@@ -16,6 +16,9 @@ Projets
 * Regression logistique 
 
 Seances
+
+"It's not magic; it's code", Ben Welsh, https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/
+
 1. Motivation et rappels
 2. Le modele lineaire simple
 3. Le modele linear multiple
