@@ -23,7 +23,7 @@ Seances
 5. 
 6. 
 7. 
-8.EXAMEN
+8. EXAMEN
 9.
 10.
 11.
