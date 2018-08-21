@@ -18,17 +18,17 @@ Plan de cours :
 
 **Examens passés**
 * OLS énoncé hiver 2012 [H2012E.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6410-h2012-enonce.pdf)
-* OLS _correction_ hiver 2012 https://github.com/freakonometrics/STT5100/raw/master/act6410-h2012-correc.pdf
-* OLS énoncé automne 2012 https://github.com/freakonometrics/STT5100/raw/master/act6410-a2012-enonce.pdf
-* OLS _correction_ automne 2012 https://github.com/freakonometrics/STT5100/raw/master/act6410-a2012-correc.pdf
-* GLM énoncé 2011 https://github.com/freakonometrics/STT5100/raw/master/act2040-2011-enonce.pdf
-* GLM _correction_ 2011 https://github.com/freakonometrics/STT5100/raw/master/act2040-2011-correc.pdf
-* GLM énoncé 2013 https://github.com/freakonometrics/STT5100/raw/master/act2040-2013-enonce.pdf
-* GLM _correction_ 2013 https://github.com/freakonometrics/STT5100/raw/master/act2040-2013-correc.pdf
+* OLS _correction_ hiver 2012 [H2012C.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6410-h2012-correc.pdf)
+* OLS énoncé automne 2012 [A2012E.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6410-a2012-enonce.pdf)
+* OLS _correction_ automne 2012 [A2012C.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6410-a2012-correc.pdf)
+* GLM énoncé 2011 [2011E.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2011-enonce.pdf)
+* GLM _correction_ 2011 [2011C.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2011-correc.pdf)
+* GLM énoncé 2013 [2013E.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2013-enonce.pdf)
+* GLM _correction_ 2013 [2013C.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2013-correc.pdf)
 
 **Seances**
 
-"It's not magic; it's code", Ben Welsh, https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/
+"It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/)
 
 1. Motivation et rappels (probabilités et statistiques)
 2. Le modele linéaire simple
