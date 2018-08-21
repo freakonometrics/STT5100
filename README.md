@@ -32,20 +32,21 @@ Seances
 
 1. Motivation et rappels (probabilités et statistiques)
 2. Le modele linéaire simple
-3. Le modele linéar multiple
-4. 
-5. 
-6. 
-7. 
+3. Le modele linéaire multiple
+4. Incertitude dans le modele lineaire
+5. Tests statistiques et significativite
+6. Regression locale et lissage
+7. Choix de modeles
 8. EXAMEN
-9.
-10.
-11.
-12.
-13.
-14.
+9. Regression logistique
+10. Regression logistique
+11. Regression de Poisson
+12. Regression de Poisson 
+13. GLM - Modeles Lineaires Generalises
+14. GLM - Modeles Lineaires Generalises
 15. EXAMEN
 
 Bases de données 
-* cars
-* 
+* davis (y = height)
+* cars (y = dist, x = speed)
+* chicago (y = Fire, x1,x2,x3)
