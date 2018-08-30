@@ -48,6 +48,10 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 15. **Examen Final**
 
 **Bases de données**
+
+[STT5100-0.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-0.md)
+
 * davis (y = height)
 * cars (y = dist, x = speed)
-* chicago (y = Fire, x1,x2,x3)
+* chicago (y = Fire, x1, x2, x3)
+* myocarde (y= PRONO, FRCAR, INCAR, INSYS, PRDIA, PAPUL, PVENT, REPUL)
