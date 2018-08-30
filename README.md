@@ -4,7 +4,7 @@ Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100/2018-automne)
 
-Plan de cours :
+Plan de cours : [Plan_STT5100_A2018.pdf](https://github.com/freakonometrics/STT5100/raw/master/Plan_STT5100_A2018.pdf)
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
