@@ -31,8 +31,8 @@ Plan de cours : [Plan_STT5100_A2018.pdf](https://github.com/freakonometrics/STT5
 "It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
-1. Motivation et rappels (probabilités et statistiques)
-2. Le modele linéaire simple
+1. Motivation et rappels (probabilités et statistiques) [STT5100-1.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-1.md)
+2. Le modele linéaire simple [STT5100-2.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-2.md)
 3. Le modele linéaire multiple
 4. Incertitude dans le modele lineaire
 5. Tests statistiques et significativite
@@ -51,7 +51,11 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 [STT5100-0.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-0.md)
 
-* davis (y = height)
+* davis (y = wight, x1 = height, x2 = gender)
 * cars (y = dist, x = speed)
 * chicago (y = Fire, x1, x2, x3)
 * myocarde (y= PRONO, FRCAR, INCAR, INSYS, PRDIA, PAPUL, PVENT, REPUL)
+
+**Exercices**
+
+[TD1STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD1STT5100.pdf)
