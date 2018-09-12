@@ -55,6 +55,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 * cars (y = dist, x = speed)
 * chicago (y = Fire, x1, x2, x3)
 * myocarde (y= PRONO, FRCAR, INCAR, INSYS, PRDIA, PAPUL, PVENT, REPUL)
+* titanic [kaggle](https://www.kaggle.com/c/titanic/data)
 
 **Exercices**
 
