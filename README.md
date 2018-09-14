@@ -14,7 +14,7 @@ Plan de cours : [Plan_STT5100_A2018.pdf](https://github.com/freakonometrics/STT5
 * Achim Zeileis, 2008, Applied Econometrics with R, [Springer Verlag](https://eeecon.uibk.ac.at/~zeileis/teaching/AER/index.html)
 
 **Projets**
-* Modeles de régression - OLS
+* Modeles de régression - OLS : [STT5100-devoir1.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-devoir1.md)
 * Regression logistique - GLM
 
 **Examens passés**
