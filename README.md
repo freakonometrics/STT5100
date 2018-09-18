@@ -67,3 +67,4 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 **Exercices**
 
 [TD1STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD1STT5100.pdf)
+[TD2STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD2STT5100.pdf)
