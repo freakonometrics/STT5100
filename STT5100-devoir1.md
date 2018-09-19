@@ -16,7 +16,7 @@ Le nom du fichier du rapport (comme la base de données) doit contenir le (ou le
 
 ou 
 
-![modele](https://latex.codecogs.com/gif.latex?\text{deathRate}=-5+2\cdot\text{povertyPercent}+.05\cdot\text{PctMarriedHouseholds}\\-.02\cdot\boldsymbol{1}_{R^+}(\text{PctMarriedHouseholds}))
+![modele](https://latex.codecogs.com/gif.latex?\begin{align*}\text{deathRate}=&-5+2\cdot\text{povertyPercent}+.05\cdot\text{PctMarriedHouseholds}\\&-.02\cdot\boldsymbol{1}_{R^+}(\text{PctMarriedHouseholds})\end{align*})
 
 Le rapport devra presenter quelques graphiques pertinents, expliquer quel a ete le premier modele construit, puis le cheminement arrivant au modele final. La sortie `R` (obtenue avec `summary(lm(TARGET_deathRate~....))` devra ensuite figurer.
 
