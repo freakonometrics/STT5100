@@ -12,7 +12,7 @@ STT5100 Devoir \#1
 
 Le nom du fichier du rapport (comme la base de données) doit contenir le (ou les) code permanent de l'étudiant, le sigle du cours, et "devoir 1" (eg `STT5100-ABCD12345678-devoir1.pdf` et `STT5100-ABCD12345678-devoir1.csv`). La premiere ligne du rapport doit indiquer le (ou les) code permanent de l'étudiant. Tout manquement entrainera une perte de points. Le rapport doit de conclure avec la presentation du modele retenu, par exemple
 
-![equation](http://latex.codecogs.com/gif.latex?\text{deathRate}=-5+2\cdot\text{povertyPercent}+.05\cdot\text{PctMarriedHouseholds})
+<img src="https://latex.codecogs.com/gif.latex?\text{deathRate}=-5+2\cdot\text{povertyPercent}+.05\cdot\text{PctMarriedHouseholds}"\>
 
 Le rapport devra presenter quelques graphiques pertinents, expliquer quel a ete le premier modele construit, puis le cheminement arrivant au modele final.
 
