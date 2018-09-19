@@ -70,7 +70,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 [TD2STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD2STT5100.pdf)
 
-**Autres**
+**"Curve Fitting"**
 
 ![https://xkcd.com/2048/](https://imgs.xkcd.com/comics/curve_fitting_2x.png)
 
