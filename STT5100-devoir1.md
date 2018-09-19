@@ -3,13 +3,19 @@ STT5100 Devoir \#1
 
 **Objectif** : construire un "bon" modele linéaire pour comprendre le taux de décès par cancer, aux Etats-Unis.
 
-**Attendus** : les etudiants devront rendre le devoir qu'ils auront fait, soit seul, soit avec une autre personne inscrite au cours (deux eleves par projet, maximum). Sont attendus, 
+**Attendus** : les étudiants devront rendre le devoir qu'ils auront fait, soit seul, soit avec une autre personne inscrite au cours (deux étudiants par projet, maximum). Sont attendus, 
 1) un rapport
 - soit un rapport au format `pdf`, 
 - soit une sortie `R` (au format `html` ou `rmd`),
 2) une base de données
-- un fichier `csv` avec la prevision pour chacun des 2400 comtés de la base 
-Le nom du fichier du rapport (comme la base de données) doit contenir le (ou les) code permanent de l'étudiant, le sigle du cours, et "devoir 1" (eg `STT5100-ABCD12345678-devoir1.pdf` et `STT5100-ABCD12345678-devoir1.csv`). La premiere ligne du rapport doit indiquer le (ou les) code permanent de l'étudiant. Tout manquement entrainera une perte de points.
+- un fichier `csv` avec la prévision pour chacun des 2400 comtés de la base. La base contiendra 2400 lignes, et 2 variables : la variable `Geography` et une variable supplementaire appelée `prevision`.
+
+Le nom du fichier du rapport (comme la base de données) doit contenir le (ou les) code permanent de l'étudiant, le sigle du cours, et "devoir 1" (eg `STT5100-ABCD12345678-devoir1.pdf` et `STT5100-ABCD12345678-devoir1.csv`). La premiere ligne du rapport doit indiquer le (ou les) code permanent de l'étudiant. Tout manquement entrainera une perte de points. Le rapport doit de conclure avec la presentation du modele retenu, par exemple
+$$
+deathRate = -5 + 2*povertyPercent +.05*PctMarriedHouseholds
+$$
+
+Les deux fichiers doivent etre envoyés, au plus tard, le **12 novembre 2018, midi** (conformément a l'entente d'évaluation).
 
 **Donnees**
 
