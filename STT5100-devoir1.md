@@ -1,6 +1,17 @@
 STT5100 Devoir \#1
 ================
-Arthur Charpentier
+
+**Objectif** : construire un "bon" modele linéaire pour comprendre le taux de décès par cancer, aux Etats-Unis.
+
+**Attendus** : les etudiants devront rendre le devoir qu'ils auront fait, soit seul, soit avec une autre personne inscrite au cours (deux eleves par projet, maximum). Sont attendus, 
+1) un rapport
+- soit un rapport au format `pdf`, 
+- soit une sortie `R` (au format `html` ou `rmd`),
+2) une base de données
+- un fichier `csv` avec la prevision pour chacun des 2400 comtés de la base 
+Le nom du fichier du rapport (comme la base de données) doit contenir le (ou les) code permanent de l'étudiant, le sigle du cours, et "devoir 1" (eg `STT5100-ABCD12345678-devoir1.pdf` et `STT5100-ABCD12345678-devoir1.csv`). La premiere ligne du rapport doit indiquer le (ou les) code permanent de l'étudiant. Tout manquement entrainera une perte de points.
+
+**Donnees**
 
 ``` r
 base = read.table("http://freakonometrics.free.fr/STT5100_A2018_Devoir1.txt",sep=";")
