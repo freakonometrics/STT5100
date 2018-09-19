@@ -16,9 +16,9 @@ Le nom du fichier du rapport (comme la base de données) doit contenir le (ou le
 
 ou 
 
-![modele](https://latex.codecogs.com/gif.latex?\text{deathRate}=-5+2\cdot\text{povertyPercent}+.05\cdot\text{PctMarriedHouseholds}-.02\cdot\boldsymbol{1}_{R^+}(\text{PctMarriedHouseholds}))
+![modele](https://latex.codecogs.com/gif.latex?\text{deathRate}=-5+2\cdot\text{povertyPercent}+.05\cdot\text{PctMarriedHouseholds}\\-.02\cdot\boldsymbol{1}_{R^+}(\text{PctMarriedHouseholds}))
 
-Le rapport devra presenter quelques graphiques pertinents, expliquer quel a ete le premier modele construit, puis le cheminement arrivant au modele final.
+Le rapport devra presenter quelques graphiques pertinents, expliquer quel a ete le premier modele construit, puis le cheminement arrivant au modele final. La sortie `R` (obtenue avec `summary(lm(TARGET_deathRate~....))` devra ensuite figurer.
 
 Les deux fichiers doivent etre envoyés, au plus tard, le **12 novembre 2018, midi** (conformément a l'entente d'évaluation).
 
