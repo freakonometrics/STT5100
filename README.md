@@ -6,7 +6,7 @@ Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freak
 
 Plan de cours : [Plan_STT5100_A2018.pdf](https://github.com/freakonometrics/STT5100/raw/master/Plan_STT5100_A2018.pdf)
 
-Démonstrateur : Mohamed Ouhourane <a href="https://www-s.uqam.ca/cgi-bin/regis/trcpV2.pl?nom=ouhourane&prenom=mohamed"><i class="fa fa-caret-right"></i></a>, puis Gillis Delmas Tchouangue Dinkou (à partir du 21 septembre)
+Démonstrateur : Mohamed Ouhourane [*](https://www-s.uqam.ca/cgi-bin/regis/trcpV2.pl?nom=ouhourane&prenom=mohamed), puis Gillis Delmas Tchouangue Dinkou [*](https://www-s.uqam.ca/cgi-bin/regis/trcpV2.pl?nom=tchouangue%20dinkou&prenom=gillis%20delmas) (à partir du 21 septembre)
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
