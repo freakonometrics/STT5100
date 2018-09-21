@@ -46,7 +46,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 3. Le modele linéaire multiple [STT5100-3.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-3.md)
 - lecture : Chapitres 2 et 3 (Greene, edition 5)
 - lecture : Chapitre  5 et 6 (Stock & Watston)
-- exercices : 3.3 et 3.6 (Greene)
+- exercices : 3.3 et 3.6 (Greene) et faire des exemples dans la page [chiffres.pdf]{https://github.com/freakonometrics/STT5100/raw/master/STT5100_donnees_chiffres.pdf}
 4. Incertitude dans le modele lineaire
 - lecture : Chapitre  6 (Stock & Watston)
 5. Tests statistiques et significativite
