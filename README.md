@@ -43,7 +43,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 1. Motivation et rappels (probabilités et statistiques) [STT5100-1.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-1.md)
 2. Le modele linéaire simple [STT5100-2.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-2.md)
 - lecture : Chapitre 4 (Stock & Watston)
-3. Le modele linéaire multiple [code4.R](https://github.com/freakonometrics/STT5100/blob/master/code4.R) [STT5100-3.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-3.md)
+3. Le modele linéaire multiple [code4.R](https://github.com/freakonometrics/STT5100/blob/master/code4.R) (code utilisé en cours) [STT5100-3.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-3.md)
 - lecture : Chapitres 2 et 3 (Greene, edition 5)
 - lecture : Chapitre  5 et 6 (Stock & Watston)
 - exercices : 3.3 et 3.6 (Greene) et faire des exemples dans la page [chiffres.pdf](https://github.com/freakonometrics/STT5100/raw/master/STT5100_donnees_chiffres.pdf)
