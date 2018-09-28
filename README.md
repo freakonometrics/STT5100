@@ -43,10 +43,11 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 1. Motivation et rappels (probabilités et statistiques) [STT5100-1.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-1.md)
 2. Le modele linéaire simple [STT5100-2.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-2.md)
 - lecture : Chapitre 4 (Stock & Watston)
-3. Le modele linéaire multiple [STT5100-3.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-3.md)
+3. Le modele linéaire multiple [code4.R](https://github.com/freakonometrics/STT5100/blob/master/code4.R) [STT5100-3.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-3.md)
 - lecture : Chapitres 2 et 3 (Greene, edition 5)
 - lecture : Chapitre  5 et 6 (Stock & Watston)
 - exercices : 3.3 et 3.6 (Greene) et faire des exemples dans la page [chiffres.pdf](https://github.com/freakonometrics/STT5100/raw/master/STT5100_donnees_chiffres.pdf)
+- complément sur la régression avec un facteur [blog](https://freakonometrics.hypotheses.org/55142)
 4. Incertitude dans le modele lineaire
 - lecture : Chapitre  6 (Stock & Watston)
 5. Tests statistiques et significativite
@@ -78,7 +79,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 [TD2STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD2STT5100.pdf) et correction [stt5100-2-C.pdf](https://github.com/freakonometrics/STT5100/blob/master/stt5100-2-C.pdf)
 
-[TD3STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD3STT5100.pdf) 
+[TD3STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD3STT5100.pdf) et correction [TD3STT5100-C.pdf] (https://github.com/freakonometrics/STT5100/blob/master/TD3STT5100-C.pdf)
 
 **"Curve Fitting"**
 
