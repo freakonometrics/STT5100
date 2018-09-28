@@ -79,7 +79,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 [TD2STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD2STT5100.pdf) et correction [stt5100-2-C.pdf](https://github.com/freakonometrics/STT5100/blob/master/stt5100-2-C.pdf)
 
-[TD3STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD3STT5100.pdf) et correction [TD3STT5100-C.pdf] (https://github.com/freakonometrics/STT5100/blob/master/TD3STT5100-C.pdf)
+[TD3STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD3STT5100.pdf) et correction [TD3STT5100-C.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD3STT5100-C.pdf)
 
 **"Curve Fitting"**
 
