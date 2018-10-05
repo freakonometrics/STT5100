@@ -48,7 +48,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 - lecture : Chapitre  5 et 6 (Stock & Watston)
 - exercices : 3.3 et 3.6 (Greene) et faire des exemples dans la page [chiffres.pdf](https://github.com/freakonometrics/STT5100/raw/master/STT5100_donnees_chiffres.pdf)
 - complément sur la régression avec un facteur [blog](https://freakonometrics.hypotheses.org/55142)
-4. Incertitude dans le modele lineaire
+4. Incertitude dans le modele lineaire [code5.R](https://github.com/freakonometrics/STT5100/blob/master/code5.R)
 - lecture : Chapitre  6 (Stock & Watston)
 5. Tests statistiques et significativite
 - lecture : Chapitre  7 (Stock & Watston)
