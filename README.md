@@ -15,6 +15,8 @@ Démonstrateur : Mohamed Ouhourane [*](https://www-s.uqam.ca/cgi-bin/regis/trcpV
 * James H. Stock & Mark W. Watson, 2007, Introduction to Econometrics, [Addison Wesley](https://www.pearson.com/us/higher-education/product/Stock-Introduction-to-Econometrics-3rd-Edition/9780138009007.html)
 * Achim Zeileis, 2008, Applied Econometrics with R, [Springer Verlag](https://eeecon.uibk.ac.at/~zeileis/teaching/AER/index.html)
 
+Complément : optimisation convexe sous contrainte linéaire, [slides](www.parisschoolofeconomics.com/grenet-julien/TD/Annexe1.pdf#section.4) [section4](www.parisschoolofeconomics.com/grenet-julien/TD/Annexe1.pdf#section.4) [section2.3](https://www.math.sciences.univ-nantes.fr/~guillope/l3-osc/osc.pdf#section2.3) 
+
 **Notes de cours (2014)**
 *  OLS, partie 1 [act6420-e2014-1.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6420-e2014-1.pdf)
 *  OLS, partie 2 [act6420-e2014-2.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6420-e2014-2.pdf)
