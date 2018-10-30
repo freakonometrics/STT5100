@@ -58,7 +58,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 7. Regression locale et lissage
 8. **Examen Intra**
 
-Le sujet de l'examen (version A, pour le B, les questions etaient juste decallees) [intra-A.pdf](https://github.com/freakonometrics/STT5100/raw/master/Exam_STT5100_Aut_2018_intra-A.pdf) et des elements de correction [intra-A-correction.pdf](https://f-origin.hypotheses.org/wp-content/blogs.dir/253/files/2013/03/Exam_STT5100_Aut_2018_intra-A-correction.pdf)
+Le sujet de l'examen (version A, pour le B, les questions etaient juste decallees) [intra-A.pdf](https://github.com/freakonometrics/STT5100/raw/master/Exam_STT5100_Aut_2018_intra-A.pdf) et des elements de correction [intra-A-correction.pdf](https://github.com/freakonometrics/STT5100/raw/master/Exam_STT5100_Aut_2018_intra-A-correction.pdf)
 
 9. Regression logistique
 10. Regression logistique
