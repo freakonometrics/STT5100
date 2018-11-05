@@ -25,7 +25,7 @@ Attention, ce sont des resumes synthetiques du cours ! Il convient de lire Green
 
 **Projets**
 * Modeles de régression - OLS : [STT5100-devoir1.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-devoir1.md)
-* Regression logistique - GLM
+* Regression logistique - GLM : [STT5100-devoir1.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-devoir2.md)
 
 **Examens passés**
 * OLS énoncé hiver 2012 [H2012E.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6410-h2012-enonce.pdf) [csv](http://freakonometrics.blog.free.fr/public/data/basket-exam-v2.csv) pas d'annexes, désolé
