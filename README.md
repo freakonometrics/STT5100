@@ -25,7 +25,7 @@ Attention, ce sont des resumes synthetiques du cours ! Il convient de lire Green
 
 **Projets**
 * Modeles de régression - OLS : [STT5100-devoir1.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-devoir1.md)
-* Regression logistique - GLM : [STT5100-devoir1.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-devoir2.md)
+* Regression logistique - GLM : [STT5100-devoir2.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-devoir2.md)
 
 **Examens passés**
 * OLS énoncé hiver 2012 [H2012E.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6410-h2012-enonce.pdf) [csv](http://freakonometrics.blog.free.fr/public/data/basket-exam-v2.csv) pas d'annexes, désolé
@@ -57,10 +57,9 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 - lecture : Chapitre  7 (Stock & Watston)
 7. Regression locale et lissage
 8. **Examen Intra**
-
-Le sujet de l'examen (version A, pour le B, les questions etaient juste decallees) [intra-A.pdf](https://github.com/freakonometrics/STT5100/raw/master/Exam_STT5100_Aut_2018_intra-A.pdf) et des elements de correction [intra-A-correction.pdf](https://github.com/freakonometrics/STT5100/raw/master/Exam_STT5100_Aut_2018_intra-A-correction.pdf)
-
+- Le sujet de l'examen (version A, pour le B, les questions etaient juste decallees) [intra-A.pdf](https://github.com/freakonometrics/STT5100/raw/master/Exam_STT5100_Aut_2018_intra-A.pdf) et des elements de correction [intra-A-correction.pdf](https://github.com/freakonometrics/STT5100/raw/master/Exam_STT5100_Aut_2018_intra-A-correction.pdf)
 9. Regression logistique
+- petit exercice pour se pratiquer [STT5100-exercice.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-exercice.md) (base utilisee pour le devoir de 2013)
 10. Regression logistique
 11. Regression de Poisson
 12. Regression de Poisson 
