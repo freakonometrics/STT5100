@@ -14,6 +14,7 @@ Démonstrateur : Mohamed Ouhourane [*](https://www-s.uqam.ca/cgi-bin/regis/trcpV
 * Julian, J. Faraway, 2002, Practical Regression and Anova using R, [CRAN](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)
 * James H. Stock & Mark W. Watson, 2007, Introduction to Econometrics, [Addison Wesley](https://www.pearson.com/us/higher-education/product/Stock-Introduction-to-Econometrics-3rd-Edition/9780138009007.html)
 * Achim Zeileis, 2008, Applied Econometrics with R, [Springer Verlag](https://eeecon.uibk.ac.at/~zeileis/teaching/AER/index.html)
+* Yihui Xie, J. J. Allaire & Garrett Grolemund, R Markdown: The Definitive Guide [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
 
 Complément : optimisation convexe sous contrainte linéaire, [slides](www.parisschoolofeconomics.com/grenet-julien/TD/Annexe1.pdf#section.4) [section4](www.parisschoolofeconomics.com/grenet-julien/TD/Annexe1.pdf#section.4) [section2.3](https://www.math.sciences.univ-nantes.fr/~guillope/l3-osc/osc.pdf#section2.3) 
 
