@@ -62,7 +62,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 9. Regression logistique
 - petit exercice pour se pratiquer [STT5100-exercice.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-exercice.md) (base utilisee pour le devoir de 2013)
 10. Regression logistique [STT5100-8.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-8.md)
-11. Regression de Poisson [UK aids data](https://rdrr.io/cran/apc/man/data.aids.html)
+11. Regression de Poisson [UK aids data](https://rdrr.io/cran/apc/man/data.aids.html) et [STT5100-9.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-9.md)
 12. Regression de Poisson 
 13. GLM - Modeles Lineaires Generalises
 14. GLM - Modeles Lineaires Generalises
