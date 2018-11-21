@@ -1,0 +1,32 @@
+---
+title: "STT5100 #9 - Regression Poisson"
+author: "Arthur Charpentier"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(boot)
+data(aids)
+reg=glm(y~as.factor(delay)+as.factor(time),data=aids)
+
+D=unique(aids$delay)
+T=unique(aids$time)
+T2=unique(aids$year+(aids$quarter-1/2)/4)
+M=matrix(NA,length(T2),length(D))
+for(i in 1:length(T2)){
+  for(j in 1:length(D)){
+    M[i,j]=aids[(aids$time==i)&(aids$delay==D[j]),"y"]}}
+for(i in 1:(length(D)-2)){
+  M[nrow(M)+1-i,(2+i):length(D)]=NA
+}
+M
+
+aids2=aids
+aids2$y[aids2$dud==1]=NA
+reg=glm(y~as.factor(delay)+as.factor(time),data=aids2,family=poisson)
+summary(reg)
+```
