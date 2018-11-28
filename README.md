@@ -21,6 +21,7 @@ Complément : optimisation convexe sous contrainte linéaire, [slides](www.paris
 **Notes de cours (2014)**
 *  OLS, partie 1 [act6420-e2014-1.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6420-e2014-1.pdf)
 *  OLS, partie 2 [act6420-e2014-2.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6420-e2014-2.pdf)
+*  GLM, chapitre 9 [chapitre9.pdf](https://github.com/freakonometrics/STT5100/raw/master/chapitre9.pdf), extrait de [Charpentier & Denuit (2005)](https://freakonometrics.hypotheses.org/files/2018/11/ASSNVT1.pdf)
 
 Attention, ce sont des resumes synthetiques du cours ! Il convient de lire Greene (2011) pour Stock & Watson (2007) pour plus de details (les parties sont indiquees dans le plan, plus bas).
 
