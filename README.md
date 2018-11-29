@@ -87,10 +87,12 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 [TD3STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD3STT5100.pdf) et correction [TD3STT5100-C.pdf](https://github.com/freakonometrics/STT5100/blob/master/TD3STT5100-C.pdf)
 
-[demo.pdf](https://github.com/freakonometrics/STT5100/blob/master/ 	Demo-19-oct.pdf) et code R sur les dummy [dummy.pdf](https://github.com/freakonometrics/STT5100/blob/master/dummy-19-oct.pdf)
+[.pdf](https://github.com/freakonometrics/STT5100/blob/master/Demo-19-oct.pdf) et code R sur les dummy [dummy.pdf](https://github.com/freakonometrics/STT5100/blob/master/dummy-19-oct.pdf)
 
 [TD9STT5100.pdf](https://github.com/freakonometrics/STT5100/blob/master/serie4.pdf), sur la base utilisee pour le devoir de 2013 [exercice.md](https://github.com/freakonometrics/STT5100/blob/master/STT5100-exercice.md), 
 [demo5-a.pdf](https://github.com/freakonometrics/STT5100/blob/master/demo5-a.pdf) et [demo5-b.pdf](https://github.com/freakonometrics/STT5100/blob/master/Demo5-b.pdf)
+
+[demo6.pdf](https://github.com/freakonometrics/STT5100/blob/master/demo6.pdf)
 
 **"Curve Fitting"**
 
