@@ -18,7 +18,7 @@ Démonstrateur : Mohamed Ouhourane [*](https://www-s.uqam.ca/cgi-bin/regis/trcpV
 
 Complément : optimisation convexe sous contrainte linéaire, [slides](www.parisschoolofeconomics.com/grenet-julien/TD/Annexe1.pdf#section.4) [section4](www.parisschoolofeconomics.com/grenet-julien/TD/Annexe1.pdf#section.4) [section2.3](https://www.math.sciences.univ-nantes.fr/~guillope/l3-osc/osc.pdf#section2.3) 
 
-**Notes de cours (2014)**
+**Notes de cours (2014 et 2017)**
 *  OLS, partie 1 [act6420-e2014-1.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6420-e2014-1.pdf)
 *  OLS, partie 2 [act6420-e2014-2.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6420-e2014-2.pdf)
 *  GLM, chapitre 9 [chapitre9.pdf](https://github.com/freakonometrics/STT5100/raw/master/chapitre9.pdf), extrait de [Charpentier & Denuit (2005)](https://freakonometrics.hypotheses.org/files/2018/11/ASSNVT1.pdf)
