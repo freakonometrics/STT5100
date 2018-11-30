@@ -22,6 +22,12 @@ Complément : optimisation convexe sous contrainte linéaire, [slides](www.paris
 *  OLS, partie 1 [act6420-e2014-1.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6420-e2014-1.pdf)
 *  OLS, partie 2 [act6420-e2014-2.pdf](https://github.com/freakonometrics/STT5100/raw/master/act6420-e2014-2.pdf)
 *  GLM, chapitre 9 [chapitre9.pdf](https://github.com/freakonometrics/STT5100/raw/master/chapitre9.pdf), extrait de [Charpentier & Denuit (2005)](https://freakonometrics.hypotheses.org/files/2018/11/ASSNVT1.pdf)
+*  logistique [slides-2.pdf](https://github.com/freakonometrics/STT5100/raw/master/slides-ensae-2017-2.pdf)
+*  poisson [slides-3.pdf](https://github.com/freakonometrics/STT5100/raw/master/slides-ensae-2017-3.pdf)
+*  GLM [slides-4.pdf](https://github.com/freakonometrics/STT5100/raw/master/slides-ensae-2017-4.pdf)
+*  poisson avec surdispersion [slides-5.pdf](https://github.com/freakonometrics/STT5100/raw/master/slides-ensae-2017-5.pdf)
+*  gamma, lognormal et autres [slides-7.pdf](https://github.com/freakonometrics/STT5100/raw/master/slides-ensae-2017-7.pdf)
+*  Tweedie [slides-9.pdf](https://github.com/freakonometrics/STT5100/raw/master/slides-ensae-2017-9.pdf)
 
 Attention, ce sont des resumes synthetiques du cours ! Il convient de lire Greene (2011) pour Stock & Watson (2007) pour plus de details (les parties sont indiquees dans le plan, plus bas).
 
@@ -38,6 +44,9 @@ Attention, ce sont des resumes synthetiques du cours ! Il convient de lire Green
 * GLM _correction_ 2011 [2011C.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2011-correc.pdf)
 * GLM énoncé 2013 [2013E.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2013-enonce.pdf) [Annexes](https://f-origin.hypotheses.org/wp-content/blogs.dir/253/files/2013/03/EXAMEN-INTRA-annexe-2040-H2013.pdf)
 * GLM _correction_ 2013 [2013C.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2013-correc.pdf)
+
+**Exam S - CAS**
+* page "study tools" [ttps://www.casact.org/examS/](https://www.casact.org/admissions/studytools/examS/)
 
 **Seances**
 
