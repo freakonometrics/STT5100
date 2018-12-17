@@ -77,7 +77,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 13. GLM - Modeles Lineaires Generalises [STT5100-10.md](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/STT5100-10.md)
 14. GLM - Modeles Lineaires Generalises
 15. **Examen Final**
-- Le sujet de l'examen (version A) [final-A.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Examen_STT5100_Aut_2018_final.pdf) et des elements de correction [final-A-correction.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Examen_STT5100_Aut_2018_final-correction.pdf)
+- Le sujet de l'examen (version A) [final-A.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Examen_STT5100_Aut_2018_final-correction.pdf) et des elements de correction [final-A-correction.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Examen_STT5100_Aut_2018_final.pdf)
 
 **Bases de données**
 
