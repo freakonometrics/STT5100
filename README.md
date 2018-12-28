@@ -36,7 +36,11 @@ Démonstrateur : *a confirmer*
 * GLM _correction_ automne 2018 [A2018-2C.pdf](devoirs/Examen_STT5100_Aut_2018_final.pdf)
 
 **Exam S - CAS**
-* page "study tools" [ttps://www.casact.org/examS/](https://www.casact.org/admissions/studytools/examS/)
+* page "study tools" [https://www.casact.org/examS/](https://www.casact.org/admissions/studytools/examS/)
+
+**R Toolbox - SOA**
+* page "R console" [https://actuarialtoolkit.soa.org/](https://actuarialtoolkit.soa.org/tool/r-console/learn-more)
+![https://actuarialtoolkit.soa.org/tool/r-console/learn-more](image/R-SOA-2.png)
 
 **Seances**
 
