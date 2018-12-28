@@ -1,4 +1,4 @@
-# STT5100 Modèles linéaires appliqués
+# STT5100 Modèles linéaires appliqués (Hiver 2019)
 
 Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
