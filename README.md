@@ -4,7 +4,7 @@ Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100/2018-automne)
 
-Plan de cours : [Plan_STT5100_A2018.pdf](https://github.com/freakonometrics/STT5100/raw/master/Plan_STT5100_A2018.pdf)
+Plan de cours : [Plan_STT5100_H2019.pdf](docs/Plan STT5100 H2019.pdf)
 
 Démonstrateur : *a confirmer*
 
@@ -19,7 +19,7 @@ Démonstrateur : *a confirmer*
 Complément : optimisation convexe sous contrainte linéaire, [slides](www.parisschoolofeconomics.com/grenet-julien/TD/Annexe1.pdf#section.4) [section4](www.parisschoolofeconomics.com/grenet-julien/TD/Annexe1.pdf#section.4) [section2.3](https://www.math.sciences.univ-nantes.fr/~guillope/l3-osc/osc.pdf#section2.3) 
 
 **Notes de cours (2014 et 2017)**
-*  introduction : [STT5100_part_1.pdf](/docs/STT5100_part_1.pdf)
+*  introduction : [STT5100_part_1.pdf](docs/STT5100_part_1.pdf)
 
 **Projets**
 * Modeles de régression - OLS : *a confirmer*
@@ -30,12 +30,12 @@ Complément : optimisation convexe sous contrainte linéaire, [slides](www.paris
 * OLS _correction_ hiver 2012 [H2012C.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-h2012-correc.pdf)
 * OLS énoncé automne 2012 [A2012E.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-a2012-enonce.pdf)
 * OLS _correction_ automne 2012 [A2012C.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-a2012-correc.pdf)
-* OLS énoncé automne 2018 [A2018-1E.pdf](/devoirs/Exam_STT5100_Aut_2018_intra-A.pdf)
-* OLS _correction_ automne 2018 [A2018-1C.pdf](/devoirs/Exam_STT5100_Aut_2018_intra-A-correction.pdf)
+* OLS énoncé automne 2018 [A2018-1E.pdf](devoirs/Exam_STT5100_Aut_2018_intra-A.pdf)
+* OLS _correction_ automne 2018 [A2018-1C.pdf](devoirs/Exam_STT5100_Aut_2018_intra-A-correction.pdf)
 * GLM énoncé 2013 [2013E.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2013-enonce.pdf) [Annexes](https://f-origin.hypotheses.org/wp-content/blogs.dir/253/files/2013/03/EXAMEN-INTRA-annexe-2040-H2013.pdf)
 * GLM _correction_ 2013 [2013C.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2013-correc.pdf)
-* GLM énoncé automne 2018 [A2018-2E.pdf](/devoirs/Examen_STT5100_Aut_2018_final-correction.pdf)
-* GLM _correction_ automne 2018 [A2018-2C.pdf](/devoirs/Examen_STT5100_Aut_2018_final.pdf)
+* GLM énoncé automne 2018 [A2018-2E.pdf](devoirs/Examen_STT5100_Aut_2018_final-correction.pdf)
+* GLM _correction_ automne 2018 [A2018-2C.pdf](devoirs/Examen_STT5100_Aut_2018_final.pdf)
 
 **Exam S - CAS**
 * page "study tools" [ttps://www.casact.org/examS/](https://www.casact.org/admissions/studytools/examS/)
