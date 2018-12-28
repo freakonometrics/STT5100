@@ -1,0 +1,40 @@
+---
+title: "STT5100 #0 - Bases de données"
+author: "Arthur Charpentier"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+Davis=read.table(
+"http://socserv.socsci.mcmaster.ca/jfox/Books/Applied-Regression-2E/datasets/Davis.txt")
+Davis[12,c(2,3)]=Davis[12,c(3,2)]
+Davis=data.frame(X=Davis$height / 30.48,
+                 Y=Davis$weight * 2.204622)
+str(Davis)
+hist(Davis$X)
+hist(Davis$Y)
+plot(Davis)
+```
+
+```{r}
+data(cars)
+str(cars)
+plot(cars)
+```
+
+```{r}
+chicago = read.table("http://freakonometrics.free.fr/chicago.txt",header=TRUE,sep=";")
+tail(chicago)
+str(chicago)
+for(k in 2:4) plot(chicago[,k],chicago$Fire)
+```
+
+```{r}
+myocarde = read.table("http://freakonometrics.free.fr/myocarde.csv",head=TRUE, sep=";")
+str(myocarde)
+for(i in 1:7) boxplot(myocarde[,i]~myocarde$PRONO,horizontal=TRUE)
+```

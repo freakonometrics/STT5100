@@ -1,0 +1,58 @@
+---
+title: "STT5100 Devoir #2 "
+author: "Arthur Charpentier"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Objectif** : construire un "bon" modele linéaire pour comprendre les visites chez le medecine, en Allemagne.
+
+**Attendus** : les étudiants devront rendre le devoir qu'ils auront fait, soit seul, soit avec une autre personne inscrite au cours (deux étudiants par projet, maximum). Sont attendus,
+
+1. un rapport
+
+* soit un rapport au format `pdf`,
+    
+* soit une sortie `R` (au format `html` ou `rmd`),
+
+2. une base de données
+
+* un fichier `csv` avec la prévision pour chacun des 19609 personnes de la base. La base contiendra 19609 lignes, et 3 variables : la variable `id`, la variable `year` et une variable supplementaire appelée `prevision`, correspondant a la probabilite d'aller chez le medecin.
+
+Le nom du fichier du rapport (comme la base de données) doit contenir le (ou les) code permanent de l'étudiant, le sigle du cours, et "devoir 2" (eg `STT5100-ABCD12345678-devoir2.pdf` et `STT5100-ABCD12345678-devoir2.csv`). La premiere ligne du rapport doit indiquer le (ou les) code permanent de l'étudiant. Tout manquement entrainera une perte de points. Le rapport doit de conclure avec la presentation du modele retenu.
+
+Le rapport devra presenter quelques graphiques pertinents, expliquer quel a ete le premier modele construit, puis le cheminement arrivant au modele final. La sortie `R` (obtenue avec `summary(glm(doctor~...., family=binomial)`) devra ensuite figurer. Le travail devra presenter la courbe ROC du modele retenu, avec la valeur de l'AUC correspondante.
+
+Les deux fichiers doivent etre envoyés, au plus tard, le **17 decembre 2018, midi** (conformément a l'entente d'évaluation).
+
+**Donnees** 
+
+```{r}
+base = read.table("http://freakonometrics.free.fr/STT5100_A2018_Devoir2.txt",sep=";")
+str(base)
+tail(base)
+table(base$doctor)
+```
+
+Les donnees sont en Allemagne, pour les annees 1984-1988.
+
+- `doctor` : **Variable a expliquer** : Au moins une visite chez le docteur pendant l'annee `year`
+- `id` : Identifiant du patient
+- `hospvis` : Nombre de jours d'hospitalisation **a ne pas utiliser**
+- `year` : Annee
+- `edlevel` : Niveau d'education (facteur 1-4)
+- `age` : Age (25-64)
+- `outwork` : out of work=1; working=0
+- `female` : Genre, femme=1; homme=0
+- `married` : Statut marital, marie=1; non-marie=0
+- `kids` : Enfants, enfants=1; pas d'enfants=0
+- `hhninc` : Richesse du menage (annuel)
+- `educ` : Nombre d'annees d'education (7-18)
+- `self` : self-employed=1; not self employed=0
+- `edlevel1` : (1/0) not high school graduate
+- `edlevel2` : (1/0) high school graduate
+- `edlevel3` : (1/0) university/college
+- `edlevel4` : (1/0) graduate school

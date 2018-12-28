@@ -43,9 +43,9 @@ modele final. La sortie `R` (obtenue avec `summary(glm(doctor~....,
 family=binomial)`) devra ensuite figurer. Le travail devra presenter la
 courbe ROC du modele retenu, avec la valeur de l’AUC correspondante.
 
-Les deux fichiers doivent etre envoyés, au plus tard, le **17 decembre
-2018, midi** (conformément a l’entente
-d’évaluation).
+Les deux fichiers doivent etre envoyés, au plus tard, le **27 decembre
+2018, midi** (conformément à l’entente
+d’évaluation, et la discussion en cours sur le report de 10 jours). Le rendu se fera en revanche par message électronique, et non plus via Moodle !
 
 **Donnees**
 

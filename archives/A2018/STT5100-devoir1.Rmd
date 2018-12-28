@@ -1,0 +1,55 @@
+---
+title: "STT5100 Devoir #1 "
+author: "Arthur Charpentier"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+base = read.table("http://freakonometrics.free.fr/STT5100_A2018_Devoir1.txt",sep=";")
+str(base)
+tail(base)
+```
+
+Les donnees sont par comte, aux Etats-Unis.
+
+- `TARGET_deathRate` : **Variable a expliquer** : Moyenne par habitant (100 000) décès par cancer(a)
+- `avgAnnCount` : Nombre moyen de cas déclarés de cancer diagnostiqués annuellement(a)
+- `avgDeathsPerYear` : Nombre moyen de décès déclarés dus au cancer(a)
+- `incidenceRate` : Moyenne par habitant (100 000) des diag diagoses du cancer(a)
+- `medianIncome` : Revenu médian par comté (b)
+- `popEst2015` : Population du comté (b)
+- `povertyPercent` : Pourcentage de la population vivant dans la pauvreté (b)
+- `studyPerCap` : Nombre d'essais cliniques liés au cancer par habitant et par comté (a)
+- `binnedInc` : Revenu médian par habitant par décile b)
+- `MedianAge` : Âge médian des résidents du comté (b)
+- `MedianAgeMale` : Âge médian des résidents masculins du comté (b)
+- `MedianAgeFemale` : Âge médian des résidentes du comté (b)
+- `Geography` : Nom du comté (b)
+- `AvgHouseholdSize` : Taille moyenne des ménages du comté (b)
+- `PercentMarried` : Pourcentage de résidents du comté qui sont mariés (b)
+- `PctNoHS18_24` : Pourcentage de résidents du comté âgés de 18 à 24 ans ayant le plus haut niveau de scolarité atteint : moins que le secondaire (b)
+- `PctHS18_24` : Pourcentage de résidents du comté âgés de 18 à 24 ans ayant fait les plus hautes études : diplôme d'études secondaires (b)
+- `PctSomeCol18_24` : Pourcentage des résidents du comté âgés de 18 à 24 ans ayant le plus haut niveau de scolarité atteint : certains collèges (b)
+- `PctBachDeg18_24` : Pourcentage de résidents du comté âgés de 18 à 24 ans ayant le plus haut niveau d'instruction atteint : baccalauréat (b)
+- `PctHS25_Over` : Pourcentage de résidents du comté âgés de 25 ans et plus ayant fait les plus hautes études : diplôme d'études secondaires - (b)
+- `PctBachDeg25_Over` : Pourcentage de résidents du comté âgés de 25 ans et plus ayant fait les plus hautes études : baccalauréat (b)
+- `PctEmployed16_Over` : Pourcentage de résidents du comté âgés de 16 ans et plus ayant un emploi (b)
+- `PctEmployed16_Over` : Pourcentage de résidents du comté âgés de 16 ans et plus sans emploi (b)
+- `PctPrivateCoverage` : Pourcentage de résidents du comté bénéficiant d'une couverture médicale privée (b)
+- `PctPrivateCoverageAlone` : Pourcentage de résidents du comté bénéficiant d'une couverture médicale privée uniquement (pas d'assistance publique) (b)
+- `PctEmpPrivCoverage` : Pourcentage de résidents du comté bénéficiant d'une assurance maladie privée fournie par l'employé (b)
+- `PctPublicCoverage` : Pourcentage de résidents des comtés bénéficiant d'une couverture médicale fournie par le gouvernement (b)
+- `PctPubliceCoverageAlone` : Pourcentage de résidents des comtés bénéficiant d'une couverture médicale fournie par le gouvernement seulement (b)
+- `PctWhite` : Pourcentage de résidents du comté qui s'identifient comme Blancs (b)
+- `PctBlack` : Pourcentage de résidents du comté qui s'identifient comme Noirs (b)
+- `PctAsian` : Pourcentage de résidents des comtés qui s'identifient comme asiatiques (b)
+- `PctOtherRace` : Pourcentage des résidents du comté qui s'identifient dans une catégorie qui n'est pas blanche, noire ou asiatique (b)
+- `PctMarriedHousesholds` : Pourcentage de ménages mariés (b)
+BirthRate : Nombre de naissances vivantes par rapport au nombre de femmes dans le comté (b)
+
+(a) : années 2010-2016
+(b) : Estimations du recensement de 2013
