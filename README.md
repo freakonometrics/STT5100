@@ -41,7 +41,7 @@ Démonstrateur : *a confirmer*
 **R Toolbox - SOA**
 * page "R console" [https://actuarialtoolkit.soa.org/](https://actuarialtoolkit.soa.org/tool/r-console/learn-more)
 ![https://actuarialtoolkit.soa.org/tool/r-console/learn-more](image/R-SOA-2.png)
-![https://actuarialtoolkit.soa.org/tool/r-console/learn-more](image/R-SOA-1.png)
+![https://actuarialtoolkit.soa.org/tool/r-console/learn-more](image/R-SOA-1.png){ width: 200px; }
 
 **Seances**
 
