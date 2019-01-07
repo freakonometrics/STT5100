@@ -29,6 +29,7 @@ Démonstrateur : *a confirmer*
 * Regression logistique - GLM : *a confirmer*
 
 **Examens passés**
+il s'agit d'un "nouveau cours" du programme : le premier a été donné à l'automne 2018
 * OLS énoncé hiver 2012 [H2012E.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-h2012-enonce.pdf) [csv](http://freakonometrics.blog.free.fr/public/data/basket-exam-v2.csv) pas d'annexes, désolé
 * OLS _correction_ hiver 2012 [H2012C.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-h2012-correc.pdf)
 * OLS énoncé automne 2012 [A2012E.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-a2012-enonce.pdf)
