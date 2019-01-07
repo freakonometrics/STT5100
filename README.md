@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_H2019.pdf](docs/Plan%20STT5100%20H2019.pdf)
 Démonstrateur : *a confirmer*
 
 ```diff
-- *7 Janvier 2019* : le plan de cours est en ligne [Plan_STT5100_H2019.pdf](docs/Plan%20STT5100%20H2019.pdf)
+- (7 Janvier 2019) le plan de cours est en ligne 
 ```
 
 **Références** 
