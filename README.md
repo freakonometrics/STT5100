@@ -8,6 +8,10 @@ Plan de cours : [Plan_STT5100_H2019.pdf](docs/Plan%20STT5100%20H2019.pdf)
 
 Démonstrateur : *a confirmer*
 
+```diff
+- *7 Janvier 2019* : le plan de cours est en ligne [Plan_STT5100_H2019.pdf](docs/Plan%20STT5100%20H2019.pdf)
+```
+
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
 * Colin Cameron & Pravin K. Trivedi, 2013, Regression Analysis of Count Data, [Cambridge University Press](http://faculty.econ.ucdavis.edu/faculty/cameron/racd/count.html)
