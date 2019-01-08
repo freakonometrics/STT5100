@@ -36,8 +36,8 @@ Démonstrateur : *a confirmer*
 * OLS _correction_ automne 2012 [A2012C.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-a2012-correc.pdf)
 * OLS énoncé automne 2018 [A2018-1E.pdf](devoirs/Exam_STT5100_Aut_2018_intra-A.pdf)
 * OLS _correction_ automne 2018 [A2018-1C.pdf](devoirs/Exam_STT5100_Aut_2018_intra-A-correction.pdf)
-* GLM énoncé 2013 [2013E.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2013-enonce.pdf) [Annexes](https://f-origin.hypotheses.org/wp-content/blogs.dir/253/files/2013/03/EXAMEN-INTRA-annexe-2040-H2013.pdf)
-* GLM _correction_ 2013 [2013C.pdf](https://github.com/freakonometrics/STT5100/raw/master/act2040-2013-correc.pdf)
+* GLM énoncé 2013 [2013E.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/act2040-2013-enonce.pdf) [Annexes](https://f-origin.hypotheses.org/wp-content/blogs.dir/253/files/2013/03/EXAMEN-INTRA-annexe-2040-H2013.pdf)
+* GLM _correction_ 2013 [2013C.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/act2040-2013-correc.pdf)
 * GLM énoncé automne 2018 [A2018-2E.pdf](devoirs/Examen_STT5100_Aut_2018_final-correction.pdf)
 * GLM _correction_ automne 2018 [A2018-2C.pdf](devoirs/Examen_STT5100_Aut_2018_final.pdf)
 
@@ -54,7 +54,7 @@ Démonstrateur : *a confirmer*
 "It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
-1. Motivation et rappels (probabilités et statistiques)
+1. Motivation et rappels (probabilités et statistiques) [STT5100.md](code/STT5100-0.md) et [STT5100.Rmd](code/STT5100-0.Rmd)
 2. Le modele linéaire simple 
 3. Le modele linéaire multiple 
 4. Le modele linéaire multiple
