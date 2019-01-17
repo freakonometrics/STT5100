@@ -1,0 +1,64 @@
+---
+title: "STT5100 - Devoir 1 - Hiver 2019"
+author: "Arthur Charpentier"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+code_permanent = "ABCD12345678"
+loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,".RData",sep="")
+download.file(loc_fichier, "base_devoir_1.RData")
+load("base_devoir_1.RData")
+dim(database)
+```
+
+* `Zone` = quartier (7 niveaux)
+* `Surface_Lot` = surface du lot (square feet)
+* `Rue` = type (2 niveaux)
+* `Forme` = forme du lot (4 niveaux)  *           
+* `Utilities` = (3 niveaux)
+* `Configuration` = localisation (5 niveaux)   
+* `Proxim_1` = (9 niveaux)
+* `Proxim_2` = (8 niveaux)         
+* `Logement`= (5 niveaux)       
+* `Style` = (8 niveaux)
+* `Int_Qualite` = qualite interieur du logement
+* `Int_Condition` = condition interieur du logement
+* `Construction_Annee` = annee de construction
+* `Renovation_Annee` = annee de renovation (ou construction)
+* `Toit` = (6 niveaux)
+* `Exterieur` = materiel (16 niveaux)
+* `Maconnerie` = (6 niveaux) 
+* `Ext_Qualite` = (4 niveaux)
+* `Ext_Condition` = (5 niveaux)
+* `Foundation` = (6 niveaux)
+* `Chauffage` = (6 niveaux)
+* `Chauff_Qualite` = (5 niveaux)
+* `Electricite` = (6 niveaux)
+* `Surface_RdC` = surface du rez-de-chaussee (square feet)
+* `Surface_Etage` = surface de l'etage (square feet)
+* `Surface_Autre` = surface (square feet)
+* `Toilettes` = nombre de toilettes
+* `Chambres` = nombre de chambres
+* `Cuisine_Qualite` = qualite de la cuisine (5 niveaux)
+* `Pieces` = nombre de pieces
+* `Note` = note donnee par l'agent immobilier (8 niveaux)
+* `Foyer` = Nombre de foyers
+* `Allee` = (3 niveaux)
+* `Garage_Ext_Surface` = surface du garage ext. (square feet)
+* `Garage_Int_Surface` = surface du garage int. (square feet)
+* `Piscine_Surface` = surface de la piscine (0 =  pas de piscine)
+* `Vente_Mois` = mois de la vente
+* `Vente_Annee` = annee de la vente
+* `Vente_Type` = (10 niveaux)
+* `Vente_Condition` = (6 niveaux)
+* `Prix` : valeur de la propriete (en dollar) **variable a expliquer**
+
+
+```{r}
+str(database)
+```
