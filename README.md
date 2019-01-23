@@ -25,7 +25,7 @@ Démonstrateur : *a confirmer*
 *  introduction : [STT5100_part_1.pdf](docs/STT5100_part_1.pdf)
 
 **Projets**
-* Modeles de régression - OLS : *a confirmer*
+* Modeles de régression - OLS : [devoir1.md](code/STT5100-H2019-devoir1.md)
 * Regression logistique - GLM : *a confirmer*
 
 **Examens passés**
