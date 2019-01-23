@@ -1,0 +1,61 @@
+---
+title: "STT5100 #1 - Modèle Linéaire Simple"
+author: "Arthur Charpentier"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+Davis=read.table(
+"http://socserv.socsci.mcmaster.ca/jfox/Books/Applied-Regression-2E/datasets/Davis.txt")
+Davis[12,c(2,3)]=Davis[12,c(3,2)]
+Davis=data.frame(X=Davis$height / 30.48,
+                 Y=Davis$weight * 2.204622)
+str(Davis)
+Y = Davis$Y
+library(MASS)
+fitdistr(Y,"normal")
+```
+
+Numerical optimization
+
+```{r}
+minuslogL = function(theta){
+  mu=theta[1]
+  sigma=theta[2]
+  logL=sum( log(dnorm(Y,mu,sigma) ))
+  return(-logL)
+}
+optim(par = c(150,20),minuslogL,hessian=FALSE)$par
+optim(par = c(150,20),minuslogL,hessian=TRUE)$hessian
+sqrt(diag(solve(optim(par = c(150,20),minuslogL,hessian=TRUE)$hessian)))
+fitdistr(Y,"normal")
+```
+
+Visualization
+
+```{r}
+hist(Y,probability = TRUE, col=rgb(0,0,1,.4))
+x=seq(min(Y),max(Y),length=251)
+y=dnorm(x,fitdistr(Y,"normal")$estimate[1],fitdistr(Y,"normal")$estimate[2])
+lines(x,y,col="red")
+```
+
+Multivariate
+
+```{r}
+X = Davis$X
+plot(X,Y)
+Z=cbind(X,Y)
+apply(Z,2,mean)
+var(Z)
+library(mnormt)
+f = function(x,y) dmnorm(cbind(x,y),apply(Z,2,mean),var(Z))
+x=seq(min(X),max(X),length=101) 
+y=seq(min(Y),max(Y),length=101) 
+z=outer(x,y,f)
+contour(x,y,z,col="red",add=TRUE)
+```
