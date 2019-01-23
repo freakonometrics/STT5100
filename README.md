@@ -54,8 +54,8 @@ Démonstrateur : *a confirmer*
 "It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
-1. Motivation et rappels (probabilités et statistiques) [STT5100.md](code/STT5100-0.md) et [STT5100.Rmd](code/STT5100-0.Rmd)
-2. Le modele linéaire simple 
+1. Motivation et rappels (probabilités et statistiques) [STT5100-0.md](code/STT5100-0.md) et [STT5100-0.Rmd](code/STT5100-0.Rmd)
+2. Le modele linéaire simple [STT5100-1.md](code/STT5100-H2019-1.md) et [STT5100-1.Rmd](code/STT5100-H2019-1.Rmd)
 3. Le modele linéaire multiple 
 4. Le modele linéaire multiple
 5. Incertitude dans le modele lineaire 
