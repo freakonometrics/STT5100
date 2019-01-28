@@ -1,7 +1,7 @@
 ---
 title: "STT5100 #1 - Modèle Linéaire Simple"
 author: "Arthur Charpentier"
-output: github_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -113,6 +113,65 @@ t.test(x = Davis$Y[Davis$X2=="M"],
 reg = lm(Y ~ 0+X2, data=Davis)
 summary(reg)
 reg = lm(Y ~ X2, data=Davis)
+summary(reg)
+```
+
+# Regression - on a continuous and a categorical variable
+
+Consider a linear regression of
+
+- the **weight** $Y\in\mathbb{R}$ `Y`
+
+on
+
+- the **height** $X_1\in\mathbb{R}$ `X1`
+- the **gender** $X_2\in\{F,M\}$ `X2`
+
+Estimation of $\beta=(\beta_0,\beta_1,\beta_2)$
+
+```{r}
+Y = Davis$Y
+X=as.matrix(cbind(1,Davis$X1,Davis$X2=="M"))
+(beta = (solve(t(X)%*%X))%*%(t(X)%*%Y))
+```
+
+Estimation of $\sigma^2$ and $Var[\hat\beta]$
+
+```{r}
+predY = X%*% beta
+epsilon = Y-predY
+```
+
+```{r}
+s2=var(epsilon)
+(V=as.numeric(s2)* solve(t(X)%*%X))
+sqrt(diag(V))
+```
+
+Correction for the **degrees of freedom** ($n-k-1$ instead of $n$ - or $n-1$)
+
+```{r}
+s2=var(epsilon)*(length(Y))/(length(Y)-3)
+(V=as.numeric(s2)* solve(t(X)%*%X))
+sqrt(diag(V))
+```
+
+Student $t$-test :
+
+```{r}
+(t=as.numeric(beta)/sqrt(diag(V)))
+```
+
+and the associated $p$-value
+
+```{r}
+2*pt(-abs(t),length(Y)-2)
+```
+
+And finally, `R` output
+
+```{r}
+reg = lm(Y~X1+X2,data=Davis)
 summary(reg)
 ```
 
