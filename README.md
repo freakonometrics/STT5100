@@ -55,10 +55,10 @@ Démonstrateur : *a confirmer*
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
 1. Motivation et rappels (probabilités et statistiques) [STT5100-0.md](code/STT5100-0.md) et [STT5100-0.Rmd](code/STT5100-0.Rmd)
-2. Le modele linéaire simple [STT5100-1.md](code/STT5100-H2019-1.md) et [STT5100-1.Rmd](code/STT5100-H2019-1.Rmd)
-3. Le modele linéaire multiple 
+2. Le modele linéaire simple 
+3. Le modele linéaire multiple [STT5100-1.md](code/STT5100-H2019-1.md) et [STT5100-1.Rmd](code/STT5100-H2019-1.Rmd)
 4. Le modele linéaire multiple
-5. Incertitude dans le modele lineaire 
+5. Incertitude dans le modele lineaire  [STT5100-2.md](code/STT5100-H2019-2.md) et [STT5100-2.Rmd](code/STT5100-H2019-2.Rmd)
 6. Choix de modeles, tests statistiques et significativite
 7. Regression locale et lissage
 8. **Examen Intra**
