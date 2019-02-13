@@ -1,4 +1,4 @@
-STT5100 - Probabilites et Statistiques - Hiver 2019
+STT5100 - Devoir 1 - Hiver 2019
 ================
 Arthur Charpentier
 
@@ -40,9 +40,9 @@ dim(database)
   - `Surface_Autre` = surface (square feet)
   - `Toilettes` = nombre de toilettes
   - `Chambres` = nombre de chambres
-  - `Cuisine_Qualite` = (5 niveaux)
+  - `Cuisine_Qualite` = qualite de la cuisine (5 niveaux)
   - `Pieces` = nombre de pieces
-  - `Note` = (8 niveaux)
+  - `Note` = note donnee par l’agent immobilier (8 niveaux)
   - `Foyer` = Nombre de foyers
   - `Allee` = (3 niveaux)
   - `Garage_Ext_Surface` = surface du garage ext. (square feet)
@@ -102,3 +102,40 @@ str(database)
     ##  $ Vente_Type        : Factor w/ 10 levels "COD","Con","ConLD",..: 10 10 10 10 10 10 10 10 7 10 ...
     ##  $ Vente_Condition   : Factor w/ 6 levels "Abnorml","AdjLand",..: 5 5 5 5 5 5 5 5 6 5 ...
     ##  $ Prix              : int  165000 188000 113700 87000 167900 119000 181000 128600 194000 100000 ...
+
+``` diff
+- (12 Fevrier 2019) precision sur les 'instructions'
+```
+
+Le but du devoir est de mettre en oeuvre, sur des vraies donnees, les
+techniques exposees en cours.
+
+  - Date limite pour envoyer le devoir **25 mars** a **midi**,
+  - Chaque etudiant(e) doit envoyer par messagerie electronique deux
+    fichiers : `devoir1.hmtl`, output d’un fichier `devoir1.Rmd` (il
+    faudra envoyer les deux fichier). Le fichier `devoir1.hmtl` doit
+    etre lisible et le fichier `devoir1.Rmd` doit compiler sans erreur,
+  - Dans le preambule du markdown, `author:` doit mentionner le code
+    permanent,
+  - Le fichier doit contenir trois parties
+
+<!-- end list -->
+
+1.  Une partie exploratoire qui presente rapidement les variables qui
+    pourraient etre interessantes (pour rappel, `Prix` est la variable
+    d’interet)
+2.  Une partie presentant la construction du modele : il s’agira de
+    partir au choix (i) d’un modele simple, et de montrer comment
+    l’ameliorer, (ii) d’une modele complexe, et de montrer comment le
+    simplifier
+3.  Une partie qui presente la forme du modele, en donnant (i) le R2
+    ajuste (ii) l’indice d’Akaike AIC et (iii) l’indice BIC (iv) la
+    liste des variables explicatives retenues
+
+<!-- end list -->
+
+  - Les techniques de validation croisee, ou la constitution de bases
+    d’apprentissage et de test *ne sont pas au programme* et ne
+    devront pas etre utilisee ici \!
+  - Les seuls packages autorises (sauf autorisation explicite) sont
+    `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`

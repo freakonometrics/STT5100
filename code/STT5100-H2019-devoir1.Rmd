@@ -62,3 +62,20 @@ dim(database)
 ```{r}
 str(database)
 ```
+
+```diff
+- (12 Fevrier 2019) precision sur les 'instructions'
+```
+
+Le but du devoir est de mettre en oeuvre, sur des vraies donnees, les techniques exposees en cours.
+
+- Date limite pour envoyer le devoir **25 mars** a **midi**,
+- Chaque etudiant(e) doit envoyer par messagerie electronique deux fichiers : `devoir1.hmtl`, output d'un fichier `devoir1.Rmd` (il faudra envoyer les deux fichier). Le fichier `devoir1.hmtl` doit etre lisible et le fichier `devoir1.Rmd` doit compiler sans erreur,
+- Dans le preambule du markdown, `author: ` doit mentionner le code permanent,
+- Le fichier doit contenir trois parties 
+1. Une partie exploratoire qui presente rapidement les variables qui pourraient etre interessantes (pour rappel, `Prix` est la variable d'interet)
+2. Une partie presentant la construction du modele : il s'agira de partir au choix (i) d'un modele simple, et de montrer comment l'ameliorer, (ii) d'une modele complexe, et de montrer comment le simplifier
+3. Une partie qui presente la forme du modele, en donnant (i) le R2 ajuste (ii) l'indice d'Akaike AIC et (iii) l'indice BIC (iv) la liste des variables explicatives retenues
+- Les techniques de validation croisee, ou la constitution de bases d'apprentissage et de test *ne sont pas au programme* et ne devront pas etre utilisee ici !
+- Les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`
+
