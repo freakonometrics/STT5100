@@ -42,7 +42,10 @@ Démonstrateur : *a confirmer*
 * GLM _correction_ automne 2018 [A2018-2C.pdf](devoirs/Examen_STT5100_Aut_2018_final.pdf)
 
 **Exam S - CAS**
-* page "study tools" [https://www.casact.org/examS/](https://www.casact.org/admissions/studytools/examS/)
+* page "study tools" [https://casact.org/examS/](https://www.casact.org/admissions/studytools/examS/)
+
+**Exam SRM - SOA**
+* ACTEX "study notes" (sample) [https://actexmadriver.com/samples/ACTEX_SRM.pdf]https://www.actexmadriver.com/samples/ACTEX_SRM-ACT-18FSMP-E_sample_6-27-18.pdf)
 
 **R Toolbox - SOA**
 * page "R console" [https://actuarialtoolkit.soa.org/](https://actuarialtoolkit.soa.org/tool/r-console/learn-more)
