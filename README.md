@@ -41,16 +41,16 @@ Démonstrateur : *a confirmer*
 * GLM énoncé automne 2018 [A2018-2E.pdf](devoirs/Examen_STT5100_Aut_2018_final-correction.pdf)
 * GLM _correction_ automne 2018 [A2018-2C.pdf](devoirs/Examen_STT5100_Aut_2018_final.pdf)
 
-**Exam S - CAS**
+**Exam S/MASI - CAS** [modern actuarial statistics](https://www.casact.org/admissions/syllabus/index.cfm?fa=MASI)
 * page "study tools" [https://casact.org/examS/](https://www.casact.org/admissions/studytools/examS/)
 
-**Exam SRM - SOA**
+**Exam SRM - SOA** [statistics for risk modeling](https://www.soa.org/Education/Exam-Req/edu-exam-srm-detail.aspx)
 * ACTEX "study notes" (sample) [https://actexmadriver.com/samples/SRM-2018.pdf](https://www.actexmadriver.com/samples/ACTEX_SRM-ACT-18FSMP-E_sample_6-27-18.pdf) and [https://actexmadriver.com/samples/SRM-2019.pdf](https://www.actexmadriver.com/samples/Actex%20SRM%20Spring%202019%20Sample.pdf)
+
+**Exam PA - SOA** [predictive analytics](https://www.soa.org/Education/Exam-Req/edu-exam-pa-detail.aspx)
 
 **R Toolbox - SOA**
 * page "R console" [https://actuarialtoolkit.soa.org/](https://actuarialtoolkit.soa.org/tool/r-console/learn-more)
-![https://actuarialtoolkit.soa.org/tool/r-console/learn-more](./image/R-SOA-2.png)
-![https://actuarialtoolkit.soa.org/tool/r-console/learn-more](./image/R-SOA-1.png)
 
 **Seances**
 
