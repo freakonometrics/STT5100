@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_H2019.pdf](docs/Plan%20STT5100%20H2019.pdf)
 Démonstrateur : *a confirmer*
 
 ```diff
-- (23 Janvier 2019) les instructions pour avoir accès aux données pour le premier devoir sont en ligne 
+- (12 Fev. 2019) les instructions pour le premier devoir sont en ligne et mises a jour
 ```
 
 **Références** 
