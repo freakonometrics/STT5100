@@ -45,7 +45,7 @@ Démonstrateur : *a confirmer*
 * page "study tools" [https://casact.org/examS/](https://www.casact.org/admissions/studytools/examS/)
 
 **Exam SRM - SOA**
-* ACTEX "study notes" (sample) [https://actexmadriver.com/samples/ACTEX_SRM.pdf](https://www.actexmadriver.com/samples/ACTEX_SRM-ACT-18FSMP-E_sample_6-27-18.pdf)
+* ACTEX "study notes" (sample) [https://actexmadriver.com/samples/SRM-2018.pdf](https://www.actexmadriver.com/samples/ACTEX_SRM-ACT-18FSMP-E_sample_6-27-18.pdf) and [https://actexmadriver.com/samples/SRM-2019.pdf](https://www.actexmadriver.com/samples/Actex%20SRM%20Spring%202019%20Sample.pdf)
 
 **R Toolbox - SOA**
 * page "R console" [https://actuarialtoolkit.soa.org/](https://actuarialtoolkit.soa.org/tool/r-console/learn-more)
