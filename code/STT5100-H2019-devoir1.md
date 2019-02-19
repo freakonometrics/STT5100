@@ -2,6 +2,8 @@ STT5100 - Devoir 1 - Hiver 2019
 ================
 Arthur Charpentier
 
+Comme indique dans le courriel, vous devez remplacer `code_permanent` par votre vrai code permanent (lettres en majuscules)
+
 ``` r
 code_permanent = "ABCD12345678"
 loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,".RData",sep="")
