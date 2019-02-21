@@ -14,7 +14,7 @@ Démonstrateur : *a confirmer*
 
 **Notes de cours**
 *  introduction : [part_1.pdf](docs/STT5100_part_1.pdf)
-* [STT5100.html](https://freakonometrics.free.fr/STT5100/STT5100-H2019.html)
+* [STT5100.html](http://freakonometrics.free.fr/STT5100/STT5100-H2019.html)
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
