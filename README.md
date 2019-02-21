@@ -9,8 +9,12 @@ Plan de cours : [Plan_STT5100_H2019.pdf](docs/Plan%20STT5100%20H2019.pdf)
 Démonstrateur : *a confirmer*
 
 ```diff
-- (12 Fev. 2019) les instructions pour le premier devoir sont en ligne et mises a jour
+- (21 Fev. 2019) je commence a mettre en ligne des notes de cours (partielles)
 ```
+
+**Notes de cours**
+*  introduction : [part_1.pdf](docs/STT5100_part_1.pdf)
+* [STT5100.html](freakonometrics.free.fr/STT5100/STT5100-H2019.html)
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
@@ -20,9 +24,6 @@ Démonstrateur : *a confirmer*
 * James H. Stock & Mark W. Watson, 2007, Introduction to Econometrics, [Addison Wesley](https://www.pearson.com/us/higher-education/product/Stock-Introduction-to-Econometrics-3rd-Edition/9780138009007.html)
 * Achim Zeileis, 2008, Applied Econometrics with R, [Springer Verlag](https://eeecon.uibk.ac.at/~zeileis/teaching/AER/index.html)
 * Yihui Xie, J. J. Allaire & Garrett Grolemund, R Markdown: The Definitive Guide [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
-
-**Notes de cours (2014 et 2017)**
-*  introduction : [STT5100_part_1.pdf](docs/STT5100_part_1.pdf)
 
 **Projets**
 * Modeles de régression - OLS : [devoir1.md](code/STT5100-H2019-devoir1.md)
