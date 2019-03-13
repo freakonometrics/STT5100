@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_H2019.pdf](docs/Plan%20STT5100%20H2019.pdf)
 Démonstrateur : *a confirmer*
 
 ```diff
-- (21 Fev. 2019) je commence a mettre en ligne des notes de cours (partielles)
+- (14 Mars 2019) la correction de l'examen intra est en ligne
 ```
 
 **Notes de cours**
@@ -28,6 +28,9 @@ Démonstrateur : *a confirmer*
 **Projets**
 * Modeles de régression - OLS : [devoir1.md](code/STT5100-H2019-devoir1.md)
 * Regression logistique - GLM : [devoir2.md](code/STT5100-H2019-devoir2.md)
+
+**Examen**
+* Modeles de régression - OLS : [examen.pdf](docs/Examen_STT5100_H2019_enonce.pdf) et [correction.pdf](docs/Examen_STT5100_H2019_correction.pdf)
 
 **Examens passés**
 (il s'agit d'un "nouveau cours" du programme : le premier a été donné à l'automne 2018)
