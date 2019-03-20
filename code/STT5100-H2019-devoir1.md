@@ -141,3 +141,13 @@ techniques exposees en cours.
     devront pas etre utilisee ici \!
   - Les seuls packages autorises (sauf autorisation explicite) sont
     `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`
+    
+Pour ceux qui ont une erreur de Constrats (une variable factorielle dont des modalités seraient absentes de la base), le code suivant vous permet de trouver quelle variable a un soucis... Il faut ensuite supprimer la variable !   
+   
+``` r
+liste_i = which(sapply(database,is.factor))
+for(i in liste_i){
+  cat(names(database)[i]," ------------------------------------------ \n")
+      print(table(database[,i]))
+}
+```    
