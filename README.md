@@ -66,11 +66,11 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 3. Le modele linéaire multiple [STT5100-1.md](code/STT5100-H2019-1.md) et [STT5100-1.Rmd](code/STT5100-H2019-1.Rmd)
 4. Le modele linéaire multiple
 5. Incertitude dans le modele lineaire  [STT5100-2.md](code/STT5100-H2019-2.md) et [STT5100-2.Rmd](code/STT5100-H2019-2.Rmd)
-6. Choix de modeles, tests statistiques et significativite [STT5100-3.md](code/STT5100-H2019-3.md)
+6. Choix de modeles, tests statistiques et significativite [STT5100-3.md](code/STT5100-H2019-3.md) et [code5.R](code/code5.R)
 7. Regression locale et lissage
 8. **Examen Intra**
-9. Regression logistique
-10. Regression logistique 
+9. Regression logistique [code8.R](code/code8.R)
+10. Regression logistique [code9.R](code/code9.R)
 11. Regression de Poisson 
 12. Regression de Poisson 
 13. GLM - Modeles Lineaires Generalises
