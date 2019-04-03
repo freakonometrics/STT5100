@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_H2019.pdf](docs/Plan%20STT5100%20H2019.pdf)
 Démonstrateur : *a confirmer*
 
 ```diff
-- (14 Mars 2019) la correction de l'examen intra est en ligne
+- (2 avril 2019) les notes de cours sont (un peu) à jour
 ```
 
 **Notes de cours**
