@@ -54,7 +54,7 @@ table(database$Y)
 
 
 ``` diff
-- (12 Fevrier 2019) precision sur les 'instructions'
+- (9 avril 2019) precision sur les 'instructions'
 ```
 
 Le but du devoir est de mettre en oeuvre, sur des vraies donnees, les
