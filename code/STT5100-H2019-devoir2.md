@@ -19,7 +19,7 @@ dim(database)
   - `anciennete` = nombre d’heures passees dans l’entreprise
   - `accidents` = indicateur indiquant l’employe a eu un accident de
     travail  
-  - `Y` = a quitte l’entreprise (0 : non, 1 : oui) **variable a
+  - `Y` = a quitté l’entreprise (0 : non, 1 : oui) **variable a
     expliquer**
   - `promotion` = indicateur indiquant si l’employe a obtenu une
     promotion au cours des 5 dernieres annees
@@ -51,3 +51,40 @@ table(database$Y)
     ## 
     ##  0  1 
     ## 80 20
+
+
+``` diff
+- (12 Fevrier 2019) precision sur les 'instructions'
+```
+
+Le but du devoir est de mettre en oeuvre, sur des vraies donnees, les
+techniques exposees en cours.
+
+  - Date limite pour envoyer le devoir **29 avril** a **midi**,
+  - Chaque etudiant(e) doit envoyer par messagerie electronique deux
+    fichiers : `devoir2.hmtl`, output d’un fichier `devoir2.Rmd` (il
+    faudra envoyer les deux fichier). Le fichier `devoir2.hmtl` doit
+    etre lisible et le fichier `devoir2.Rmd` doit compiler sans erreur,
+  - Dans le preambule du markdown, `author:` doit mentionner le code
+    permanent,
+  - Le fichier doit contenir trois parties
+
+<!-- end list -->
+
+1.  Une partie exploratoire qui presente rapidement les variables qui
+    pourraient être intéressantes (pour rappel, `Y` est la variable
+    d’interet)
+2.  Une partie presentant la construction du modele : il s’agira de
+    partir au choix (i) d’un modele simple, et de montrer comment
+    l’ameliorer, (ii) d’une modele complexe, et de montrer comment le
+    simplifier
+3.  Une partie qui presente la forme du modele, en affichant (i) la courbe ROC obtenue (ii) le AUC du modèle retenu (iii) la
+    liste des variables explicatives retenues
+
+<!-- end list -->
+
+  - Les techniques de validation croisee, ou la constitution de bases
+    d’apprentissage et de test *ne sont pas au programme* et ne
+    devront pas etre utilisee ici \!
+  - Les seuls packages autorises (sauf autorisation explicite) sont
+    `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `pROC`, `plotROC`, `verification`, `ROCR`, `dplyr`, `aod`, `vcd`, `statmod` (et les dépendances associées)
