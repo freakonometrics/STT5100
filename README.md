@@ -31,7 +31,7 @@ Démonstrateur : *a confirmer*
 
 **Examen**
 * Modeles de régression - OLS : [examen.pdf](docs/Examen_STT5100_H2019_enonce.pdf) et [correction.pdf](docs/Examen_STT5100_H2019_correction.pdf)
-* Modeles de régression - GLM : [examen.pdf](docs/Examen_STT5100_Hiver_2019-final-B) et [correction.pdf](docs/Examen_STT5100_Hiver_2019-correction.pdf)
+* Modeles de régression - GLM : [examen.pdf](docs/Examen_STT5100_Hiver_2019-final-B.pdf) et [correction.pdf](docs/Examen_STT5100_Hiver_2019-correction.pdf)
 
 **Examens passés**
 (il s'agit d'un "nouveau cours" du programme : le premier a été donné à l'automne 2018)
