@@ -16,7 +16,7 @@ dim(database)
   - `eval` = temps depuis la derniere evaluation (en annees)
   - `projets` = nombre de projets sur lequel l’employe etait implique
   - `heures_mensuel` = nombre d’heures travaillees par mois  
-  - `anciennete` = nombre d’heures passees dans l’entreprise
+  - `anciennete` = nombre d’années passées dans l’entreprise
   - `accidents` = indicateur indiquant l’employe a eu un accident de
     travail  
   - `Y` = a quitté l’entreprise (0 : non, 1 : oui) **variable a
