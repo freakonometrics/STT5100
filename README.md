@@ -1,4 +1,4 @@
-# STT5100 Modèles Linéaires Appliqués (Hiver 2019)
+# STT5100 Modèles Linéaires Appliqués (Automne 2019)
 
 Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_H2019.pdf](docs/Plan%20STT5100%20H2019.pdf)
 Démonstrateur : *a confirmer*
 
 ```diff
-- (26 avril 2019) l'examen et la correction sont en ligne
+- (10 août 2019) bientôt mis à jour
 ```
 
 **Notes de cours**
