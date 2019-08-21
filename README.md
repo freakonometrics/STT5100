@@ -35,16 +35,16 @@ Démonstrateur : *a confirmer*
 
 **Examens passés**
 (il s'agit d'un "nouveau cours" du programme : le premier a été donné à l'automne 2018)
-* OLS énoncé hiver 2012 [H2012E.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-h2012-enonce.pdf) [csv](http://freakonometrics.blog.free.fr/public/data/basket-exam-v2.csv) pas d'annexes, désolé
-* OLS _correction_ hiver 2012 [H2012C.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-h2012-correc.pdf)
-* OLS énoncé automne 2012 [A2012E.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-a2012-enonce.pdf)
-* OLS _correction_ automne 2012 [A2012C.pdf](https://github.com/freakonometrics/STT5100/archives/A2018/raw/master/act6410-a2012-correc.pdf)
+* OLS énoncé hiver 2012 [H2012E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-h2012-enonce.pdf) [csv](http://freakonometrics.blog.free.fr/public/data/basket-exam-v2.csv) pas d'annexes, désolé
+* OLS _correction_ hiver 2012 [H2012C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-h2012-correc.pdf)
+* OLS énoncé automne 2012 [A2012E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-a2012-enonce.pdf)
+* OLS _correction_ automne 2012 [A2012C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-a2012-correc.pdf)
 * OLS énoncé automne 2018 [A2018-1E.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Exam_STT5100_Aut_2018_intra-A.pdf)
 * OLS _correction_ automne 2018 [A2018-1C.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Exam_STT5100_Aut_2018_intra-A-correction.pdf)
 * OLS énoncé hiver 2019 [H2019-1E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/docs/Examen_STT5100_H2019_enonce.pdf)
 * OLS _correction_ hiver 2019 [H2019-1C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/docs/Examen_STT5100_H2019_correction.pdf)
-* GLM énoncé 2013 [2013E.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/act2040-2013-enonce.pdf) [Annexes](https://f-origin.hypotheses.org/wp-content/blogs.dir/253/files/2013/03/EXAMEN-INTRA-annexe-2040-H2013.pdf)
-* GLM _correction_ 2013 [2013C.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/act2040-2013-correc.pdf)
+* GLM énoncé 2013 [2013E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act2040-2013-enonce.pdf) [Annexes](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/EXAMEN-INTRA-annexe-2040-H2013.pdf)
+* GLM _correction_ 2013 [2013C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act2040-2013-correc.pdf)
 * GLM énoncé automne 2018 [A2018-2E.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Examen_STT5100_Aut_2018_final-correction.pdf)
 * GLM _correction_ automne 2018 [A2018-2C.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Examen_STT5100_Aut_2018_final.pdf)
 * GLM énoncé hiver 2019 [H2019-2E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/docs/Examen_STT5100_Hiver_2019-final-B.pdf)
