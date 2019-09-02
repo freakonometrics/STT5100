@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_A2019.pdf](docs/Plan%20STT5100%20A2019.pdf)
 Démonstrateur : *a confirmer*
 
 ```diff
-- (21 août 2019) bientôt mis à jour
+- (1er septembre 2019) bientôt mis à jour
 ```
 
 **Notes de cours**
