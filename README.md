@@ -6,10 +6,10 @@ Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freak
 
 Plan de cours : [Plan_STT5100_A2019.pdf](docs/Plan%20STT5100%20A2019.pdf)
 
-Démonstrateur : *a confirmer*
+Démonstrateur : Alexandre LeBlanc
 
 ```diff
-- (1er septembre 2019) bientôt mis à jour
+- (16 septembre 2019) la démo 1 est en ligne
 ```
 
 **Notes de cours**
@@ -67,7 +67,7 @@ Démonstrateur : *a confirmer*
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
 1. Motivation et rappels (probabilités et statistiques) [STT5100-0.md](code/STT5100-0.md) et [STT5100-0.Rmd](code/STT5100-0.Rmd)
-2. Le modele linéaire simple 
+2. Le modele linéaire simple: droite de régression et ANOVA [Demonstration_1.R](demos/STT5100_Demonstration_1.R), [Demonstration_1.Rmd](demos/STT5100_Demonstration_1.Rmd) et [Demonstration_1.html](demos/STT5100_Demonstration_1.html)
 3. Le modele linéaire multiple 
 4. Le modele linéaire multiple
 5. Incertitude dans le modele lineaire 
