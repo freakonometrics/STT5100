@@ -1,0 +1,194 @@
+---
+title: "STT5510 - Démonstration #1"
+author: "Alexandre LeBlanc"
+output: html_document
+params:
+  data: "base_devoir_1"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=TRUE, fig.align="center")
+```
+
+# Statistiques descriptives et visualisations de base
+
+---
+
+## Base de données - Devoir #1 (H2019)
+
+---
+
+La base de données utilisée par la présente démonstration est disponible au répertoire Github d'Arthur Charpentier: <https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/code/STT5100-H2019-devoir1.md>.
+
+Pour télécharger la base de données effectuez le code suivant:
+
+```{r, echo=TRUE, results = "hide"}
+code_permanent = "ABCD12345678"
+loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,".RData",sep="")
+download.file(loc_fichier, "base_devoir_1.RData")
+load("base_devoir_1.RData")
+dim(database)
+```
+
+## Survol de RMarkdown
+
+---
+
+En général, un langage dit mardown est un example de langage markup (e.g. HTML, **Hypertext Markup Language**) qui a pour objectif d'organiser et de mettre en évidence la priorité des éléments d'un texte. 
+
+```{r, out.width="50%", fig.show="hold", out.width="25%"}
+knitr::include_graphics(c("https://miro.medium.com/max/5120/1*l4xICbIIYlz1OTymWCoUTw.jpeg", "https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdown.png"))
+```
+
+Ceci est le but d'un langage de markup et il suffit de se prévaloir d'autres langages, dont CSS (**Cascading Style Sheets**) et JS (**JavaScript**) dans le cas du HTML pour enrichir l'aspect visuel et l'interactivité d'un fichier `.html`. *L'emphase de ce cours sera uniquement sur la rédaction du contenu et des augmentations que vous pouvez y apporter par le biais du langage de markup et R pour parvenir à compléter les devoirs et les projets*.
+
+Un autre exemple de *langage* de markup est $\LaTeX$ qui crée un fichier `.pdf`.
+
+Assurez-vous de télécharger la librarie `knitr` qui permet d'interpréter plusieurs langages de programmation (e.g. Python, SQL, CSS, JS, etc.). Selon la référence, [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/installation.html), il faut installer les libraries `rmarkdown` et `tiny_tex` si vous n'aviez pas installé $\LaTeX$ et vous voulez générer un sortie `.pdf`.
+
+## Syntaxe RMarkdown
+
+---
+
+La syntaxe de RMarkdown repose sur le texte avec annotations (i.e. markup) et la librarie `knitr` qui sert d'interpreteur de code et de générateur de fichier markdown qui est ensuite saisi et affiché. 
+
+Elle débute avec un encadrement qui comprend  les métadonnées (e.g. titre, nom de l'auteur, date et les paramètres du fichier) `.Rmd`. C'est à l'intérieur de ces paramètres que nous pouvons spécifier un jeu de données qui sera appelé par notre code R. Ce bloc est rédigé en YAML, ou encore **YAML Ain't Markup Language**.
+
+Pour encadrer le code R dans le fichier `.Rmd`, la syntaxe de RMarkdown demande d'insérer le code ci-bas à l'intérieur de  ` ```{r} ... ``` `:
+
+```{r, echo = TRUE}
+paste("Hello", "World!")
+```
+
+Il y a ensuite plusieurs options qui peuvent s'exercer:
+
+* `include = FALSE` pour eviter que le code et ses résultats n'apparaissent au fichier final.
+* `echo = FALSE` pour éviter que le code appraisse au fichier final, **mais pas les résultats de ce dernier**.
+* `message = FALSE` pour éviter que les messages R (e.g. installation de libraries) apparaissent au fichier final.
+* `warning = FALSE` pour éviter que les avertissements R apparaissent au fichier final.
+* `error = FALSE`  pour éviter que les messages **d'erreur** R apparaissent au fichier final.
+* `results = "hide"` pour cacher les résultats du code exécuté.
+* `fig.cap = ...` pour ajouter un commentaire à une image.
+* parmi tant d'autres sont disponibles au <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>
+
+Ces options peuvent être définies **globalement** à l'aide de l'énoncé `knitr::opts_chunk$set` à l'intérieur d'un *chunk* R. 
+
+Comme HTML, il y a certaines annotations qui permettent de modifier le style de la sortie du fichier `.Rmd`:
+
+* Caractères:
+    + `*italique*` affiche *italique*.
+    + `**gras**` affiche **gras**.
+    + `exposant^2^` affiche exposant^2^.
+    + `[Site web du cours](https://github.com/freakonometrics/STT5100)` affiche [Site web du     
+       cours](https://github.com/freakonometrics/STT5100).
+    + `<!-- regular html comment --> ` permet d'écrire le commentaire `regular html comment`.
+       
+Il y a également la possibilité d'utiliser le langage $\LaTeX$ afin d'illustrer des équations mathématiques. Par exemple,
+
+
+$$\text{Soient } X_{1},\,\ldots\,,X_{n}, n \in \mathbb{N} \text{ des } v.a. i.i.d \text{ telles que } E(X_{i}) = \mu, \text{Var}(X_{i}) = \sigma^{2} \in \mathbb{R}^{+}. \text{Soient } \overline{X}_{n} = \frac{X_{1} +\,\ldots\,+ X_{n}}{n} \text{ et } Z \sim \mathcal{N}(0, 1).\\
+\text{Il s'ensuit que} \lim_{n \to \infty} \text{Pr}\left(\frac{\overline{X}_{n} - \mu}{\sigma/\sqrt{n}} \leq z\right) = \text{Pr}(Z \leq z),\,\forall z \in \mathbb{R}$$.
+
+On peut aussi utiliser $\LaTeX$ pour afficher des images ou des tableaux à l'aide des environments, `table` `tabular`, `longtable` parmi tant d'autres. Par contre, il existe des libraries R qui aident à batîr des tableaux de manière beaucoup plus efficace.
+
+
+## Tableaux
+
+---
+
+Pour créer un tableau à l'aide de RMarkdown, on peut utiliser la fonction `kable` de la librarie `knitr`:
+
+```{r, echo = TRUE}
+library(knitr)
+kable(head(database)[, 1:10], caption="Un tableau `knitr`.") 
+```
+
+On peut en quelques lignes obtenir une table de probabilité de $v.a.\ \mathcal{N}(0, 1)$. La librarie `kableExtra` permet d'illustrer des tableaux plus complexes en HTML à l'aide de l'opérateur de *piping*, `%>%, qui permet d'appliquer une composition de fonctions R et knitr.
+
+```{r echo=TRUE}
+library(knitr)
+library(kableExtra)
+
+u = seq(0, 3.09, by = 0.01)
+p = pnorm(u)
+tableNormale = matrix(p, ncol = 10, byrow = TRUE)
+rownames(tableNormale) <- seq(from = 0, to = 3 , by = 0.1)
+colnames(tableNormale) <- seq(from = 0, to = 0.09, by = 0.01)
+
+tableNormale %>% kable() %>% kable_styling(bootstrap_options = c("striped", "bordered"), position = "center", font_size = 13) %>% 
+                             column_spec(1, width = "100px", background = "#1FC1D6") %>%
+                             scroll_box(width = "100%", height = "500px")
+```
+
+La documentation de `kableExtra` est disponible au [Create Awesome HTML Table with knitr::kable and kableExtra](https://haozhu233.github.io/kableExtra/awesome_table_in_html.html#column__row_specification).
+
+La librarie `pander` qui permet de produire automatiquement un tableau des esitmateurs et statistiques du test d'un modèle linéaire:
+
+```{r pander}
+library(pander)
+
+n = 1000
+x = rnorm(n)
+y = 2 * x + rnorm(n)
+fit <- lm(y ~ x)
+panderOptions("digits", 2)
+pander(fit)
+```
+
+## Graphiques
+
+---
+
+Pour afficher des graphiques, comme tout autre code R, il suffit de glisser le code adapté à l'intérieur d'un bloc ` ```{r} ... ``` `:
+
+```{r, fig.show="hold", fig.cap="Graphiques à l'aide de R de base."}
+library(ggplot2)
+library(vioplot)
+library(gridExtra)
+attach(database)
+
+par(mfrow = c(1, 2))
+zone_num = table(Zone)
+barplot(height = zone_num, beside = TRUE, col = "#2A9BF3", xlab = "Zone", ylab = "Effectif", main = "Variable Zone")
+
+vioplot(Prix ~ droplevels(Configuration), horizontal = TRUE, col = "magenta", xlab = "Prix ($)", ylab = "Configuration")
+title("Prix par Superficie (par Configuration)")
+abline(v = mean(Prix), col = "red", lty = 2)
+abline(v = median(Prix), col = "blue", lty = 2)
+legend("right", inset = .02, c("Moyenne (Prix)", "Médiane (Prix)"), lty = c(2, 2), col = c("red", "blue"), cex = 0.8)
+```
+
+
+```{r, fig.width=6, fig.cap="Graphiques à l'aide de `ggplot2`."}
+g1 <- ggplot(database, aes(Zone)) + geom_bar(fill = "#2A9BF3") + 
+                              xlab("Zone") + 
+                              ylab("Effectif") + 
+                              labs(title = "Variable Zone") + 
+                              theme(axis.text.x = element_text(angle = 90, vjust = 0.5),        
+                              plot.title = element_text(hjust = 0.5))
+
+g2 <- ggplot(database, aes(x = droplevels(Configuration), y = Prix)) + geom_violin(fill = "magenta", adjust = 1) + 
+                                                                 coord_flip() +
+                                                                 geom_boxplot(width = 0.2) +
+                                                                 geom_hline(aes(yintercept = mean(Prix)), color = "red", linetype = "dashed", size = 1, show.legend = TRUE) +
+                                                                 geom_hline(aes(yintercept = median(Prix)), color = "blue", linetype = "dashed", size = 1) +
+                                                                 xlab("Configuration") + 
+                                                                 ylab("Prix ($)") + 
+                                                                 ggtitle("Prix par Superficie (par Configuration)") + 
+                                                                 theme(plot.title = element_text(hjust = 0.5))
+grid.arrange(g1, g2, ncol = 2)
+```
+
+À l'entête d'un *chunk* R, il y a plusieurs options possibles:
+
+* `fig.align` permet d'alligner un graphique (soit `"left"`, `"right"` ou `"center"`).
+* `fig.cap` permet d'ajouter un sous-titre à un graphique.
+* `fig.height`, `fig.width` permettent de modifier la hauteur et la largeur respectivement.
+* `fig.keep` permet de déterminer quels graphiques à l'intérieur du *chunk* seront conservés au fichier final.
+* `fig.show` permet de déterminer ou le graphiques apparaissent dans le fichier final (e.g. à l'endroit où ils sont inscrits dans le code ou à la fin du *chunk*)
+* etc.
+
+
+
+
+
