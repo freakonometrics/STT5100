@@ -67,7 +67,7 @@ Démonstrateur : Alexandre LeBlanc
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
 1. Motivation et rappels (probabilités et statistiques) [STT5100-0.md](code/STT5100-0.md) et [STT5100-0.Rmd](code/STT5100-0.Rmd)
-2. Le modele linéaire simple: droite de régression et ANOVA [Demonstration_1.R](demos/STT5100_Demonstration_1.R), [Demonstration_1.Rmd](demos/STT5100_Demonstration_1.Rmd) et [Demonstration_1.html](demos/STT5100_Demonstration_1.html)
+2. Le modele linéaire simple: droite de régression et ANOVA [Demonstration_1.R](demos/STT5100_Demonstration_1.R), [Demonstration_1.Rmd](demos/STT5510_Demonstration_1.Rmd) et [Demonstration_1.html](demos/STT5510_Demonstration_1.html)
 3. Le modele linéaire multiple 
 4. Le modele linéaire multiple
 5. Incertitude dans le modele lineaire 
