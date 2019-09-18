@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_A2019.pdf](docs/Plan%20STT5100%20A2019.pdf)
 Démonstrateur : Alexandre LeBlanc
 
 ```diff
-- (16 septembre 2019) la démo 1 est en ligne
+- (16 septembre 2019) la démo 1 est en ligne ainsi que la base pour le devoir 1
 ```
 
 **Notes de cours**
@@ -25,8 +25,8 @@ Démonstrateur : Alexandre LeBlanc
 * Achim Zeileis, 2008, Applied Econometrics with R, [Springer Verlag](https://eeecon.uibk.ac.at/~zeileis/teaching/AER/index.html)
 * Yihui Xie, J. J. Allaire & Garrett Grolemund, R Markdown: The Definitive Guide [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
 
-**Projets**
-* Modeles de régression - OLS : 
+**Projets / Devoir**
+* Modeles de régression - OLS : [Devoir1](devoir/STT5100-A2019-devoir1.md)
 * Regression logistique - GLM : 
 
 **Examen**
