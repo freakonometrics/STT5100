@@ -26,7 +26,7 @@ Démonstrateur : Alexandre LeBlanc
 * Yihui Xie, J. J. Allaire & Garrett Grolemund, R Markdown: The Definitive Guide [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
 
 **Projets / Devoir**
-* Modeles de régression - OLS : [Devoir1](devoir/STT5100-A2019-devoir1.md)
+* Modeles de régression - OLS : [Devoir1](devoirs/STT5100-A2019-devoir1.md)
 * Regression logistique - GLM : 
 
 **Examen**
