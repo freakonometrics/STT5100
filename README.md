@@ -68,7 +68,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 1. Motivation et rappels (probabilités et statistiques) [STT5100-0.md](code/STT5100-0.md) et [STT5100-0.Rmd](code/STT5100-0.Rmd)
 2. Le modele linéaire simple: droite de régression et ANOVA [Demonstration_1.R](demos/STT5100_Demonstration_1.R), [Demonstration_1.Rmd](demos/STT5510_Demonstration_1.Rmd) et [Demonstration_1.html](demos/STT5510_Demonstration_1.html)
-3. Le modele linéaire multiple 
+3. Du modele linéaire simple au modèle multiple [code3.R](codes/code-stt5100-A2019-3.R)
 4. Le modele linéaire multiple
 5. Incertitude dans le modele lineaire 
 6. Choix de modeles, tests statistiques et significativite 
