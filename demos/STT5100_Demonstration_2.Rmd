@@ -1,0 +1,245 @@
+---
+title: 'STT5100 - Démonstration #2'
+author: "Alexandre LeBlanc"
+params:
+  data: base_devoir_1
+output:
+  html_document: default
+  html_notebook: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=TRUE, fig.align="center")
+```
+
+# Régression linéaire simple
+
+---
+
+## Base de données - Devoir #1 (H2019)
+
+---
+
+La base de données utilisée par la présente démonstration est disponible au répertoire Github d'Arthur Charpentier: <https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/code/STT5100-H2019-devoir1.md>.
+
+Pour télécharger la base de données effectuez le code suivant:
+
+```{r, results="hide"}
+code_permanent = "ABCD12345678"
+loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,".RData",sep="")
+download.file(loc_fichier, "base_devoir_1.RData")
+load("base_devoir_1.RData")
+dim(database)
+```
+
+```{r}
+attach(database)
+str(database)
+sum(is.na(Surface_RdC))
+sum(is.na(Prix))
+```
+
+##Modèle linéaire simple avec prédicteur continu
+
+Soit $Y = \texttt{Prix}$ et $X_{1} = \texttt{Surface_RdC}$. Le modèle linéaire simple classique s'intéresse à poser $Y$ (**variable dépendante**) en fonction $X_{1}$ (**variable explicative**, **variable indépendante** ou **prédicteur**) de la forme suivante:
+
+$$Y_{i} = \beta_{0} + \beta_{1}X_{i} + \varepsilon_{i},\quad i = 1,\,\ldots\,,n.$$
+
+On fait normalement trois hypothèses pour le modèle classique:
+
+* Les erreurs $\varepsilon_{i} \sim \mathcal{N}(0, \sigma^2)$ pour $\sigma^2 > 0$ fixe (homoscédasticité) et les $\varepsilon_{i}$.
+non--corrélées.
+* Linearité de l'espérance conditionelle $E(Y_{i} \mid X_{i})$.
+* La variable indépendante $X_{i}$ est supposée non--aléatoire (exogène).
+
+### Échelle de variables
+
+---
+
+```{r}
+x = Surface_RdC
+y = Prix
+plot(x, y, main = "Prix vs. Surface_RdC", xlab = "Superficie (pi^2)", ylab = "Prix ($)")
+
+abline(h = mean(y), col = "blue", lty = 1)
+abline(h = mean(y) - 2 * sd(y), col = "blue", lty = 2)
+abline(h = mean(y) + 2 * sd(y), col = "blue", lty = 2)
+abline(v = mean(x), col = "red", lty = 1)
+abline(v = mean(x) - 2 * sd(x), col = "red", lty = 2)
+abline(v = mean(x) + 2 * sd(x), col = "red", lty = 2)
+```
+
+```{r}
+plot((x - mean(x))/sd(x), (y - mean(y))/sd(y), main = "Prix vs. Surface_Lot (Normalisé)", xlab = "Côte Superficie", ylab = " Côte Prix")
+
+plot((x - min(x))/(max(x) - min(x)), (y - min(y))/(max(y) - min(y)), main = "Prix vs. Surface_RdC (Échelle unitaire)", xlab = "Échelle Superficie", ylab = " Échelle Prix")
+```
+
+###Poser le modèle linéaire simple
+
+---
+
+```{r, fig.show='hold'}
+lin = lm(y ~ x, data = database)
+summary(lin)
+
+plot(x, y, main = "Prix vs. Surface_RdC", xlab = "Superficie (pi^2)", ylab = "Prix ($)")
+abline(lm(y ~ x), col = "red")
+segments(x, y, x, fitted(lin), col = "light blue")
+```
+
+###Estimation par le maximum de vraisemblance (MV)
+
+---
+
+Remarquez que l'on trouve les mêmes estimateurs de $\beta_{0}$ et $\beta_{1}$ quand on fait l'estimation par MV de de vraisemblance de $Y_{i} \mid X_{i} \sim \mathcal{N}(E(Y_{i} \mid X_{i}) = \beta_{0} + \beta_{1}X_{i}, \sigma^2)$. Par contre, notez que l'estimateur de $\sigma^2$ n'est pas le même ($\widehat{\sigma}^2_{MV} < \widehat{\sigma}^2_{MC}$).
+
+```{r}
+ll_norm <- function(data, param){ 
+  return(-sum(log(dnorm(data[,1], mean = param[1] + param[2] * data[,2], sd = sqrt(param[3])))))
+}
+
+lin_mv = optim(par = c(50000, 100, 2.5 * 10^9), fn = ll_norm, lower = c(-Inf, -Inf, 0), data = cbind(Prix, Surface_RdC), method = "L-BFGS-B")
+
+lin_mv$par
+```
+
+
+###Diagnostiques du modèle linéaire simple
+
+---
+
+On peut vérifier les hypothèses du modèle linéaire simple en dérivant quelques identités qui découlent du processus d'estimation. Par exemple,
+
+* $\displaystyle\sum_{i = 1}^{n} \widehat{\varepsilon}_{i} = 0$.
+* $\displaystyle\sum_{i = 1}^{n} \widehat{\varepsilon}_{i}x_{i} = 0$ et $\displaystyle\sum_{i = 1}^{n} \widehat{\varepsilon}_{i}\widehat{y}_{i} = 0.$
+* Les résidus possèdent une variance constante. 
+
+```{r, fig.width=10}
+lin_residus = residuals(lin)
+lin_estime = fitted(lin)
+
+sum(lin_residus)
+sum(lin_residus * lin_estime)
+sum(lin_residus * x)
+
+par(mfrow = c(1, 2))
+plot(x, lin_residus, xlab = "Superficie (pi^2)", ylab = expression(epsilon), main = "Residus vs. Surface_RdC")
+abline(h = 0, col = "red", lty = 2)
+
+plot(lin_estime, lin_residus, xlab = expression(hat(y)), ylab = expression(epsilon), main = "Residus vs. lin_estime")
+abline(h = 0, col = "red", lty = 2)
+```
+
+Ou encore,
+
+```{r, fig.width=15, fig.height=15}
+par(mfrow = c(2, 2))
+plot(lin)
+```
+
+On ne peut pas se reposer uniquement sur les tests d'ajustements et les mesures d'adéquation (e.g. $R^{2}$). Par exemple, si on suppose $X_{i} = \texttt{Int_Qualite}$ continu,
+
+```{r, fig.width=15, fig.show="hold"}
+  lin_int_qualite = lm(y ~ Int_Qualite, data = database)
+  summary(lin_int_qualite)
+  
+  plot(Int_Qualite, y, xlab = "Int_Qualite", ylab =
+  "Prix ($)", main = "Prix vs. Int_Qualite")
+  abline(lm(y ~ Int_Qualite, data = database), col = "red")
+  
+  par(mfrow = c(1, 2))
+  plot(Int_Qualite, residuals(lin_int_qualite), xlab = "Int_Qualite", ylab =
+  expression(epsilon), main = "Residus vs. Int_Qualite")
+  abline(h = 0, col = "red", lty = 2)
+
+  plot(fitted(lin_int_qualite), residuals(lin_int_qualite), xlab = expression(hat(y)), ylab =      
+  expression(epsilon), main = "Residus vs. lin_int_qualite")
+  abline(h = 0, col = "red", lty = 2)
+```
+
+#Modèle linéaire simple avec prédicteur catégoriel (facteur)
+
+---
+
+Rappelez que le modèle linéaire simple avec une variable carégorielle n'est pas identifiable si il comprend l'ordonnée à l'origine et une variable pour chaque catégorie. Si on introduit le contraste $\beta^{C}_{j} = \beta_{j} - \beta_{0},\,j = 1,\,\ldots\,,k$, si la variable catégorielle possède $k + 1$ niveaux. On obtient le modèle $Y_{i} = \beta_{0} + \displaystyle\sum_{j = 1}^{k}\beta^{C}_{j}X_{ij} + \varepsilon_{i}.$ 
+
+```{r}
+  table(Zone)
+```
+
+Supposons que
+
+$$X_{i1} = \begin{cases} 
+              1,\quad \text{si } \texttt{Zone} = \texttt{FV}\\
+              0,\quad \text{sinon}
+            \end{cases}$$
+                          
+$$X_{i2} = \begin{cases} 
+               1,\quad \text{si } \texttt{Zone} = \texttt{FH}\\
+               0,\quad \text{sinon}
+            \end{cases}$$
+                          
+$$X_{i3} = \begin{cases} 
+              1,\quad \text{si } \texttt{Zone} = \texttt{RL}\\
+              0,\quad \text{sinon}
+           \end{cases}$$
+                        
+$$X_{i4} = \begin{cases} 
+               1,\quad \text{si } \texttt{Zone} = \texttt{RM}\\
+               0,\quad \text{sinon}
+            \end{cases}$$
+
+```{r}
+library(vioplot)
+
+par(mfrow = c(1, 2))
+plot(Zone, y, xlab = "Zone", ylab = "Prix ($)")
+#####################################################################
+#vioplot ne fonctionne pas si le nom d'un niveau contient un espace#
+#####################################################################
+levels(Zone) <- c("A_agr", "C_all", "FV", "I_all", "RH", "RL", "RM") 
+##############################################
+#Il faut également éliminer les niveaux vides#
+##############################################
+vioplot(y ~ droplevels(Zone), col = "magenta", xlab = "Zone", ylab = "Prix ($)")
+table(Zone)
+```
+
+```{r}
+lin_zone = lm(y ~ Zone, data = database)
+summary(lin_zone)
+```
+
+Remarquez que 
+
+```{r}
+  mean(Prix[Zone == "C_all"])
+  mean(Prix[Zone == "FV"]) - mean(Prix[Zone == "C_all"])
+  mean(Prix[Zone == "RH"]) - mean(Prix[Zone == "C_all"])
+  mean(Prix[Zone == "RL"]) - mean(Prix[Zone == "C_all"])
+  mean(Prix[Zone == "RM"]) - mean(Prix[Zone == "C_all"])
+```
+
+Vérifions encore une fois les hypothèses du modèle linéaire simple.
+
+```{r, fig.show="hold"}
+  par(mfrow = c(1, 2))
+  plot(fitted(lin_zone), residuals(lin_zone), xlab = expression(hat(y)), ylab = expression(epsilon), main = "Residus vs. lin_zone")
+  abline(h = 0, col = "red", lty = 2)
+  plot(Zone, residuals(lin_zone), xlab = "Zone", ylab = expression(epsilon), main = "Residus vs. Zone")
+  abline(h = 0, col = "red", lty = 2)
+  
+  par(mfrow = c(1, 1))
+  qqnorm(residuals(lin_zone), xlab = "Quantile théo.", ylab = "Quantile empirique", main = "QQ plot des résidus de lin_zone")
+  qqline(residuals(lin_zone))
+```
+
+
+
+
+
+
+
+
+
