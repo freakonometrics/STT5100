@@ -82,7 +82,7 @@ techniques exposees en cours.
     fichiers : `devoir1-ABCD12345678.html`, output d’un fichier
     `devoir1-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
     `ABCD12345678` doit être remplacé par le code permanent de
-    l’étudiant(e). Le fichier `devoir1-ABCD12345678.hmtl` doit etre
+    l’étudiant(e). Le fichier `devoir1-ABCD12345678.html` doit etre
     lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
     erreur,
   - Dans le preambule du markdown, `author:` doit mentionner le code
