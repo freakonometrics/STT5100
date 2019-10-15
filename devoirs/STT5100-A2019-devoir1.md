@@ -79,7 +79,7 @@ techniques exposees en cours.
 
   - Date limite pour envoyer le devoir **4 novembre** a **midi**,
   - Chaque etudiant(e) doit envoyer par messagerie electronique deux
-    fichiers : `devoir1-ABCD12345678.hmtl`, output d’un fichier
+    fichiers : `devoir1-ABCD12345678.html`, output d’un fichier
     `devoir1-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
     `ABCD12345678` doit être remplacé par le code permanent de
     l’étudiant(e). Le fichier `devoir1-ABCD12345678.hmtl` doit etre
