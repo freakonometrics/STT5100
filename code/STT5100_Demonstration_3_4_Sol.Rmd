@@ -1,0 +1,349 @@
+---
+title: 'STT5100: Démonstrations 3 et  4'
+author: "Alexandre LeBlanc"
+params:
+  data: base_devoir_1
+output:
+  html_document: default
+  html_notebook: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=TRUE, error=TRUE, fig.align="center")
+```
+
+# Exercices sur la régression linéaire simple et la régression linéaire multiple
+
+---
+
+## Base de données - Devoir #1 (H2019)
+
+---
+
+La base de données utilisée par la présente démonstration est disponible au répertoire Github d'Arthur Charpentier: <https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/code/STT5100-H2019-devoir1.md>.
+
+Pour télécharger la base de données effectuez le code suivant:
+
+```{r, results="hide"}
+code_permanent = "ABCD12345678"
+loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,".RData",sep="")
+download.file(loc_fichier, "base_devoir_1.RData")
+load("base_devoir_1.RData")
+dim(database)
+```
+
+```{r}
+attach(database)
+str(database)
+```
+
+## Question 1
+
+Pour le modèle $E(\texttt{Prix}_{i} \mid \texttt{Surface_RdC}_{i}) = \beta_{0} + \beta_{1}\texttt{Surface_RdC}_{i},$ calculez un intervale de **prédiction** si $\texttt{Surface_RdC} = 1\,372.$  
+
+```{r}
+lin = lm(Prix ~ Surface_RdC, data = database)
+predict(lin, newdata = data.frame(Surface_RdC = 1372), interval = "predict")
+```
+
+## Question 2
+
+Supposons que l'on a posé le modèle $E(y{i} \mid \mathbf{X}_{i}) = \beta_{0} + \beta_{1}X_{i,1}$ tandis que le *vrai* modèle est $E(y_{i} \mid \mathbf{X}_{i}) = \beta_{0} + \beta_{1}X_{i,1} + \beta_{2}X_{i,2}.$ Est--ce que l'estimateur du paramètre $\widehat{\beta}_{1}$ du modèle posé est sans biais? Sinon, quel est son biais?
+
+\begin{align*}
+  E(\widehat{\beta}_{1}) &= E\left(\frac{\sum_{i = 1}^{n}(x_{i,1} - \overline{x}_{1})(y_{i} - \overline{y})}{\sum_{i = 1}^{n}(x_{i,1} - \overline{x}_{1})^2}\right)\\
+  &= E\left(\frac{\sum_{i = 1}^{n}(x_{i,1} - \overline{x}_{1})y_{i}}{\sum_{i = 1}^{n}(x_{i,1} - \overline{x}_{1})^2}\right)\\
+  &= E\left(\sum_{i = 1}^{n}\omega_{i}y_{i}\right) && \text{ où }\omega_{i} = \frac{x_{i,1} - \overline{x}_{1}}{\sum_{i = 1}^{n}(x_{i,1} - \overline{x}_{1})^2}\\
+  &=  \sum_{i = 1}^{n}\omega_{i}E(y_{i})\\
+  &= \sum_{i = 1}^{n}\omega_{i}(\beta_{0} + \beta_{1}x_{i,1} + \beta_{2}x_{i,2})\\
+  &= \beta_{1} + \sum_{i = 1}^{n} \beta_{2}\omega_{i}x_{i,2}\\
+  &= \beta_{1} + \frac{\sum_{i = 1}^{n}\beta_{2}(x_{i,1} - \overline{x}_{1})(x_{i,2} - \overline{x}_{2})}{\sum_{i = 1}^{n}(x_{i,1} - \overline{x}_{1})^2}\\
+  &= \beta_{1} + \beta_{2}\frac{S_{x_{1}x_{2}}}{S_{x_{1}x_{1}}}
+\end{align*}
+
+Le biais de l'estimateur de $\widehat{\beta}_{1}$ du modèle réduit est $-\displaystyle\beta_{2}\frac{S_{x_{1}x_{2}}}{S_{x_{1}x_{1}}}.$
+
+## Question 3
+
+Calculez la variance des résidus $\widehat{{\boldsymbol{\varepsilon}}} = \mathbf{y} - \widehat{\mathbf{y}}$ pour le modèle de régression linéaire. Est-elle constante?
+
+\begin{align*}
+  \text{Var}(\widehat{\boldsymbol{{\varepsilon}}}) &= \text{Var}(\mathbf{y} - \widehat{\mathbf{y}})\\
+                                      &= \text{Var}(\mathbf{y} - \mathbf{H}\mathbf{y})\\
+                                      &= \text{Var}[(\mathbf{I}_{n} - \mathbf{H})\mathbf{y}]\\
+                                      &= (\mathbf{I}_{n} - \mathbf{H})\text{Var}(\mathbf{y})(\mathbf{I}_{n} - \mathbf{H})^{T}\\
+                                      &= (\mathbf{I}_{n} - \mathbf{H})\sigma^{2}\mathbf{I}_{n}(\mathbf{I}_{n} - \mathbf{H})^{T}\\
+                                      &= \sigma^{2}(\mathbf{I}_{n} - \mathbf{H})^2 && \text{ puisque } \mathbf{I}_{n} - \mathbf{H} \text{ est symmétrique}\\
+                                      &= \sigma^{2}(\mathbf{I}_{n} - \mathbf{H}) && \text{ puisque } \mathbf{I}_{n} - \mathbf{H} \text{ est idempotente (vérifiez!)}
+\end{align*}
+
+La variance des résidus n'est pas constante!
+
+## Question 4
+
+Pour le modèle de la question 1, calculez un intervalle de confiance pour l'estimé $\widehat{y}_{52}$ par le boostrap: tirez des échantillons de paires $(x_{i}, y_{i})$ avec remise. Pour chaque intervalle, tirer un échantillon de $1\,000$ et comparez les intervalles.
+
+**Méthode de réflection:** 
+
+Différente de la méthode présentée en classe, on calcule un intervalle à l'aide du bootsrap pour chaque paramètre et tous ces intervalles nous permettront de calculer un intervalle de $\widehat{y}.$ C'est--à--dire, on pose l'intervalle $\widehat{\beta} - D_{2} \leq \beta \leq \widehat{\beta} + D_{1}$ où $D_{1} = \widehat{\beta} - \widehat{\beta}^{*}\left(\frac{\alpha}{2}\right)$ et $D_{2} = \widehat{\beta}^{*}\left(1 - \frac{\alpha}{2}\right) - \widehat{\beta}.$ Notez que le $\widehat{\beta}^{*}$ est un quantile empirique calculé à partir de l'échantillon du bootstrap. 
+
+Alors, pour un paramètre choisi et un alpha donné, $$2\widehat{\beta} - \widehat{\beta}^{*}\left(1 - \frac{\alpha}{2}\right) \leq \beta \leq 2\widehat{\beta} - \widehat{\beta}^{*}\left(\frac{\alpha}{2}\right)$$ 
+
+Pour $\alpha = 0.05,$
+
+```{r}
+beta = matrix(NA, 1000, 2)
+for(s in 1:1000){
+  set.seed(s)
+  idx = sample(1:nrow(database), nrow(database), replace = TRUE)
+  reg_sim = lm(Prix ~ Surface_RdC, data=database[idx,])
+  beta[s,] = reg_sim$coefficients
+}
+
+intervalle_b0 = c(2 * lin$coefficients[1] - quantile(beta[,1], 0.975), 2 * lin$coefficients[1] - quantile(beta[,1], 0.025))
+intervalle_b1 = c(2 * lin$coefficients[2] - quantile(beta[,2], 0.975), 2 * lin$coefficients[2] - quantile(beta[,2], 0.025))
+
+intervalle_y1 = intervalle_b0 + database$Surface_RdC[52] * intervalle_b1
+names(intervalle_y1) <- c("2.5%", "97.5%")
+intervalle_y1
+```
+
+**Méthode dans les notes de cours:**
+
+La méthode de les notes cours calcule les quantiles non sur les betas individuels, mais plutôt sur les prévisions du modèles. Or, $$\widehat{y}^{*}\left(\frac{\alpha}{2}\right) \leq \widehat{y} \leq \widehat{y}^{*}\left(1 - \frac{\alpha}{2}\right)$$
+
+Pour $\alpha = 0.05,$
+
+```{r}
+beta = matrix(NA, 1000, 2)
+for(s in 1:1000){
+  set.seed(s)
+  idx = sample(1:nrow(database), nrow(database), replace = TRUE)
+  reg_sim = lm(Prix ~ Surface_RdC, data=database[idx,])
+  beta[s,] = reg_sim$coefficients
+}
+
+lin_pred = beta %*% c(1, database$Surface_RdC[52])
+
+intervalle_y2 = c(quantile(lin_pred, 0.025), quantile(lin_pred, 0.975))
+intervalle_y2
+```
+
+
+## Question 5
+
+Pour le modèle de régression linéaire multiple, démontrez que le $SCR = \mathbf{y}^{T}(\textbf{I}_{n} - \mathbf{H})\mathbf{y}$ et calculer $E(SCR)$ en montrant que $E(\mathbf{y}^{T}\mathbf{A}\mathbf{y}) = \text{tr}(\mathbf{AV}) + \boldsymbol{\mu}^{T}\mathbf{A}\boldsymbol{\mu}$ pour $E(\mathbf{y}) =  \boldsymbol{\mu}$, $\text{Var}(\mathbf{y}) = \mathbf{V}$ et $\mathbf{A}$ une matrice symmétrique.
+
+\begin{align*}
+  E[(\mathbf{y} - \boldsymbol{\mu})^{T}\mathbf{A}(\mathbf{y} - \boldsymbol{\mu})] &= E\left[\sum_{i = 1}^{n}\sum_{j = 1}^{n}(y_{i} - \mu_{i})A_{i,j}(y_{j} - \mu_{j})\right]\\
+  &= \sum_{i = 1}^{n}\sum_{j = 1}^{n}A_{i,j}E\left[(y_{i} - \mu_{i})(y_{j} - \mu_{j})\right]\\
+  &= \sum_{i = 1}^{n}\sum_{j = 1}^{n}A_{i,j}V_{i,j}\\
+  &= \sum_{i = 1}^{n}\mathbf{AV}_{[i,i]} && \text{puisque } \mathbf{A} \text{ et } \mathbf{V} \text{ sont symmétriques}\\
+  &= \text{tr}(\mathbf{AV})
+\end{align*}
+
+En développant le côté gauche de l'égalité, on obtient $E(\mathbf{y}^{T}\mathbf{A}\mathbf{y}) = \text{tr}(\mathbf{AV}) + \boldsymbol{\mu}^{T}\mathbf{A}\boldsymbol{\mu}.$ Remarquez que 
+
+$$SCR = \displaystyle\sum_{i = 1}^{n}\widehat{\varepsilon}_{i}^2 = \widehat{\boldsymbol{\varepsilon}}^{T}\widehat{\boldsymbol{\varepsilon}} = [(\mathbf{I}_{n} - \mathbf{H})\mathbf{y}]^{T}(\mathbf{I}_{n} - \mathbf{H})\mathbf{y} = \mathbf{y}^{T}(\mathbf{I}_{n} - \mathbf{H})^{T}(\mathbf{I}_{n} - \mathbf{H})\mathbf{y} = \mathbf{y}^{T}(\mathbf{I}_{n} - \mathbf{H})\mathbf{y}$$
+
+Finalement, 
+
+\begin{align*}
+  E(SCR) = E(\mathbf{y}^{T}(\mathbf{I}_{n} - \mathbf{H})\mathbf{y}) &= \text{tr}[(\mathbf{I}_{n} - \mathbf{H})\sigma^2\mathbf{I}_{n}] + (\mathbf{X}\boldsymbol{\beta})^{T}(\mathbf{I}_{n} - \mathbf{H})\mathbf{X}\boldsymbol{\beta}\\
+  &= [\text{tr}(\mathbf{I}_{n}) - \text{tr}(\mathbf{H})]\sigma^2 + \boldsymbol{\beta}^{T}(\mathbf{X}^{T}\mathbf{X} - \mathbf{X}^{T}\mathbf{H}\mathbf{X})\boldsymbol{\beta}\\
+  &= [n - \text{tr}(\mathbf{X}(\mathbf{X}^{T}\mathbf{X})^{-1}\mathbf{X}^{T})]\sigma^2 + \boldsymbol{\beta}^{T}(\mathbf{X}^{T}\mathbf{X} - \mathbf{X}^{T}\mathbf{X})\boldsymbol{\beta} && \text{ puisque } \mathbf{HX} = \mathbf{X} \text{ et } \mathbf{X}^{T}\mathbf{H} = \mathbf{X}^{T}\\
+  &=[n - \text{tr}(\mathbf{X}^{T}\mathbf{X}(\mathbf{X}^{T}\mathbf{X})^{-1})]\sigma^2 && \textit{(Correction)}\\
+  &= [n - \text{tr}(\mathbf{I}_{p})]\sigma^2\\
+  &= (n - p)\sigma^2
+\end{align*}
+
+## Question 6
+
+Supposons qu'il y a deux modèles qui respectent les hypothèses de la régression linéaire classique: 
+
+<center>
+$\text{Modèle A:} \quad \mathbf{y} = \mathbf{X}_{1}\boldsymbol{\beta}_{1} + \boldsymbol{\varepsilon} \quad \text{ et } \quad \text{Modèle B:} \quad \mathbf{y} = \mathbf{X}_{1}\boldsymbol{\beta}_{1} + \mathbf{X}_{2}\boldsymbol{\beta}_{2} + \boldsymbol{\varepsilon}$
+</center>
+
+Montrez que $R^2_{A} \leq R^2_{B}.$
+
+Soient $\boldsymbol{\beta}_{1}$ un vecteur de $i$ paramètres et $\boldsymbol{\beta}_{2}$ est un vecteur de $j$ paramètres. Puisque $R^2 = \displaystyle\frac{SCE}{TSS},$ 
+
+\[\underbrace{SCE(\beta_{i,1}, \beta_{i,2},\,\ldots\,, \beta_{i,i}, \beta_{j,1}, \beta_{j,2},\,\ldots\,, \beta_{j,j} \mid  \beta_{0})}_{\text{SSR du modèle B}} = \underbrace{SCE(\beta_{j,1}, \beta_{j,2},\,\ldots\,, \beta_{j,j} \mid  \beta_{i,1}, \beta_{i,2},\,\ldots\,, \beta_{i,i}, \beta_{0})}_{\text{Augmentation du SSR en ajoutant le } \boldsymbol{\beta}_{2} \text { au modèle A}} + \underbrace{SCE(\beta_{i,1}, \beta_{i,2},\,\ldots\,, \beta_{i,i} \mid \beta_{0})}_{\text{SSR du modèle A}}\]
+
+Puisque $SCE \geq 0$, il s'ensuit que $R^2_{A} \leq R^2_{B}.$
+
+## Question 7
+
+Pour le modèle régression linéaire multiple, démontrer que $R^2 = \widehat{\text{Corr}}(\mathbf{y}, \widehat{\mathbf{y}})^2.$
+
+\begin{align*}
+  \widehat{\text{Corr}}(\mathbf{y}, \widehat{\mathbf{y}})^2 &= \frac{\widehat{\text{Cov}}(\mathbf{y}, \widehat{\mathbf{y}})^2}{\widehat{\text{Var}}(\mathbf{y})\widehat{\text{Var}}(\widehat{\mathbf{y}})}\\
+  &= \frac{\widehat{\text{Cov}}(\widehat{\mathbf{y}} + \widehat{\boldsymbol{\varepsilon}}, \widehat{\mathbf{y}})^2}{\widehat{\text{Var}}(\mathbf{y})\widehat{\text{Var}}(\widehat{\mathbf{y}})}\\
+  &= \frac{\left[\widehat{\text{Var}}(\widehat{\mathbf{y}}) + \widehat{\text{Cov}}(\widehat{\mathbf{y}}, \widehat{\boldsymbol{\varepsilon}})\right]^2}{\widehat{\text{Var}}(\mathbf{y})\widehat{\text{Var}}(\widehat{\mathbf{y}})}\\
+  &= \frac{\widehat{\text{Var}}(\widehat{\mathbf{y}})^2}{\widehat{\text{Var}}(\mathbf{y})\widehat{\text{Var}}(\widehat{\mathbf{y}})} && \widehat{\text{Cov}}(\widehat{\mathbf{y}}, \widehat{\boldsymbol{\varepsilon}}) = 0 \text{ puisque } \sum_{i = 1}^{n}\widehat{y}_{i}\widehat{\varepsilon}_{i} = 0 \text{ et } \sum_{i = 1}^{n}\widehat{\varepsilon}_{i} = 0\\
+  &= \frac{\widehat{\text{Var}}(\widehat{\mathbf{y}})}{\widehat{\text{Var}}(\mathbf{y})}\\
+  &= \frac{\sum_{i = 1}^{n}(\widehat{y}_{i} - \overline{y})^2}{\sum_{i = 1}^{n}(y_{i} - \overline{y})^2}\\
+  &= \frac{SCE}{TSS} = R^2
+\end{align*}
+
+## Question 8
+
+Faire un *forward selection* et *backward selection* pour le modèle de régression linéaire multiple. Utiliser la valeur--p avec $p_{OUT} = 0.1$ et $p_{IN} = 0.01.$ Ces dernières sont les valeurs--p selon lequelles on rejette ou on inclut une variable explicative au modèle. Comme modèle de départ pour la *forward selection*, poser la variable \texttt{Prix} contre la variable la plus corrélée avec cette dernière et pour *backward selection*, posez le modèle complet (sans interactions). Quelle est la différence du $R^2$ des deux modèles sélectionnés?
+
+```{r, results="hide"}
+################################################
+#Vérifier les effectifs des facteurs et les NAs#
+################################################
+for(i in 1:ncol(database)){
+  if(is.integer(database[,i]) | is.numeric(database[,i])){
+    print(paste(names(database)[i], ": ", sum(is.na(database[,i])) , sep = ""))
+  } else {
+    print(names(database)[i])
+    print(table(database[,i]))
+  }
+}
+```
+
+
+```{r, results="hide"}
+###################################################
+#Eliminer les niveaux vides et les var. à 1 niveau#
+###################################################
+database_num = database[sapply(database, function(x){is.numeric(x) || is.integer(x)})]
+database_factor = database[sapply(database, function(x){is.factor(x)})]
+database_factor = droplevels(database_factor)
+database_factor = database_factor[,sapply(database_factor, nlevels) > 1]
+database = data.frame(database_factor, database_num)
+```
+
+
+```{r, results="hide"}
+########################################################
+#Trouver la variable la plus corrélée avec la var. Prix#
+########################################################
+########################################
+#La var. Surface_Piscine est constante!#
+########################################
+for(i in 1:ncol(database_num)){
+  print(names(database_num)[i])
+  print(table(database_num[,i]))
+}
+database = database[,-which(names(database) %in% c("Piscine_Surface"))]
+database_num = database_num[,-which(names(database_num) %in% c("Piscine_Surface"))]
+names(database_num)[abs(cor(subset(database_num, select = -c(Prix)), Prix)) == max(abs(cor(subset(database_num, select = -c(Prix)), Prix)))]
+```
+
+### Sélection de modèle sur base de la valeur-p
+
+---
+
+```{r}
+select_p <- function(data, reponse, modele_init, modele_complet, direction = "forward", critere_p = 0.01){
+  
+  if(direction == "forward"){
+    l_lm = modele_init
+    l = add1(l_lm, scope = modele_complet, test = "F", data = database)
+    l_form = l_lm$call$formula
+    l = l[order(l$`Pr(>F)`),]
+    p = l$`Pr(>F)`[1]
+    while(p <= critere_p & length(l_lm$coefficients) < length(lin_complet$coefficients)){
+      l_form = update.formula(l_form, as.formula(paste(". ~ . + ", rownames(l)[1])))
+      l_lm = lm(l_form, data = database)
+      l = add1(l_lm, scope = modele_complet, test = "F", data = database)
+      l = l[order(l$`Pr(>F)`),]
+      p = l$`Pr(>F)`[1]
+    }
+  }
+  
+  if(direction == "backward"){
+    l_lm = modele_complet
+    l = drop1(l_lm, test = "F", data = data)
+    l_form = as.formula(paste(reponse, " ~ ", l_lm$terms[[3]][2]))
+    l = l[order(l$`Pr(>F)`, decreasing = TRUE),]
+    p = l$`Pr(>F)`[1]
+    while(p >= critere_p & length(l_lm$coefficients) > 1){
+      l_form = update.formula(l_form, as.formula(paste(". ~ . - ", rownames(l)[1])))
+      l_lm = lm(l_form, data = data)
+      l = drop1(l_lm, test = "F", data = data)
+      l = l[order(l$`Pr(>F)`, decreasing = TRUE),]
+      p = l$`Pr(>F)`[1]
+    }
+  }
+  
+  return(l_lm)
+}
+```
+
+Pour la *sélection forward*,
+
+```{r}
+  lin_init = lm(Prix ~ Int_Qualite, data = database)
+  lin_complet = lm(Prix ~., data = database)
+  lm_forward_p = select_p(database, Prix, lin_init, lin_complet)
+  summary(lm_forward_p)
+```
+
+Pour la *sélection backward*,
+
+```{r}
+  lin_complet = lm(Prix ~ ., data = database)
+  lm_backward_p = select_p(database, "Prix", modele_complet = lin_complet, direction =   
+                           "backward", critere_p = 0.1)
+  summary(lm_backward_p)
+```
+
+Si l'on calcule la différence du $R^2$ entre le *forward selection* et le *backward selection*,
+
+```{r}
+  diff_r2 = summary(lm_forward_p)$r.squared - summary(lm_backward_p)$r.squared
+  diff_r2
+```
+
+
+### Sélection de modèle sur base de la statistique du test de Fisher
+
+---
+
+Notez qu'il est également possible d'utiliser la stastique du test de Fisher comme critère de sélection, ou encore la statistique du test de Student si on ajoute ou elimine des paramètres, **une à la fois**, qui fait en sorte que $F = t^2.$ Il est également typique d'utiliser des critères d'information comme le AIC.
+
+## Question 9
+
+Faire un  *stepwise selection* pour le modèle de régression linéaire multiple. Utiliser le critère AIC pour parvenir au modèle final. Utilisez encore la variable \texttt{Prix} contre la variable explicative la plus corrélée avec cette dernière comme modèle initial.
+
+```{r}
+library(MASS)
+l = stepAIC(lin_init, scope = list(lower = ~ 1, upper = lin_complet), direction = "both", trace = 0)
+AIC(lin_init)
+```
+
+```{r}
+AIC(l)
+```
+
+
+## Question 10
+
+Pour le modèle de la Q9, quels sont les points qui possèdent une grande pondération (en fonction de $h_{i}$) **ainsi que** les points qui sont influent (en fonction de la distance de Cook)? Typiquement, on dit qu'une observation possède une grande pondération si $h_{i,i} > \displaystyle\frac{2p}{n}$ et influente si $D_{i} = \displaystyle\frac{\widehat{\varepsilon}_{i}^2}{p\widehat{\sigma}}\left[\frac{h_{i,i}}{(1 - h_{i,i})^2}\right] > 1$ (pour grand $n$).
+
+```{r}
+X = model.matrix(l, database)
+h = diag(X %*% solve(t(X) %*% X) %*% t(X))
+#########################
+#h = lm.influence(l)$hat#
+#########################
+x_lev = h[which(h > 2 * length(l$coefficients)/nrow(X))]
+head(x_lev)
+```
+
+
+```{r}
+cd = cooks.distance(l, infl = lm.influence(l, do.coef = FALSE))
+which(is.na(cd))
+head(cd)
+```
+
+```{r}
+cd[cd > 1 & is.na(cd) == FALSE]
+```
+

@@ -1,0 +1,131 @@
+---
+title: 'STT5100: Démonstrations 3 et  4'
+author: "Alexandre LeBlanc"
+params:
+  data: base_devoir_1
+output:
+  html_document: default
+  html_notebook: default
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=TRUE, error=TRUE, fig.align="center")
+```
+
+# Exercices sur la régression linéaire simple et la régression linéaire multiple
+
+---
+
+## Base de données - Devoir #1 (H2019)
+
+---
+
+La base de données utilisée par la présente démonstration est disponible au répertoire Github d'Arthur Charpentier: <https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/code/STT5100-H2019-devoir1.md>.
+
+Pour télécharger la base de données effectuez le code suivant:
+
+```{r, results="hide"}
+code_permanent = "ABCD12345678"
+loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,".RData",sep="")
+download.file(loc_fichier, "base_devoir_1.RData")
+load("base_devoir_1.RData")
+dim(database)
+```
+
+```{r}
+attach(database)
+str(database)
+```
+
+## Question 1
+
+Pour le modèle $E(\texttt{Prix}_{i} \mid \texttt{Surface_RdC}_{i}) = \beta_{0} + \beta_{1}\texttt{Surface_RdC}_{i},$ calculez un intervale de **prédiction** si $\texttt{Surface_RdC} = 1\,372.$  
+
+## Question 2
+
+Supposons que l'on a posé le modèle $E(y{i} \mid \mathbf{X}_{i}) = \beta_{0} + \beta_{1}X_{i,1}$ tandis que le *vrai* modèle est $E(y_{i} \mid \mathbf{X}_{i}) = \beta_{0} + \beta_{1}X_{i,1} + \beta_{2}X_{i,2}.$ Est--ce que l'estimateur du paramètre $\widehat{\beta}_{1}$ du modèle posé est sans biais? Sinon, quel est son biais?
+
+## Question 3
+
+Calculez la variance des résidus $\widehat{{\boldsymbol{\varepsilon}}} = \mathbf{y} - \widehat{\mathbf{y}}$ pour le modèle de régression linéaire. Est-elle constante?
+
+## Question 4
+
+Pour le modèle de la question 1, calculez un intervalle de confiance pour l'estimé $\widehat{y}_{52}$ par le boostrap: tirez des échantillons de paires $(x_{i}, y_{i})$ avec remise. Pour chaque intervalle, tirer un échantillon de $1\,000$ et comparez les intervalles. Calculez un intervalle pour $\alpha = 0.05.$
+
+
+## Question 5
+
+Pour le modèle de régression linéaire multiple, démontrez que le $SCR = \mathbf{y}^{T}(\textbf{I}_{n} - \mathbf{H})\mathbf{y}$ et calculer $E(SCR)$ en montrant que $E(\mathbf{y}^{T}\mathbf{A}\mathbf{y}) = \text{tr}(\mathbf{AV}) + \boldsymbol{\mu}^{T}\mathbf{A}\boldsymbol{\mu}$ pour $E(\mathbf{y}) =  \boldsymbol{\mu}$, $\text{Var}(\mathbf{y}) = \mathbf{V}$ et $\mathbf{A}$ une matrice symmétrique.
+
+## Question 6
+
+Supposons qu'il y a deux modèles qui respectent les hypothèses de la régression linéaire classique: 
+
+<center>
+$\text{Modèle A:} \quad \mathbf{y} = \mathbf{X}_{1}\boldsymbol{\beta}_{1} + \boldsymbol{\varepsilon} \quad \text{ et } \quad \text{Modèle B:} \quad \mathbf{y} = \mathbf{X}_{1}\boldsymbol{\beta}_{1} + \mathbf{X}_{2}\boldsymbol{\beta}_{2} + \boldsymbol{\varepsilon}$
+</center>
+
+Montrez que $R^2_{A} \leq R^2_{B}.$
+
+## Question 7
+
+Pour le modèle régression linéaire multiple, démontrer que $R^2 = \widehat{\text{Corr}}(\mathbf{y}, \widehat{\mathbf{y}})^2.$
+
+## Question 8
+
+Faire un *forward selection* et *backward selection* pour le modèle de régression linéaire multiple. Utiliser la valeur--p avec $p_{OUT} = 0.1$ et $p_{IN} = 0.01.$ Ces dernières sont les valeurs--p selon lequelles on rejette ou on inclut une variable explicative au modèle. Comme modèle de départ pour la *forward selection*, poser la variable \texttt{Prix} contre la variable la plus corrélée avec cette dernière et pour *backward selection*, posez le modèle complet (sans interactions). Quelle est la différence du $R^2$ des deux modèles sélectionnés?
+
+```{r, results="hide"}
+################################################
+#Vérifier les effectifs des facteurs et les NAs#
+################################################
+for(i in 1:ncol(database)){
+  if(is.integer(database[,i]) | is.numeric(database[,i])){
+    print(paste(names(database)[i], ": ", sum(is.na(database[,i])) , sep = ""))
+  } else {
+    print(names(database)[i])
+    print(table(database[,i]))
+  }
+}
+```
+
+
+```{r, results="hide"}
+###################################################
+#Eliminer les niveaux vides et les var. à 1 niveau#
+###################################################
+database_num = database[sapply(database, function(x){is.numeric(x) || is.integer(x)})]
+database_factor = database[sapply(database, function(x){is.factor(x)})]
+database_factor = droplevels(database_factor)
+database_factor = database_factor[,sapply(database_factor, nlevels) > 1]
+
+########################################
+#La var. Surface_Piscine est constante!#
+########################################
+for(i in 1:ncol(database_num)){
+  print(names(database_num)[i])
+  print(table(database_num[,i]))
+}
+database_num = database_num[,-which(names(database_num) %in% c("Piscine_Surface"))]
+
+database = data.frame(database_factor, database_num)
+```
+
+
+```{r}
+########################################################
+#Trouver la variable la plus corrélée avec la var. Prix#
+########################################################
+names(database_num)[abs(cor(subset(database_num, select = -c(Prix)), Prix)) == max(abs(cor(subset(database_num, select = -c(Prix)), Prix)))]
+```
+
+## Question 9
+
+Faire un  *stepwise selection* pour le modèle de régression linéaire multiple. Utiliser le critère AIC pour parvenir au modèle final. Utilisez encore la variable \texttt{Prix} contre la variable explicative la plus corrélée avec cette dernière comme modèle initial.
+
+## Question 10
+
+Pour le modèle de la Q9, quels sont les points qui possèdent une grande pondération (en fonction de $h_{i}$) **ainsi que** les points qui sont influent (en fonction de la distance de Cook)? Typiquement, on dit qu'une observation possède une grande pondération si $h_{i,i} > \displaystyle\frac{2p}{n}$ et influente si $D_{i} = \displaystyle\frac{\widehat{\varepsilon}_{i}^2}{p\widehat{\sigma}}\left[\frac{h_{i,i}}{(1 - h_{i,i})^2}\right] > 1$ (pour grand $n$).
