@@ -72,7 +72,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 4. Le modele linéaire multiple [code4.R](code/code-stt5100-A2019-4.R) (pas de démo)
 5. Choix de modeles, tests statistiques  [code5.R](code/ccours5-A2019.R) et [STT5100_Demonstration_3.Rmd](code/STT5100_Demonstration_3.Rmd) 
 6. *pas de cours*
-7. Regression locale et lissage
+7. Regression locale et lissage [code7.R](code/Stt5100-5.R) et [STT5100_Demonstration_4.Rmd](code/STT5100_Demonstration_3_4_Q.Rmd) pour les questions, et [STT5100_Demonstration_4S.Rmd](code/STT5100_Demonstration_3_4_Sol.Rmd) pour la solution
 8. Pratique de la régression linéaire
 9. **Examen Intra**
 10. Regression logistique 
