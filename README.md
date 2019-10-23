@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_A2019.pdf](docs/Plan%20STT5100%20A2019.pdf)
 Démonstrateur : Alexandre LeBlanc
 
 ```diff
-- (8 octobre 2019) pas de cours vendredi 11 octobre
+- (23 octobre 2019) pour le rendu des devoirs, un espace moodle a été créé (pour déposer les deux fichiers)
 ```
 
 **Notes de cours**
