@@ -77,7 +77,7 @@ str(database)
 Le but du devoir est de mettre en oeuvre, sur des vraies donnees, les
 techniques exposees en cours.
 
-  - Date limite pour envoyer le devoir **4 novembre** a **midi**,
+  - Date limite pour envoyer le devoir **4 novembre** à **midi**,
   - Chaque etudiant(e) doit envoyer ~~par messagerie electronique~~ via [moodle](https://www.moodle2.uqam.ca/) deux
     fichiers : `devoir1-ABCD12345678.html`, output d’un fichier
     `devoir1-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
@@ -87,6 +87,12 @@ techniques exposees en cours.
     erreur,
     
   ![40% center](img/moodle1.png)
+  
+  - Il suffit de déposer les deux fichiers comme indiqué
+  
+  ![40% center](img/moodle2.png)
+  
+  __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **4 novembre** à **midi**)
   
   - Dans le preambule du markdown, `author:` doit mentionner le code
     permanent,
