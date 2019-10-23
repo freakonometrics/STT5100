@@ -71,20 +71,23 @@ str(database)
     ##  $ DrugScore       : int  32 36 22 6 37 44
 
 ``` diff
-- (18 Septembre 2019) la base est en ligne
+- (23 Octobre 2019) la remise du devoir se fera par moodle !
 ```
 
 Le but du devoir est de mettre en oeuvre, sur des vraies donnees, les
 techniques exposees en cours.
 
   - Date limite pour envoyer le devoir **4 novembre** a **midi**,
-  - Chaque etudiant(e) doit envoyer par messagerie electronique deux
+  - Chaque etudiant(e) doit envoyer ~~par messagerie electronique~~ via [moodle](https://www.moodle2.uqam.ca/) deux
     fichiers : `devoir1-ABCD12345678.html`, output d’un fichier
     `devoir1-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
     `ABCD12345678` doit être remplacé par le code permanent de
     l’étudiant(e). Le fichier `devoir1-ABCD12345678.html` doit etre
     lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
     erreur,
+    
+  ![40% center](img/moodle1.png)
+  
   - Dans le preambule du markdown, `author:` doit mentionner le code
     permanent,
   - Le fichier doit contenir trois parties
