@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_A2019.pdf](docs/Plan%20STT5100%20A2019.pdf)
 Démonstrateur : Alexandre LeBlanc
 
 ```diff
-- (23 octobre 2019) pour le rendu des devoirs, un espace moodle a été créé (pour déposer les 2 fichiers)
+- (1er novembre 2019) le sujet de l'intra et des éléments de correction sont en ligne
 ```
 
 **Notes de cours**
@@ -30,7 +30,7 @@ Démonstrateur : Alexandre LeBlanc
 * Regression logistique - GLM : 
 
 **Examen**
-* Modeles de régression - OLS : 
+* Modeles de régression - OLS : [A2019-1E.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_ENONCE.pdf) pour l'énoncé et [A2019-1C.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_CORREC.pdf) pour la "correction"
 * Modeles de régression - GLM : 
 
 **Examens passés**
