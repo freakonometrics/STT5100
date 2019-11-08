@@ -27,7 +27,7 @@ Démonstrateur : Alexandre LeBlanc
 
 **Projets / Devoir**
 * Modeles de régression - OLS : [Devoir1](devoirs/STT5100-A2019-devoir1.md)
-* Regression logistique - GLM : 
+* Regression logistique - GLM : [Devoir2](devoirs/STT5100-A2019-devoir2.md) 
 
 **Examen**
 * Modeles de régression - OLS : [A2019-1E.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_ENONCE.pdf) pour l'énoncé et [A2019-1C.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_CORREC.pdf) pour la "correction"
