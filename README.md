@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_A2019.pdf](docs/Plan%20STT5100%20A2019.pdf)
 Démonstrateur : Alexandre LeBlanc
 
 ```diff
-- (1er novembre 2019) le sujet de l'intra et des éléments de correction sont en ligne
+- (7 novembre 2019) le second devoir est en ligne
 ```
 
 **Notes de cours**
