@@ -102,4 +102,4 @@ techniques exposees en cours.
     d’apprentissage et de test *ne sont pas au programme* et ne
     devront pas etre utilisee ici \!
   - Les seuls packages autorises (sauf autorisation explicite) sont
-    `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`
+    `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `pROC`, `plotROC`, `verification`, `ROCR`, `dplyr`, `aod`, `vcd`, `statmod` (et les dépendances associées)
