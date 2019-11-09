@@ -75,7 +75,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 7. Regression locale et lissage [code7.R](code/Stt5100-5.R) et [STT5100_Demonstration_4.Rmd](code/STT5100_Demonstration_3_4_Q.Rmd) pour les questions, et [STT5100_Demonstration_4S.Rmd](code/STT5100_Demonstration_3_4_Sol.Rmd) pour la solution
 8. Pratique de la régression linéaire [code8.R](code/code8.R)
 9. **Examen Intra**
-10. Regression logistique 
+10. Regression logistique [code10.R](code/stt5100-10.R)
 11. Regression logistique 
 12. Regression de Poisson 
 13. Regression de Poisson 
