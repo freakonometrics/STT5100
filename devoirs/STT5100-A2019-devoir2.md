@@ -64,6 +64,8 @@ str(database)
     ##  $ medicaid        : Factor w/ 2 levels "no","yes": 1 1 1 1 1 1
     ##  $ visites.1       : int  7 13 13 4 5 2
 
+La dernière variable, `visites.1` est malheurement la variable `visites` dupliquée, il conviendra de la supprimer.
+
 ``` diff
 - (7 Novembre 2019) la base est en ligne
 ```
@@ -90,11 +92,11 @@ techniques exposees en cours.
     variable d’interet)
 2.  Une partie presentant la construction du modele : il s’agira de
     partir au choix (i) d’un modele simple, et de montrer comment
-    l’ameliorer, (ii) d’une modele complexe, et de montrer comment le
+    l’ameliorer, (ii) d’un modele complexe, et de montrer comment le
     simplifier
-3.  Une partie qui presente la forme du modele, en donnant (i) la courbe
-    ROC obtenue (ii) le AUC du modèle retenu (iii) la liste des
-    variables explicatives retenues
+3.  Une partie où on étudiera *le fait d'aller chez le médecin, ou pas*, i.e. la variable `y = (base$visites == 0)`. Le premier modèle sera simplement le modèle construit à partir du modèle de Poisson, et une régression logistique
+4.  Une partie qui compare les deux modèles avec (i) les deux courbes
+    ROC obtenues (ii) les AUC des modèles
 
 <!-- end list -->
 
@@ -102,4 +104,4 @@ techniques exposees en cours.
     d’apprentissage et de test *ne sont pas au programme* et ne
     devront pas etre utilisee ici \!
   - Les seuls packages autorises (sauf autorisation explicite) sont
-    `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `pROC`, `plotROC`, `verification`, `ROCR`, `dplyr`, `aod`, `vcd`, `statmod` (et les dépendances associées)
+    `MASS`, `lmtest`, `counts`, `nortest`, `car`, `splines`, `AER`, `pROC`, `plotROC`, `verification`, `ROCR`, `dplyr`, `aod`, `vcd`, `statmod` (et les dépendances associées)
