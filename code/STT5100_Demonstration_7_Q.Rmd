@@ -1,0 +1,75 @@
+---
+title: 'STT5100: Démonstration 7'
+author: "Alexandre LeBlanc"
+params:
+  data: base_devoir_2
+output:
+  html_document: default
+  html_notebook: default
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=TRUE, error=TRUE, fig.align="center")
+```
+
+# Exercices sur la régression logistique
+
+---
+
+## Base de données - Devoir #2 (H2019)
+
+---
+
+La base de données utilisée par la présente démonstration est disponible au répertoire Github d'Arthur Charpentier: <https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/code/STT5100-H2019-devoir2.md>.
+
+Pour télécharger la base de données effectuez le code suivant:
+
+```{r}
+code_permanent = "ABCD12345678"
+loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,"2.RData",sep="")
+download.file(loc_fichier, "base_devoir_2.RData")
+load("base_devoir_2.RData")
+dim(database)
+```
+
+```{r}
+attach(database)
+str(database)
+```
+
+## Question 1
+
+Pour le modèle de régression logistique avec fonction de lien *logit*, calculer $\text{Var}(\widehat{\boldsymbol{\beta}}).$ Déduire que lorsque $n$ (le nombre de données) augmente, $\text{Var}(\widehat{\beta}_j)$ diminue pour tout $j = 1, 2,\,\ldots\,,p.$ 
+
+## Question 2 (À venir)
+
+Soit $y_i$ provenant d'une loi $\text{Bernoulli}(\pi_i),\ i = 1,\,\ldots\,n.$ Pour le modèle de régression logistique $\text{logit}(\pi_i) = \beta_0 + \beta_1X_i$ montrer que la déviance du modèle dépend des $\widehat{\pi}_i$ et non des $y_i.$ Est ce-que la déviance est-t-elle utile pour vérifier l'adéquation du modèle?
+
+## Question 3
+
+Pour la base de données \texttt{database}, ajuster le modèle logistique complet (sans interactions) pour la variable explicative $y_i = \text{Employé } i \text{ a quitté l'entreprise}.$ Faites l'appel de la fonction \texttt{summary} du modèle ajusté.
+
+## Question 4
+
+Remarquez les paramètres des variables explicatives catégorielles $\texttt{promotion},\ \texttt{dept},\ \texttt{salaire}$ ainsi que l'ordonnée à l'origine possèdent des écarts-types supérieurs de plusieurs ordres de grandeur. 
+
+Illustrer les graphiques sommaires du modèle par la fonction $\texttt{plot}.$ Commenter sur les graphiques.
+
+## Question 5
+
+Pour expliquer le phénomène aux Q3 et Q4, afficher des tableaux de contingence des variables explicatives en question contre la variable réponse. Enlever les variables causant la séparation et comparer l'ajustement de celui-ci avec le modèle à la Q3.
+
+## Question 6
+
+Calculer la courbe ROC du modèle à la Q5 ainsi que son AUC. Afficher le graphique de la courbe ROC du modèle et identifier *cutoff* optimal en fonction de la **sensibilité** et du **taux de faux négatifs**.
+
+## Question 7
+
+Estimez le modèle multinomial avec variable réponse $\texttt{salaire}$ en fonction des autres variables et calculer prédictions des probabilités d'être dans chacune des classes de la variable $\texttt{salaire}$ pour chacune des observations. Quel individu possède la plus grande probabilité d'être classé avec un haut salaire? 
+
+## Question 8
+
+Posez le modèle *logit* suivant: $g(Y) = \beta_0 + \beta_1\texttt{projets}.$ Une fois les estimés $\widehat{\beta}_0, \widehat{\beta}_1$ obtenus, calculez $\widehat{\text{Pr}}(\texttt{projets} = i \mid Y = 1),\ i = 1, 2, 3, 4, 5.$
+
