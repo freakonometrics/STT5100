@@ -76,7 +76,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 8. Pratique de la régression linéaire [code8.R](code/code8.R)
 9. **Examen Intra**
 10. Regression logistique [code10.R](code/stt5100-10.R)
-11. Regression logistique [code11.R](code/stt5100-code-11.R)
+11. Regression logistique [code11.R](code/stt5100-code-11.R) et [STT5100_Demonstration_5.Rmd](code/STT5100_Demonstration_7Q.Rmd) pour les questions, et [STT5100_Demonstration_5S.Rmd](code/STT5100_Demonstration_7.Rmd) pour la solution
 12. Regression de Poisson 
 13. Regression de Poisson 
 14. GLM - Modeles Lineaires Generalises
