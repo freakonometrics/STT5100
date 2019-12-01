@@ -1,0 +1,180 @@
+---
+title: 'STT5100: Démonstration 8'
+author: "Alexandre LeBlanc"
+output:
+  html_document: default
+  html_notebook: default
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=TRUE, error=TRUE, fig.align="center")
+```
+
+# Exercices sur la régression de Poisson
+
+---
+
+## Base de données - Assurance automobile
+
+---
+
+On utilise la base de données $\texttt{ausprivauto0405}$ qui contient les polices souscrites d'un portefeuille d'assurance responsabilité civile lors de l'année 2004-2005 pour un assureur privé australien. 
+
+Cette base de données paraît dans l'ouvrage *Computational Actuarial Science with R* (Charpentier, 2016). Pour accéder à la base de données, effectuez les codes suivant:
+
+```{r}
+install.packages("xts")
+install.packages("CASdatasets", repos = "http://cas.uqam.ca/pub/R/")
+
+```
+
+```{r}
+library(xts)
+library(CASdatasets)
+```
+
+```{r}
+data(ausprivauto0405)
+attach(ausprivauto0405)
+```
+
+## Question 1
+
+Pour les deux variable $\texttt{Gender}$ et $\texttt{DrivAge}$ relativement à la variable réponse $\texttt{ClaimNb},$ poser le **modèle additif** ainsi que le **modèle additif** selon la méthode des marges.
+
+Le modèle additif est de la forme
+$$\widehat{r}_{i,j} = x_i + y_j,\ i = 1, 2 \text{ et } j = 1,\,\ldots\,,6$$
+
+Le modèle multiplicatif est de la forme
+$$\widehat{r}_{i,j} = x_iy_j,\ i = 1, 2 \text{ et } j = 1,\,\ldots\,,6$$
+
+où la variable $x$ correpond à la relativité dû à la variable $\texttt{Gender}$ et $y$ correpond à la relativité dû à la variable $\texttt{DrivAge}.$
+
+Premièrement, l'exposition au risque est
+
+```{r}
+w = aggregate(Exposure ~ Gender + DrivAge, FUN = sum, data = ausprivauto0405)
+```
+
+Ensuite, les nombres de réclamations selon les catégories sont
+
+```{r}
+n = aggregate(ClaimNb ~ Gender + DrivAge, FUN = sum, data = ausprivauto0405) 
+```
+
+Il s'ensuit que les relativités observées $r_{i,j}$ sont
+
+```{r}
+bm_data = merge(w, n, by = c("Gender", "DrivAge"))
+bm_data$Rel = (bm_data$ClaimNb/bm_data$Exposure)/(bm_data$ClaimNb[1]/bm_data$Exposure[1])
+```
+
+```{r}
+wMat = matrix(bm_data$Exposure, nrow = 2, ncol = 6, byrow = TRUE)
+rMat = matrix(bm_data$Rel, nrow = 2, ncol = 6, byrow = TRUE)
+```
+
+Pour que les marges soient respectées (Bailey), rappelez que le **modèle multiplicatif** possède les solutions
+
+$$x_i = \frac{\sum_jw_{i,j}r_{i,j}}{\sum_jw_{i,j}y_j} \quad\text{ et }\quad y_j = \frac{\sum_iw_{i,j}r_{i,j}}{\sum_iw_{i,j}x_i}$$
+
+```{r}
+x = rep(1, length(levels(bm_data$Gender)))
+y = colSums(wMat * rMat)/(t(wMat) %*% x)
+
+for(i in 1:1000){
+  x = rowSums(wMat * rMat)/(wMat %*% y)
+  y = colSums(wMat * rMat)/(t(wMat) %*% x)
+}
+```
+
+Les relativités prédites sont
+
+```{r}
+relPred1 = matrix(outer(x, y, FUN = "*"), nrow = 2, ncol = 6)
+rownames(relPred1) = levels(Gender)
+colnames(relPred1) = levels(DrivAge)
+relPred1/relPred1[1,1]
+```
+
+Pour que les marges du modèle prédictif respecte celles des observations, notez que le **modèle additif** possède les solutions
+
+$$x_i = \frac{\sum_jw_{i,j}(r_{i,j} - y_j)}{\sum_jw_{i,j}} \quad\text{ et }\quad y_j = \frac{\sum_iw_{i,j}(r_{i,j} - x_i)}{\sum_iw_{i,j}}$$
+
+```{r}
+x = rep(1, length(levels(bm_data$Gender)))
+y = colSums(wMat * (rMat - x))/colSums(wMat)
+
+for(i in 1:1000){
+  x = rowSums(wMat * (rMat - y))/rowSums(wMat)
+  y = colSums(wMat * (rMat - x))/colSums(wMat)
+}
+```
+
+```{r}
+relPred2 = matrix(outer(x, y, FUN = "+"), nrow = 2, ncol = 6)
+rownames(relPred2) = levels(Gender)
+colnames(relPred2) = levels(DrivAge)
+relPred2 - relPred2[1,1]
+```
+
+## Question 2
+
+Vérifiez que les résulats du modèle **multiplicatif** la Q1 sont équivalents à ceux d'un modèle de Poisson où $N_{i,j} \sim \text{Poisson}(w_{i,j}x_iy_j)$ où $w_{i,j}$ correspond à l'exposition de la classe $(i,j).$ Vérifiez ceci en comparant les relativités du modèle à biais minimums et de la régression de Poisson. 
+
+Également, vérifiez l'équivalence par le **MV**.
+
+```{r}
+regPois = glm(ClaimNb ~ Gender + DrivAge, family = poisson, offset = log(Exposure))
+summary(regPois)
+```
+
+```{r}
+predPois = predict(regPois, type = "response", newdata = cbind(bm_data[,1:2], Exposure = rep(1, nrow(bm_data))))
+relPois = matrix(predPois/predPois[1], nrow = 2, ncol = 6, byrow = TRUE)
+rownames(relPois) = levels(Gender)
+colnames(relPois) = levels(DrivAge)
+```
+
+```{r}
+relPois
+```
+
+### Remarque
+
+Vous pouvez consulter l'article de [Brown (1988)](https://www.casact.org/pubs/proceed/proceed88/88187.pdf) sur les méthodes des biais minimums et les GLMs. La démonstration de l'équivalence de la méthode de Bailey et de la régression de Poisson est donnée par le **MV** (en bas de la p.14).
+
+## Question 3
+
+Pour le modèle de régression de Poisson, montrez que le changement moyen de l'espérance relativement à une variable explicative respecte $\displaystyle\frac{1}{n}\sum_i\frac{\partial\widehat{\lambda}_i}{\partial X_{i,j}} = \widehat{\beta}_j\overline{y}.$ 
+
+Puisque $g(\lambda_i) = \log(\lambda_i) = \mathbf{X}_i^T\boldsymbol{\beta},\ \lambda_i = e^{\mathbf{X}_i^T\boldsymbol{\beta}}.$ Alors,
+$$\frac{\partial\lambda_i}{\partial X_{i,j}} = \lambda_i\beta_j$$
+
+Remplaçant par les estimateurs, $\displaystyle\frac{\partial\widehat{\lambda}_i}{\partial X_{i,j}} = \widehat{\lambda}_i\widehat{\beta}_j.$ Par le **MV** pour la régression de Poisson, on obtient $\displaystyle\sum_{i = 1}^n \widehat{\lambda}_i = \sum_{i = 1}^n y_i.$
+
+Finalement, $\displaystyle\frac{1}{n}\sum_{i = 1}^n\frac{\partial\widehat{\lambda}_i}{\partial X_{i,j}} = \widehat{\beta}_j\overline{y}.$
+
+## Question 4
+
+Supposez que les observations $y_1,\,\ldots\,,y_n$ sont issus d'une loi de Poisson $Y \sim \text{Poisson}(\lambda).$ Montrer que l'estimateur par le **MV** de $\lambda$ est la moyenne $\overline{y}$ peut importe la fonction de lien $g.$
+
+Par la définition de la fonction de lien, $$g(E(y_i \mid \mathbf{X}_i)) = g(\lambda) = \mathbf{X}_i^T\boldsymbol{\beta} \implies \lambda = g^{-1}(\mathbf{X}_i^T\boldsymbol{\beta})\ \text{ pour tout } i = 1,\,\ldots\,n$$
+
+Alors, 
+\begin{align*}
+\ell(\boldsymbol{\beta}) &= \sum_{i = 1}^{n}\{y_i\log{\lambda(\boldsymbol{\beta})} - \lambda(\boldsymbol{\beta}) - \log{y_i!}\}
+\end{align*}
+
+Pour $g^{-1}$ dérivable et $g^{\prime} \circ g^{-1}$ non nulle, $\displaystyle\frac{d}{dx}g^{-1}(x) = \frac{1}{(g^{\prime} \circ g^{-1})(x)}.$ Il en découle que 
+\begin{align*}
+\frac{\partial\ell}{\partial\beta_j} &= \sum_{i = 1}^{n}\left\{y_i\lambda^{-1} - 1\right\} \frac{\partial\lambda}{\partial\beta_j}X_{i,j}\\
+&= \sum_{i = 1}^{n}\left\{y_i\lambda^{-1} - 1\right\} \frac{1}{X_{i,j}}X_{i,j}\\
+&= \sum_{i = 1}^{n}\left\{y_i\lambda^{-1} - 1\right\}\\
+&= 0
+\end{align*}
+
+On obient que $\widehat{\lambda} = \overline{y}$, tel que voulu.
+
