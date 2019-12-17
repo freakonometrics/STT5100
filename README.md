@@ -31,7 +31,7 @@ Démonstrateur : Alexandre LeBlanc
 
 **Examen**
 * Modeles de régression - OLS : [A2019-1E.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_ENONCE.pdf) pour l'énoncé et [A2019-1C.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_CORREC.pdf) pour la "correction"
-* Modeles de régression - GLM : 
+* Modeles de régression - GLM : [A2019-2E.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_2_ENONCE.pdf) pour l'énoncé et [A2019-2C.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_2_CORREC.pdf) pour la "correction"
 
 **Examens passés**
 (il s'agit d'un "nouveau cours" du programme : le premier a été donné à l'automne 2018)
