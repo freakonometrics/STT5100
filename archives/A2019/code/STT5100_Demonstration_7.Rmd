@@ -1,0 +1,229 @@
+---
+title: 'STT5100: Démonstration 7'
+author: "Alexandre LeBlanc"
+params:
+  data: base_devoir_2
+output:
+  html_document: default
+  html_notebook: default
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=TRUE, error=TRUE, fig.align="center")
+```
+
+# Exercices sur la régression logistique
+
+---
+
+## Base de données - Devoir #2 (H2019)
+
+---
+
+La base de données utilisée par la présente démonstration est disponible au répertoire Github d'Arthur Charpentier: <https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/code/STT5100-H2019-devoir2.md>.
+
+Pour télécharger la base de données effectuez le code suivant:
+
+```{r}
+code_permanent = "ABCD12345678"
+loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,"2.RData",sep="")
+download.file(loc_fichier, "base_devoir_2.RData")
+load("base_devoir_2.RData")
+dim(database)
+```
+
+```{r}
+attach(database)
+str(database)
+```
+
+## Question 1
+
+Pour le modèle de régression logistique avec fonction de lien *logit*, calculer $\text{Var}(\widehat{\boldsymbol{\beta}}).$ Déduire que lorsque $n$ (le nombre de données) augmente, $\text{Var}(\widehat{\beta}_j)$ diminue pour tout $j = 1, 2,\,\ldots\,,p.$ 
+
+Puisque les méthodes d'estimations de paramètres pour les GLMs sont fondées sur le **MV**, on calculera la première et deuxième dérivée de la fonction de log-vraisemblance $\ell(\boldsymbol{\beta}),$
+
+\begin{align*}
+  \ell(\boldsymbol{\beta}) &= \sum_{i = 1}^{n}\log\left[{n \choose y_i}\pi_i^{y_i}(1 - \pi_i)^{n - y_i}\right]\\
+  &= \sum_{i = 1}^{n}\left\{y_i\log\left(\frac{\pi_i}{1 - \pi_i}\right) + n\log(1 - \pi_i) + \log{n \choose y_i}\right\}\\
+  &= \sum_{i = 1}^{n}\left\{y_i(\mathbf{X}_i^T\boldsymbol{\beta}) - n\log(1 + e^{\mathbf{X}_i^T\boldsymbol{\beta}}) + \log{n \choose y_i}\right\}
+\end{align*}
+
+Il s'ensuit que la première et deuxième dérivée de la log-vraisemblance est
+
+\begin{align*}
+  \frac{\partial\ell}{\partial\boldsymbol{\beta}} &= \sum_{i = 1}^{n}\left\{y_i\mathbf{X}_i^T - n\frac{e^{\mathbf{X}_i^T\boldsymbol{\beta}}}{1 + e^{\mathbf{X}_i^T\boldsymbol{\beta}}}\mathbf{X}_i^T\right\}\\
+  &= \sum_{i = 1}^{n}(y_i - n\pi_i)\mathbf{X}_i^T\\
+  &= \mathbf{X}^T(\mathbf{y} - n\boldsymbol{\pi}) && \mathbf{X} = (\mathbf{X}_1 \mid \dots \mid \mathbf{X}_n)^T \text{ et } \boldsymbol{\pi} = \left(\frac{e^{\mathbf{X}_1^T\boldsymbol{\beta}}}{1 + e^{\mathbf{X}_1^T\boldsymbol{\beta}}}, \,\ldots\,, \frac{e^{\mathbf{X}_n^T\boldsymbol{\beta}}}{1 + e^{\mathbf{X}_n^T\boldsymbol{\beta}}}\right)^T
+\end{align*}
+
+Puisque, $$\displaystyle\frac{\partial\boldsymbol{\pi}}{\partial\boldsymbol{\beta}} = \displaystyle\frac{\partial}{\partial\boldsymbol{\beta}}\left(\frac{e^{\mathbf{X}_1^T\boldsymbol{\beta}}}{1 + e^{\mathbf{X}_1^T\boldsymbol{\beta}}},\,\ldots\,, \frac{e^{\mathbf{X}_n^T\boldsymbol{\beta}}}{1 + e^{\mathbf{X}_n^T\boldsymbol{\beta}}}\right)^T = \begin{pmatrix}\frac{e^{\mathbf{X}_1^T\boldsymbol{\beta}}}{(1 + e^{\mathbf{X}_1^T\boldsymbol{\beta}})^2} & \frac{e^{\mathbf{X}_1^T\boldsymbol{\beta}}}{(1 + e^{\mathbf{X}_1^T\boldsymbol{\beta}})^2}X_{1, 1} & \dots & \frac{e^{\mathbf{X}_1^T\boldsymbol{\beta}}}{(1 + e^{\mathbf{X}_1^T\boldsymbol{\beta}})^2}X_{1, p}\\ 
+\frac{e^{\mathbf{X}_2^T\boldsymbol{\beta}}}{(1 + e^{\mathbf{X}_2^T\boldsymbol{\beta}})^2} & \frac{e^{\mathbf{X}_2^T\boldsymbol{\beta}}}{(1 + e^{\mathbf{X}_2^T\boldsymbol{\beta}})^2}X_{2, 1} & \dots & \frac{e^{\mathbf{X}_2^T\boldsymbol{\beta}}}{(1 + e^{\mathbf{X}_2^T\boldsymbol{\beta}})^2}X_{2, p}\\
+\vdots & \vdots & \dots & \vdots \\
+\frac{e^{\mathbf{X}_n^T\boldsymbol{\beta}}}{(1 + e^{\mathbf{X}_n^T\boldsymbol{\beta}})^2} & \frac{e^{\mathbf{X}_n^T\boldsymbol{\beta}}}{(1 + e^{\mathbf{X}_n^T\boldsymbol{\beta}})^2}X_{n, 1} & \dots & \frac{e^{\mathbf{X}_n^T\boldsymbol{\beta}}}{(1 + e^{\mathbf{X}_n^T\boldsymbol{\beta}})^2}X_{n, p}
+\end{pmatrix} = \begin{pmatrix}\pi_1(1 - \pi_1) & \pi_1(1 - \pi_1)X_{1, 1} & \dots & \pi_1(1 - \pi_1)X_{1, p}\\ 
+\pi_2(1 - \pi_2) & \pi_2(1 - \pi_2)X_{2, 1} & \dots & \pi_2(1 - \pi_2)X_{2, p}\\
+\vdots & \vdots & \dots & \vdots \\
+\pi_n(1 - \pi_n) & \pi_n(1 - \pi_n)X_{n, 1} & \dots & \pi_n(1 - \pi_n)X_{n, p}
+\end{pmatrix} = \text{diag}\left\{\pi_1(1 - \pi_1),\,\ldots\,, \pi_n(1 - \pi_n)\right\}\mathbf{X}$$
+
+Alors, 
+
+\begin{align*}
+I(\boldsymbol{\beta}) = -E\left[\frac{\partial^2\ell}{\partial\boldsymbol{\beta}^2}\right] = \mathbf{X}^Tn\displaystyle\frac{\partial\boldsymbol{\pi}}{\partial\boldsymbol{\beta}} = \mathbf{X}^T\text{Var}(\mathbf{y})\mathbf{X}
+\end{align*}
+
+L'inverse de matrice d'information de Fisher est la matrice de variance-covariance pour $\widehat{\boldsymbol{\beta}}$ si celui-ci est sans biais et est un estimateur *efficient*. Il en découle que $\text{Var}(\widehat{\beta}_j)$ décroît si $n$ augmente.
+
+### Remarque
+
+Puisque $E\left[\displaystyle\frac{\partial\ell}{\partial\boldsymbol{\beta}}\right] = \mathbf{0},$ il est possible d'écrire que $-E\left[\displaystyle\frac{\partial^2\ell}{\partial\boldsymbol{\beta}^2}\right] = E\left[\displaystyle\frac{\partial\ell}{\partial\boldsymbol{\beta}}\left(\frac{\partial\ell}{\partial\boldsymbol{\beta}}\right)^T\right] = \mathbf{X}^TE[(\mathbf{y} - n\boldsymbol{\pi})(\mathbf{y} - n\boldsymbol{\pi})^T]\mathbf{X} = \mathbf{X}^T\text{Var}(\mathbf{y})\mathbf{X}.$
+
+## Question 2 (À venir)
+
+Soit $y_i$ provenant d'une loi $\text{Bernoulli}(\pi_i),\ i = 1,\,\ldots\,n.$ Pour le modèle de régression logistique $\text{logit}(\pi_i) = \beta_0 + \beta_1X_i$ montrer que la déviance du modèle dépend des $\widehat{\pi}_i$ et non des $y_i.$ Est ce-que la déviance est-t-elle utile pour vérifier l'adéquation du modèle?
+
+## Question 3
+
+Pour la base de données \texttt{database}, ajuster le modèle logistique complet (sans interactions) pour la variable explicative $y_i = \text{Employé } i \text{ a quitté l'entreprise}.$ Faites l'appel de la fonction \texttt{summary} du modèle ajusté.
+
+```{r}
+modele_logit = glm(Y ~ ., data = database, family = binomial(link = "logit"))
+```
+
+```{r}
+summary(modele_logit)
+```
+
+## Question 4
+
+Remarquez les paramètres des variables explicatives catégorielles $\texttt{promotion},\ \texttt{dept},\ \texttt{salaire}$ ainsi que l'ordonnée à l'origine possèdent des écarts-types supérieurs de plusieurs ordres de grandeur. 
+
+Illustrer les graphiques sommaires du modèle par la fonction $\texttt{plot}.$ Commenter sur les graphiques.
+
+```{r}
+par(mfrow = c(2, 2))
+plot(modele_logit)
+```
+
+Les graphiques démontrent que les observations 9187 et 7108 semblent être des valeurs influentes par la distance de Cook. Également, pour les valeurs prédites dans l'intervalle $(-25,-15)$, les résidus (sur l'échelle de la fonction de lien) semblent nuls (approximativement) avec aucune variabilité selon les écarts-types des résidus. 
+
+Alors, il y a sûrement une déficience du modèle pour une certaine sous-ensemble d'observations.
+
+## Question 5
+
+Pour expliquer le phénomène aux Q3 et Q4, afficher des tableaux de contingence des variables explicatives en question contre la variable réponse. Enlever les variables causant la séparation et comparer l'ajustement de celui-ci avec le modèle à la Q3.
+
+```{r}
+table(Y, promotion)
+```
+
+```{r}
+table(Y, dept)
+```
+
+```{r}
+table(Y, salaire)
+```
+
+Le phénomène apparent par les tableaux ci-hauts est celui de la *séparation*. S'il y a une variable explicative pour laquelle peut importe sa valeur (quantitative ou qualitative) donne la même valeur de la variable réponse, on dit qu'il y a **séparation complète**. Ceci est plus probable issu d'une variable qualitative. En contrepartie, si il y a une variable qualitative qui possède un niveau vide, il y a la **séparation quasi-complète** par rapport à la variable qualitative en question. La séparation quasi-complète peut survenir pour une variable quantitative si une valeur d'une variable explicative donne pleusieurs valeurs pour la variable réponse. 
+
+Il y a plusieurs solutions au problème de la séparation quasi-complète:
+
+* Rien
+* Ne pas inclure les variables troublantes dans le modèle (introduit un biais dans l'estimateur de $\boldsymbol{\beta}$)
+* Aggréger les catégories afin d'éliminer les catégories vides (si cela est justifiable)
+* Introduire une distribution *a priori* et utiliser des méthodes bayésienes (e.g. )
+* Pénalisation de la vraisemblance (Firth)
+
+Pour fins de simplicité, les variables $\texttt{promotion},\ \texttt{dept}, \text{ et } \texttt{salaire}$ seront éliminées.
+
+```{r}
+modele_logit_sansSep = glm(Y ~ . - promotion - dept - salaire, data = database)
+```
+
+```{r}
+summary(modele_logit_sansSep)
+```
+
+## Question 6
+
+Calculer la courbe ROC du modèle à la Q5 ainsi que son AUC. Afficher le graphique de la courbe ROC du modèle et identifier *cutoff* optimal en fonction de la **sensibilité** et du **taux de faux négatifs**.
+
+```{r}
+install.packages("ROCR")
+```
+
+```{r}
+library(ROCR)
+```
+
+```{r}
+score = data.frame(yobs = Y, ypred = predict(modele_logit_sansSep, type = "response"))
+```
+
+```{r}
+pred = prediction(score$ypred,score$yobs)
+rocs = performance(pred, "tpr", "fpr")
+plot(rocs)
+abline(0, 1, col = "red", lty = 2)
+```
+
+```{r}
+max(as.numeric(unlist(rocs@alpha.values))[2:100])
+```
+
+```{r}
+perf = performance(pred, measure = "auc")
+perf@y.values
+```
+
+## Question 7
+
+Estimez le modèle multinomial avec variable réponse $\texttt{salaire}$ en fonction des autres variables et calculer prédictions des probabilités d'être dans chacune des classes de la variable $\texttt{salaire}$ pour chacune des observations. Quel individu possède la plus grande probabilité d'être classé avec un haut salaire? 
+
+```{r}
+library(nnet)
+```
+
+```{r}
+modele_multinom = multinom(salaire ~., data = database)
+summary(modele_multinom)
+```
+
+```{r}
+pred.multinom = predict(modele_multinom, data = database, type = "probs")
+which(pred.multinom[,1] == max(pred.multinom[,1]))
+```
+
+## Question 8
+
+Posez le modèle *logit* suivant: $g(Y) = \beta_0 + \beta_1\texttt{projets}.$ Une fois les estimés $\widehat{\beta}_0, \widehat{\beta}_1$ obtenus, calculez $\widehat{\text{Pr}}(\texttt{projets} = i \mid Y = 1),\ i = 1, 2, 3, 4, 5.$
+
+```{r}
+modele_logit_2 = glm(Y ~ projets, data = database, family = binomial(link = "logit"))
+summary(modele_logit_2)
+```
+
+Par le théorème de Bayes,
+
+\begin{align*}
+  \widehat{\text{Pr}}(\texttt{projets} = i \mid Y = 1) &= \frac{\widehat{\text{Pr}}(Y = 1 \mid \texttt{projets} = i)\,\widehat{\text{Pr}}(\texttt{projets} = i)}{\widehat{\text{Pr}}(Y = 1)}\\
+  &= \frac{\widehat{\text{Pr}}(Y = 1 \mid \texttt{projets} = i)\,\widehat{\text{Pr}}(\texttt{projets} = i)}{\displaystyle\sum_{j}\widehat{\text{Pr}}(Y = 1 \mid \texttt{projets} = j)\,\widehat{\text{Pr}}(\texttt{projets} = j)}\\
+\end{align*}
+
+Le vecteur de probabilités $\widehat{\text{Pr}}(\texttt{projets} = j)$ est 
+
+```{r}
+projets.prob = c(table(projets)/nrow(database))
+Y_projets.prob = sapply(sort(unique(projets), decreasing = FALSE), function(x){predict(modele_logit_2, newdata = data.frame(projets = x), type = "response")})
+names(Y_projets.prob) = sort(unique(projets), decreasing = FALSE)
+```
+
+```{r}
+(p = (Y_projets.prob * projets.prob)/(Y_projets.prob %*% Y_projets.prob))
+```
+
+

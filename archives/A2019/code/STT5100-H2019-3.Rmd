@@ -1,0 +1,34 @@
+---
+title: "STT5100 #2 - Modèle Linéaire Multiple"
+author: "Arthur Charpentier"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(DALEX)
+data(apartments, package = "DALEX")
+str(apartments)
+model = lm(m2.price~.,data=apartments)
+summary(model)
+```
+
+# Boston Database
+
+Used in [Belsley, Kuh & Welsch (2013)](https://www.wiley.com/en-us/Regression+Diagnostics%3A+Identifying+Influential+Data+and+Sources+of+Collinearity-p-9780471691174)
+
+!(416.png)
+
+```{r}
+library(MASS)
+data(Boston, package = "MASS")
+str(Boston)
+model = lm(log(medv)~.,data=Boston)
+summary(model)
+```
+
+

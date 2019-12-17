@@ -1,0 +1,75 @@
+---
+title: "STT5100 - Probabilites et Statistiques - Hiver 2019"
+author: "Arthur Charpentier"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+Davis=read.table(
+"http://socserv.socsci.mcmaster.ca/jfox/Books/Applied-Regression-2E/datasets/Davis.txt")
+Davis[12,c(2,3)]=Davis[12,c(3,2)]
+Davis=data.frame(X=Davis$height / 30.48,
+                 Y=Davis$weight * 2.204622)
+str(Davis)
+```
+
+```{r}
+X = Davis$X
+plot(ecdf(X))
+ecdf(X)(mean(X))
+u=seq(4.5,7,length=251)
+v=ecdf(X)(u)
+plot(u,v,type="s")
+plot(v,u,type="s")
+```
+
+```{r}
+hist(Davis$X)
+mean(Davis$X)
+var(Davis$X)
+sd(Davis$X)
+u=seq(min(Davis$X),max(Davis$X),length=251)
+hist(Davis$X,probability=TRUE)
+lines(u,dnorm(u,mean(Davis$X),sd(Davis$X)),col="red")
+hist(Davis$Y)
+mean(Davis$Y)
+var(Davis$Y)
+sd(Davis$Y)
+u=seq(min(Davis$Y),max(Davis$Y),length=251)
+hist(Davis$Y,probability=TRUE)
+lines(u,dnorm(u,mean(Davis$Y),sd(Davis$Y)),col="red")
+```
+
+```{r}
+var(Davis[,c("X","Y")])
+plot(Davis)
+library(mnormt)
+f=function(x,y) dmnorm(cbind(x,y),c(mean(Davis$X),mean(Davis$Y)),var(Davis))
+x=seq(min(Davis$X),max(Davis$X),length=101)
+y=seq(min(Davis$Y),max(Davis$Y),length=101)
+z=outer(x,y,f)
+contour(x,y,z,add=TRUE,col="red")
+```
+
+```{r}
+data(cars)
+str(cars)
+plot(cars)
+```
+
+```{r}
+chicago = read.table("http://freakonometrics.free.fr/chicago.txt",header=TRUE,sep=";")
+tail(chicago)
+str(chicago)
+for(k in 2:4) plot(chicago[,k],chicago$Fire)
+```
+
+```{r}
+myocarde = read.table("http://freakonometrics.free.fr/myocarde.csv",head=TRUE, sep=";")
+str(myocarde)
+for(i in 1:7) boxplot(myocarde[,i]~myocarde$PRONO,horizontal=TRUE)
+```

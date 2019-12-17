@@ -1,0 +1,33 @@
+---
+title: "STT5100 - Devoir 2 - Hiver 2019"
+author: "Arthur Charpentier"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+code_permanent = "ABCD12345678"
+loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,"2.RData",sep="")
+download.file(loc_fichier, "base_devoir_2.RData")
+load("base_devoir_2.RData")
+dim(database)
+```
+
+* `satisf` = niveau de satisfaction (entre 0 et 1)
+* `eval` = temps depuis la derniere evaluation (en annees)
+* `projets` = nombre de projets sur lequel l'employe etait implique
+* `heures_mensuel` = nombre d'heures travaillees par mois           
+* `anciennete` = nombre d'heures passees dans l'entreprise
+* `accidents` = indicateur indiquant l'employe a eu un accident de travail   
+* `Y` = a quitte l'entreprise (0 : non, 1 : oui) **variable a expliquer**
+* `promotion` = indicateur indiquant si l'employe a obtenu une promotion au cours des 5 dernieres annees
+* `dept` = departement ou la personne etait employee (10 niveaux)
+* `salaire` = niveau relatif de salaire (3 niveaux)
+
+```{r}
+str(database)
+table(database$Y)
+```
