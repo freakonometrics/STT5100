@@ -1,0 +1,141 @@
+---
+title: "Exam PA December 2018 Rmd Template"
+
+---
+# Three useful items
+
+I find these three items useful and so am providing them here in case you have need for what they do. The first and second will not run until some of the code is replaced with actual data freame and/or variable names, but the third, which creates a function, needs to be run in order for the function to be used.
+
+The first uses caret to partition a dataset.
+
+```{r}
+library(caret)
+set.seed(1234)
+partition <- createDataPartition(data.frame$FEATURE, list = FALSE, p = .80)
+train <- data.frame[partition, ]
+test <- data.frame[-partition, ]
+# replace "data.frame" with the name of your dataframe (3 times)
+# replace "FEATURE" with the target variable
+# The proportion that goes to the training set need not be .80
+# Consider giving more intuitive names to the two sets created here
+```
+
+The second is how to change the order of the levels for a factor (categorical variable). This can make a difference for GLM results as the first level becomes the baseline and all but the first level become additional predictive variables. In general, for GLMs it is good set the base (reference) level to the one that has the most observations.
+
+```{r}
+levels(data.frame$CATEGORICAL)
+data.frame$CATEGORICAL <- relevel(data.frame$CATEGORICAL, ref = "Level Name")
+levels(data.frame$CATEGORICAL)
+# the levels function might help you see the effect of the change
+# replace "data.frame" with the name of your dataframe (2 times)
+# replace "CATEGORICAL" with the name of a variable that is a factor (categorical variable) (2 times)
+# replace "Level Name" with the name of the level that should become the first level
+```
+
+The third is a function that measures the quality of fit of predicted versus actual outcomes. It is the loglikelihood function for a Poisson model (up to a constant) and can be used to assess fit against the data used to build the model or against a test set. I will mention the Poisson model later on in this file. As with any loglikelihood function, less negative or more positive values indicate a better fit.
+
+There are some special considerations taken care of by this function. At times when using trees, the predicticted value is slightly negative (a computer issue) when it should be zero. In addition, when the predicted value is zero, the log cannot be taken. If the target is zero, evaluating the loglikehood to zero makes sense. If not, a small value such as 0.000001 can be used. These adjustments are made in the function.
+
+```{r}
+LLfunction <- function(targets, predicted_values){
+  p_v_zero <- ifelse(predicted_values <= 0, 0, predicted_values)
+  p_v_pos <- ifelse(predicted_values <= 0, 0.000001 ,predicted_values)
+  return(sum(targets*log(p_v_pos)) - sum(p_v_zero))
+}
+# "targets" is a vector containing the actual values for the target variable
+# "predicted_values" is a vector containing the predicted values for the target variable
+```
+
+# Load data
+
+Load data provided for project.
+
+```{r}
+# Read in data files
+data.all <- read.csv('MSHA_Mine_Data_2013-2016.csv')
+
+```
+
+# Data exploration and cleaning
+
+To get a sense of the data, here are summary statistics:
+
+```{r}
+summary(data.all)
+```
+
+Not much missing data, so getting rid of any record with a missing value.
+
+```{r}
+data.nomissing <- data.all[!is.na(data.all$MINE_STATUS),]
+data.nomissing <- data.nomissing[!is.na(data.nomissing$US_STATE),]
+data.nomissing <- data.nomissing[!is.na(data.nomissing$PRIMARY),]
+nrow(data.all) - nrow(data.nomissing)
+summary(data.nomissing)
+```
+
+Removed 27 rows. Not sure how to interpret all the PRIMARY categories given there are so many possibilities, will leave out for now to simplify matters.
+
+```{r}
+length(levels(data.all$PRIMARY))
+data.reduced <- data.nomissing
+data.reduced$PRIMARY <- NULL
+```
+
+There appears to be some potential outliers and perhaps some other variables that should be eliminated before building a model. No time for that, but will leave you with one graph, a log-log plot of employees vs hours. After that I will move on set up some models.
+
+```{r}
+library(ggplot2)
+p1 <- ggplot(data = data.reduced, aes(x=AVG_EMP_TOTAL, y=EMP_HRS_TOTAL)) + geom_point()
+p1 + scale_x_log10() + scale_y_log10()
+```
+
+# Decision tree
+
+The following code sets up a decision tree using all the variables in the dataframe "data.reduced." It also uses the full dataset. The left side of the formula is employee hours per year followed by number of injuries. Number of injuries is what is being predicted, but employee hours is used as an offset as the number injuries is expected to be proportional to the number of employee hours worked. This formula format automatically results in a Poisson method being used, but I am stating it explicitly for clarity. Need to make sure to remove EMP_HRS_TOTAL from the formula as that is not a predictor variable.
+
+This code sets arbitrary parameters for the control, then prunes the tree. It then calculates the loglikelihood using the entire dataset. I've not had time to work with training and testing sets. When I worked with the data set cleaned as above, the resulting tree was too complex to easily interpret. Perhaps by working further with the data, controls, and pruning, you can come up with a tree that makes sense and can be explained to the union.
+
+```{r}
+library(rpart)
+library(rpart.plot)
+set.seed(153) # because rpart uses cross-validation for estimating complexity parameter
+tree.reduced <- rpart(cbind(EMP_HRS_TOTAL/2000, NUM_INJURIES) ~ . - EMP_HRS_TOTAL,
+                      data = data.reduced,
+                      method = "poisson",
+                      control = rpart.control(minbucket = 25, 
+                                              cp = 0, 
+                                              maxdepth = 10))
+plotcp(tree.reduced)
+tree.reduced.pruned <- prune(tree.reduced, 
+                             cp = tree.reduced$cptable[which.min(tree.reduced$cptable[, "xerror"]), "CP"])
+rpart.plot(tree.reduced.pruned)
+printcp(tree.reduced.pruned)
+tree.reduced.pruned
+
+pruned.predict <- (data.reduced$EMP_HRS_TOTAL/2000)*predict(tree.reduced.pruned, newdata = data.reduced, type = "vector") # The prediction for the loglikelihood function should be the number of injuries, not the injury rate
+print("loglikelihood")
+LLfunction(data.reduced$NUM_INJURIES,pruned.predict)
+```
+
+# GLM
+
+The following code produces a poisson GLM. The log link is the default and the offset is a log here because it acts at the level of the linear model. As with the tree, when I ran this using the data I had there were some odd results. There are NAs for "sand & gravel" and something about a rank-deficient fit, which may be tied the huge coeffients for the hours variable and with the fact that they sum to 1 in each case.
+
+
+```{r}
+glm.reduced <- glm(NUM_INJURIES ~ . - EMP_HRS_TOTAL,
+                   family = poisson(),
+                   offset = log(EMP_HRS_TOTAL/2000),
+                   data = data.reduced)
+summary(glm.reduced)
+
+glm.predict <- predict(glm.reduced, newdata = data.reduced, type = "response")
+# For GLM with an offset, this predict function includes the effect of the offset, producing the number of injuries.
+print("loglikelihood")
+LLfunction(data.reduced$NUM_INJURIES,glm.predict)
+```
+
+# Final models
+
+Once analysis is done in above sections, run the final models on all data here (even if training and test sets were previously used) so it is clear how to make the connection between the code above and what is produced for the report.
