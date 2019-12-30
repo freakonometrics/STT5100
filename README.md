@@ -26,15 +26,14 @@ Démonstrateur :
 * Yihui Xie, J. J. Allaire & Garrett Grolemund, R Markdown: The Definitive Guide [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
 
 **Projets / Devoir**
-* Modeles de régression - OLS : [Devoir1](devoirs/STT5100-A2019-devoir1.md)
-* Regression logistique - GLM : [Devoir2](devoirs/STT5100-A2019-devoir2.md) 
+* Modeles de régression - OLS : exemple de l'automne 2019 [Devoir1](devoirs/STT5100-A2019-devoir1.md)
+* Regression logistique - GLM : exemple de l'automne 2019 [Devoir2](devoirs/STT5100-A2019-devoir2.md) 
 
 **Examen**
 * Modeles de régression - OLS : 
 * Modeles de régression - GLM : 
 
 **Examens passés**
-(il s'agit d'un "nouveau cours" du programme : le premier a été donné à l'automne 2018)
 * OLS énoncé hiver 2012 [H2012E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-h2012-enonce.pdf) [csv](http://freakonometrics.blog.free.fr/public/data/basket-exam-v2.csv) pas d'annexes, désolé
 * OLS _correction_ hiver 2012 [H2012C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-h2012-correc.pdf)
 * OLS énoncé automne 2012 [A2012E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-a2012-enonce.pdf)
