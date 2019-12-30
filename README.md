@@ -1,15 +1,15 @@
-# STT5100 Modèles Linéaires Appliqués (Automne 2019)
+# STT5100 Modèles Linéaires Appliqués (Hiver 2020)
 
 Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_STT5100_A2019.pdf](docs/Plan%20STT5100%20A2019.pdf)
+Plan de cours : [Plan_STT5100_H2020pdf](docs/Plan%20STT5100%20H2020.pdf)
 
-Démonstrateur : Alexandre LeBlanc
+Démonstrateur : 
 
 ```diff
-- (7 novembre 2019) le second devoir est en ligne
+- (30 décembre 2019) mise à jour de la page
 ```
 
 **Notes de cours**
@@ -30,8 +30,8 @@ Démonstrateur : Alexandre LeBlanc
 * Regression logistique - GLM : [Devoir2](devoirs/STT5100-A2019-devoir2.md) 
 
 **Examen**
-* Modeles de régression - OLS : [A2019-1E.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_ENONCE.pdf) pour l'énoncé et [A2019-1C.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_CORREC.pdf) pour la "correction"
-* Modeles de régression - GLM : [A2019-2E.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_2_ENONCE.pdf) pour l'énoncé et [A2019-2C.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_2_CORREC.pdf) pour la "correction"
+* Modeles de régression - OLS : 
+* Modeles de régression - GLM : 
 
 **Examens passés**
 (il s'agit d'un "nouveau cours" du programme : le premier a été donné à l'automne 2018)
@@ -43,12 +43,16 @@ Démonstrateur : Alexandre LeBlanc
 * OLS _correction_ automne 2018 [A2018-1C.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Exam_STT5100_Aut_2018_intra-A-correction.pdf)
 * OLS énoncé hiver 2019 [H2019-1E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/docs/Examen_STT5100_H2019_enonce.pdf)
 * OLS _correction_ hiver 2019 [H2019-1C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/docs/Examen_STT5100_H2019_correction.pdf)
+* OLS énoncé automne 2019 [A2019-1E.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_ENONCE.pdf) 
+* OLS _correction_ automne 2019 [A2019-1C.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_CORREC.pdf) pour la "correction"
 * GLM énoncé 2013 [2013E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act2040-2013-enonce.pdf) [Annexes](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/EXAMEN-INTRA-annexe-2040-H2013.pdf)
 * GLM _correction_ 2013 [2013C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act2040-2013-correc.pdf)
 * GLM énoncé automne 2018 [A2018-2E.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Examen_STT5100_Aut_2018_final-correction.pdf)
 * GLM _correction_ automne 2018 [A2018-2C.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Examen_STT5100_Aut_2018_final.pdf)
 * GLM énoncé hiver 2019 [H2019-2E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/docs/Examen_STT5100_Hiver_2019-final-B.pdf)
 * GLM _correction_ hiver 2019 [H2019-2C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/docs/Examen_STT5100_Hiver_2019-correction.pdf)
+* GLM écononcé automne 2019 [A2019-2E.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_2_ENONCE.pdf) 
+* GLM _correction_ écononcé automne 2019 [A2019-2C.pdf](https://github.com/freakonometrics/STT5100/raw/master/devoirs/STT5100_AUTOMNE2019_2_CORREC.pdf) 
 
 **Exam S/MASI - CAS** [modern actuarial statistics](https://www.casact.org/admissions/syllabus/index.cfm?fa=MASI)
 * page "study tools" [https://casact.org/examS/](https://www.casact.org/admissions/studytools/examS/)
@@ -67,22 +71,20 @@ Démonstrateur : Alexandre LeBlanc
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
 1. Motivation et rappels (probabilités et statistiques) [STT5100-0.md](code/STT5100-0.md) et [STT5100-0.Rmd](code/STT5100-0.Rmd)
-2. Le modele linéaire simple: droite de régression et ANOVA [Demonstration_1.R](demos/STT5100_Demonstration_1.R), [Demonstration_1.Rmd](demos/STT5510_Demonstration_1.Rmd) et [Demonstration_1.html](demos/STT5510_Demonstration_1.html)
-3. Du modele linéaire simple au modèle multiple [code3.R](code/code-stt5100-A2019-3.R) - code du cours - et [Demonstration_2.Rmd](demos/STT5100_Demonstration_2.Rmd)
-4. Le modele linéaire multiple [code4.R](code/code-stt5100-A2019-4.R) (pas de démo)
-5. Choix de modeles, tests statistiques  [code5.R](code/ccours5-A2019.R) et [STT5100_Demonstration_3.Rmd](code/STT5100_Demonstration_3.Rmd) 
-6. *pas de cours*
-7. Regression locale et lissage [code7.R](code/Stt5100-5.R) et [STT5100_Demonstration_4.Rmd](code/STT5100_Demonstration_3_4_Q.Rmd) pour les questions, et [STT5100_Demonstration_4S.Rmd](code/STT5100_Demonstration_3_4_Sol.Rmd) pour la solution
-8. Pratique de la régression linéaire [code8.R](code/code8.R)
+2. Le modele linéaire simple: droite de régression et ANOVA 
+3. Du modele linéaire simple au modèle multiple
+4. Le modele linéaire multiple 
+5. Choix de modeles, tests statistiques 
+6. Diagnostique
+7. Regression locale et lissage 
+8. Pratique de la régression linéaire 
 9. **Examen Intra**
-10. Regression logistique [code10.R](code/stt5100-10.R)
-11. Regression logistique [code11.R](code/stt5100-code-11.R) et [STT5100_Demonstration_5.Rmd](code/STT5100_Demonstration_7Q.Rmd) pour les questions, et [STT5100_Demonstration_5S.Rmd](code/STT5100_Demonstration_7.Rmd) pour la solution
+10. Regression logistique 
+11. Regression logistique 
 12. Regression de Poisson 
-13. Regression de Poisson [code13.R](code/code123.R) et [STT5100_Demonstration_6.Rmd](code/STT5100_Demonstration_8Q.Rmd) pour les questions, et [STT5100_Demonstration_6S.Rmd](code/STT5100_Demonstration_8.Rmd) pour la solution
+13. Regression de Poisson 
 14. GLM - Modeles Lineaires Generalises
 15. **Examen Final**
-
-**Exercices**
 
 **"Curve Fitting"**
 
