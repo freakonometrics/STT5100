@@ -4,12 +4,12 @@ Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_STT5100_H2020pdf](docs/Plan%20STT5100%20H2020.pdf)
+Plan de cours : [Plan_STT5100_H2020pdf](docs/PLAN-COURS-STT5100-H2020.pdf)
 
 Démonstrateur : 
 
 ```diff
-- (30 décembre 2019) mise à jour de la page
+- (3 janvier 2020) le plan de cours provisoire est en ligne
 ```
 
 **Notes de cours**
