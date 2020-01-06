@@ -141,8 +141,6 @@ techniques exposées en cours.
   
   - Il suffit de déposer les deux fichiers comme indiqué
   
-  ![40% center](img/moodle2.png)
-  
   __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **1er mars** à **midi**)
   
   - Dans le preambule du markdown, `author:` doit mentionner le code
