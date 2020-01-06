@@ -119,3 +119,54 @@ Les donnees sont par comté, aux Etats-Unis.
 
 1)  : années 2010-2016
 2)  : Estimations du recensement de 2013
+
+
+``` diff
+- (6 Janvier 2020) seule la base test (6 lignes) est en ligne
+```
+
+Le but du devoir est de mettre en oeuvre, sur des vraies données, les
+techniques exposées en cours.
+
+  - Date limite pour envoyer le devoir **1er mars** avant **midi**,
+  - Chaque étudiant(e) doit envoyer via [moodle](https://www.moodle2.uqam.ca/) deux
+    fichiers : `devoir1-ABCD12345678.html`, output d’un fichier
+    `devoir1-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
+    `ABCD12345678` doit être remplacé par le code permanent de
+    l’étudiant(e). Le fichier `devoir1-ABCD12345678.html` doit être
+    lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
+    erreur,
+    
+  ![40% center](img/moodle1.png)
+  
+  - Il suffit de déposer les deux fichiers comme indiqué
+  
+  ![40% center](img/moodle2.png)
+  
+  __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **1er mars** à **midi**)
+  
+  - Dans le preambule du markdown, `author:` doit mentionner le code
+    permanent,
+  - Le fichier doit contenir trois parties
+
+<!-- end list -->
+
+1.  Une partie exploratoire qui presente rapidement les variables qui
+    pourraient être intéressantes (pour rappel, `TARGET_deathRate` est la
+    variable d’interêt)
+2.  Une partie presentant la construction du modèle : il s’agira de
+    partir au choix (i) d’un modele simple, et de montrer comment
+    l’ameliorer, (ii) d’une modele complexe, et de montrer comment le
+    simplifier
+3.  Une partie qui presente la forme du modele, en donnant (i) le R2
+    ajusté (ii) l’indice d’Akaike AIC et (iii) l’indice BIC (iv) la
+    liste des variables explicatives retenues
+
+<!-- end list -->
+
+  - Les techniques de validation croisée, ou la constitution de bases
+    d’apprentissage et de test *ne sont pas au programme* et ne
+    devront pas etre utilisee ici \!
+  - Les seuls packages autorises (sauf autorisation explicite) sont
+    `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`
+
