@@ -26,8 +26,8 @@ Démonstrateur :
 * Yihui Xie, J. J. Allaire & Garrett Grolemund, R Markdown: The Definitive Guide [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
 
 **Projets / Devoir**
-* Modeles de régression - OLS : exemple de l'automne 2019 [Devoir1](devoirs/STT5100-A2019-devoir1.md)
-* Regression logistique - GLM : exemple de l'automne 2019 [Devoir2](devoirs/STT5100-A2019-devoir2.md) 
+* Modeles de régression - OLS : [Devoir1](devoirs/devoir1-H2020-STT5100.md)
+* Regression logistique - GLM : *exemple de l'automne 2019* [Devoir2](devoirs/STT5100-A2019-devoir2.md) 
 
 **Examen**
 * Modeles de régression - OLS : 
