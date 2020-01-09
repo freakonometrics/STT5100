@@ -9,8 +9,28 @@ Plan de cours : [Plan_STT5100_H2020pdf](docs/PLAN-COURS-STT5100-H2020.pdf)
 Démonstrateur : 
 
 ```diff
-- (3 janvier 2020) le plan de cours provisoire est en ligne
+- (5 janvier 2020) exercice à faire avant le premier cours
 ```
+
+**Exercice (préparatoire)**
+* ouvrez R (ou RStudio) - à installer, ou utilisez la version en ligne [https://rstudio.cloud](https://rstudio.cloud/projects)
+* tapez le code suivant
+
+``` r
+source("http://freakonometrics.free.fr/devoir_STT5100_H2020_0.R")
+```
+
+* vous allez avoir une base de données (data.frame) base contenant trois variables
+- `$  sex   `: variable catégorielle prenant deux modalités "Femme","Homme" indiquant le genre d'un élève
+- `$  height`: variable numérique indiquant la taille d'un élève (en cm)
+- `$  weight`: variable numérique indiquant le poids d'un élève (en kg)
+* allez sur [https://framaforms.org/stt5100](https://framaforms.org/stt5100-hiver-2020-exercice-1-1575901947) et répondez aux trois questions :
+- un élève manque dans la base, essayez de prévoir sa taille (en cm)
+- pour cet élève, on souhaite affirmer qu'il y a 95% de chances pour que sa taille soit comprise entre a (borne inférieure) et b (borne supérieure). Proposez des valeurs pour a et b (en cm).
+- un élève de sexe féminin manque dans la base, essayez de prévoir sa taille (en cm)
+(vous devez indiquer la valeur numérique dans les trois cas)
+* indiquez votre code permanent et soumettez
+* il s'agit d'un devoir obligatoire et vous devez participer !
 
 **Notes de cours**
 * introduction : [part_1.pdf](docs/STT5100_part_1.pdf)
