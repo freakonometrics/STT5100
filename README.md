@@ -25,9 +25,9 @@ source("http://freakonometrics.free.fr/devoir_STT5100_H2020_0.R")
 - `$  height`: variable numérique indiquant la taille d'un élève (en cm)
 - `$  weight`: variable numérique indiquant le poids d'un élève (en kg)
 * allez sur [https://framaforms.org/stt5100](https://framaforms.org/stt5100-hiver-2020-exercice-1-1575901947) et répondez aux trois questions :
-- un élève manque dans la base, essayez de prévoir sa taille (en cm)
-- pour cet élève, on souhaite affirmer qu'il y a 95% de chances pour que sa taille soit comprise entre a (borne inférieure) et b (borne supérieure). Proposez des valeurs pour a et b (en cm).
-- un élève de sexe féminin manque dans la base, essayez de prévoir sa taille (en cm)
+1. un élève manque dans la base, essayez de prévoir sa taille (en cm)
+2. pour cet élève, on souhaite affirmer qu'il y a 95% de chances pour que sa taille soit comprise entre a (borne inférieure) et b (borne supérieure). Proposez des valeurs pour a et b (en cm).
+3. un élève de sexe féminin manque dans la base, essayez de prévoir sa taille (en cm)
 (vous devez indiquer la valeur numérique dans les trois cas)
 * indiquez votre code permanent et soumettez
 * il s'agit d'un devoir obligatoire et vous devez participer !
