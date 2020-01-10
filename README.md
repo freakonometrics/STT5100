@@ -44,6 +44,7 @@ source("http://freakonometrics.free.fr/devoir_STT5100_H2020_0.R")
 * James H. Stock & Mark W. Watson, 2007, Introduction to Econometrics, [Addison Wesley](https://www.pearson.com/us/higher-education/product/Stock-Introduction-to-Econometrics-3rd-Edition/9780138009007.html)
 * Achim Zeileis, 2008, Applied Econometrics with R, [Springer Verlag](https://eeecon.uibk.ac.at/~zeileis/teaching/AER/index.html)
 * Yihui Xie, J. J. Allaire & Garrett Grolemund, R Markdown: The Definitive Guide [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
+* ACT3035 [https://nour.me/act3035/](https://nour.me/act3035/)
 
 **Projets / Devoir**
 * Modeles de régression - OLS : [Devoir1](devoirs/devoir1-H2020-STT5100.md)
