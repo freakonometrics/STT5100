@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_H2020pdf](docs/PLAN-COURS-STT5100-H2020.pdf)
 Démonstrateur : 
 
 ```diff
-- (5 janvier 2020) exercice à faire avant le premier cours
+- (12 janvier 2020) le devoir 1 est en ligne (avec une base par étudiant(e))
 ```
 
 **Exercice (préparatoire)**
