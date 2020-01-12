@@ -12,26 +12,6 @@ Démonstrateur :
 - (12 janvier 2020) le devoir 1 est en ligne (avec une base par étudiant(e))
 ```
 
-**Exercice (préparatoire)**
-* ouvrez R (ou RStudio) - à installer, ou utilisez la version en ligne [https://rstudio.cloud](https://rstudio.cloud/projects)
-* tapez le code suivant
-
-``` r
-source("http://freakonometrics.free.fr/devoir_STT5100_H2020_0.R")
-```
-
-* vous allez avoir une base de données (data.frame) base contenant trois variables
-- `$  sex   `: variable catégorielle prenant deux modalités "Femme","Homme" indiquant le genre d'un élève
-- `$  height`: variable numérique indiquant la taille d'un élève (en cm)
-- `$  weight`: variable numérique indiquant le poids d'un élève (en kg)
-* allez sur [https://framaforms.org/stt5100](https://framaforms.org/stt5100-hiver-2020-exercice-1-1575901947) et répondez aux trois questions :
-1. un élève manque dans la base, essayez de prévoir sa taille (en cm)
-2. pour cet élève, on souhaite affirmer qu'il y a 95% de chances pour que sa taille soit comprise entre a (borne inférieure) et b (borne supérieure). Proposez des valeurs pour a et b (en cm).
-3. un élève de sexe féminin manque dans la base, essayez de prévoir sa taille (en cm)
-(vous devez indiquer la valeur numérique dans les trois cas)
-* indiquez votre code permanent et soumettez
-* il s'agit d'un devoir obligatoire et vous devez participer !
-
 **Notes de cours**
 * introduction : [part_1.pdf](docs/STT5100_part_1.pdf)
 * ébauche de notes de cours [STT5100.html](http://freakonometrics.free.fr/STT5100/STT5100-H2020.html)
@@ -111,3 +91,24 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 ![https://xkcd.com/2048/](https://imgs.xkcd.com/comics/curve_fitting_2x.png)
 
 [https://xkcd.com/2048/](https://xkcd.com/2048/)
+
+
+**Exercice (préparatoire)**
+* ouvrez R (ou RStudio) - à installer, ou utilisez la version en ligne [https://rstudio.cloud](https://rstudio.cloud/projects)
+* tapez le code suivant
+
+``` r
+source("http://freakonometrics.free.fr/devoir_STT5100_H2020_0.R")
+```
+
+* vous allez avoir une base de données (data.frame) base contenant trois variables
+- `$  sex   `: variable catégorielle prenant deux modalités "Femme","Homme" indiquant le genre d'un élève
+- `$  height`: variable numérique indiquant la taille d'un élève (en cm)
+- `$  weight`: variable numérique indiquant le poids d'un élève (en kg)
+* allez sur [https://framaforms.org/stt5100](https://framaforms.org/stt5100-hiver-2020-exercice-1-1575901947) et répondez aux trois questions :
+1. un élève manque dans la base, essayez de prévoir sa taille (en cm)
+2. pour cet élève, on souhaite affirmer qu'il y a 95% de chances pour que sa taille soit comprise entre a (borne inférieure) et b (borne supérieure). Proposez des valeurs pour a et b (en cm).
+3. un élève de sexe féminin manque dans la base, essayez de prévoir sa taille (en cm)
+(vous devez indiquer la valeur numérique dans les trois cas)
+* indiquez votre code permanent et soumettez
+* il s'agit d'un devoir obligatoire et vous devez participer !
