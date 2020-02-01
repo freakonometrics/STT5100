@@ -72,7 +72,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 1. Motivation et rappels (probabilités et statistiques) [STT5100-1.R](code/STT5100-10012020-tableau.R) - et un exemple de Rmarkdown [STT5100-0.md](code/STT5100-0.md) et [STT5100-0.Rmd](code/STT5100-0.Rmd)
 2. Le modele linéaire simple: droite de régression et ANOVA [billet de blog (1)](https://freakonometrics.hypotheses.org/54935) [billet de blog (2)](https://freakonometrics.hypotheses.org/55451)
-3. Du modele linéaire simple au modèle multiple [code.R](/code/code3.R)
+3. Du modele linéaire simple au modèle multiple [code.R](https://github.com/freakonometrics/STT5100/blob/master/code/cours3.R)
 4. Le modele linéaire multiple 
 5. Choix de modeles, tests statistiques [billet de blog](https://freakonometrics.hypotheses.org/59685)
 6. Diagnostique [billet de blog (1)](https://freakonometrics.hypotheses.org/58451) [billet de blog (2)](https://freakonometrics.hypotheses.org/58421)
