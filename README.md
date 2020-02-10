@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_H2020pdf](docs/PLAN-COURS-STT5100-H2020.pdf)
 Démonstrateur : 
 
 ```diff
-- (12 janvier 2020) le devoir 1 est en ligne (avec une base par étudiant(e))
+- (10 février 2020) l'annexe du devoir sur table est en ligne
 ```
 
 **Notes de cours**
