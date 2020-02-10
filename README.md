@@ -31,7 +31,7 @@ Démonstrateur :
 * Regression logistique - GLM : *exemple de l'automne 2019* [Devoir2](devoirs/STT5100-A2019-devoir2.md) 
 
 **Examen**
-* Modeles de régression - OLS : 
+* Modeles de régression - OLS : [Annexe](devoirs/STT5100_Hiver2020_annexes.pdf)
 * Modeles de régression - GLM : 
 
 **Examens passés**
