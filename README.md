@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_H2020pdf](docs/PLAN-COURS-STT5100-H2020.pdf)
 Démonstrateur : 
 
 ```diff
-- (10 février 2020) l'annexe du devoir sur table est en ligne
+- (21 février 2020) le sujet du devoir sur table est en ligne (la correction suivra)
 ```
 
 **Notes de cours**
@@ -77,7 +77,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 5. Choix de modeles, tests statistiques [billet de blog](https://freakonometrics.hypotheses.org/59685)
 6. Diagnostique [billet de blog (1)](https://freakonometrics.hypotheses.org/58451) [billet de blog (2)](https://freakonometrics.hypotheses.org/58421)
 7. Regression locale et lissage 
-8. Pratique de la régression linéaire 
+8. Pratique de la régression linéaire [billet de blog (1)](https://freakonometrics.hypotheses.org/58446) [billet de blog (2)](https://freakonometrics.hypotheses.org/55451) [billet de blog (3)](https://freakonometrics.hypotheses.org/59685)
 9. **Examen Intra**
 10. Regression logistique 
 11. Regression logistique 
