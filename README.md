@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_H2020pdf](docs/PLAN-COURS-STT5100-H2020.pdf)
 Démonstrateur : 
 
 ```diff
-- (21 février 2020) le sujet du devoir sur table est en ligne avec des éléments de correction
+- (24 février 2020) le sujet du devoir sur table est en ligne avec des éléments de correction (et les stats)
 ```
 
 **Notes de cours**
