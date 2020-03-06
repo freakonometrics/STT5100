@@ -76,26 +76,22 @@ table(database$foyer)
     
 
 ``` diff
-- (6 Janvier 2020) seule la base test (6 lignes) est en ligne
+- (6 Mars 2020) la base test (6 lignes) est en ligne, ainsi que les bases personnalisées
 ```
 
 Le but du devoir est de mettre en oeuvre, sur des vraies données, les
 techniques exposées en cours.
 
-  - Date limite pour envoyer le devoir **1er mars** avant **midi**,
+  - Date limite pour envoyer le devoir **1er mai** avant **midi**,
   - Chaque étudiant(e) doit envoyer via [moodle](https://www.moodle2.uqam.ca/) deux
-    fichiers : `devoir1-ABCD12345678.html`, output d’un fichier
-    `devoir1-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
+    fichiers : `devoir2-ABCD12345678.html`, output d’un fichier
+    `devoir2-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
     `ABCD12345678` doit être remplacé par le code permanent de
-    l’étudiant(e). Le fichier `devoir1-ABCD12345678.html` doit être
-    lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
+    l’étudiant(e). Le fichier `devoir2-ABCD12345678.html` doit être
+    lisible et le fichier `devoir2-ABCD12345678.Rmd` doit compiler sans
     erreur,
-    
-  ![40% center](img/moodle1.png)
   
-  - Il suffit de déposer les deux fichiers comme indiqué
-  
-  __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **1er mars** à **midi**)
+  __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **1er mai** à **midi**)
   
   - Dans le preambule du markdown, `author:` doit mentionner le code
     permanent,
@@ -104,20 +100,19 @@ techniques exposées en cours.
 <!-- end list -->
 
 1.  Une partie exploratoire qui presente rapidement les variables qui
-    pourraient être intéressantes (pour rappel, `TARGET_deathRate` est la
+    pourraient être intéressantes (pour rappel, `foyer` est la
     variable d’interêt)
 2.  Une partie presentant la construction du modèle : il s’agira de
     partir au choix (i) d’un modele simple, et de montrer comment
     l’ameliorer, (ii) d’une modele complexe, et de montrer comment le
     simplifier
-3.  Une partie qui presente la forme du modele, en donnant (i) le R2
-    ajusté (ii) l’indice d’Akaike AIC et (iii) l’indice BIC (iv) la
-    liste des variables explicatives retenues
+3.  Une partie qui compare les deux modèles avec (i) les deux courbes
+    ROC obtenues (ii) les AUC des modèles
 
 <!-- end list -->
 
-  - Les techniques de validation croisée, ou la constitution de bases
+  - Les techniques de validation croisee, ou la constitution de bases
     d’apprentissage et de test *ne sont pas au programme* et ne
     devront pas etre utilisee ici \!
   - Les seuls packages autorises (sauf autorisation explicite) sont
-    `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`
+    `MASS`, `lmtest`, `counts`, `nortest`, `car`, `splines`, `AER`, `pROC`, `plotROC`, `verification`, `ROCR`, `dplyr`, `aod`, `vcd`, `statmod` (et les dépendances associées)
