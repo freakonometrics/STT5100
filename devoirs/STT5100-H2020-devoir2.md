@@ -20,6 +20,8 @@ Les données sont par maison vendue
 
 <!-- end list -->
 
+(etc)
+
 ``` r
 str(database)
 ```
