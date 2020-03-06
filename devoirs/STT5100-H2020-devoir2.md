@@ -1,125 +1,79 @@
-STT5100 Devoir \#1 - Hiver 2020
+STT5100 Devoir \#2 - Hiver 2020
 ================
 Arthur Charpentier
 
 ``` r
 code_permanent = "ABCD12345678"
-loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,"H2020D1.RData",sep="")
-download.file(loc_fichier, "base_devoir_1.RData")
-load("base_devoir_1.RData")
+loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,"H2020D2.RData",sep="")
+download.file(loc_fichier, "base_devoir_2.RData")
+load("base_devoir_2.RData")
 dim(database)
 ```
 
-    ## [1]  6 32
+    ## [1]  6 40
+
+Les données sont par maison vendue
+
+  - `foyer` : **Variable a expliquer** : Présence (1) ou pas (0) d’un
+    foyer dans la maison
+  - `Zone` : zone géographie (catégorielle, 7 modalités) (etc)
+
+<!-- end list -->
 
 ``` r
 str(database)
 ```
 
-    ## 'data.frame':    6 obs. of  32 variables:
-    ##  $ avgAnnCount           : num  583 86 1931 493 18 ...
-    ##  $ avgDeathsPerYear      : int  206 36 677 182 6 11
-    ##  $ TARGET_deathRate      : num  173 166 173 173 199 ...
-    ##  $ incidenceRate         : num  491 423 526 477 574 ...
-    ##  $ medIncome             : int  51138 52260 61510 39548 36903 36708
-    ##  $ popEst2015            : int  125175 16829 300813 75713 1830 5533
-    ##  $ povertyPercent        : num  14.3 11.7 10 17.5 18 25.7
-    ##  $ studyPerCap           : num  192 0 366 674 0 ...
-    ##  $ binnedInc             : Factor w/ 10 levels "(34218.1, 37413.8]",..: 7 7 9 2 1 1
-    ##  $ MedianAge             : num  34.7 41.4 41.8 44.3 49.6 35
-    ##  $ MedianAgeMale         : num  33.2 40.5 40 42.6 52.3 35.4
-    ##  $ MedianAgeFemale       : num  36.2 42.1 43.2 45.8 44.2 34
-    ##  $ Geography             : Factor w/ 3047 levels "Abbeville County, South Carolina",..: 233 1491 2022 2042 1809 3043
-    ##  $ AvgHouseholdSize      : num  2.57 2.51 2.56 2.43 2.47 2.81
-    ##  $ PercentMarried        : num  49 57.4 51.4 53.8 55.1 37.8
-    ##  $ PctNoHS18_24          : num  18.7 21 9.3 15.8 34.9 26.6
-    ##  $ PctHS18_24            : num  33.2 33.3 28.7 35.5 40.6 53.8
-    ##  $ PctBachDeg18_24       : num  6.9 2.8 9.1 5.6 2.8 0
-    ##  $ PctHS25_Over          : num  29.4 41.5 35.3 31.8 39.7 40.1
-    ##  $ PctBachDeg25_Over     : num  16.1 12.2 17.2 13.7 18.8 7.4
-    ##  $ PctEmployed16_Over    : num  59.3 66.2 59.2 47 55.8 49.2
-    ##  $ PctUnemployed16_Over  : num  5.7 3.6 7.3 10.4 3.9 18.2
-    ##  $ PctPrivateCoverage    : num  68.5 71.8 77.1 63.5 57.7 32
-    ##  $ PctEmpPrivCoverage    : num  42.2 48.8 54.2 37.9 24.7 23.8
-    ##  $ PctPublicCoverage     : num  31 31 30.1 39.9 41.3 36.6
-    ##  $ PctPublicCoverageAlone: num  16.6 14.9 13.5 18.7 19.9 25.4
-    ##  $ PctWhite              : num  72.2 96.8 86.5 88.2 98.5 ...
-    ##  $ PctBlack              : num  21.325 0.386 5.041 7.498 0 ...
-    ##  $ PctAsian              : num  1.475 0.208 2.75 0.646 0.474 ...
-    ##  $ PctOtherRace          : num  1.84 1.59 2.4 1.52 0 ...
-    ##  $ PctMarriedHouseholds  : num  47 56.4 53.4 52.1 52 ...
-    ##  $ BirthRate             : num  5.82 5.7 4.24 6.6 3.9 ...
+    ## 'data.frame':    6 obs. of  40 variables:
+    ##  $ Zone              : Factor w/ 7 levels "A (agr)","C (all)",..: 6 6 6 6 6 6
+    ##  $ Surface_Lot       : int  6897 6289 9488 13774 8923 8197
+    ##  $ Rue               : Factor w/ 2 levels "Grvl","Pave": 2 2 2 2 2 2
+    ##  $ Forme             : Factor w/ 4 levels "IR1","IR2","IR3",..: 1 1 4 1 1 4
+    ##  $ Utilities         : Factor w/ 3 levels "AllPub","NoSeWa",..: 1 1 1 1 1 1
+    ##  $ Configuration     : Factor w/ 5 levels "Corner","CulDSac",..: 1 5 5 5 5 5
+    ##  $ Proxim_1          : Factor w/ 9 levels "Artery","Feedr",..: 3 3 2 3 3 3
+    ##  $ Proxim_2          : Factor w/ 8 levels "Artery","Feedr",..: 3 3 3 3 3 3
+    ##  $ Logement          : Factor w/ 5 levels "1Fam","2fmCon",..: 1 5 1 1 1 1
+    ##  $ Style             : Factor w/ 8 levels "1.5Fin","1.5Unf",..: 3 3 3 6 8 3
+    ##  $ Int_Qualite       : int  5 6 5 7 7 6
+    ##  $ Int_Condition     : int  8 5 6 7 5 5
+    ##  $ Construction_Annee: int  1962 2005 1947 1977 1998 1977
+    ##  $ Renovation_Annee  : int  2010 2006 1993 1992 1998 1977
+    ##  $ Toit              : Factor w/ 6 levels "Flat","Gable",..: 2 2 2 4 2 2
+    ##  $ Exterieur         : Factor w/ 16 levels "AsbShng","AsphShn",..: 7 14 14 7 14 10
+    ##  $ Maconnerie        : Factor w/ 6 levels "","BrkCmn","BrkFace",..: 5 6 5 3 5 3
+    ##  $ Ext_Qualite       : Factor w/ 4 levels "Ex","Fa","Gd",..: 4 3 3 4 3 4
+    ##  $ Ext_Condition     : Factor w/ 5 levels "Ex","Fa","Gd",..: 3 5 5 3 5 5
+    ##  $ Foundation        : Factor w/ 6 levels "BrkTil","CBlock",..: 2 3 2 3 3 2
+    ##  $ Chauffage         : Factor w/ 6 levels "Floor","GasA",..: 2 2 2 2 2 2
+    ##  $ Chauff_Qualite    : Factor w/ 5 levels "Ex","Fa","Gd",..: 1 1 3 1 3 1
+    ##  $ Electricite       : Factor w/ 6 levels "","FuseA","FuseF",..: 6 6 6 6 6 6
+    ##  $ Surface_RdC       : int  1040 1362 1054 1316 751 1285
+    ##  $ Surface_Etage     : int  0 0 0 972 631 0
+    ##  $ Surface_Autre     : int  0 0 0 0 0 0
+    ##  $ Toilettes         : int  1 2 1 1 2 1
+    ##  $ Chambres          : int  3 2 3 4 3 3
+    ##  $ Cuisine_Qualite   : Factor w/ 4 levels "Ex","Fa","Gd",..: 4 3 4 3 4 4
+    ##  $ Pieces            : int  6 6 6 8 7 7
+    ##  $ Note              : Factor w/ 8 levels "Maj1","Maj2",..: 8 8 8 8 8 8
+    ##  $ Allee             : Factor w/ 3 levels "N","P","Y": 3 3 3 3 3 3
+    ##  $ Garage_Ext_Surface: int  104 28 60 72 0 0
+    ##  $ Garage_Int_Surface: int  0 0 122 0 0 0
+    ##  $ Piscine_Surface   : int  0 0 0 0 0 0
+    ##  $ Vente_Mois        : int  4 6 9 11 2 4
+    ##  $ Vente_Annee       : int  2010 2007 2008 2009 2009 2007
+    ##  $ Vente_Type        : Factor w/ 10 levels "COD","Con","ConLD",..: 10 10 10 10 10 10
+    ##  $ Vente_Condition   : Factor w/ 6 levels "Abnorml","AdjLand",..: 5 5 1 5 5 5
+    ##  $ foyer             : num  0 1 0 1 1 1
 
-Les donnees sont par comté, aux Etats-Unis.
+``` r
+table(database$foyer)
+```
 
-  - `TARGET_deathRate` : **Variable a expliquer** : Moyenne par habitant
-    (100 000) décès par cancer (a)
-  - `avgAnnCount` : Nombre moyen de cas déclarés de cancer diagnostiqués
-    annuellement (a)
-  - `avgDeathsPerYear` : Nombre moyen de décès déclarés dus au cancer
-    (a)
-  - `incidenceRate` : Moyenne par habitant (100 000) des diag diagoses
-    du cancer (a)
-  - `medianIncome` : Revenu médian par comté (b)
-  - `popEst2015` : Population du comté (b)
-  - `povertyPercent` : Pourcentage de la population vivant dans la
-    pauvreté (b)
-  - `studyPerCap` : Nombre d’essais cliniques liés au cancer par
-    habitant et par comté (a)
-  - `binnedInc` : Revenu médian par habitant par décile b)
-  - `MedianAge` : Âge médian des résidents du comté (b)
-  - `MedianAgeMale` : Âge médian des résidents masculins du comté (b)
-  - `MedianAgeFemale` : Âge médian des résidentes du comté (b)
-  - `Geography` : Nom du comté (b)
-  - `AvgHouseholdSize` : Taille moyenne des ménages du comté (b)
-  - `PercentMarried` : Pourcentage de résidents du comté qui sont mariés
-    (b)
-  - `PctNoHS18_24` : Pourcentage de résidents du comté âgés de 18 à 24
-    ans ayant le plus haut niveau de scolarité atteint : moins que le
-    secondaire (b)
-  - `PctHS18_24` : Pourcentage de résidents du comté âgés de 18 à 24 ans
-    ayant fait les plus hautes études : diplôme d’études secondaires (b)
-  - `PctBachDeg18_24` : Pourcentage de résidents du comté âgés de 18 à
-    24 ans ayant le plus haut niveau d’instruction atteint :
-    baccalauréat (b)
-  - `PctHS25_Over` : Pourcentage de résidents du comté âgés de 25 ans et
-    plus ayant fait les plus hautes études : diplôme d’études
-    secondaires - (b)
-  - `PctBachDeg25_Over` : Pourcentage de résidents du comté âgés de 25
-    ans et plus ayant fait les plus hautes études : baccalauréat (b)
-  - `PctEmployed16_Over` : Pourcentage de résidents du comté âgés de 16
-    ans et plus ayant un emploi (b)
-  - `PctEmployed16_Over` : Pourcentage de résidents du comté âgés de 16
-    ans et plus sans emploi (b)
-  - `PctPrivateCoverage` : Pourcentage de résidents du comté bénéficiant
-    d’une couverture médicale privée (b)
-  - `PctEmpPrivCoverage` : Pourcentage de résidents du comté bénéficiant
-    d’une assurance maladie privée fournie par l’employé (b)
-  - `PctPublicCoverage` : Pourcentage de résidents des comtés
-    bénéficiant d’une couverture médicale fournie par le gouvernement
-    (b)
-  - `PctPublicCoverageAlone` : Pourcentage de résidents des comtés
-    bénéficiant d’une couverture médicale fournie par le gouvernement
-    seulement (b)
-  - `PctWhite` : Pourcentage de résidents du comté qui s’identifient
-    comme Blancs (b)
-  - `PctBlack` : Pourcentage de résidents du comté qui s’identifient
-    comme Noirs (b)
-  - `PctAsian` : Pourcentage de résidents des comtés qui s’identifient
-    comme asiatiques (b)
-  - `PctOtherRace` : Pourcentage des résidents du comté qui
-    s’identifient dans une catégorie qui n’est pas blanche, noire ou
-    asiatique (b)
-  - `PctMarriedHousesholds` : Pourcentage de ménages mariés (b)
-    BirthRate : Nombre de naissances vivantes par rapport au nombre de
-    femmes dans le comté (b)
-  - `BirthRate` : Taux de naissance par femme, dans le comté (b)
-
-<!-- end list -->
-
-1)  : années 2010-2016
-2)  : Estimations du recensement de 2013
-
+    ## 
+    ## 0 1 
+    ## 2 4
+    
 
 ``` diff
 - (6 Janvier 2020) seule la base test (6 lignes) est en ligne
