@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_H2020pdf](docs/PLAN-COURS-STT5100-H2020.pdf)
 Démonstrateur : 
 
 ```diff
-- (6 mars) le sujet et les données du second devoir sont en ligne 
+- (17 mars) billet de blog sur la courbe ROC 
 ```
 
 **Notes de cours**
@@ -80,7 +80,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 8. Pratique de la régression linéaire [billet de blog (1)](https://freakonometrics.hypotheses.org/58446) [billet de blog (2)](https://freakonometrics.hypotheses.org/55451) [billet de blog (3)](https://freakonometrics.hypotheses.org/59685) sur les variables factorielles
 9. **Examen Intra**
 10. Regression logistique 
-11. Regression logistique [billet de blog (1)](https://freakonometrics.hypotheses.org/58031) sur la courbe ROC
+11. Regression logistique [billet de blog (1)](https://freakonometrics.hypotheses.org/60460) sur la courbe ROC
 12. Regression de Poisson [billet de blog (1)](https://freakonometrics.hypotheses.org/56400) sur [Bailey (1963)](https://www.casact.org/pubs/proceed/proceed63/63004.pdf) sur la régression sur des facteurs
 13. Regression de Poisson 
 14. GLM - Modèles Linéaires Generalisés [billet de blog (1)](https://freakonometrics.hypotheses.org/56682) sur les fonctions de lien [billet de blog (2)](https://freakonometrics.hypotheses.org/56493) sur les liens et la distribution
