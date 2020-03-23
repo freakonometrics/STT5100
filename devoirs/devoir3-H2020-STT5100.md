@@ -72,3 +72,45 @@ str(database)
     three months
   - `public` : insured in public health insurance = 1; otherwise = 0
   - `addon` : insured by add-on insurance = 1; otherswise = 0
+
+
+``` diff
+- (23 Mars 2020) la base test (6 lignes) est en ligne, ainsi que les bases personnalisées
+```
+
+Le but du devoir est de mettre en oeuvre, sur des vraies données, les
+techniques exposées en cours.
+
+  - Date limite pour envoyer le devoir **1er mai** avant **midi**,
+  - Chaque étudiant(e) doit envoyer via [moodle](https://www.moodle2.uqam.ca/) deux
+    fichiers : `devoir3-ABCD12345678.html`, output d’un fichier
+    `devoir3-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
+    `ABCD12345678` doit être remplacé par le code permanent de
+    l’étudiant(e). Le fichier `devoir3-ABCD12345678.html` doit être
+    lisible et le fichier `devoir3-ABCD12345678.Rmd` doit compiler sans
+    erreur,
+  
+  __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **1er mai** à **midi**)
+  
+  - Dans le preambule du markdown, `author:` doit mentionner le code
+    permanent,
+  - Le fichier doit contenir trois parties
+
+<!-- end list -->
+
+1.  Une partie exploratoire qui presente rapidement les variables qui
+    pourraient être intéressantes (pour rappel, `docvis` est la
+    variable d’interêt)
+2.  Une partie presentant la construction du modèle : il s’agira de
+    partir au choix (i) d’un modele simple, et de montrer comment
+    l’ameliorer, (ii) d’une modele complexe, et de montrer comment le
+    simplifier
+3.  Une partie qui compare les deux modèles avec les AIC des modèles
+
+<!-- end list -->
+
+  - Les techniques de validation croisee, ou la constitution de bases
+    d’apprentissage et de test *ne sont pas au programme* et ne
+    devront pas etre utilisee ici \!
+  - Les seuls packages autorises (sauf autorisation explicite) sont
+    `MASS`, `lmtest`, `counts`, `nortest`, `car`, `splines`, `AER`, `dplyr`, `aod`, `vcd`, `statmod` (et les dépendances associées)
