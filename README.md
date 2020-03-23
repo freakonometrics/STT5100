@@ -33,7 +33,7 @@ Démonstrateur :
 
 **Examen**
 * Modeles de régression - OLS : [Sujet (A)](devoirs/STT5100_Hiver2020_A.pdf) [Correction (A)](devoirs/STT5100_Hiver2020_A_correc.pdf) et [Annexe](devoirs/STT5100_Hiver2020_annexes.pdf)
-* Modeles de régression - GLM : 
+* Modeles de régression - GLM : **annulé**
 
 **Examens passés**
 * OLS énoncé hiver 2012 [H2012E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-h2012-enonce.pdf) [csv](http://freakonometrics.blog.free.fr/public/data/basket-exam-v2.csv) pas d'annexes, désolé
