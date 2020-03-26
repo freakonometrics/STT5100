@@ -17,6 +17,18 @@ Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 **Notes de cours**
 * ébauche de notes de cours [STT5100.html](http://freakonometrics.free.fr/STT5100/STT5100-H2020.html)
 * slides - 0 : agenda [0-A](slides/STT5100-0-A.pdf) [0-B](slides/STT5100-0-B.pdf) [vidéo](http://freakonometrics.free.fr/STT5100/STT5100-H2020.html)
+* slides - 1 : loi binomilale et multinomiale
+* slides - 2 : régression logistique, inférence
+* slides - 3 : régression logistique
+* slides - 4 : régression sur variables catégorielles
+* slides - 5 : régression sur variables continues
+* slides - 6 : courbe ROC et analyse discriminante
+* slides - 7 : loi de Poisson et modèles de comptage
+* slides - 8 : inférence dans le modèle de Poisson
+* slides - 9 : régression de Poisson
+* slides - 10 : méthode des marges
+* slides - 11 : example en assurance automobile
+* slides - 12 : famille exponentielle
 
 **Projets (liste des sujets)** 
 * R2 (coefficient d'ajustement) 
@@ -36,6 +48,7 @@ Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 * R2 pour les GLM
 * régression locale et noyaux
 * regroupement de modalités pour les variables factorielles
-* 
-* 
-* 
+* Cp de Mallows
+* outliers
+* leverage
+* *autre*
