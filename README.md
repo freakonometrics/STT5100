@@ -9,12 +9,19 @@ Plan de cours : [Plan_STT5100_H2020pdf](docs/PLAN-COURS-STT5100-H2020.pdf)
 Démonstrateur : 
 
 ```diff
-- (17 mars) billet de blog sur la courbe ROC 
+- (30 mars) reprise de la session d'hiver : mise en ligne de vidéos 
 ```
 
 **Notes de cours**
 * introduction : [part_1.pdf](docs/STT5100_part_1.pdf)
 * ébauche de notes de cours [STT5100.html](http://freakonometrics.free.fr/STT5100/STT5100-H2020.html)
+- (0) agenda [video](https://vimeo.com/401441666) + [pdf](/covid/STT5100-0.pdf) 
+- (1) lois Bernoulli, binomiale, multnomiale [video](https://vimeo.com/401464711) + [pdf](/covid/STT5100-1.pdf) 
+- (2) régression logistique (Bernoulli) [video](https://vimeo.com/401471254) + [pdf](/covid/STT5100-2.pdf) 
+- (3) régression multinomiale [video](https://vimeo.com/401971316) + [pdf](/covid/STT5100-3.pdf) 
+- (4) régression logistique sur variables catégorielles [video](https://vimeo.com/401969127) + [pdf](/covid/STT5100-4.pdf)
+- (5) régression logistique sur variables continues [video](https://vimeo.com/) + [pdf](/covid/STT5100-5.pdf)
+- (6) analyse discriminante et courbe ROC [video](https://vimeo.com/) + [pdf](/covid/STT5100-6.pdf)
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
