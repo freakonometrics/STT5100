@@ -20,8 +20,10 @@ Démonstrateur :
 - (2) régression logistique (Bernoulli) [video](https://vimeo.com/401471254) + [pdf](/covid/STT5100-2.pdf) 
 - (3) régression multinomiale [video](https://vimeo.com/401971316) + [pdf](/covid/STT5100-3.pdf) 
 - (4) régression logistique sur variables catégorielles [video](https://vimeo.com/401969127) + [pdf](/covid/STT5100-4.pdf)
-- (5) régression logistique sur variables continues [video](https://vimeo.com/) + [pdf](/covid/STT5100-5.pdf)
-- (6) analyse discriminante et courbe ROC [video](https://vimeo.com/) + [pdf](/covid/STT5100-6.pdf)
+- (5) régression logistique sur variables continues [video](https://vimeo.com/402262213) + [pdf](/covid/STT5100-5.pdf)
+- (6) analyse discriminante et courbe ROC [video](https://vimeo.com/402261818) + [pdf](/covid/STT5100-6.pdf)
+- (7) modèles de comptage et loi de Poisson [video](https://vimeo.com/402261657) + [pdf](/covid/STT5100-7.pdf)
+- (8) régression de Poisson [video](https://vimeo.com/402261431) + [pdf](/covid/STT5100-8.pdf)
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
