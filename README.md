@@ -24,6 +24,11 @@ Démonstrateur :
 - (6) analyse discriminante et courbe ROC [video](https://vimeo.com/402261818) + [pdf](/covid/STT5100-6.pdf)
 - (7) modèles de comptage et loi de Poisson [video](https://vimeo.com/402261657) + [pdf](/covid/STT5100-7.pdf)
 - (8) régression de Poisson [video](https://vimeo.com/402261431) + [pdf](/covid/STT5100-8.pdf)
+- (9) régression de Poisson et interprétations [video](https://vimeo.com/402630775) + [pdf](/covid/STT5100-9.pdf)
+- (10) régression de Poisson et méthode des marges video + [pdf](/covid/STT5100-10.pdf)
+- (11) régression de Poisson et application en assurance [video](https://vimeo.com/402630298) + [pdf](/covid/STT5100-11.pdf)
+- (12) famille exponentielle [video](https://vimeo.com/402630535) + [pdf](/covid/STT5100-12.pdf)
+- (13) famille exponentielle et GLM [video](https://vimeo.com/402631017) + [pdf](/covid/STT5100-13.pdf)
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
