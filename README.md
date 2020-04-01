@@ -29,7 +29,7 @@ Démonstrateur :
 - (11) régression de Poisson et application en assurance [video](https://vimeo.com/402630298) + [pdf](/covid/STT5100-11.pdf)
 - (12) famille exponentielle [video](https://vimeo.com/402630535) + [pdf](/covid/STT5100-12.pdf)
 - (13) famille exponentielle et GLM [video](https://vimeo.com/402631017) + [pdf](/covid/STT5100-13.pdf)
-- (14) loi et lien video + [pdf](/covid/STT5100-14.pdf)
+- (14) loi et lien video [video](https://vimeo.com/402967734) + [pdf](/covid/STT5100-14.pdf)
 - (15) déviance et résidus video+ [pdf](/covid/STT5100-15.pdf)
 - (16) modèle Tweedie et poids video + [pdf](/covid/STT5100-16.pdf)
 - (17) surdispersion video + [pdf](/covid/STT5100-17.pdf)
