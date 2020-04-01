@@ -30,12 +30,12 @@ Démonstrateur :
 - (12) famille exponentielle [video](https://vimeo.com/402630535) + [pdf](/covid/STT5100-12.pdf)
 - (13) famille exponentielle et GLM [video](https://vimeo.com/402631017) + [pdf](/covid/STT5100-13.pdf)
 - (14) loi et lien video [video](https://vimeo.com/402967734) + [pdf](/covid/STT5100-14.pdf)
-- (15) déviance et résidus video+ [pdf](/covid/STT5100-15.pdf)
-- (16) modèle Tweedie et poids video + [pdf](/covid/STT5100-16.pdf)
+- (15) déviance et résidus [video](https://vimeo.com/402988804) + [pdf](/covid/STT5100-15.pdf)
+- (16) modèle Tweedie et poids [video]() + [pdf](/covid/STT5100-16.pdf)
 - (17) surdispersion video + [pdf](/covid/STT5100-17.pdf)
-- (18) tests et GLM video + [pdf](/covid/STT5100-18.pdf)
-- (19) GLM en petite dimension video + [pdf](/covid/STT5100-19.pdf)
-- (20) méthode stepwise video + [pdf](/covid/STT5100-20.pdf)
+- (18) tests et GLM [video](https://vimeo.com/403078679) + [pdf](/covid/STT5100-18.pdf)
+- (19) GLM en petite dimension [video](https://vimeo.com/403078474) + [pdf](/covid/STT5100-19.pdf)
+- (20) méthode stepwise [video](https://vimeo.com/403078320) + [pdf](/covid/STT5100-20.pdf)
 - (21) Poisson vs. Binomiale, application en démographie [video](https://vimeo.com/402928573) + [pdf](/covid/STT5100-21.pdf)
 
 **Références** 
