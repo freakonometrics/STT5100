@@ -36,6 +36,7 @@ Démonstrateur :
 - (18) tests et GLM video + [pdf](/covid/STT5100-18.pdf)
 - (19) GLM en petite dimension video + [pdf](/covid/STT5100-19.pdf)
 - (20) méthode stepwise video + [pdf](/covid/STT5100-20.pdf)
+- (21) Poisson vs. Binomiale video + [pdf](/covid/STT5100-21.pdf)
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
