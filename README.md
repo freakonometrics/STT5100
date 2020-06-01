@@ -12,7 +12,12 @@ Démonstrateur :
 - (été 2020) mise en ligne de rappels 
 ```
 
-**Notes de cours**
+**Seances**
+
+"It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
+Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
+
+1. à venir
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
@@ -65,13 +70,6 @@ Démonstrateur :
 
 **R Toolbox - SOA**
 * page "R console" [https://actuarialtoolkit.soa.org/](https://actuarialtoolkit.soa.org/tool/r-console/learn-more)
-
-**Seances**
-
-"It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
-Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
-
-1. à venir
 
 **"Curve Fitting"**
 
