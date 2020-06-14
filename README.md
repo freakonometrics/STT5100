@@ -18,6 +18,7 @@ Démonstrateur :
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
 **Rappels**
+
 0. R, RStudio, Rmarkdown [video]() + [pdf]() 
 1. Probabilités [video]() + [pdf]() 
 2. Vecteur Gaussien [video]() + [pdf]() 
@@ -27,9 +28,13 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 6. Simulations, Monte Carlo, Bootstrap  [video]() + [pdf]() 
 7. Optimisation [video]() + [pdf]() 
 8. Algèbre linéaire, matrices [video]() + [pdf]() 
+
 **Moindres carrés**
+
 1. à venir
+
 **Modèles linéaires généralisés (GLM)**
+
 1. lois de Bernoulli, binomiale, multnomiale [video]() + [pdf]() 
 2. régression logistique (Bernoulli)  [video]() + [pdf]() 
 3. régression multinomiale [video]() + [pdf]() 
