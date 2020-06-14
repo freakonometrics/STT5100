@@ -17,7 +17,40 @@ Démonstrateur :
 "It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
+**Rappels**
+0. R, RStudio, Rmarkdown [video]() + [pdf]() 
+1. Probabilités [video]() + [pdf]() 
+2. Vecteur Gaussien [video]() + [pdf]() 
+3. Maximum de vraisemblance [video]() + [pdf]() 
+4. Estimation paramétrique [video]() + [pdf]() 
+5. Tests [video]() + [pdf]() 
+6. Simulations, Monte Carlo, Bootstrap  [video]() + [pdf]() 
+7. Optimisation [video]() + [pdf]() 
+8. Algèbre linéaire, matrices [video]() + [pdf]() 
+**Moindres carrés**
 1. à venir
+**Modèles linéaires généralisés (GLM)**
+1. lois de Bernoulli, binomiale, multnomiale [video]() + [pdf]() 
+2. régression logistique (Bernoulli)  [video]() + [pdf]() 
+3. régression multinomiale [video]() + [pdf]() 
+4. régression logistique sur variables catégorielles  [video]() + [pdf]() 
+5. régression logistique sur variables continues  [video]() + [pdf]() 
+6. analyse discriminante et courbe ROC  [video]() + [pdf]() 
+7. modèles de comptage et loi de Poisson  [video]() + [pdf]() 
+8. régression de Poisson  [video]() + [pdf]() 
+9. régression de Poisson et interprétations  [video]() + [pdf]() 
+10. régression de Poisson et méthode des marges  [video]() + [pdf]() 
+11. régression de Poisson et application en assurance  [video]() + [pdf]() 
+12. famille exponentielle  [video]() + [pdf]() 
+13. famille exponentielle et GLM  [video]() + [pdf]() 
+14. loi et lien video  [video]() + [pdf]() 
+15. déviance et résidus  [video]() + [pdf]() 
+16. modèle Tweedie et poids  [video]() + [pdf]() 
+17. surdispersion  [video]() + [pdf]() 
+18. tests et GLM  [video]() + [pdf]() 
+19. GLM en petite dimension  [video]() + [pdf]() 
+20. méthode stepwise  [video]() + [pdf]() 
+21. Poisson vs. Binomiale, application en démographie  [video]() + [pdf]() 
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
