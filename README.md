@@ -80,10 +80,6 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 * Régression logistique - GLM : [Devoir2](docs/devoirs/STT5100-H2020-devoir2.md)
 * Régression de Poisson - GLM : [Devoir3](docs/devoirs/devoir3-H2020-STT5100.md)
 
-**Examen**
-
-* Modeles de régression - GLM : **annulé**
-
 **Examens passés**
 * OLS énoncé hiver 2012 [H2012E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-h2012-enonce.pdf) [csv](http://freakonometrics.blog.free.fr/public/data/basket-exam-v2.csv) pas d'annexes, désolé
 * OLS _correction_ hiver 2012 [H2012C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-h2012-correc.pdf)
