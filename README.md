@@ -28,11 +28,14 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 1. Probabilités [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_2.pdf) 
 2. Vecteur Gaussien [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_3.pdf) 
 3. Maximum de vraisemblance [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_4.pdf) 
-4. Estimation paramétrique [video]() + [pdf]() 
-5. Tests [video]() + [pdf]() 
-6. Simulations, Monte Carlo, Bootstrap  [video]() + [pdf]() 
-7. Optimisation [video]() + [pdf]() 
-8. Algèbre linéaire, matrices [video]() + [pdf]() 
+4. Estimation paramétrique [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_5.pdf) 
+5. Estimation non-paramétrique [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_6.pdf) 
+6. Simulations, Monte Carlo, Bootstrap  [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_7.pdf) 
+7. Tests (1) [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_8.pdf) 
+8. Tests (2) [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_9.pdf) 
+9. Tests (3) [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_10.pdf) 
+10. Optimisation [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_11.pdf) 
+11. Algèbre linéaire [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_12.pdf) 
 
 **Moindres carrés**
 
