@@ -17,6 +17,11 @@ Démonstrateur :
 "It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
+**Introduction**
+
+0. Plan de cours [video]() + [pdf](/slides/STT5100_A2020_INTRO_1.pdf) 
+1. Epistémologie [video]() + [pdf](/slides/STT5100_A2020_INTRO_2.pdf) 
+
 **Rappels**
 
 0. R, RStudio, Rmarkdown [video]() + [pdf]() 
