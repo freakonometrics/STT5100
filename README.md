@@ -24,10 +24,10 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 **Rappels**
 
-0. R, RStudio, Rmarkdown [video]() + [pdf]() 
-1. Probabilités [video]() + [pdf]() 
-2. Vecteur Gaussien [video]() + [pdf]() 
-3. Maximum de vraisemblance [video]() + [pdf]() 
+0. R, RStudio, Rmarkdown [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_1.pdf) 
+1. Probabilités [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_2.pdf) 
+2. Vecteur Gaussien [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_3.pdf) 
+3. Maximum de vraisemblance [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_4.pdf) 
 4. Estimation paramétrique [video]() + [pdf]() 
 5. Tests [video]() + [pdf]() 
 6. Simulations, Monte Carlo, Bootstrap  [video]() + [pdf]() 
