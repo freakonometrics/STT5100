@@ -97,10 +97,10 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 * Yihui Xie, J. J. Allaire & Garrett Grolemund, R Markdown: The Definitive Guide [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
 * ACT3035 [https://nour.me/act3035/](https://nour.me/act3035/)
 
-**Projets / Devoir**
-* Modèles de régression - OLS : [Devoir1](docs/devoirs/devoir1-H2020-STT5100.md)
-* Régression logistique - GLM : [Devoir2](docs/devoirs/STT5100-H2020-devoir2.md)
-* Régression de Poisson - GLM : [Devoir3](docs/devoirs/devoir3-H2020-STT5100.md)
+**Projets / Devoir passés**
+* Modèles de régression - OLS (hiver 2020) : [Devoir1](https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/devoirs/devoir1-H2020-STT5100.md)
+* Régression logistique - GLM (hiver 2020) : [Devoir2](https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/devoirs/STT5100-H2020-devoir2.md)
+* Régression de Poisson - GLM (hiver 2020) : [Devoir3](https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/devoirs/devoir3-H2020-STT5100.md)
 
 **Examens passés**
 * OLS énoncé hiver 2012 [H2012E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act6410-h2012-enonce.pdf) [csv](http://freakonometrics.blog.free.fr/public/data/basket-exam-v2.csv) pas d'annexes, désolé
