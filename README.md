@@ -39,31 +39,53 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 **Moindres carrés**
 
-1. à venir
+1. Régressions [video]() + [pdf](/slides/STT5100_A2020_OLS_1.pdf) 
+2. Régression simple sur variable continue (1) [video]() + [pdf](/slides/STT5100_A2020_OLS_2.pdf) 
+3. Régression simple sur variable continue (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_3.pdf) 
+4. Régression simple sur variable continue (3) [video]() + [pdf](/slides/STT5100_A2020_OLS_4.pdf) 
+5. Régression simple sur variable factorielle [video]() + [pdf](/slides/STT5100_A2020_OLS_5.pdf) 
+6. Régression multiple (1) [video]() + [pdf](/slides/STT5100_A2020_OLS_6.pdf) 
+7. Régression multiple (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_7.pdf) 
+8. Modèle Gaussien et tests [video]() + [pdf](/slides/STT5100_A2020_OLS_8.pdf) 
+9. Bootstrap [video]() + [pdf](/slides/STT5100_A2020_OLS_9.pdf) 
+10. Diagnostique [video]() + [pdf](/slides/STT5100_A2020_OLS_10.pdf) 
+11. ANOVA (1) [video]() + [pdf](/slides/STT5100_A2020_OLS_11.pdf) 
+12. Régression pondérée [video]() + [pdf](/slides/STT5100_A2020_OLS_12.pdf) 
+13. Multicolinéarité (1) [video]() + [pdf](/slides/STT5100_A2020_OLS_13.pdf) 
+14. Sélection de variables [video]() + [pdf](/slides/STT5100_A2020_OLS_14.pdf) 
+15. MCG & hétéroscédasticité [video]() + [pdf](/slides/STT5100_A2020_OLS_15.pdf) 
+16. Multicolinéarité (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_16.pdf) 
+17. ANOVA (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_17.pdf) 
+18. Lissage, non-linéarités [video]() + [pdf](/slides/STT5100_A2020_OLS_18.pdf) 
+19. Discontinuités [video]() + [pdf](/slides/STT5100_A2020_OLS_19.pdf) 
+
+
 
 **Modèles linéaires généralisés (GLM)**
 
-1. lois de Bernoulli, binomiale, multnomiale [video]() + [pdf]() 
-2. régression logistique (Bernoulli)  [video]() + [pdf]() 
-3. régression multinomiale [video]() + [pdf]() 
-4. régression logistique sur variables catégorielles  [video]() + [pdf]() 
-5. régression logistique sur variables continues  [video]() + [pdf]() 
-6. analyse discriminante et courbe ROC  [video]() + [pdf]() 
-7. modèles de comptage et loi de Poisson  [video]() + [pdf]() 
-8. régression de Poisson  [video]() + [pdf]() 
-9. régression de Poisson et interprétations  [video]() + [pdf]() 
-10. régression de Poisson et méthode des marges  [video]() + [pdf]() 
-11. régression de Poisson et application en assurance  [video]() + [pdf]() 
-12. famille exponentielle  [video]() + [pdf]() 
-13. famille exponentielle et GLM  [video]() + [pdf]() 
-14. loi et lien video  [video]() + [pdf]() 
-15. déviance et résidus  [video]() + [pdf]() 
-16. modèle Tweedie et poids  [video]() + [pdf]() 
-17. surdispersion  [video]() + [pdf]() 
-18. tests et GLM  [video]() + [pdf]() 
-19. GLM en petite dimension  [video]() + [pdf]() 
-20. méthode stepwise  [video]() + [pdf]() 
-21. Poisson vs. Binomiale, application en démographie  [video]() + [pdf]() 
+0. introduction générale <a href="https://www.youtube.com/watch?v=p4XMwcelyI0&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=1">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-0.pdf">pdf</a> (10:15) <br /> 	    
+1. lois de Bernoulli, binomiale, multnomiale <a href="https://www.youtube.com/watch?v=75wN_XJvXYo&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=2">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-1.pdf">pdf</a> (29:23) <br /> 
+2.  régression logistique (Bernoulli) <a href="https://www.youtube.com/watch?v=9qPe9YbSk4k&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=3">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-2.pdf">pdf</a> (23:04) <br /> 
+3.    régression multinomiale <a href="https://www.youtube.com/watch?v=M8q3mzQuWZc&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=4">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-3.pdf">pdf</a> (21:45) <br /> 
+4.    régression logistique sur variables catégorielles <a href="https://www.youtube.com/watch?v=beB-6PgDQP4&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=5">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-4.pdf">pdf</a> (30:24) <br /> 
+5.    régression logistique sur variables continues <a href="https://www.youtube.com/watch?v=RfaBrGGFNn4&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=6">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-5.pdf">pdf</a> (21:35) <br /> 
+6.    analyse discriminante et courbe ROC <a href="https://www.youtube.com/watch?v=BQ_zdviAHu8&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=7">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-6.pdf">pdf</a> (56:53) <br /> 
+7.    modèles de comptage et loi de Poisson <a href="https://www.youtube.com/watch?v=vBTrb7KBoB8&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=8">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-7.pdf">pdf</a> (19:28) <br /> 
+8.  régression de Poisson <a href="https://www.youtube.com/watch?v=Et07c3a8V3c&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=9">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-8.pdf">pdf</a> (25:38) <br /> 
+9.    régression de Poisson et interprétations <a href="https://www.youtube.com/watch?v=xUGFwU8aLAw&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=10">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-9.pdf">pdf</a> (40:15) <br /> 
+10.    régression de Poisson et méthode des marges <a href="https://www.youtube.com/watch?v=hJUY3CEIQOQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=11">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-10.pdf">pdf</a> (25:29) <br /> 
+11.    régression de Poisson et application en assurance <a href="https://www.youtube.com/watch?v=1BuMQX_mlec&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=12">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-11.pdf">pdf</a> (36:23) <br /> 
+12.    famille exponentielle <a href="https://www.youtube.com/watch?v=0Hs7e4nstO4&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=13">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-12.pdf">pdf</a> (30:01) <br /> 
+13.    famille exponentielle et GLM <a href="https://www.youtube.com/watch?v=weoPmeWVaaw&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=14">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-13.pdf">pdf</a> (41:02) <br /> 
+14.    loi et lien video <a href="https://www.youtube.com/watch?v=4apRCozfmLE&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=15">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-14.pdf">pdf</a> (36:05) <br /> 
+15.    déviance et résidus <a href="https://www.youtube.com/watch?v=XZQTlAoVHl8&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=16">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-15.pdf">pdf</a> (15:10) <br /> 
+16.    modèle Tweedie et poids <a href="https://www.youtube.com/watch?v=BSp_qXnmbSo&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=17">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-16.pdf">pdf</a> (29:33) <br /> 
+17.    surdispersion <a href="https://www.youtube.com/watch?v=tZjjR0Z4k3k&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=18">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-17.pdf">pdf</a> (21:01) <br /> 
+18.    tests et GLM <a href="https://www.youtube.com/watch?v=o72UZKCd3jI&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=19">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-18.pdf">pdf</a> (19:41) <br /> 
+19.    GLM en petite dimension <a href="https://www.youtube.com/watch?v=YHOVtBC_s4o&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=20">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-19.pdf">pdf</a> (23:34) <br /> 
+20.    méthode stepwise <a href="https://www.youtube.com/watch?v=D31VCd-XJLU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=21">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-20.pdf">pdf</a> (17:57) <br /> 
+21.    Poisson vs. Binomiale, application en démographie <a href="https://www.youtube.com/watch?v=A-uIImX-Jto&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=22">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-21.pdf">pdf</a> (22:25) <br /> 
+
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
