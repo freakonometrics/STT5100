@@ -19,12 +19,12 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 **Introduction**
 
-0. Plan de cours [video]() + [pdf](/slides/STT5100_A2020_INTRO_1.pdf) 
-1. Epistémologie [video]() + [pdf](/slides/STT5100_A2020_INTRO_2.pdf) 
+0. Plan de cours [video](https://www.youtube.com/watch?v=8DI3d6nxhTc&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=2&t=0s) + [pdf](/slides/STT5100_A2020_INTRO_1.pdf) (36:44)
+1. Epistémologie [video](https://www.youtube.com/watch?v=suw4eKnraHQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=3&t=0s) + [pdf](/slides/STT5100_A2020_INTRO_2.pdf) (29:50)
 
 **Rappels**
 
-0. R, RStudio, Rmarkdown [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_1.pdf) 
+0. R, RStudio, Rmarkdown [video](https://www.youtube.com/watch?v=SMDeNtqOkVU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=4&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_1.pdf) (30:48)
 1. Probabilités [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_2.pdf) 
 2. Vecteur Gaussien [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_3.pdf) 
 3. Maximum de vraisemblance [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_4.pdf) 
