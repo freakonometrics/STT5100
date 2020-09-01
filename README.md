@@ -25,9 +25,9 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 **Rappels**
 
 0. R, RStudio, Rmarkdown [video](https://www.youtube.com/watch?v=SMDeNtqOkVU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=4&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_1.pdf) (30:48)
-1. Probabilités [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_2.pdf) 
-2. Vecteur Gaussien [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_3.pdf) 
-3. Maximum de vraisemblance [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_4.pdf) 
+1. Probabilités [video](https://www.youtube.com/watch?v=tf9C7KUgzgQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=5&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_2.pdf) (47:24)
+2. Vecteur Gaussien [video](https://www.youtube.com/watch?v=g5lfBRNcuaw&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=6&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_3.pdf) (36:05)
+3. Maximum de vraisemblance [video](https://www.youtube.com/watch?v=8MlQxK1ooRg&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=7&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_4.pdf) (39:56)
 4. Estimation paramétrique [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_5.pdf) 
 5. Estimation non-paramétrique [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_6.pdf) 
 6. Simulations, Monte Carlo, Bootstrap  [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_7.pdf) 
