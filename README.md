@@ -28,14 +28,14 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 1. Probabilités [video](https://www.youtube.com/watch?v=tf9C7KUgzgQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=5&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_2.pdf) (47:24)
 2. Vecteur Gaussien [video](https://www.youtube.com/watch?v=g5lfBRNcuaw&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=6&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_3.pdf) (36:05)
 3. Maximum de vraisemblance [video](https://www.youtube.com/watch?v=8MlQxK1ooRg&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=7&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_4.pdf) (39:56)
-4. Estimation paramétrique [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_5.pdf) 
-5. Estimation non-paramétrique [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_6.pdf) 
-6. Simulations, Monte Carlo, Bootstrap  [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_7.pdf) 
-7. Tests (1) [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_8.pdf) 
+4. Estimation paramétrique [video](https://www.youtube.com/watch?v=yWaSzptP14o&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=8&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_5.pdf) (27:32)
+5. Estimation non-paramétrique [video](https://www.youtube.com/watch?v=8qhplMgqVuU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=9&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_6.pdf) (37:12)
+6. Simulations, Monte Carlo, Bootstrap  [video](https://www.youtube.com/watch?v=1oRAjtkxhhc&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=10&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_7.pdf) (40:50)
+7. Tests (1) [video](https://www.youtube.com/watch?v=sBJOIGx1XHM&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=8&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_8.pdf) (32:29)
 8. Tests (2) [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_9.pdf) 
 9. Tests (3) [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_10.pdf) 
 10. Optimisation [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_11.pdf) 
-11. Algèbre linéaire [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_12.pdf) 
+11. Algèbre linéaire [video](https://www.youtube.com/watch?v=CAmOpaYi3jU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=9&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_12.pdf) (53:54)
 
 **Moindres carrés**
 
