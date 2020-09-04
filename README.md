@@ -32,8 +32,8 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 5. Estimation non-paramétrique [video](https://www.youtube.com/watch?v=8qhplMgqVuU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=9&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_6.pdf) (37:12)
 6. Simulations, Monte Carlo, Bootstrap  [video](https://www.youtube.com/watch?v=1oRAjtkxhhc&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=10&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_7.pdf) (40:50)
 7. Tests (1) [video](https://www.youtube.com/watch?v=sBJOIGx1XHM&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=8&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_8.pdf) (32:29)
-8. Tests (2) [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_9.pdf) 
-9. Tests (3) [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_10.pdf) 
+8. Tests (2) [video](https://www.youtube.com/watch?v=EhPU260yz30&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=11) + [pdf](/slides/STT5100_A2020_RAPPELS_9.pdf) (32:20)
+9. Tests (3) [video](https://www.youtube.com/watch?v=Mz7NSFNDWcE&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=12) + [pdf](/slides/STT5100_A2020_RAPPELS_10.pdf)  (25:44)
 10. Optimisation [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_11.pdf) 
 11. Algèbre linéaire [video](https://www.youtube.com/watch?v=CAmOpaYi3jU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=9&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_12.pdf) (53:54)
 
