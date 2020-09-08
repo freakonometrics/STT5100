@@ -34,13 +34,13 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 7. Tests (1) [video](https://www.youtube.com/watch?v=sBJOIGx1XHM&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=8&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_8.pdf) (32:29)
 8. Tests (2) [video](https://www.youtube.com/watch?v=EhPU260yz30&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=11) + [pdf](/slides/STT5100_A2020_RAPPELS_9.pdf) (32:20)
 9. Tests (3) [video](https://www.youtube.com/watch?v=Mz7NSFNDWcE&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=12) + [pdf](/slides/STT5100_A2020_RAPPELS_10.pdf)  (25:44)
-10. Optimisation [video]() + [pdf](/slides/STT5100_A2020_RAPPELS_11.pdf) 
+10. Optimisation [video](https://www.youtube.com/watch?v=qbMfX07McmQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=14) + [pdf](/slides/STT5100_A2020_RAPPELS_11.pdf) (49:57)
 11. Algèbre linéaire [video](https://www.youtube.com/watch?v=CAmOpaYi3jU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=9&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_12.pdf) (53:54)
 
 **Moindres carrés**
 
-1. Régressions [video]() + [pdf](/slides/STT5100_A2020_OLS_1.pdf) 
-2. Régression simple sur variable continue (1) [video]() + [pdf](/slides/STT5100_A2020_OLS_2.pdf) 
+1. Régressions [video](https://www.youtube.com/watch?v=8aXmC2fj_n8&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=16&t=0s) + [pdf](/slides/STT5100_A2020_OLS_1.pdf) (40:01)
+2. Régression simple sur variable continue (1) [video](https://www.youtube.com/watch?v=Xw3dWco4xHM&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=17&t=0s) + [pdf](/slides/STT5100_A2020_OLS_2.pdf) (41:33)
 3. Régression simple sur variable continue (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_3.pdf) 
 4. Régression simple sur variable continue (3) [video]() + [pdf](/slides/STT5100_A2020_OLS_4.pdf) 
 5. Régression simple sur variable factorielle [video]() + [pdf](/slides/STT5100_A2020_OLS_5.pdf) 
