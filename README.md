@@ -43,7 +43,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 2. Régression simple sur variable continue (1) [video](https://www.youtube.com/watch?v=Xw3dWco4xHM&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=17&t=0s) + [pdf](/slides/STT5100_A2020_OLS_2.pdf) (41:33)
 3. Régression simple sur variable continue (2) [video](https://www.youtube.com/watch?v=z65Z4nsz2FI&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=18&t=0s) + [pdf](/slides/STT5100_A2020_OLS_3.pdf) (30:26)
 4. Régression simple sur variable continue (3) [video](https://www.youtube.com/watch?v=c1w-fGrGGtA&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=18&t=0s) + [pdf](/slides/STT5100_A2020_OLS_4.pdf) (30:39)
-5. Régression simple sur variable factorielle [video](https://www.youtube.com/watch?v=tFnvXKYoJrQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=20&t=0s) + [pdf](/slides/STT5100_A2020_OLS_5.pdf) (39:39)
+5. Régression simple sur variable factorielle [video](https://www.youtube.com/watch?v=tFnvXKYoJrQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=20&t=0s) + [pdf](/slides/STT5100_A2020_OLS_5.pdf) (39:59)
 6. Régression multiple (1) [video]() + [pdf](/slides/STT5100_A2020_OLS_6.pdf) 
 7. Régression multiple (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_7.pdf) 
 8. Modèle Gaussien et tests [video]() + [pdf](/slides/STT5100_A2020_OLS_8.pdf) 
