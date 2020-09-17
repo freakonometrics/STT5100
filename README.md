@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_A2020pdf](/docs/STT5100_A2020_Plan_de_Cours.pdf) (
 Démonstrateur : Rawanda Matar
 
 ```diff
-- (11 sept, cours 1) regarder les capsules intro-1,2 et rappels-1
+- (18 sept, cours 2) regarder les capsules proba+stats (inférence)
 ```
 
 **Seances**
