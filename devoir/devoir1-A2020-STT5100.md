@@ -75,4 +75,4 @@ vous demande de me l’envoyer avec les deux autres fichiers (`Rmd` et
 
 <img src="https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/obviously.png" alt="drawing" width="300" align=right/>
 
-Le fichier ABCD12345678A2020Devoir1.html doit être lisible dans un navigateur internet (Firefox) et le code ABCD12345678A2020Devoir.Rmd doit compiler sans erreur
+Le fichier html doit être lisible dans un navigateur internet (Firefox) et le code Rmd doit compiler sans erreur. Le préambule du fichier Rmd doit contenir comme auteur le code permanent.
