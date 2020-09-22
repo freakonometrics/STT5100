@@ -72,3 +72,5 @@ save(valeur, file = paste(code_permanent,"A2020-prix200.RData",sep=""))
 Un fichier intitulé ABCD12345678A2020-prix200.RData sera créé, et je
 vous demande de me l’envoyer avec les deux autres fichiers (`Rmd` et
 `html`).
+
+![obviously](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/obviously.png?raw=true "Captain Obvious")
