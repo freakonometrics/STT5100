@@ -71,6 +71,6 @@ save(valeur, file = paste(code_permanent,"A2020-prix200.RData",sep=""))
 
 Un fichier intitulé ABCD12345678A2020-prix200.RData sera créé, et je
 vous demande de me l’envoyer avec les deux autres fichiers (`Rmd` et
-`html`).
+`html`). **Le fichier ABCD12345678A2020Devoir1.html doit être lisible dans un navigateur internet (Firefox) et le code ABCD12345678A2020Devoir.Rmd doit compiler sans erreur**
 
 ![obviously](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/obviously.png?raw=true "Captain Obvious")
