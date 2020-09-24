@@ -51,14 +51,15 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 10. Diagnostique [video](https://www.youtube.com/watch?v=BpomPYoSvw0&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=25&t=0s) + [pdf](/slides/STT5100_A2020_OLS_10.pdf) (50:08)
 11. ANOVA (1) [video](https://www.youtube.com/watch?v=Pe1psmbjvDY&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=26&t=0s) + [pdf](/slides/STT5100_A2020_OLS_11.pdf) (37:52)
 12. ANOVA (2) [video](https://www.youtube.com/watch?v=nCsdO4j5ODs&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=27&t=0s) + [pdf](/slides/STT5100_A2020_OLS_11.pdf) (28:28)
-13. Régression pondérée [video](https://www.youtube.com/watch?v=ks2GprUnL04&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=28&t=0s) + [pdf](/slides/STT5100_A2020_OLS_12.pdf) (16:33)
-14. Multicolinéarité (1) [video]() + [pdf](/slides/STT5100_A2020_OLS_13.pdf) 
-15. Sélection de variables [video]() + [pdf](/slides/STT5100_A2020_OLS_14.pdf) 
-16. MCG & hétéroscédasticité [video]() + [pdf](/slides/STT5100_A2020_OLS_15.pdf) 
-17. Multicolinéarité (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_16.pdf) 
-18. ANOVA (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_17.pdf) 
-19. Lissage, non-linéarités [video]() + [pdf](/slides/STT5100_A2020_OLS_18.pdf) 
-10. Discontinuités [video]() + [pdf](/slides/STT5100_A2020_OLS_19.pdf) 
+13. ANOVA (3) [video]() + [pdf](/slides/STT5100_A2020_OLS_21.pdf) 
+14. Régression pondérée [video](https://www.youtube.com/watch?v=ks2GprUnL04&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=28&t=0s) + [pdf](/slides/STT5100_A2020_OLS_12.pdf) (16:33)
+15. Multicolinéarité (1) [video]() + [pdf](/slides/STT5100_A2020_OLS_13.pdf) 
+16. Sélection de variables [video]() + [pdf](/slides/STT5100_A2020_OLS_14.pdf) 
+17. MCG & hétéroscédasticité [video]() + [pdf](/slides/STT5100_A2020_OLS_15.pdf) 
+18. Multicolinéarité (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_16.pdf) 
+19. ANOVA (4) [video]() + [pdf](/slides/STT5100_A2020_OLS_17.pdf) 
+20. Lissage, non-linéarités [video]() + [pdf](/slides/STT5100_A2020_OLS_18.pdf) 
+21. Discontinuités [video]() + [pdf](/slides/STT5100_A2020_OLS_19.pdf) 
 
 
 
