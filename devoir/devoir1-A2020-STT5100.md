@@ -4,6 +4,8 @@ STT5100 Devoir \#1 - Automne 2020
 
 **Récupérer les données**
 
+Il convient de remplacer le code permanent par *votre* propre code permanent pour avoir votre base,
+
 ``` r
 code_permanent = "ABCD12345678"
 loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,"A2020Devoir1.RData",sep="")
@@ -36,8 +38,35 @@ str(database)
     ##  $ ValueperSquareFeet      : num  166.3 77.1 94 120.7 123.2 ...
 
 On a la valeur `ValueperSquareFeet` de maisons par pieds carrés, aux
-États-Unis, et 14 variables explicatives. Le but est de construire un
-modèle prédictif pour prévoir la valeur de la maison.
+États-Unis, et 14 variables explicatives. 
+
+**Instructions**
+
+Le but de ce premier projet est de construire un
+modèle prédictif pour prévoir la valeur de la maison, par pieds carrés.
+
+Il convidendra d'adopter le plan suivant :
+
+**1.Présentation des données**
+
+Dans une première partie, il faudra un peu de statistique descriptives, montrant quelles variables sont *a priori* corrélées avec la variable d'intérêt. Des graphiques sont attendus dans cette partie.
+
+**2.Un premier modèle
+
+En utilisant les techniques du cours, **et uniquement les techniques du cours**, il faudra expliquer comment vous avez contruit un premier modèle qui vous semble valide.
+
+**3.Le modèle final**
+
+Dans un second temps, vous essayerez d'améliorer ce premier modèle, peut-être en tenant compte de non-linéarités potentielles, ou en regroupant des modalités de variables qualitatives. Il s'agira d'avoir aussi une discussion sur d'éventuelles valeurs aberrantes, ou levier, ainsi que la validation des hypothèses usuelles.
+
+**4.Indicateurs**
+
+Dans une section spécifique, il faudra indiquer
+* le R2 ajusté du modèle retenu
+* le AIC du modèle retenu
+* le BIC du modèle retenu
+
+**5.Prévision**
 
 Une fois construit votre modèle final, par exemple
 
@@ -45,7 +74,7 @@ Une fois construit votre modèle final, par exemple
 model = lm(ValueperSquareFeet~1, data=database)
 ```
 
-il faudra prévoir la valeur (par pieds carrés) de 200 maisons, et
+Il faudra prévoir la valeur (par pieds carrés) de 200 maisons, et
 d’envoyer les données, avec un code de la forme (merci de
 copier-coller ce code à la fin de votre fichier
 Rmd)
@@ -72,9 +101,14 @@ head(btest)
 save(valeur, file = paste(code_permanent,"A2020-prix200.RData",sep=""))
 ```
 
-Un fichier intitulé ABCD12345678A2020-prix200.RData sera créé, et je
-vous demande de me l’envoyer avec les deux autres fichiers (`Rmd` et
-`html`). 
+**Envoi des résultats**
+
+Un fichier intitulé ABCD12345678A2020-prix200.RData sera créé lors de la compilation, et je
+vous demande de me le déposer sur Moodle avec les deux autres fichiers (`Rmd` et `html`). 
+
+**Précisions complémentaires**
+
+
 
 <img src="https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/obviously.png" alt="drawing" width="300" align=right/>
 
