@@ -111,7 +111,8 @@ vous demande de me le déposer sur Moodle avec les deux autres fichiers (`ABCD12
 * dans le préambule de fichier `ABCD12345678A2020-devoir1.Rmd`, l'auteur doit contenir le **code permanent**, `author: "ABCD12345678: John Doe"`
 * les techniques de validation croisée, ou la constitution de bases d’apprentissage et de test (*hold-out*) ne sont pas au programme et ne devront pas etre utilisées pour ce devoir
 * tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `<https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test>`)
-* Les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable.
+* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable.
+* la forme du document et sa lisibilité interviendront dans la notation. Afficher des tableaux de plusieurs centaines de lignes est à proscrire.
 
 <img src="https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/obviously.png" alt="drawing" width="300" align=right/>
 
