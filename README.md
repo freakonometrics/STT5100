@@ -17,6 +17,11 @@ Démonstrateur : Rawanda Matar
 "It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
+**Projets / Devoir**
+* Modèles de régression - OLS : [Devoir1](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir1-A2020-STT5100.md)
+* Modèles de régression - GLM : [Devoir2](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir2-A2020-STT5100.md)
+
+
 **Introduction**
 
 0. Plan de cours [video](https://www.youtube.com/watch?v=8DI3d6nxhTc&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=2&t=0s) + [pdf](/slides/STT5100_A2020_INTRO_1.pdf) (36:44)
