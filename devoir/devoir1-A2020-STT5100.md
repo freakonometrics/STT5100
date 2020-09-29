@@ -1,6 +1,9 @@
 STT5100 Devoir \#1 - Automne 2020
 ================
 
+
+**Récupérer les données**
+
 ``` r
 code_permanent = "ABCD12345678"
 loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,"A2020Devoir1.RData",sep="")
