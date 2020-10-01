@@ -4,7 +4,7 @@ Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_STT5100_A2020pdf](/docs/STT5100_A2020_Plan_de_Cours.pdf) (version préliminaire, non approuvée)
+Plan de cours : [Plan_STT5100_A2020pdf](/docs/STT5100_A2020_Plan_de_Cours.pdf) (version approuvée)
 
 Démonstrateur : Rawanda Matar
 
