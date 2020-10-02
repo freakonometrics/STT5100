@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_A2020pdf](/docs/STT5100_A2020_Plan_de_Cours.pdf) (
 Démonstrateur : Rawanda Matar
 
 ```diff
-- (vendredi 5) introduction avec la régression linéaire multiple
+- (vendredi 9) introduction avec la régression linéaire multiple
 ```
 
 **Seances**
