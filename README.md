@@ -63,9 +63,10 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 17. MCG & hétéroscédasticité [video](https://www.youtube.com/watch?v=YzXiSFkG5Sg&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=31) + [pdf](/slides/STT5100_A2020_OLS_15.pdf) (21:30)
 18. Multicolinéarité (2) [video](https://www.youtube.com/watch?v=pDATCIVv-OU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=32) + [pdf](/slides/STT5100_A2020_OLS_16.pdf) (25:05)
 19. ANOVA (4) [pdf](/slides/STT5100_A2020_OLS_17.pdf) 
+20. Transformations [video]() + [pdf](/slides/STT5100_A2020_OLS_20.pdf) 
 20. Lissage, non-linéarités [video]() + [pdf](/slides/STT5100_A2020_OLS_18.pdf) 
 21. Discontinuités [video]() + [pdf](/slides/STT5100_A2020_OLS_19.pdf) 
-22. Exemple [video]() + [pdf](/slides/STT5100_A2020_OLS_20.pdf) 
+22. Exemple [video]() + [pdf](/slides/STT5100_A2020_OLS_22.pdf) 
 
 
 **Modèles linéaires généralisés (GLM)**
