@@ -60,12 +60,12 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 14. Régression pondérée [video](https://www.youtube.com/watch?v=ks2GprUnL04&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=28&t=0s) + [pdf](/slides/STT5100_A2020_OLS_12.pdf) (16:33)
 15. Multicolinéarité (1) [video](https://www.youtube.com/watch?v=JmhqnkAn1KA&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=29) + [pdf](/slides/STT5100_A2020_OLS_13.pdf) (43:25)
 16. Sélection de variables [video](https://www.youtube.com/watch?v=-YzrEsgYFJQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=30) + [pdf](/slides/STT5100_A2020_OLS_14.pdf) (44:13)
-17. MCG & hétéroscédasticité [video]() + [pdf](/slides/STT5100_A2020_OLS_15.pdf) 
-18. Multicolinéarité (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_16.pdf) 
-19. ANOVA (4) [video]() + [pdf](/slides/STT5100_A2020_OLS_17.pdf) 
+17. MCG & hétéroscédasticité [video](https://www.youtube.com/watch?v=YzXiSFkG5Sg&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=31) + [pdf](/slides/STT5100_A2020_OLS_15.pdf) (21:30)
+18. Multicolinéarité (2) [video](https://www.youtube.com/watch?v=pDATCIVv-OU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=32) + [pdf](/slides/STT5100_A2020_OLS_16.pdf) (25:05)
+19. ANOVA (4) [pdf](/slides/STT5100_A2020_OLS_17.pdf) 
 20. Lissage, non-linéarités [video]() + [pdf](/slides/STT5100_A2020_OLS_18.pdf) 
 21. Discontinuités [video]() + [pdf](/slides/STT5100_A2020_OLS_19.pdf) 
-
+22. Exemple [video]() + [pdf](/slides/STT5100_A2020_OLS_20.pdf) 
 
 
 **Modèles linéaires généralisés (GLM)**
