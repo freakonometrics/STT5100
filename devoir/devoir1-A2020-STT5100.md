@@ -49,7 +49,7 @@ Il convidendra d'adopter le plan suivant :
 
 **1.Présentation des données**
 
-Dans une première partie, il faudra un peu de statistique descriptives, montrant quelles variables sont *a priori* corrélées avec la variable d'intérêt. Des graphiques sont attendus dans cette partie.
+Dans une première partie, il faudra un peu de statistique descriptives, montrant quelles variables sont *a priori* corrélées avec la variable d'intérêt. Des graphiques sont attendus dans cette partie. Dans cette partie, vous avez le droit de transformer vos variables et de supprimer certains individus, si vous l'expliquez.
 
 **2.Un premier modèle**
 
@@ -109,11 +109,11 @@ vous demande de me le déposer sur Moodle avec les deux autres fichiers (`ABCD12
 **Précisions complémentaires**
 
 * dans le préambule de fichier `ABCD12345678A2020-devoir1.Rmd`, l'auteur doit contenir le **code permanent**, `author: "ABCD12345678: John Doe"`
-* les techniques de validation croisée, ou la constitution de bases d’apprentissage et de test (*hold-out*) ne sont pas au programme et ne devront pas etre utilisées pour ce devoir
-* tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `<https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test>`)
-* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable.
+* les techniques de validation croisée, ou la constitution de bases d’apprentissage et de test (*hold-out*) ne sont pas au programme et ne devront pas etre utilisées pour ce devoir.
+* tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `<https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test>`). Dans le cas contraitre, des points seront enlevés.
+* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
 * la forme du document et sa lisibilité interviendront dans la notation. Afficher des tableaux de plusieurs centaines de lignes, par exemple, est à proscrire.
-* les rapports sont individuels ! s'il est autorisé de discuter avec d'autres élèves du groupe (en respectant le protocol sanitaire en vigueur), chacun doit rendre son propre rapport.
+* les rapports sont individuels ! s'il est autorisé de discuter avec d'autres élèves du groupe (en respectant le protocol sanitaire en vigueur), chacun doit rendre son propre rapport. Dans le cas où deux fichiers identiques seraient envoyés par deux élèves différents, les deux élèves seront sanctionnés.
 
 <img src="https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/obviously.png" alt="drawing" width="300" align=right/>
 
