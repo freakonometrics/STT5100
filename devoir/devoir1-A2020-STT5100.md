@@ -51,7 +51,7 @@ Il convidendra d'adopter le plan suivant :
 
 Dans une première partie, il faudra un peu de statistique descriptives, montrant quelles variables sont *a priori* corrélées avec la variable d'intérêt. Des graphiques sont attendus dans cette partie.
 
-**2.Un premier modèle
+**2.Un premier modèle**
 
 En utilisant les techniques du cours, **et uniquement les techniques du cours**, il faudra expliquer comment vous avez contruit un premier modèle qui vous semble valide.
 
