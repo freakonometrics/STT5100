@@ -64,8 +64,8 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 18. Multicolinéarité (2) [video](https://www.youtube.com/watch?v=pDATCIVv-OU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=32) + [pdf](/slides/STT5100_A2020_OLS_16.pdf) (25:05)
 19. ANOVA (4) [pdf](/slides/STT5100_A2020_OLS_17.pdf) (*hors programme*)
 20. Transformations [video](https://www.youtube.com/watch?v=doSWBIlmizk&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=33) + [pdf](/slides/STT5100_A2020_OLS_20.pdf) (13:20)
-20. Lissage, non-linéarités [video]() + [pdf](/slides/STT5100_A2020_OLS_18.pdf) 
-21. Discontinuités [video]() + [pdf](/slides/STT5100_A2020_OLS_19.pdf) 
+20. Lissage, non-linéarités [video](https://www.youtube.com/watch?v=vLSUy0oOTZ0&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=34) + [pdf](/slides/STT5100_A2020_OLS_18.pdf) (34:51)
+21. Discontinuités [video](https://www.youtube.com/watch?v=0yb9OCUUbOI&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=35) + [pdf](/slides/STT5100_A2020_OLS_19.pdf) (21:36) 
 22. Exemple [video](https://www.youtube.com/watch?v=q6U3jZfPOGE&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=34) + [pdf](/slides/STT5100_A2020_OLS_22.pdf) (40:24) 
 
 
