@@ -9,7 +9,7 @@ Plan de cours : [Plan_STT5100_A2020pdf](/docs/STT5100_A2020_Plan_de_Cours.pdf) (
 Démonstrateur : Rawanda Matar
 
 ```diff
-- (vendredi 9) introduction avec la régression linéaire multiple
+- le plan détaillé du cours est indiqué sur Moodle
 ```
 
 **Seances**
@@ -19,7 +19,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 **Projets / Devoir**
 * Modèles de régression - OLS : [Devoir1](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir1-A2020-STT5100.md)
-* Modèles de régression - GLM : [Devoir2](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir2-A2020-STT5100.md)
+* Modèles de régression - GLM : Devoir2
 
 
 **Introduction**
