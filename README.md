@@ -67,7 +67,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 20. Lissage, non-linéarités [video](https://www.youtube.com/watch?v=vLSUy0oOTZ0&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=34) + [pdf](/slides/STT5100_A2020_OLS_18.pdf) (34:51)
 21. Discontinuités [video](https://www.youtube.com/watch?v=0yb9OCUUbOI&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=35) + [pdf](/slides/STT5100_A2020_OLS_19.pdf) (21:36) 
 22. Exemple (1) [video](https://www.youtube.com/watch?v=q6U3jZfPOGE&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=34) + [pdf](/slides/STT5100_A2020_OLS_22.pdf) (40:24) 
-23. Exemple (2) [video]() + [pdf](/slides/STT5100_A2020_OLS_23.pdf) 
+23. Exemple (2) [video](https://www.youtube.com/watch?v=8WeUvlJEY3w&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=37) + [pdf](/slides/STT5100_A2020_OLS_23.pdf)  (28:17)
 
 
 **Modèles linéaires généralisés (GLM)**
