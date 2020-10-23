@@ -9,8 +9,10 @@ Plan de cours : [Plan_STT5100_A2020pdf](/docs/STT5100_A2020_Plan_de_Cours.pdf) (
 Démonstrateur : Rawanda Matar
 
 ```diff
-- le plan détaillé du cours est indiqué sur Moodle
+- Examen vendredi 30 octobre, 9:00-12:00
 ```
+quelques précisions sur l'examen:
+* envoi des sujets sous forme pdf, par courriel (adresse @etudiants.uqam.ca) à 9:00
 
 **Seances**
 
