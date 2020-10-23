@@ -12,7 +12,13 @@ Démonstrateur : Rawanda Matar
 - Examen vendredi 30 octobre, 9:00-12:00
 ```
 quelques précisions sur l'examen:
-* envoi des sujets sous forme pdf, par courriel (adresse @etudiants.uqam.ca) à 9:00
+* envoi des sujets sous forme pdf, par courriel (adresse @etudiants.uqam.ca) à 9:00 (bien vérifier le dossier de spam)
+* il y aura deux documents : la page de réponse (A), plusieurs pages de questions (B)
+* une notification sera envoyée à 11:45 : il faudra déposer sur Moodle la page (A) dûment remplie avant 12:00 (heure à laquelle le dépôt sera fermé)
+* le document rendu devra consister en une page, soit le pdf rempli électroniquement, soit un scan du document imprimé et rempli à la main (tout scan flou ou illisible sera considéré comme nul)
+* en cas de soucis matériel majeur, je reste disponible soit via teams, soit via arthur.charpentier@gmail.com
+* aucun question ne sera autorisée (en cas de problème, expliquer très sommairement sur la page (A) qui sera renvoyée)
+* toute discussion entre élèves est interdite pendant la durée de l'examen
 
 **Seances**
 
