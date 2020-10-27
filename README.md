@@ -17,7 +17,7 @@ quelques précisions sur l'examen:
 * une notification sera envoyée à 11:45 : il faudra déposer sur Moodle la page (A) dûment remplie avant 12:00 (heure à laquelle le dépôt sera fermé)
 * le document rendu devra consister en une page, soit le pdf rempli électroniquement, soit un scan du document imprimé et rempli à la main (tout scan flou ou illisible sera considéré comme nul)
 * en cas de soucis matériel majeur, je reste disponible soit via teams, soit via arthur.charpentier@gmail.com
-* aucun question ne sera autorisée (en cas de problème, expliquer très sommairement sur la page (A) qui sera renvoyée)
+* aucun question ne sera autorisée (en cas de problème, merci d'expliquer très sommairement sur la page (A) qui sera renvoyée le problème rencontré)
 * toute discussion entre élèves est interdite pendant la durée de l'examen
 
 **Seances**
