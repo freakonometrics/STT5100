@@ -26,8 +26,8 @@ quelques précisions sur l'examen:
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
 **Projets / Devoir**
-* Modèles de régression - OLS : [Devoir1](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir1-A2020-STT5100.md)
-* Modèles de régression - GLM : Devoir2
+* Modèles de régression - OLS : [Devoir 1](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir1-A2020-STT5100.md)
+* Modèles de régression - GLM : [Devoir 2](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir2-A2020-STT5100.md)
 
 
 **Introduction**
