@@ -58,14 +58,15 @@ En utilisant les techniques du cours, **et uniquement les techniques du cours**,
 
 **3.Le modèle final**
 
-Dans un second temps, vous essayerez d'améliorer ce premier modèle, peut-être en tenant compte de non-linéarités potentielles, ou en regroupant des modalités de variables qualitatives. Il s'agira d'avoir aussi une discussion sur d'éventuelles valeurs aberrantes, ou levier, ainsi que la validation des hypothèses usuelles.
+Dans un second temps, vous essayerez d'améliorer ce premier modèle, peut-être en tenant compte de non-linéarités potentielles, ou en regroupant des modalités de variables qualitatives. 
 
 **4.Indicateurs**
 
 Dans une section spécifique, il faudra indiquer
-* le R2 ajusté du modèle retenu
 * le AIC du modèle retenu
 * le BIC du modèle retenu
+* le AUC du mdoèle retenu
+et de tracer la courbe ROC de vos deux modèles.
 
 **5.Prévision**
 
@@ -75,7 +76,7 @@ Une fois construit votre modèle final, par exemple
 model = glm(y~1, data=database, family = binomial)
 ```
 
-Il faudra prévoir la probabilité d'avoir un accident pour 2000 polices d'assurance, et
+il faudra prévoir la probabilité d'avoir un accident pour 2000 polices d'assurance, et
 d’envoyer les données, avec un code de la forme suivante (merci de
 copier-coller ce code à la fin de votre fichier
 Rmd)
