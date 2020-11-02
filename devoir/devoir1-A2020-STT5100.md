@@ -75,7 +75,7 @@ model = lm(ValueperSquareFeet~1, data=database)
 ```
 
 Il faudra prévoir la valeur (par pieds carrés) de 200 maisons, et
-d’envoyer les données, avec un code de la forme (merci de
+d’envoyer les données, avec un code de la forme suivante (merci de
 copier-coller ce code à la fin de votre fichier
 Rmd)
 
