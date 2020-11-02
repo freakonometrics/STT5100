@@ -9,8 +9,8 @@ Il convient de remplacer le code permanent par *votre* propre code permanent pou
 ``` r
 code_permanent = "ABCD12345678"
 loc_fichier = paste("http://freakonometrics.free.fr/",code_permanent,"A2020Devoir2.RData",sep="")
-download.file(loc_fichier, "base_devoir_1.RData")
-load("base_devoir_1.RData")
+download.file(loc_fichier, "base_devoir_2.RData")
+load("base_devoir_2.RData")
 dim(database)
 ```
 
@@ -72,44 +72,44 @@ Dans une section spécifique, il faudra indiquer
 Une fois construit votre modèle final, par exemple
 
 ``` r
-model = lm(ValueperSquareFeet~1, data=database)
+model = glm(y~1, data=database, family = binomial)
 ```
 
-Il faudra prévoir la valeur (par pieds carrés) de 200 maisons, et
-d’envoyer les données, avec un code de la forme (merci de
+Il faudra prévoir la probabilité d'avoir un accident pour 2000 polices d'assurance, et
+d’envoyer les données, avec un code de la forme suivante (merci de
 copier-coller ce code à la fin de votre fichier
 Rmd)
 
 ``` r
-loc_fichier = "http://freakonometrics.free.fr/DATATESTA2020Devoir1.RData"
-download.file(loc_fichier, "base_test_devoir_1.RData")
-load("base_test_devoir_1.RData")
-valeur = predict(model, newdata = datatest)
+loc_fichier = "http://freakonometrics.free.fr/DATATESTA2020Devoir2.RData"
+download.file(loc_fichier, "base_test_devoir_2.RData")
+load("base_test_devoir_2.RData")
+valeur = predict(model, newdata = datatest, type="response")
 btest = data.frame(indice = 1:nrow(datatest),x=valeur)
 names(btest) = c("indice", code_permanent)
 head(btest)
 ```
 
     ##   indice ABCD12345678
-    ## 1      1     113.9465
-    ## 2      2     113.9465
-    ## 3      3     113.9465
-    ## 4      4     113.9465
-    ## 5      5     113.9465
-    ## 6      6     113.9465
+    ## 1      1     0.166667
+    ## 2      2     0.166667
+    ## 3      3     0.166667
+    ## 4      4     0.166667
+    ## 5      5     0.166667
+    ## 6      6     0.166667
 
 ``` r
-save(valeur, file = paste(code_permanent,"A2020-prix200.RData",sep=""))
+save(valeur, file = paste(code_permanent,"A2020-proba2000.RData",sep=""))
 ```
 
 **Envoi des résultats**
 
-Un fichier intitulé `ABCD12345678A2020-prix200.RData` sera créé lors de la compilation, et je
-vous demande de me le déposer sur Moodle avec les deux autres fichiers (`ABCD12345678A2020-devoir1.Rmd` et `ABCD12345678A2020-devoir1.html`). 
+Un fichier intitulé `ABCD12345678A2020-proba2000.RData` sera créé lors de la compilation, et je
+vous demande de me le déposer sur Moodle avec les deux autres fichiers (`ABCD12345678A2020-devoir2.Rmd` et `ABCD12345678A2020-devoir2.html`). 
 
 **Précisions complémentaires**
 
-* dans le préambule de fichier `ABCD12345678A2020-devoir1.Rmd`, l'auteur doit contenir le **code permanent**, `author: "ABCD12345678: John Doe"`
+* dans le préambule de fichier `ABCD12345678A2020-devoir2.Rmd`, l'auteur doit contenir le **code permanent**, `author: "ABCD12345678: John Doe"`
 * les techniques de validation croisée, ou la constitution de bases d’apprentissage et de test (*hold-out*) ne sont pas au programme et ne devront pas etre utilisées pour ce devoir.
 * tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `<https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test>`). Dans le cas contraitre, des points seront enlevés.
 * les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
