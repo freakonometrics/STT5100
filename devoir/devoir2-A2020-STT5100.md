@@ -39,6 +39,12 @@ str(database)
     ## $ Exppdays  : int  148 365 365 365 365 365
     ## $ y         : int  0 0 0 0 0 0
 
+Il faut ensuite ajouter la ligne
+
+``` r
+database$y = (database$y > 0)
+```
+
 On a l'indicatrice `y` associée à la survenance, ou pas, d'un accident d'automobile, et 16 variables explicatives. 
 
 **Instructions**
