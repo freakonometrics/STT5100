@@ -133,7 +133,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 * OLS _correction_ automne 2019 [A2019-1C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2019/devoirs/STT5100_AUTOMNE2019_CORREC.pdf) pour la "correction"
 * OLS : énoncé hiver 2020 [H2020-1E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/devoirs/STT5100_Hiver2020_A.pdf) et [Annexe](https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/devoirs/STT5100_Hiver2020_annexes.pdf)
 * OLS _correction_ hiver 2020 [H2020-1C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/devoirs/STT5100_Hiver2020_A_correc.pdf) 
-* GLM énoncé 2013 [2013E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act2040-2013-enonce.pdf) [Annexes](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/EXAMEN-INTRA-annexe-2040-H2013.pdf)
+* GLM énoncé 2013 [2013E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act2040-2013-enonce.pdf) [Annexes](https://f-origin.hypotheses.org/wp-content/blogs.dir/253/files/2013/03/EXAMEN-INTRA-annexe-2040-H2013.pdf)
 * GLM _correction_ 2013 [2013C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/act2040-2013-correc.pdf)
 * GLM énoncé automne 2018 [A2018-2E.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Examen_STT5100_Aut_2018_final-correction.pdf)
 * GLM _correction_ automne 2018 [A2018-2C.pdf](https://github.com/freakonometrics/STT5100/raw/master/archives/A2018/Examen_STT5100_Aut_2018_final.pdf)
