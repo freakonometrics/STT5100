@@ -104,6 +104,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 20.    méthode stepwise <a href="https://www.youtube.com/watch?v=D31VCd-XJLU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=21">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-20.pdf">pdf</a> (17:57) <br /> 
 21.    Poisson vs. Binomiale, application en démographie <a href="https://www.youtube.com/watch?v=A-uIImX-Jto&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=22">video</a> <a href="https://github.com/freakonometrics/STT5100/blob/master/archives/H2020/covid/STT5100-21.pdf">pdf</a> (22:25) <br /> 
 22. Exemple (1) video + [pdf](/slides/STT5100-22.pdf) 
+23. Exemple (2) video + [pdf](/slides/STT5100-23.pdf) 
 
 **Références** 
 * William H. Greene, 2011, Econometric Analysis, [Prentice Hall](http://www.prenhall.com/greene/)
