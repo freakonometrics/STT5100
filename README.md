@@ -4,21 +4,13 @@ Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_STT5100_A2020pdf](/docs/STT5100_A2020_Plan_de_Cours.pdf) (version approuvée)
+Plan de cours : [Plan_STT5100_H2022pdf](/docs/STT5100_H2022_Plan_de_Cours.pdf) (version approuvée)
 
-Démonstrateur : Rawanda Matar
+Démonstrateur : Philipp Ratz
 
 ```diff
-- Examen vendredi 30 octobre, 9:00-12:00
+- Ajustements pour la rentrée 2022
 ```
-quelques précisions sur l'examen:
-* envoi des sujets sous forme pdf, par courriel (adresse @courrier.uqam.ca) à 9:00 (bien vérifier le dossier de spam)
-* il y aura deux documents : la page de réponse (A), plusieurs pages de questions (B)
-* une notification sera envoyée à 11:45 : il faudra déposer sur Moodle la page (A) dûment remplie avant 12:00 (heure à laquelle le dépôt sera fermé)
-* le document rendu devra consister en une page, soit le pdf rempli électroniquement, soit un scan du document imprimé et rempli à la main (tout scan flou ou illisible sera considéré comme nul)
-* en cas de soucis matériel majeur, je reste disponible soit via teams, soit via arthur.charpentier@gmail.com
-* aucun question ne sera autorisée (en cas de problème, merci d'expliquer très sommairement sur la page (A) qui sera renvoyée le problème rencontré)
-* toute discussion entre élèves est interdite pendant la durée de l'examen
 
 **Seances**
 
@@ -26,8 +18,8 @@ quelques précisions sur l'examen:
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
 **Projets / Devoir**
-* Modèles de régression - OLS : [Devoir 1](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir1-A2020-STT5100.md)
-* Modèles de régression - GLM : [Devoir 2](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir2-A2020-STT5100.md)
+* Modèles de régression - OLS : [Devoir 1](https://github.com/freakonometrics/STT5100/blob/master/devoir/)
+* Modèles de régression - GLM : [Devoir 2](https://github.com/freakonometrics/STT5100/blob/master/devoir/)
 
 
 **Introduction**
