@@ -4,7 +4,7 @@ Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_STT5100_H2022.pdf](/docs/STT5100_H2022_Plan_de_Cours.pdf) (version non-approuvée)
+Plan de cours : [Plan_Cours_STT5100_H2022.pdf](/docs/Plan_Cours_STT5100_H2022.pdf) (version non-approuvée)
 
 Démonstrateur : Philipp Ratz
 
