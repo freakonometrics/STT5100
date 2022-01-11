@@ -17,14 +17,16 @@ Démonstrateur : Philipp Ratz
 "It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
+**Démonstrations**
+* démo 1: [intro_analyse_donnees.Rmd](https://github.com/freakonometrics/STT5100/blob/master/devoir/intro_analyse_donnees.Rmd)
+
 **Projets / Devoir**
 * Modèles de régression - OLS : [Devoir 1](https://github.com/freakonometrics/STT5100/blob/master/devoir/)
 * Modèles de régression - GLM : [Devoir 2](https://github.com/freakonometrics/STT5100/blob/master/devoir/)
 
-
 **Introduction**
 
-0. Plan de cours [video](https://www.youtube.com/watch?v=8DI3d6nxhTc&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=2&t=0s) + [pdf](/slides/STT5100_H2022_INTRO_1.pdf) (36:44)
+0. Plan de cours [video](https://www.youtube.com/watch?v=CLUglokf7PE) + [pdf](/slides/STT5100_H2022_INTRO_1.pdf) (36:44)
 1. Epistémologie [video](https://www.youtube.com/watch?v=suw4eKnraHQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=3&t=0s) + [pdf](/slides/STT5100_A2020_INTRO_2.pdf) (29:50)
 
 **Rappels**
