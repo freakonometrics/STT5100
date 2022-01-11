@@ -18,7 +18,7 @@ Démonstrateur : Philipp Ratz
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
 **Démonstrations**
-* démo 1: [intro_analyse_donnees.Rmd](https://github.com/freakonometrics/STT5100/blob/master/devoir/intro_analyse_donnees.Rmd)
+* démo 1: [intro_analyse_donnees.Rmd](https://github.com/freakonometrics/STT5100/blob/master/devoir/intro_analyse_donnees.Rmd) [intro_analyse_donnees.html](https://github.com/freakonometrics/STT5100/blob/master/devoir/intro_analyse_donnees.html)
 
 **Projets / Devoir**
 * Modèles de régression - OLS : [Devoir 1](https://github.com/freakonometrics/STT5100/blob/master/devoir/)
