@@ -13,7 +13,7 @@ techniques exposées en cours.
     lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
     erreur. La base `devoir1-ABCD12345678.Rda` dont contenir 425 lignes.
   
-  __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **1er mars** à **midi**)
+  __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **6 mars** à **midi**)
   
   - Dans le preambule du markdown, `author:` doit mentionner le code
     permanent (`author: "ABCD12345678: John Doe"`),
