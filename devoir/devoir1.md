@@ -12,10 +12,6 @@ techniques exposées en cours.
     l’étudiant(e). Le fichier `devoir1-ABCD12345678.html` doit être
     lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
     erreur. La base `devoir1-ABCD12345678.Rda` dont contenir 425 lignes.
-    
-  ![40% center](img/moodle1.png)
-  
-  - Il suffit de déposer les trois fichiers comme indiqué
   
   __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **1er mars** à **midi**)
   
