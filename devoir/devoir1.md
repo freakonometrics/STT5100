@@ -1,6 +1,41 @@
 STT5100 (H2022) devoir 1
 ================
 
+Le but du devoir est de mettre en oeuvre, sur des vraies données, les
+techniques exposées en cours.
+
+  - Date limite pour envoyer le devoir **6 mars** avant **midi**,
+  - Chaque étudiant(e) doit envoyer via [moodle](https://www.moodle2.uqam.ca/) trois
+    fichiers : un _rapport_ `devoir1-ABCD12345678.html`, output d’un fichier
+    `devoir1-ABCD12345678.Rmd`, et une _base de données_ `devoir1-ABCD12345678.Rda` (il faudra envoyer les trois fichiers), où
+    `ABCD12345678` doit être remplacé par le code permanent de
+    l’étudiant(e). Le fichier `devoir1-ABCD12345678.html` doit être
+    lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
+    erreur. La base `devoir1-ABCD12345678.Rda` dont contenir 425 lignes.
+    
+  ![40% center](img/moodle1.png)
+  
+  - Il suffit de déposer les trois fichiers comme indiqué
+  
+  __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **1er mars** à **midi**)
+  
+  - Dans le preambule du markdown, `author:` doit mentionner le code
+    permanent,
+  - Le _rapport_ doit contenir trois parties
+
+<!-- end list -->
+
+1.  Une partie exploratoire qui presente rapidement les variables qui
+    pourraient être intéressantes (`non_viol_per_pop` est la
+    variable d’interêt)
+2.  Une partie presentant la construction du modèle : il s’agira de
+    partir au choix (i) d’un modèle simple, correspondant à un modèle linéeaire sans transformer les variables, `model1` (ii) d’un modèle plus complexe, `model2` avec des possibles transformations des variables explicatives ou de la variable d'intérêt, etc
+3.  Une partie qui presente succintement les modèles, en donnant, sur la base d'apprentissage (i) le R2
+    ajusté (ii) l’indice d’Akaike AIC et (iii) l’indice BIC (iv) la
+    liste des variables explicatives retenues
+
+A la fin, vous devez faire des prévisions de la variable `non_viol_per_pop`, sur une base de test `test_data_students`, à l'aide des deux modèles `model1` et `model2`. Les prévisions seront stockées dans une même base, exportées dans un fichier `Rda`, et le fichier devra être déposé sur Moodle.
+
 Vous devez remplacer `code_permanent` ci-dessous par votre **vrai** code
 permanent (avec les lettres en majuscules)
 
