@@ -20,7 +20,7 @@ techniques exposées en cours.
   __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **1er mars** à **midi**)
   
   - Dans le preambule du markdown, `author:` doit mentionner le code
-    permanent,
+    permanent (`author: "ABCD12345678: John Doe"`),
   - Le _rapport_ doit contenir trois parties
 
 <!-- end list -->
@@ -34,9 +34,17 @@ techniques exposées en cours.
     ajusté (ii) l’indice d’Akaike AIC et (iii) l’indice BIC (iv) la
     liste des variables explicatives retenues
 
-A la fin, vous devez faire des prévisions de la variable `non_viol_per_pop`, sur une base de test `test_data_students`, à l'aide des deux modèles `model1` et `model2`. Les prévisions seront stockées dans une même base, exportées dans un fichier `Rda`, et le fichier devra être déposé sur Moodle.
+* à la fin, vous devez faire des prévisions de la variable `non_viol_per_pop`, sur une base de test `test_data_students`, à l'aide des deux modèles `model1` et `model2`. Les prévisions seront stockées dans une même base, exportées dans un fichier `Rda`, et le fichier devra être déposé sur Moodle.
+* tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `<https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test>`). Dans le cas contraitre, des points seront enlevés.
+* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
+* la forme du document et sa lisibilité interviendront dans la notation. Afficher des tableaux de plusieurs centaines de lignes, par exemple, est à proscrire.
+* les rapports sont individuels ! s'il est autorisé de discuter avec d'autres élèves du groupe (en respectant le protocol sanitaire en vigueur), chacun doit rendre son propre rapport. Dans le cas où deux fichiers identiques seraient envoyés par deux élèves différents, les deux élèves seront sanctionnés.
 
-Vous devez remplacer `code_permanent` ci-dessous par votre **vrai** code
+<img src="https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/obviously.png" alt="drawing" width="300" align=right/>
+
+* le fichier html doit être lisible dans un navigateur internet (Firefox) et le code Rmd doit compiler sans erreur. Le préambule du fichier Rmd doit contenir comme auteur le code permanent. Tout fichier qui ne compile pas et/ou qui n'est pas lisible donnera lieu à une forte pénalisation.
+
+Au niveau pratique, pour avoir accès à _vos_ données, vous devez remplacer `code_permanent` ci-dessous par votre **vrai** code
 permanent (avec les lettres en majuscules)
 
 ``` r
