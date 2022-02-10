@@ -9,18 +9,13 @@ Plan de cours : [Plan_Cours_STT5100_H2022.pdf](/docs/Plan_Cours_STT5100_H2022.pd
 Démonstrateur : Philipp Ratz
 
 ```diff
-- Vendredi 21 janvier, démo à 9H !
+- Les instructions du premier devoir sont en ligne
 ```
 
 **Seances**
 
 "It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
-
-
-```diff
-- Le matériel de la démo du 21 janvier est en ligne
-```
 
 **Démonstrations**
 * démo 1: [slides_1.pdf](https://github.com/freakonometrics/STT5100/raw/master/demo/slides_course_1.pdf), ainsi que du code R, [intro_analyse_donnees.Rmd](https://github.com/freakonometrics/STT5100/blob/master/demo/intro_analyse_donnees.Rmd) [intro_analyse_donnees.html](https://github.com/freakonometrics/STT5100/raw/master/demo/intro_analyse_donnees.html), [codebook.xls](https://github.com/freakonometrics/STT5100/raw/master/demo/codebook.xls), [mobility_across_cz.dta](https://github.com/freakonometrics/STT5100/raw/master/demo/mobility_across_cz.dta)
