@@ -40,8 +40,7 @@ techniques exposées en cours.
 
 * le fichier html doit être lisible dans un navigateur internet (Firefox) et le code Rmd doit compiler sans erreur. Le préambule du fichier Rmd doit contenir comme auteur le code permanent. Tout fichier qui ne compile pas et/ou qui n'est pas lisible donnera lieu à une forte pénalisation.
 
-Au niveau pratique, pour avoir accès à _vos_ données, vous devez remplacer `code_permanent` ci-dessous par votre **vrai** code
-permanent (avec les lettres en majuscules)
+Au niveau pratique, pour avoir accès à _vos_ données, vous devez remplacer `"ABCD12345678"` ci-dessous par votre **vrai** code permanent (avec les lettres en majuscules)
 
 ``` r
 code_permanent = "ABCD12345678"
