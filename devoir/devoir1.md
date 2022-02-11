@@ -290,7 +290,7 @@ Pour finir, vous devez faire une prévision à partir de la base
 ``` r
 code_test = "test"
 loc_fichier = paste("http://freakonometrics.free.fr/STT5100/H2022/data_",code_test,".Rda",sep="")
-download.file(loc_fichier, "base_devoir_1_test.Rda")
+download.file(loc_fichier, "base_devoir_1_test.Rda", mode= "wb"))
 load("base_devoir_1_test.Rda")
 dim(test_data_students)
 ```
