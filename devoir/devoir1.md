@@ -53,6 +53,16 @@ dim(data_students)
 
     ## [1]   6 107
 
+**Note (Windows)** Il semble qu'il puisse y avoir un soucis avec Windows. Si le code précédant ne marche pas, il faudra utiliser l'option `mode= "wb"` (_The `wb` indicates that the file is opened for writing in binary mode_)
+
+``` r
+download.file(loc_fichier, "base_devoir_1.Rda", mode= "wb")
+load("base_devoir_1.Rda")
+dim(data_students)
+```
+
+    ## [1]   6 107
+
 On vous donne un ensemble de données qui contient des communautés à
 travers les États-Unis avec leur nombre total de crimes non violents
 pour 100 000 habitants `non_viol_per_pop`. On vous demande de faire une
