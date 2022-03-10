@@ -20,6 +20,10 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 **Démonstrations**
 * démo 1: [slides_1.pdf](https://github.com/freakonometrics/STT5100/raw/master/demo/slides_course_1.pdf), ainsi que du code R, [intro_analyse_donnees.Rmd](https://github.com/freakonometrics/STT5100/blob/master/demo/intro_analyse_donnees.Rmd) [intro_analyse_donnees.html](https://github.com/freakonometrics/STT5100/raw/master/demo/intro_analyse_donnees.html), [codebook.xls](https://github.com/freakonometrics/STT5100/raw/master/demo/codebook.xls), [mobility_across_cz.dta](https://github.com/freakonometrics/STT5100/raw/master/demo/mobility_across_cz.dta)
 
+
+**Compléments**
+* simulation et non-linéearités: [STT5100.html](http://freakonometrics.free.fr/STT5100/STT5100-H2022-1.html)
+
 **Projets / Devoir**
 * Examen intra : [énoncé](https://github.com/freakonometrics/STT5100/blob/master/devoir/STT5100_A2020_enonce.pdf) et [correction](https://github.com/freakonometrics/STT5100/blob/master/devoir/STT5100_A2020_corrige.pdf)
 * Examen final : Devoir 2
