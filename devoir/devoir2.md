@@ -88,8 +88,6 @@ prévision sur la survenance d'un accident. Les covariables de la base sont ici
 - `population`:	The population of the town where the policy holder is registered multiplied by a constant scale
 - `town_surface_area`:	 Approximate surface area (in hectors multiplied by a constant scale.) of the town where the policy holder is registered. 
 - `target_accident`:	Whether the policy had a claim in the specified period
-- 
-- <img width="1127" alt="image" src="https://user-images.githubusercontent.com/4670200/158723586-df2ab5c5-1881-4e3a-a066-f644746ffc9e.png">
 
 Vous devez ensuite construire vos modèles, par exemple
 
