@@ -4,7 +4,7 @@ STT5100 (H2022) devoir 1
 Le but du devoir est de mettre en oeuvre, sur des vraies données, les
 techniques exposées en cours.
 
-  - Date limite pour envoyer le devoir **6 mars** avant **midi**,
+  - Date limite pour envoyer le devoir **20 mars** avant **midi**,
   - Chaque étudiant(e) doit envoyer via [moodle](https://www.moodle2.uqam.ca/) trois
     fichiers : un _rapport_ `devoir1-ABCD12345678.html`, output d’un fichier
     `devoir1-ABCD12345678.Rmd`, et une _base de données_ `devoir1-ABCD12345678.Rda` (il faudra envoyer les trois fichiers), où
@@ -13,7 +13,7 @@ techniques exposées en cours.
     lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
     erreur. La base `devoir1-ABCD12345678.Rda` dont contenir 425 lignes.
   
-  __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **6 mars** à **midi**)
+  __**En cas de soucis avec moodle**__ un envoi par messagerie électronique [charpentier.arthur@uqam.ca](mailto:charpentier.arthur@uqam.ca) est possible (la date butoir reste la même : **20 mars** à **midi**)
   
   - Dans le preambule du markdown, `author:` doit mentionner le code
     permanent (`author: "ABCD12345678: John Doe"`),
