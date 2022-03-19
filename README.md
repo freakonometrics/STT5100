@@ -31,7 +31,7 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 **Projets / Devoir**
 * Modèles de régression - OLS : [Devoir 1](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir1.md)
-* Modèles de régression - GLM : Devoir 2
+* Modèles de régression - GLM : [Devoir 2](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir2.md)
 
 **Introduction**
 
