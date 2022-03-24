@@ -31,7 +31,7 @@ techniques exposées en cours.
 
 * à la fin, vous devez faire des prévisions de la probabilité associée à la variable `target_accident`, sur une base de test `test_data_students`, à l'aide des deux modèles `model1` et `model2`. Les prévisions seront stockées dans une même base, exportées dans un fichier `Rda`, et le fichier devra être déposé sur Moodle.
 * tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `[Anderson Darling](https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test)`). Dans le cas contraire, des points seront enlevés.
-* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
+* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np`, `rpart` les packages graphiques `ggplot2`, `ROCR`, `rpart.plot` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable`, `rmdformats` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
 * la forme du document et sa lisibilité interviendront dans la notation. Afficher des tableaux de plusieurs centaines de lignes, par exemple, est à proscrire.
 * les rapports sont individuels ! s'il est autorisé de discuter avec d'autres élèves du groupe (en respectant le protocol sanitaire en vigueur), chacun doit rendre son propre rapport. Dans le cas où deux fichiers identiques seraient envoyés par deux élèves différents, les deux élèves seront sanctionnés.
 
@@ -44,8 +44,8 @@ Au niveau pratique, pour avoir accès à _vos_ données, vous devez remplacer `"
 ``` r
 code_permanent = "ABCD12345678"
 loc_fichier = paste("http://freakonometrics.free.fr/STT5100/H2022/devoir2/data_",code_permanent,"_train.Rda",sep="")
-download.file(loc_fichier, "base_devoir_1.Rda")
-load("base_devoir_1.Rda")
+download.file(loc_fichier, "base_devoir_2.Rda")
+load("base_devoir_2.Rda")
 dim(data_students)
 ```
 
@@ -54,8 +54,8 @@ dim(data_students)
 **Note (Windows)** Il semble qu'il puisse y avoir un soucis avec Windows. Si le code précédant ne marche pas, il faudra utiliser l'option `mode= "wb"` (_The `wb` indicates that the file is opened for writing in binary mode_)
 
 ``` r
-download.file(loc_fichier, "base_devoir_1.Rda", mode= "wb")
-load("base_devoir_1.Rda")
+download.file(loc_fichier, "base_devoir_2.Rda", mode= "wb")
+load("base_devoir_2.Rda")
 dim(data_students)
 ```
 
@@ -102,8 +102,8 @@ Pour finir, vous devez faire une prévision à partir de la base
 ``` r
 code_test = "test"
 loc_fichier = paste("http://freakonometrics.free.fr/STT5100/H2022/devoir2/data_",code_test,".Rda",sep="")
-download.file(loc_fichier, "base_devoir_1_test.Rda", mode= "wb")
-load("base_devoir_1_test.Rda")
+download.file(loc_fichier, "base_devoir_2_test.Rda", mode= "wb")
+load("base_devoir_2_test.Rda")
 dim(test_data_students)
 ```
 
