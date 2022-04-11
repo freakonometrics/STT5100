@@ -61,7 +61,7 @@ dim(data_students)
 
     ## [1]   6 24
 
-On vous donne un ensemble de contrats d'assurances, accompagnés de la variable `target_accident` qui indique la survenance (ou pas) d'un accident. On vous demande de faire une
+On vous donne un ensemble de contrats d'assurances, accompagnés de la variable `target_accident` qui indique la survenance (ou pas) d'un accident pendant une période de temps déterminée (à savoir une année). On vous demande de faire une
 prévision sur la survenance d'un accident. Les covariables de la base sont ici
 
 - `pol_no_claims_discount`: This is a compulsory system in most European countries and globally. The coefficient is attached to the driver and indicates previous claims. It starts at 0.631 for new drivers (i.e. first year of insurance). Then, every year without claim, the value decreases by approximately 0.05 until it reaches its minimum of 0 . Without any claim, the value evolution would then be: 0.63 , 0.58 , 0.53 , 0.48 , ... , 0.03 , 0 . Every time the driver causes a claim (only certaintypes of claims are taken into account), the coefficient increases by approximately 0.2 , with a maximum of 1 . Thus, the range of pol_no_claims_discount extends from 0 to 1 in the dataset.
