@@ -6,7 +6,7 @@ Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freak
 
 Plan de cours : [Plan_Cours_STT5100_A2022.pdf](/docs/Plan_Cours_STT5100_A2022.pdf) (version non-approuvée)
 
-Démonstrateur : Philipp Ratz
+Démonstrateur : ---
 
 ```diff
 - Plus d'information à la rentrée
@@ -18,14 +18,11 @@ Démonstrateur : Philipp Ratz
 Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
 
 **Démonstrations**
-* démo 1: 
-
-**Compléments**
-* simulation et non-linéearités: [STT5100.html](http://freakonometrics.free.fr/STT5100/STT5100-H2022-1.html)
+* démo 1: ---
 
 **Projets / Devoir**
-* Modèles de régression - OLS : [Devoir 1](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir1.md)
-* Modèles de régression - GLM : [Devoir 2](https://github.com/freakonometrics/STT5100/blob/master/devoir/devoir2.md)
+* Modèles de régression - OLS : [Devoir 1]()
+* Modèles de régression - GLM : [Devoir 2]()
 
 **Introduction**
 
@@ -74,7 +71,6 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 22. Exemple (1) [video](https://www.youtube.com/watch?v=q6U3jZfPOGE&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=34) + [pdf](/slides/STT5100_A2020_OLS_22.pdf) (40:24) 
 23. Exemple (2) [video](https://www.youtube.com/watch?v=8WeUvlJEY3w&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=37) + [pdf](/slides/STT5100_A2020_OLS_23.pdf)  (28:17)
 24. Exemple (3) video + [pdf](/slides/STT5100_A2020_OLS_24.pdf) 
-
 
 **Modèles linéaires généralisés (GLM)**
 
