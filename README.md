@@ -46,6 +46,11 @@ Pour davantage de rappels de probabilités et statistiques, [MAT4681](https://gi
 10. Optimisation [video](https://www.youtube.com/watch?v=qbMfX07McmQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=14) + [pdf](/slides/STT5100_A2020_RAPPELS_11.pdf) (49:57)
 11. Algèbre linéaire [video](https://www.youtube.com/watch?v=CAmOpaYi3jU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=9&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_12.pdf) (53:54)
 
+Quelques compléments
+
+1. Loi normale, vecteur Gaussien et lois dérivées [pdf](/slides/STT5100_H2022_COMPLEMENT_1.pdf)
+2. Algèbre linéaire et géométrie [pdf](/slides/STT5100_H2022_COMPLEMENT_2.pdf)
+
 **Moindres carrés**
 
 1. Régressions [video](https://www.youtube.com/watch?v=8aXmC2fj_n8&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=16&t=0s) + [pdf](/slides/STT5100_A2020_OLS_1.pdf) (40:01)
