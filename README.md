@@ -31,6 +31,8 @@ Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/p
 
 **Rappels**
 
+Pour davantage de rappels de probabilités et statistiques, [MAT4681](https://github.com/freakonometrics/MAT4681/) + [vidéos](https://www.youtube.com/playlist?list=PLCrFTE7Gu_3RG98Ahj3MCgdBsjysMJ-4H) 
+
 0. R, RStudio, Rmarkdown [video](https://www.youtube.com/watch?v=SMDeNtqOkVU&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=4&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_1.pdf) (30:48)
 1. Probabilités [video](https://www.youtube.com/watch?v=tf9C7KUgzgQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=5&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_2.pdf) (47:24)
 2. Vecteur Gaussien [video](https://www.youtube.com/watch?v=g5lfBRNcuaw&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=6&t=0s) + [pdf](/slides/STT5100_A2020_RAPPELS_3.pdf) (36:05)
