@@ -12,17 +12,17 @@ Démonstrateur : ---
 - Plus d'information à la rentrée
 ```
 
-**Seances**
+**Prérequis**
 
-"It's not magic; it's code", [Ben Welsh](https://source.opennews.org/articles/how-we-found-new-patterns-la-homeless-arrest/).
-Install [R](https://cran.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/). 
+selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont soit le cours ACT4400 (Modèles de survie) ou bien les trois cours suivants : STT2000 (Statistique II), STT2100 (aboratoire de statistique) et MAT1250 (Algèbre linéaire I).
 
 **Démonstrations**
-* démo 1: ---
+* démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
+* démo 1: [--]()
 
 **Projets / Devoir**
-* Modèles de régression - OLS : [Devoir 1]()
-* Modèles de régression - GLM : [Devoir 2]()
+* Modèles de régression - OLS : [--]()
+* Modèles de régression - GLM : [--]()
 
 **Introduction**
 
