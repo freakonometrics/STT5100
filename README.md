@@ -114,6 +114,7 @@ Quelques compléments
 * James H. Stock & Mark W. Watson, 2007, Introduction to Econometrics, [Addison Wesley](https://www.pearson.com/us/higher-education/product/Stock-Introduction-to-Econometrics-3rd-Edition/9780138009007.html)
 * Achim Zeileis, 2008, Applied Econometrics with R, [Springer Verlag](https://eeecon.uibk.ac.at/~zeileis/teaching/AER/index.html)
 * Yihui Xie, J. J. Allaire & Garrett Grolemund, R Markdown: The Definitive Guide [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
+* Ewen Gallic, 2020, Notes de cours de R, [https://egallic.fr/Enseignement/R/Book/](https://egallic.fr/Enseignement/R/Book/avant-propos.html)
 * ACT3035 [https://nour.me/act3035/](https://nour.me/act3035/)
 
 **Projets / Devoir passés**
