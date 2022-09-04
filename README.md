@@ -26,7 +26,7 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 
 **Introduction**
 
-0. Plan de cours [video](https://www.youtube.com/watch?v=CLUglokf7PE) + [pdf](/slides/STT5100_H2022_INTRO_1.pdf) (32:50)
+0. Plan de cours [video](https://www.youtube.com/watch?v=CLUglokf7PE) + [pdf](/slides/STT5100_A2022_INTRO_1.pdf) (32:50)
 1. Epistémologie [video](https://www.youtube.com/watch?v=suw4eKnraHQ&list=PLCrFTE7Gu_3RDr8ZxhdwQ-9wyFz-df7i8&index=3&t=0s) + [pdf](/slides/STT5100_A2020_INTRO_2.pdf) (29:50)
 
 **Rappels**
