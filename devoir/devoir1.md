@@ -136,8 +136,22 @@ dim(base_prediction)
 On va alors l’exporter
 
 ``` r
+names(base_prediction) = c("indice",paste("model_",1:2,"_",code_permanent,sep=""))
 save(base_prediction, file = paste("prevision-devoir1-",code_permanent,".RData",sep=""))
 ```
+
+Vérifions que le fichier a bien été créé
+
+``` r
+rm(list = "base_prediction")
+load( paste("prevision-devoir1-",code_permanent,".RData",sep=""))
+str(base_prediction)
+```
+
+    ## 'data.frame':	100 obs. of  3 variables:
+    ##  $ indice              : num  701 702 703 704 705 706 707 708 709 710 ...
+    ##  $ model_1_ABCD12345678: num  15.1 15.1 15.1 15.1 15.1 ...
+    ##  $ model_2_ABCD12345678: num  14.8 14.8 14.8 14.8 14.8 ...
 
 * tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `[Anderson Darling](https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test)`). Dans le cas contraire, des points seront enlevés.
 * les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
@@ -149,17 +163,3 @@ save(base_prediction, file = paste("prevision-devoir1-",code_permanent,".RData",
 * le fichier html doit être lisible dans un navigateur internet (Firefox) et le code Rmd doit compiler sans erreur. Le préambule du fichier Rmd doit contenir comme auteur le code permanent. Tout fichier qui ne compile pas et/ou qui n'est pas lisible donnera lieu à une forte pénalisation.
 
 Au niveau pratique, pour avoir accès à _vos_ données, vous devez remplacer `"ABCD12345678"` ci-dessus par votre **vrai** code permanent (avec les lettres en majuscules).
-
-Vérifions que le fichier STT5100_2022_ABCD12345678_test.Rda a bien été
-créé
-
-``` r
-rm(list = "base_prediction")
-load( paste("prevision-devoir1-",code_permanent,".RData",sep=""))
-str(base_prediction)
-```
-
-    ## 'data.frame':	100 obs. of  3 variables:
-    ##  $ indice : num  701 702 703 704 705 706 707 708 709 710 ...
-    ##  $ model_1: num  15.1 15.1 15.1 15.1 15.1 ...
-    ##  $ model_2: num  14.8 14.8 14.8 14.8 14.8 ...
