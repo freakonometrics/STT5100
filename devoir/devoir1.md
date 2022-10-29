@@ -71,7 +71,7 @@ Le but du devoir est de mettre en oeuvre, sur des vraies données, les
 techniques exposées en cours.
 
 *   Date limite pour envoyer le devoir **14 novembre** a **midi**,
-*   Chaque etudiant(e) doit déposer sur l’espace dédié, sur Moodle,
+*   Chaque etudiant(e) doit déposer sur l’espace dédié, sur [Moodle](https://ena01.uqam.ca/mod/assign/view.php?id=3199734),
     trois fichiers : `devoir1-ABCD12345678.hmtl`, sortie d’un fichier
     `devoir1-ABCD12345678.Rmd`, et `prevision-devoir1-ABCD12345678.RData` (il faudra envoyer les deux fichiers), où
     `ABCD12345678` doit être remplacé par le code permanent de
