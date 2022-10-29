@@ -73,7 +73,7 @@ techniques exposées en cours.
 *   Date limite pour envoyer le devoir **14 novembre** a **midi**,
 *   Chaque etudiant(e) doit déposer sur l’espace dédié, sur Moodle,
     trois fichiers : `devoir1-ABCD12345678.hmtl`, sortie d’un fichier
-    `devoir1-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
+    `devoir1-ABCD12345678.Rmd`, et `prevision-devoir1-ABCD12345678.RData` (il faudra envoyer les deux fichiers), où
     `ABCD12345678` doit être remplacé par le code permanent de
     l’étudiant(e). Le fichier `devoir1-ABCD12345678.hmtl` doit etre
     lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
