@@ -20,6 +20,10 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 * démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
 * démo 1: [--]()
 
+**Examens**
+* Modèles de régression - OLS intra : [devoir1.md](/devoir/devoir1.md)
+* Modèles de régression - GLM final : [énoncé](/docs/intra_STT5100_automne_2022_sujet.pdf) et [éléments de correction](/docs/intra_STT5100_automne_2022_correction.pdf)
+
 **Projets / Devoir**
 * Modèles de régression - OLS : [devoir1.md](/devoir/devoir1.md)
 * Modèles de régression - GLM : [--]()
