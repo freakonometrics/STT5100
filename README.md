@@ -9,7 +9,7 @@ Plan de cours : [Plan_Cours_STT5100_A2022.pdf](/docs/PLANS_DE_COURS_STT5100_A202
 Démonstrateur : ---
 
 ```diff
-- Le premier cours a lieu Vendredi 9 septembre, 9:00, salle SH-3320
+- Des éléments de correction pour l'examen intra sont en ligne
 ```
 
 **Prérequis**
