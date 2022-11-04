@@ -86,14 +86,15 @@ techniques exposées en cours.
 1.  Une partie exploratoire qui presente rapidement les variables qui
     pourraient etre intéressantes pour prédire ensuite la valeur des
     maisons (pour rappel, `ValeurMaison` est la variable d’interet)
-2.  Une partie presentant la construction du modele : il s’agira de
+2.  Une partie presentant la construction d'un modele "simple", par exemple 
     partir au choix (i) d’un modele simple, et de montrer comment
     l’ameliorer, (ii) d’un modele complexe, et de montrer comment le
     simplifier
-3.  Une partie qui presente la forme du modele, en donnant (i) le R2
+3.  Une partie proposant une amélioration du modèle, par exemple en transformant une variable explicative
+4.  Une partie qui presente les deux modeles, en donnant (i) le R2
     ajuste (ii) l’indice d’Akaike AIC et (iii) l’indice BIC (iv) la
     liste des variables explicatives retenues,
-4.  Une prévision sur la base de test donnée ci-dessous,
+4.  Une prévision **des deux modèles** sur la base de test donnée ci-dessous,
 
 ``` r
 loc_fichier = "http://freakonometrics.free.fr/STT5100/TestA2021D1.RData"
