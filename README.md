@@ -16,9 +16,9 @@ Démonstrateur : ---
 
 selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont soit le cours ACT4400 (Modèles de survie) ou bien les trois cours suivants : STT2000 (Statistique II), STT2100 (aboratoire de statistique) et MAT1250 (Algèbre linéaire I).
 
-**Démonstrations**
+**Démonstrations et codes**
 * démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
-* démo 1: [--]()
+* code 1: [codelogistic.R](https://github.com/freakonometrics/STT5100/blob/master/docs/codelogistic.md)
 
 **Examens**
 * Modèles de régression - OLS intra : [énoncé](/docs/intra_STT5100_automne_2022_sujet.pdf) et [éléments de correction](/docs/intra_STT5100_automne_2022_correction.pdf)
