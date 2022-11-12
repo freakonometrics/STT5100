@@ -406,3 +406,100 @@ summary(res)
     ## Residuals   712 149559   210.1                 
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    
+    ``` r
+plot(base$Age,base$Survived)
+va = 0:100
+reg = glm(Survived~Age+Pclass, family=binomial,data=base)
+vy1 = predict(reg, newdata=data.frame(Age = va,
+                                     Pclass = '1'),
+             type='response')
+lines(va,vy1,col='red')
+vy2 = predict(reg, newdata=data.frame(Age = va,
+                                     Pclass = '2'),
+             type='response')
+lines(va,vy2,col='dark blue')
+vy3 = predict(reg, newdata=data.frame(Age = va,
+                                     Pclass = '3'),
+             type='response')
+lines(va,vy3,col='dark green')
+```
+
+![](codelogistic_files/figure-gfm/unnamed-chunk-1-8.png)<!-- -->
+
+``` r
+reg = glm(Survived~Age, family=binomial,data=base)
+plot(base$Age,base$Survived)
+vy = predict(reg, newdata=data.frame(Age = va),
+             type='response')
+lines(va,vy,col='red')
+```
+
+![](codelogistic_files/figure-gfm/unnamed-chunk-1-9.png)<!-- -->
+
+``` r
+base = base[!is.na(base$Age),]
+reg = glm(Survived~Sex+Pclass+Age+SibSp, family=binomial,data=base)
+yhat = predict(reg,type='response')
+ROC = function(seuil = .50){ 
+survie = (yhat>seuil)*1
+B = data.frame(Y = base$Survived,
+               Yhat = survie,
+               proba = yhat)
+T = table(B$Yhat,B$Y)
+fpr = T[2,1]/sum(T[,1])
+tpr = T[2,2]/sum(T[,2])
+return(c(fpr=fpr,tpr=tpr))
+}
+V=Vectorize(ROC)(seq(.1,.95,by=.01))
+
+# install.packages("ROCR")
+library(ROCR)
+yhat = predict(reg,type='response')
+  B = data.frame(Y = base$Survived,
+                 proba = yhat)
+p = prediction(B$proba,B$Y)
+plot(performance(p,'tpr','fpr'))
+```
+
+![](codelogistic_files/figure-gfm/unnamed-chunk-1-10.png)<!-- -->
+
+``` r
+performance(p, measure = "auc")@y.values[[1]] # AUC
+```
+
+    ## [1] 0.8593526
+
+``` r
+reg0 = glm(Survived~Pclass, family=binomial,data=base)
+yhat0 = predict(reg0,type='response')
+  B = data.frame(Y = base$Survived,
+                 proba = yhat0)
+p = prediction(B$proba,B$Y)
+plot(performance(p,'tpr','fpr'))
+```
+
+![](codelogistic_files/figure-gfm/unnamed-chunk-1-11.png)<!-- -->
+
+``` r
+performance(p, measure = "auc")@y.values[[1]] # AUC
+```
+
+    ## [1] 0.6948926
+
+``` r
+reg0 = glm(Survived~1, family=binomial,data=base)
+yhat0 = predict(reg0,type='response')
+  B = data.frame(Y = base$Survived,
+                 proba = yhat0)
+p = prediction(B$proba,B$Y)
+plot(performance(p,'tpr','fpr'))
+```
+
+![](codelogistic_files/figure-gfm/unnamed-chunk-1-12.png)<!-- -->
+
+``` r
+performance(p, measure = "auc")@y.values[[1]] # AUC
+```
+
+    ## [1] 0.5
