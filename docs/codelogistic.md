@@ -1,4 +1,5 @@
 
+
 ``` r
 loc_fichier = "http://freakonometrics.free.fr/titanic.RData"
 download.file(loc_fichier, "titanic.RData")
@@ -397,7 +398,7 @@ t.test(x=base$Age[base$Survived==0],
 ``` r
 # ks.test(base$Age[base$Survived==0],base$Age[base$Survived==1])
 
-res <- aov(Age ~ Survived, data = base)
+res = aov(Age ~ Survived, data = base)
 summary(res)
 ```
 
@@ -406,8 +407,8 @@ summary(res)
     ## Residuals   712 149559   210.1                 
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    
-    ``` r
+
+``` r
 plot(base$Age,base$Survived)
 va = 0:100
 reg = glm(Survived~Age+Pclass, family=binomial,data=base)
