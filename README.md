@@ -9,7 +9,7 @@ Plan de cours : [Plan_Cours_STT5100_A2022.pdf](/docs/PLANS_DE_COURS_STT5100_A202
 Démonstrateur : ---
 
 ```diff
-- Des éléments de correction pour l'examen intra sont en ligne
+- Les données pour le second devoir sont en ligne
 ```
 
 **Prérequis**
@@ -26,7 +26,7 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 
 **Projets / Devoir**
 * Modèles de régression - OLS : [devoir1.md](/devoir/devoir1.md)
-* Modèles de régression - GLM : [--]()
+* Modèles de régression - GLM : [devoir2.md](/devoir/devoir2.md)
 
 **Introduction**
 
