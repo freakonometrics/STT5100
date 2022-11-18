@@ -61,7 +61,7 @@ str(basedevoir)
 Le but du devoir est de mettre en oeuvre, sur des vraies données, les
 techniques exposées en cours.
 
--   Date limite pour envoyer le devoir **lundi 19 décembre** a **midi**,
+-   Date limite pour envoyer le devoir **vendredi 23 décembre** a **midi**,
 -   Chaque etudiant(e) doit déposer sur l’espace dédié, sur Moodle,
     trois fichiers : `devoir2-ABCD12345678.hmtl`, sortie d’un fichier
     `devoir2-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
