@@ -1,4 +1,4 @@
-STT5100 - Devoir 2 - Automne 2022
+Code GLM (1)
 ================
 Arthur Charpentier
 
