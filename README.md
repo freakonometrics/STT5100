@@ -22,6 +22,7 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 * code 2: [codepoisson.R](https://github.com/freakonometrics/STT5100/blob/master/docs/regpoisson.md)
 * code 3: [codeglm1.R](https://github.com/freakonometrics/STT5100/blob/master/docs/regglm1.md)
 * code 4: [codeglm2.R](https://github.com/freakonometrics/STT5100/blob/master/docs/regglm2.md)
+* code 5: [codeglm3.R](https://github.com/freakonometrics/STT5100/blob/master/docs/glm3.md)
 
 **Examens**
 * Modèles de régression - OLS intra : [énoncé](/docs/intra_STT5100_automne_2022_sujet.pdf) et [éléments de correction](/docs/intra_STT5100_automne_2022_correction.pdf)
