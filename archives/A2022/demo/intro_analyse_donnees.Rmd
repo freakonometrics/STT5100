@@ -1,0 +1,880 @@
+---
+title: "Introduction à l'analyse des données"
+author: "Philipp Ratz"
+date: "Hiver 2022"
+output:
+  rmdformats::robobook:
+    code_folding: hide
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+# Charger dplyr, tidyr, ggplot2 etc.
+library(tidyverse)
+library(knitr)
+library(gridExtra)
+```
+
+# Markdown 101
+
+Markdown est un "langage de balisage" et peut être utilisé pour donner aux documents texte tels que R Markdown une structure comme word ou latex. La syntaxe est assez simple.
+
+Quelques exemples (tiré de [https://www.markdownguide.org/basic-syntax](https://www.markdownguide.org/basic-syntax)):
+
+```{eval=FALSE}
+# Heading level 1	
+Titre de section
+
+
+## Heading level 2	
+Titre de sous-section
+
+### Heading level 3
+Titre de sous-sous section
+
+etc..
+
+__un texte en gras__
+
+_un texte en italique_
+
+~~un text barré~~
+
+```
+
+ie
+
+__un texte en gras__
+
+_un texte en italique_
+
+~~un text barré~~
+
+Pour plus d'informations, consultez par exemple [le lien de rstudio](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf). 
+
+
+## LaTeX
+
+R Markdown est encore plus puissant, on peut utilisier $\LaTeX$, soit _inline_ comme $y_i=\beta_0 + x_i\beta_1$ ou comme equation:
+
+$$
+\hat{\beta}=(\boldsymbol{X}^\top\boldsymbol{X})^{-1}\boldsymbol{X}^\top\boldsymbol{y}
+$$
+vous pouvez même inclure des fichiers .tex entiers. 
+
+## Figures
+
+Images (ce n'est _pas_ un plot) peuvent également être facilement incorporés avec `![](la_meilleure_image.png)`
+
+## Knitting
+
+Pour les documents de base, le yaml est ce qui est important:
+
+![](images/screenshot_yaml.png)
+`rmdformats::robobook` c'est seulement pour rendre le ficher légèrement plus joli. 
+
+## Pourquoi?
+
+* Projets pour votre thèse de baccalauréat (Peut être entièrement reproductible - un click)
+* après votre baccalauréat
+  + Industrie-1: Vous ferez beaucoup de rapports, souvent répétitifs, ce qui n'est pas très fun.. mais vous pouvez automatiser la plupart avec markdown
+  + Industrie-2: Particulierement en tant que junior, vous aurez besoin de faire des recherches, Rmarkdown est parfait pour les présenter
+  + Université: Si vous faites un master - Vous devrez probablement coder et remettre votre code
+  + Université: De plus en plus les "journals" exigent le code pour les publications
+* Vous pouvez également utiliser python/bash/stan à partir des chunks de rmarkdown / à mon avis c'est mieux que jupyter notebook
+
+
+# Manipulation des Données
+
+Si vous travaillez avec des données, vous passerez beaucoup de temps à préparer vos données avant de modeliser (ensembles de données "propres" n'existent généralement pas dans le monde réel). Dans le cadre de ce cours, nous n'examinerons que les principes de base des "tidy data". 
+
+L'idée générale est de mettre de l'ordre dans nos données de façon à ce que nous ayons :
+
+- une observation par ligne
+- Une information par cellule
+- Un type d'information par colonne
+
+Pour plus il y a le résumé du papier de Hadley Wickham, vous pouvez consulter [ce lien](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+
+Dans ce qui suit, nous envisagerons toujours plusieurs façons de résoudre un problème. Vous êtes libre de choisir celle que vous correspond le plus, bien que je recommande personnellement l'écosystème "tidyverse".
+
+Pour des raisons esthétiques, il est souvent recommandé d'utiliser l'opérateur pipe (`%>%`). Sous R-Studio avec Cmd-Shift-M ou Ctrl-Shift-M. Ce qu'il fait fondamentalement est de prendre la ligne précédente comme premier argument dans la ligne courante.
+
+```{r}
+# meme chose
+my_numbers <- c(0,1,2,3)
+
+print(sum(my_numbers))
+
+print(my_numbers %>% sum())
+
+```
+
+cette logique simplifiera grandement vos flux de travail et rendra le code plus lisible. 
+
+## SQL-Like
+
+SQL (Structured Query Language) - votre meilleur ami si vous travaillez avec des données dans une entreprise, mais également utile à plus petite échelle (aka. pour vos projets).
+
+L'exercice est basé sur l'article : "Where is the Land of Opportunity ? The Geography of Intergenerational Mobility in the United States" (Raj Chetty, Nathaniel Hendren, Patrick Kline et Emmanuel Saez ; Quarterly Journal of Economics 129(4) : 1553-1623, 2014).Il fait partie d'un plus grand projet disponible à l'adresse suivante : https://opportunityinsights.org/.
+
+Nous commençons par charger quelques données échantillons. Notez que "kable" dans la dernière ligne rend seulement les graphiques jolis.
+
+
+```{r}
+library(haven) # si le format est .dta
+library(readxl) # se le format est .xls / .xlsx
+
+mobility_data <- read_dta("data/mobility_across_cz.dta")
+codebook <- read_excel("data/codebook.xls")
+
+mobility_data %>% 
+  head() %>% 
+  kable()
+
+```
+
+Nous voyons qu'il y a des données manquantes et que les variables explicatives sont normalement numériques. Nous nous en occuperons plus tard. Pour une explication des variables, considérez le fichier codebook.xls.
+
+__select__
+
+En général, un jeu de données comporte de nombreuses colonnes. Mais parfois, nous n'avons besoin de considérer que certaines d'entre elles. La logique "select" vous permet de choisir un sous-ensemble des colonnes de données. 
+
+Il existe de nombreuses façons de le faire. Ci-dessous la démonstration pour sélectionner une seule colonne "e_rank_b" et une collection de colonnes c("e_rank_b", "taxrate", "crime_violent"). C'est quoi la difference?
+
+```{r}
+
+# Une seule colonne
+facon_1 <- mobility_data$e_rank_b
+facon_2 <- mobility_data[,'e_rank_b']
+facon_3 <- mobility_data %>% select(e_rank_b)
+
+# Plusieurs
+facon_1_mul <- mobility_data[, c("e_rank_b", "taxrate", "crime_violent")]
+facon_2_mul <- mobility_data %>% select(e_rank_b, taxrate, crime_violent)
+
+
+facon_1 %>% head() 
+facon_1_mul %>% head()
+
+facon_2 %>% head() 
+facon_2_mul %>% head() 
+
+
+```
+
+
+__if-condition (filter)__
+
+Les commandes de "select" agissent sur les colonnes, les équivalents pour les lignes sont les "if-conditions" dans R, on appel ca les conditions "filter". En reprenant l'exemple ci-dessus. Nous ne voulons que les observations où le e_rank_b est supérieur à 40. Quelle différence peut-on constater entre les deux méthodes ?
+
+```{r}
+
+facon_1 <- mobility_data[mobility_data$e_rank_b > 40, # En base-R on travaille avec 
+                                                      # un vecteur logique
+                         c("e_rank_b", "taxrate", "crime_violent")]
+
+facon_2 <- mobility_data %>% 
+  select(e_rank_b, taxrate, crime_violent) %>% 
+  filter(e_rank_b > 40)
+
+facon_1 %>% head()
+facon_2 %>% head()
+
+```
+
+C'est important à garder dans l'esprit les differences entre `tidyverse` et `base R`. En practique, on jete les observations manquantes souvent, mais il faut toujours faire le "sanity check"!
+
+__groupby__
+
+Parfois, nous sommes intéressés par des données agrégées. Avec la commande `group_by`, nous pouvons facilement créer des statistiques sommaires pour des sous-groupes de données (et on peut les ajouter à la base originale). 
+
+Il existe des façons de faire exactement cela dans base R, mais ici nous nous concentrons sur la logique de dplyr, qui est plus intuitive.
+
+```{r}
+# Calculer la moyenne de "e_rank_b" pour chaque ville
+
+group_stat <- mobility_data %>% # Choisir jeu des données
+  select(czname, e_rank_b) %>% # Choisir les colonnes
+  group_by(czname) %>% # Specifier les groups
+  summarise(
+    mean_per_city = mean(e_rank_b, na.rm=T) # Specifier la statistique d'aggreagtion
+  )
+
+group_stat %>% head()
+
+```
+
+__(mutate)__
+
+Souvent, nous devons transformer les variables pour obtenir des informations significatives de notre analyse. Cela peut être fait facilement avec la logique "mutate". L'utilisation de condtions if-else pour créer de nouvelles variables est extrêmement utile. Par exemple, nous pouvons diviser la mobilité sociale (e_rank_b) en deux catégories : faible et élevée.
+
+```{r}
+data_tmp <- mobility_data
+data_tmp <- data_tmp[!is.na(data_tmp$e_rank_b), ]
+data_tmp$binary_mobility <- ifelse(data_tmp$e_rank_b > 45, 'High', 'Low')
+
+ex_mutate_2 <- mobility_data %>% 
+  filter(!is.na(e_rank_b)) %>% # PQ? 
+  mutate(binary_mobility = if_else(e_rank_b > 45, 'High', 'Low')) %>% 
+  select(binary_mobility, e_rank_b)
+
+
+data_tmp[,c('binary_mobility', 'e_rank_b')] %>% head()
+ex_mutate_2 %>% head()
+
+```
+
+## Exercises
+
+1. Transformer la variable "e_rank_b" en "inférieure à 50" et "supérieure à 50".  Calculez la moyenne de "crime_violent" pour chaque groupe. Quelles sont vos conclusions?
+2. Transformer la variable "frac_middleclass" en "inférieure à 0.5" et "supérieure à 0.5". Pareil pour la variable "eitc_exposure". Calculer la moyenne du taux d'abandon scolaire au lycée "dropout_r" pour chaque combinaison des deux nouvelles variables. Conseil : utilisez group_by 
+3. Proposer une façon de traiter les valeurs "NA". Pourquoi pensez-vous que c'est une bonne idée ?
+
+
+# Analyse Visuelle
+
+Il est toujours bon d'avoir une compréhension intuitive des données en utilisant des graphiques. Ici, nous essaierons de réaliser la plupart des graphiques à la main (il existe des logiciels qui peuvent faire le travail pour vous, mais il est préférable de le comprendre complètement d'abord).
+
+## Plots
+
+Les plots/figures peuvent facilement être intégrées dans markdown. Tout comme une sortie de tableau, on peut les structurer légèrement. Par exemple, nous pouvons ajouter une légende ou ajouter plusieurs graphiques côte à côte.
+
+Par exemple, commençons par un histogramme:
+
+```{r}
+# Histogram simple
+hist(mobility_data$e_rank_b)
+```
+
+`?hist`
+```{r}
+?hist
+```
+
+
+```{r, figures-side, fig.show="hold"}
+plot(density(data_tmp$e_rank_b)) # Pourquoi changer les données?
+plot(density(data_tmp$e_rank_b), col='red')
+
+```
+
+Il existe aussi un package sympa de l'écosystème tidyverse (`ggplot2`)
+
+```{r}
+plot_1 <- mobility_data %>% 
+  ggplot() + 
+  geom_histogram(aes(x=e_rank_b))
+
+plot_2 <- mobility_data %>% 
+  ggplot() + 
+  geom_histogram(aes(x=crime_violent))
+
+grid.arrange(plot_1, plot_2, ncol=2)
+  
+```
+Nous pouvons également construire des figures avec plusieurs informations. Par exemple, un histogramme avec une ligne de densité. (Attention toutefois aux axes!)
+
+```{r}
+# Base R
+hist(data_tmp$e_rank_b, probability = T)
+lines(density(data_tmp$e_rank_b), col='red')
+
+# GGplot
+data_tmp %>% 
+  ggplot() + 
+  geom_histogram(aes(x=e_rank_b, y=..density..)) + 
+  geom_density(aes(x=e_rank_b), color='red')
+```
+
+## Exercises
+
+Conseil : si vous n'arrivez pas à trouver la bonne commande pour une figure,  les solutions, utilisez google!
+
+
+1. Montrer la relation entre le taux d'obtention d'un diplôme universitaire et la mobilité socialeà l'aide d'un diagramme de dispersion (scatterplot) et d'une ligne de régression.
+Conseil: vous pouvez trouver une solution si vous googlez "r plot with regression line"
+
+2. Existe-t-il une relation entre les dépenses des gouvernements locaux par habitant (`subcty_total_expenditure_pc`) et le taux d'imposition (`taxrate`)? Pouvez-vous utiliser les données directement ? Conseil : pour mettre les données à l'échelle, vous pouvez toujours essayer d'utiliser log, sqrt, etc. 
+
+3. Montrez graphiquement qu'il existe une ville où la criminalité violente est exceptionnellement élevée ('crime_violent'). Que pouvez-vous faire avec de telles données (`outlier` ou pas)?
+
+
+# Analyse descriptive
+
+L'analyse graphique est utile mais se complique avec plus que deux variables. En général, nous évaluons également les hypothèses que nous avons dérivées des graphiques à l'aide d'un test.
+
+## Tables
+Les tableaux peuvent facilement être incorporés dans R. Vous pouvez soit les imprimer directement, soit utiliser `kable` (du paquet `knitr` - plus jolie). Bien sûr, nous pouvons également combiner ce que nous avons vu dans les sections précédentes (en particulier la manipulation des données)
+
+```{r}
+# Impression de base
+mobility_data %>% head()
+
+# Avec Kable
+mobility_data %>% head() %>% kable() # c'est comme kable(head(mobilitiy_data))
+```
+
+ici nous pouvons manipuler légèrement nos données
+
+```{r}
+# Example avec manipulation des données 
+# Décrire ce qui se passe ici
+mobility_data %>% 
+  filter(!is.na(e_rank_b)) %>% 
+  mutate(decile = ntile(e_rank_b, 10)) %>% 
+  select(decile, e_rank_b, mig_outflow) %>% 
+  group_by(decile) %>% 
+  summarise(average_outflow = mean(mig_outflow)) %>% 
+  kable()
+```
+
+## Distributions en R
+
+L'un des exercices les plus importants lors de la modélisation statistique consiste à vérifier les hypothèses du modèle. La logique est toujours la même. 
+
+q-distribution (quantiles, ex: `qnorm`, `qpois`, `qgamma` etc.)
+Quel est le 99ème quantile d'une gamma avec shape=2 et rate=1?
+
+```{r}
+qgamma(0.99, shape=2,rate=1)
+```
+
+d-distribution (densité, ex: `dnorm`, `dpois`)
+Tracez visuellement le 99ème quantile d'une gamma avec shape=2 et rate=1?
+```{r}
+gamma_dist <- dgamma(seq(0,8,0.1), shape=2,rate=1)
+
+plot(x=seq(0,8,0.1), 
+     y=gamma_dist,
+     type='l')
+abline(v=qgamma(0.99, shape=2,rate=1), 
+       col='red', lty=2)
+
+
+```
+
+
+p-distribution (densité cumulative, ex: `pnorm`, `ppois`)
+
+Supposons que $X \sim Gamma(2,1)$. Quel pourcentage de la masse totale se trouve à droite de 5 ? 
+
+```{r}
+1 - pgamma(5, shape=2, rate=1)
+```
+
+
+r-distribution (échantillon, ex: `rnorm`, `rpois`)
+
+Simulez 100 observations à partir d'un gamma avec shape=2, rate=1 et comparez-les à la distribution théorique.
+```{r}
+set.seed(42)
+sims_gamma <- rgamma(100, shape=2, rate=1)
+
+plot(density(sims_gamma), ylim=c(0,0.38), 
+     xlim=c(-1, 7), 
+     main='Comparaison empirique vs. theoretique')
+lines(x=seq(0,8,0.1), 
+      y=gamma_dist, col='red')
+
+```
+
+### Q-Q Plot
+
+Pour comparer un ajustement avec une distribution théorique, on peut utiliser un diagramme quantile-quantile (qq-plot). Par exemple, on suppose souvent que le log revenue est distribué selon une normale. Comparons l'ajustement théorique et l'ajustement réel. 
+
+```{r}
+# A la main
+# Sans transformation
+inc <- (as.numeric(mobility_data$hhinc00))
+inc <- (inc - mean(inc)) / sd(inc)
+
+quantiles_norm <- qnorm(seq(0,1,0.001))
+quantiles_empirical <- quantile(inc, seq(0,1,0.001))
+
+plot(quantiles_norm,
+     quantiles_empirical, 
+     main='Normal Q-Q Plot', 
+     ylab='Sample Quantiles',  
+     xlab='Theoretical Quantiles')
+abline(a = 0, b = 1, col = "red")
+
+# Avec transformation
+# A la main
+# Sans transformation
+log_inc <- log(as.numeric(mobility_data$hhinc00))
+log_inc <- (log_inc - mean(log_inc)) / sd(log_inc)
+
+quantiles_norm <- qnorm(seq(0,1,0.001))
+quantiles_empirical <- quantile(log_inc, seq(0,1,0.001))
+
+plot(quantiles_norm,
+     quantiles_empirical, 
+     main='Normal Q-Q Plot (Log transformed)', 
+     ylab='Sample Quantiles',  
+     xlab='Theoretical Quantiles')
+abline(a = 0, b = 1, col = "red")
+
+qqnorm(log(as.numeric(mobility_data$hhinc00)))
+qqline(log(as.numeric(mobility_data$hhinc00)),
+       col = 2,lwd=2,lty=2)
+
+
+```
+
+## Exercises
+
+1. Supposons que $X \sim \mathcal{N}(0,10)$. Echantillonnez 10 observations et calculez la moyenne, que nous appelons Y. Répétez l'opération ci-dessus 1000 fois et calculez la moyenne et l'écart-type de Y. A quoi vous attendez-vous et pourquoi, qu'observez-vous ?
+
+2. Créez un tableau ou  qui montre le nombre d'observations manquantes pour chaque variable (colonne dans l'ensemble de données).
+
+3. Analysez les variables `tuition` et `num_inst_pc` et discutez de ce que vous voyez. Quelles sont vos conclusions ? S'agit-il d'un problème?
+
+4. Créez un tableau montrant le coefficient de corrélation entre la mobilité sociale `e_rank_b` et toutes les autres variables. Évaluez vos résultats.
+
+5. Séparez la variable en "faible", "moyen" et "élevé". Justifiez votre choix. Comparez chaque niveau avec les variables `gini` et `cs_born_foreign`. Interprétez et créez un tableau. 
+
+
+# Example guidée
+
+Dans cet exemple guidé, nous allons à nouveau travailler avec les données de Raj Chetty, Nathaniel Hendren, Patrick Kline et Emmanuel Saez. L'objectif pour cette session est d'avoir une idée comment nous pouvons construire un modèle. La prochaine fois, nous nous plongerons un peu plus dans les détails.
+
+
+## Exercise
+
+Notre objectif est de mieux comprendre la mobilité intragénérationnelle. On dit que la mobilité intergénérationnelle est élevée si le revenu des parents (au cours de leur vie) n'est pas très lié au revenu de leurs enfants. Pour les exercices, vous pouvez utiliser n'importe quel "package" que vous jugez nécessaire mais vous devez justifier vos résultats.
+
+Pour cela, résolvez les exercices suivants :
+
+1. Chargez les données, regardez les types de données, est-ce que cela a du sens ?
+
+2. La variable d'intérêt est `e_rank_b`, renommez cette colonne. Que se passe-t-il si vous utilisez un espace " " dans le nom ? Est-ce une bonne idée ?
+
+3. Visualiser la distribution de la mobilité intergénérationnelle. Donnez à vos graphiques un titre approprié et des étiquettes d'axe correctes.
+
+4. Examinez la relation entre la mobilité intergénérationnelle et la taille du secteur manufacturier. Quelle est votre conclusion ?
+
+5. Découpez la variable de la taille du secteur manufacturier en trois composantes (low-mid-high). Calculez les moyennes par groupe pour trois autres variables que vous jugez intéressantes.
+
+6. Ajustez une régression qui décrit l'équation suivante $\mathbb{E}[y| \text{manufacturing}]=\hat{\beta}_0 + \hat{\beta}_1*\text{manuf_1} + \hat{\beta}_2*\text{manuf_2}$. Pourquoi exclure la dernière composante?
+
+
+L'existence d'une classe moyenne importante est souvent considérée comme une bonne chose. Voir par exemple [cet article](https://ici.radio-canada.ca/nouvelle/1293565/economie-revenus-classe-moyenne-quebec-etude-inegalites
+), analysons cela plus en détail. 
+
+7. Réalisez un nuage de points ("scatterplot") avec la mobilité intergénérationnelle sur l'axe des y et la fraction de la classe moyenne sur l'axe des x. Quelles sont vos conclusions ? 
+
+8. Exécutez un modèle linéaire qui explique la mobilité intergénérationnelle à l'aide de la fraction de la classe moyenne. 
+
+9. Nous voulons rendre le modèle légèrement plus flexible. Effectuez 10 régressions différentes qui correspondent à des polynômes de plus en plus complexes de la fraction de la classe moyenne.
+
+10. Défi : Visualisez les différents résultats. Qu'arrive-t-il à la valeur $R^2$? Est-ce une bonne chose ?
+
+## Charger et preparer les données
+
+1. Chargez les données, regardez les types de données, est-ce que cela a du sens ?
+
+```{r}
+# Charger l'essentiel
+library(tidyverse)
+library(knitr)
+library(gridExtra)
+library(haven) 
+library(readxl)
+
+mobility_data <- read_dta("data/mobility_across_cz.dta")
+codebook <- read_excel("data/codebook.xls")
+
+mobility_data %>% 
+  head() %>% 
+  kable()
+
+```
+
+
+
+```{r}
+str(mobility_data)
+```
+
+Le format est celui de `stata`, mais la plupart des variables sont numériques, cela semble correct. 
+
+```{r}
+# Verifier données manquantes
+for (column_ in names(mobility_data)){
+  print(
+    paste(
+      column_, 
+      sum(is.na(mobility_data[, column_])), 
+      sep=': '
+    )
+  )
+}
+
+```
+
+Le nombre de points de données manquants ne semble pas non plus trop inquiétant. Il pourrait y avoir une certaine corrélation entre les points manquants mais nous pouvons ignorer cela pour le moment.
+
+## Renommer une variable
+
+2. La variable d'intérêt est `e_rank_b`, renommez cette colonne. Que se passe-t-il si vous utilisez un espace " " dans le nom ? Est-ce une bonne idée ?
+
+```{r}
+# renommer avec espace
+print(names(mobility_data))
+
+names(mobility_data)[4] <- "mobilite intergen"
+
+# mobility_data$`mobilite intergen` -> On a toujours besoin des symboles `. Cela semble encombrant. 
+# Essayez d'utiliser des tirets bas (_) ou des points (.)
+
+names(mobility_data)[4] <- "mobilite_intergen"
+# mobility_data$mobilite_intergen -> C'est mieux
+
+```
+
+Les réponses sont directement dans le code, moins joli mais pour cette question acceptable.
+
+## Analyse visuelle de la mobilité
+
+3. Visualiser la distribution de la mobilité intergénérationnelle. Donnez à vos graphiques un titre approprié et des étiquettes d'axe correctes.
+
+Nous allons analyser la densité en utilisant le lissage, un histogramme et la fonction de répartition (cdf).
+
+```{r}
+hist(mobility_data$mobilite_intergen, 
+     main='Intergenerational Mobility Scores', 
+     xlab='Value', 
+     ylab='Density', 
+     probability = T, 
+     breaks = seq(27, 67, 3))
+
+lines(density(mobility_data$mobilite_intergen[!is.na(mobility_data$mobilite_intergen)]), 
+      col='red', 
+      lwd=2, 
+      lty=2)
+
+legend(55,0.07,
+       legend=c("Density"),
+       col=c("red"),
+       lty=2,
+       cex=0.8)
+
+```
+
+```{r}
+quantiles_ <- quantile(mobility_data$mobilite_intergen, 
+                       probs = seq(0,1,0.01), 
+                       na.rm = T)
+
+plot(x=quantiles_, 
+     y=seq(0,1,0.01), 
+     type='l', 
+     lwd=2, 
+     main='ECDF', 
+     ylab='', 
+     xlab='Value for Mobility')
+```
+Les données sont principalement dispersées entre 30 et 60, il n'y a pas de sauts dans le cdf. Les données semblent également avoir un coefficient d'asymétrie positif.
+
+## Analyse visuelle: Manufacturing vs Mobilité
+
+4. Examinez la relation entre la mobilité intergénérationnelle et la taille du secteur manufacturier. Quelle est votre conclusion ?
+
+Si les données sont continues, commencez toujours par un nuage de points.
+
+```{r}
+plot(
+  mobility_data$cs_elf_ind_man,
+  mobility_data$mobilite_intergen, 
+  main='% Manufacturing vs Mobility', 
+  ylab='Intergen. Mob', 
+  xlab='Fraction Working in Manufacturing'
+) 
+
+```
+
+Il semble que nous ayons ici une relation linéaire. Nous pouvons également explorer cela avec une régression linéaire très simple.
+
+```{r}
+# Model simple pour la relation lineaire
+summary(lm(mobilite_intergen ~ cs_elf_ind_man, data=mobility_data))
+```
+
+Les coefficients ont les signes que l'on attend. Dans ce cas, il ne semble pas que l'ajustement aux données soit excellent (R-carré très faible). Dans un cas aussi simple, c'est une bonne idée de tracer également la ligne de régression. 
+
+```{r}
+plot(
+  mobility_data$cs_elf_ind_man,
+  mobility_data$mobilite_intergen, 
+  main='% Manufacturing vs Mobility', 
+  ylab='Intergen. Mob', 
+  xlab='Fraction Working in Manufacturing'
+) 
+
+abline(a=46.9024,
+       b=-17.7064,
+       col='red', 
+       lwd=2, 
+       lty=2)
+
+legend(0.35,60,
+       legend=c("Linear Fit"),
+       col=c("red"),
+       lty=2,
+       cex=0.8)
+
+```
+
+
+## Analyse descriptif (secteur manufacturier)
+
+5. Découpez la variable de la taille du secteur manufacturier en trois composantes (low-mid-high). Calculez les moyennes par groupe pour trois autres variables que vous jugez intéressantes.
+
+Nous pouvons trouver de bons seuils en regardant le graphique ci-dessus ou en utilisant les quantiles. Voici l'approche "visuelle". Lorsque nous coupons une variable, nous pouvons introduire des non-linéarités dans la relation (voir l'exercice suivant)
+
+```{r}
+mobility_data$manuf_cut <- cut(mobility_data$cs_elf_ind_man, 
+                               breaks = c(0,0.1,0.3, 1), 
+                               labels = c('low', 'mid', 'high'))
+
+mobility_data %>% 
+  group_by(manuf_cut) %>% 
+  summarise(
+    mean_labforce = mean(cs_labforce, na.rm=T), 
+    mean_growth_imports = mean(d_tradeusch_pw_1990, na.rm=T), 
+    mean_mig_inflow = mean(mig_outflow, na.rm=T)
+  )
+```
+
+Les tendances des trois variables semblent bien correspondre aux "cuts" - mais est-ce suffisant ?
+
+## Model simple
+
+6. Ajustez une régression qui décrit l'équation suivante $\mathbb{E}[y| \text{manufacturing}]=\hat{\beta}_0 + \hat{\beta}_1*\text{manuf_1} + \hat{\beta}_2*\text{manuf_2}$. Pourquoi exclure la dernière composante?
+
+R nous aide beaucoup ici:
+
+```{r}
+model_lineaire_simple = lm(mobilite_intergen ~ manuf_cut, 
+                           data=mobility_data)
+
+summary(model_lineaire_simple)
+
+```
+
+R a automatiquement laissé tomber la première variable (pourquoi ?), le R-carré n'augmente que légèrement, ce n'était peut-être pas une si bonne idée. Nous traçons à nouveau les résultats:
+
+```{r}
+plot(
+  mobility_data$cs_elf_ind_man,
+  mobility_data$mobilite_intergen, 
+  main='% Manufacturing vs Mobility', 
+  ylab='Intergen. Mob', 
+  xlab='Fraction Working in Manufacturing'
+) 
+
+x <- seq(0, 0.45, 0.01)
+fx <- 45.9575 + (x > 0 & x <=0.1) * 0 +
+      (x > 0.1 & x <= 0.3) * -2.3677 +
+      (x > 0.3 & x <= 2.119) *  -6.3979
+lines(x, fx, 
+      col='red', 
+      lty=2, 
+      lwd=2)
+
+```
+```{r}
+plot(
+  mobility_data$cs_elf_ind_man,
+  mobility_data$mobilite_intergen, 
+  main='% Manufacturing vs Mobility', 
+  ylab='Intergen. Mob', 
+  xlab='Fraction Working in Manufacturing'
+) 
+
+predictions_simple <- predict(model_lineaire_simple, 
+                              mobility_data)
+
+points(mobility_data$cs_elf_ind_man, 
+       predictions_simple, 
+       col='red')
+```
+La différence entre les deux graphiques est que le plus bas montre les points réels "régressés" et le plus haut montre la ligne de régression entière.
+
+Nous avons seulement considéré un modèle constant par morceaux, peut-être pouvons-nous obtenir de meilleurs résultats avec un modèle linéaire par morceaux ?
+
+```{r}
+model_lineaire_interaction = lm(mobilite_intergen ~ manuf_cut + cs_elf_ind_man + manuf_cut*cs_elf_ind_man, 
+                           data=mobility_data)
+
+summary(model_lineaire_interaction)
+
+```
+
+
+
+```{r}
+plot(
+  mobility_data$cs_elf_ind_man,
+  mobility_data$mobilite_intergen, 
+  main='% Manufacturing vs Mobility', 
+  ylab='Intergen. Mob', 
+  xlab='Fraction Working in Manufacturing'
+) 
+
+predictions_interact <- predict(model_lineaire_interaction, 
+                              mobility_data)
+
+points(mobility_data$cs_elf_ind_man, 
+       predictions_interact, 
+       col='red')
+```
+Nous pouvons constater que la fraction de travailleurs manufacturiers n'a pas un effet régulier sur la mobilité intergénérationnelle. Cela pose généralement un problème lorsque nous travaillons avec des modèles linéaires. Nous avons vu ici une possibilité de résoudre le problème. En subdivisant la variable explicative, nous pouvons obtenir des non-linéarités (nous y reviendrons plus tard dans le cours) dans un modele lineaire.
+
+
+## Model "Classe moyenne"
+
+L'existence d'une classe moyenne importante est souvent considérée comme une bonne chose. Voir par exemple [cet article](https://ici.radio-canada.ca/nouvelle/1293565/economie-revenus-classe-moyenne-quebec-etude-inegalites
+), analysons cela plus en détail. 
+
+7. Réalisez un nuage de points ("scatterplot") avec la mobilité intergénérationnelle sur l'axe des y et la fraction de la classe moyenne sur l'axe des x. Quelles sont vos conclusions ? 
+
+8. Exécutez un modèle linéaire qui explique la mobilité intergénérationnelle à l'aide de la fraction de la classe moyenne. 
+
+
+
+```{r}
+plot(x=mobility_data$frac_middleclass, 
+     y=mobility_data$mobilite_intergen, 
+     main='Middle Class and Intergen. Mobility', 
+     ylab='Intergen. Mobility', 
+     xlab='Fraction Middle class')
+```
+
+Déjà dans le graphique, nous pouvons voir une relation entre les deux variables, continuons avec une régression.
+
+```{r}
+model_middle_class <- lm(mobilite_intergen ~ frac_middleclass, 
+                         data=mobility_data)
+
+summary(model_middle_class)
+
+plot(
+  mobility_data$frac_middleclass,
+  mobility_data$mobilite_intergen, 
+  main='% Manufacturing vs Mobility', 
+  ylab='Intergen. Mob', 
+  xlab='Fraction Working in Manufacturing'
+) 
+
+predictions_middleclass <- predict(model_middle_class, 
+                              mobility_data)
+
+points(mobility_data$frac_middleclass,
+       predictions_middleclass, 
+       col='red')
+
+```
+La régression semble être en accord avec l'article, mais attention! Nous n'avons considéré que la corrélation entre les deux variables (correlation $\neq$ causation). Il y a beaucoup de possibilités qui pourraient générer les données. Par exemple, il pourrait y avoir une troisième variable qui a un effect _causal_ sur les deux variables que nous considérons ici.
+
+
+Mais laissons cela de côté pour le moment : Après chaque régression, nous devrions toujours considérer les résidus:
+
+```{r}
+# Analyse des residues
+residuals_ <- mobility_data$mobilite_intergen - predictions_middleclass
+
+# KDE smoothing (à voir plus tard)
+k1_ <- mobility_data$frac_middleclass[!is.na(mobility_data$frac_middleclass)]
+k2_ <- residuals_[!is.na(mobility_data$frac_middleclass)]
+
+smooth_fit <- lowess(k1_, k2_)
+
+plot(mobility_data$frac_middleclass, 
+     residuals_, 
+     ylab='Residuals', 
+     xlab='Middle class')
+
+lines(smooth_fit, lty=2, lwd=2, col='red')
+
+```
+
+Il est clair qu'il reste des informations dans les données. En utilisant le graphique ci-dessus, nous pouvons décider d'ajouter une fonction polynomiale dans les données (une autre façon pour générer les non-linéarités).
+
+
+```{r}
+mobility_data_nomissings <- mobility_data[!is.na(mobility_data$frac_middleclass), ]
+
+model_middle_class_poly <- lm(mobilite_intergen ~ poly(frac_middleclass, 2), 
+                              data=mobility_data_nomissings)
+
+summary(model_middle_class_poly)
+
+plot(
+  mobility_data$frac_middleclass,
+  mobility_data$mobilite_intergen, 
+  main='% Manufacturing vs Mobility', 
+  ylab='Intergen. Mob', 
+  xlab='Fraction Working in Manufacturing'
+) 
+
+predictions_middleclass_poly <- predict(model_middle_class_poly,
+                                        mobility_data_nomissings[order(mobility_data_nomissings$frac_middleclass), ])
+
+lines(mobility_data_nomissings[order(mobility_data_nomissings$frac_middleclass), ]$frac_middleclass,
+       predictions_middleclass_poly, 
+       col='red')
+
+
+```
+
+L'ajustement est clairement meilleur, ici l'ajout du terme polynomial semble ajouter beaucoup de valeur (comparez eg. les R-carrés). Mais que se passe-t-il si nous ajoutons de plus en plus de termes polynomiaux ?
+
+## Challenge
+
+```{r}
+# List pour les resultats
+results_list <- list()
+
+# Loop
+for (length_ in seq(1,10,1)){
+  reg_ <- lm(mobilite_intergen ~ poly(frac_middleclass, length_), 
+             data=mobility_data_nomissings)
+  
+  print(paste('R-Squared: ', summary(reg_)$r.squared))
+  
+  predictions_ <- predict(reg_,
+                          mobility_data_nomissings[order(mobility_data_nomissings$frac_middleclass), ])
+  
+  results_list[[length_]] <- predictions_
+
+}
+
+
+```
+
+```{r}
+
+plot(
+  mobility_data$frac_middleclass,
+  mobility_data$mobilite_intergen, 
+  main='% Manufacturing vs Mobility', 
+  ylab='Intergen. Mob', 
+  xlab='Fraction Working in Manufacturing'
+) 
+
+for(i in seq(1,10,1)){
+  
+  predictions_middleclass_poly <- results_list[[i]]
+  
+  lines(mobility_data_nomissings[order(mobility_data_nomissings$frac_middleclass), ]$frac_middleclass,
+         predictions_middleclass_poly, 
+         col='red')
+  
+}
+
+
+```
+
+Le R-carré augmente toujours avec des variables supplémentaires, mais cela ne signifie pas nécessairement que le modèle est meilleur. Vous devez toujours vérifier le modèle et l'ajuster en conséquence. 
