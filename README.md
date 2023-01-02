@@ -1,15 +1,15 @@
-# STT5100 Modèles Linéaires Appliqués (Automne 2022)
+# STT5100 Modèles Linéaires Appliqués (Hiver 2023)
 
 Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_Cours_STT5100_A2022.pdf](/docs/PLANS_DE_COURS_STT5100_A2022.pdf) (version non-approuvée)
+Plan de cours : [Plan_Cours_STT5100_A2022.pdf](/docs/PLANS_DE_COURS_STT5100_H2023.pdf) (version non-approuvée)
 
-Démonstrateur : ---
+Démonstrateur : Anne Paquet
 
 ```diff
-- Les données pour le second devoir sont en ligne
+- Le premier cours aura lieu le vendredi 13 janvier
 ```
 
 **Prérequis**
@@ -18,19 +18,14 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 
 **Démonstrations et codes**
 * démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
-* code 1: [codelogistic.R](https://github.com/freakonometrics/STT5100/blob/master/docs/codelogistic.md)
-* code 2: [codepoisson.R](https://github.com/freakonometrics/STT5100/blob/master/docs/regpoisson.md)
-* code 3: [codeglm1.R](https://github.com/freakonometrics/STT5100/blob/master/docs/regglm1.md)
-* code 4: [codeglm2.R](https://github.com/freakonometrics/STT5100/blob/master/docs/regglm2.md)
-* code 5: [codeglm3.R](https://github.com/freakonometrics/STT5100/blob/master/docs/glm3.md)
 
 **Examens**
-* Modèles de régression - OLS intra : [énoncé](/docs/intra_STT5100_automne_2022_sujet.pdf) et [éléments de correction](/docs/intra_STT5100_automne_2022_correction.pdf)
-* Modèles de régression - GLM final : [--]()
+* Modèles de régression - OLS intra : 
+* Modèles de régression - GLM final :
 
 **Projets / Devoir**
-* Modèles de régression - OLS : [devoir1.md](/devoir/devoir1.md)
-* Modèles de régression - GLM : [devoir2.md](/devoir/devoir2.md), date limite, vendredi 23 décembre midi
+* Modèles de régression - OLS : [devoir1.md](/devoir/)
+* Modèles de régression - GLM : [devoir2.md](/devoir/), 
 
 **Introduction**
 
