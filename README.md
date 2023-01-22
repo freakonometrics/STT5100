@@ -24,8 +24,8 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 * Modèles de régression - GLM final :
 
 **Projets / Devoir**
-* Modèles de régression - OLS : [devoir1.md](/devoir/)
-* Modèles de régression - GLM : [devoir2.md](/devoir/), 
+* Modèles de régression - OLS : [devoir1.md](/devoir/devoir1.md)
+* Modèles de régression - GLM : [devoir2.md](), 
 
 **Introduction**
 
