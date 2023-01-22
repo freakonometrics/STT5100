@@ -1,70 +1,115 @@
-STT5100 (A2022) devoir 1
+STT5100 (H2023) devoir 1
 ================
 
 ``` r
 code_permanent = "ABCD12345678"
-loc_fichier = paste("http://freakonometrics.free.fr/STT5100/",code_permanent,"-A2021D1.RData",sep="")
+loc_fichier = paste("http://freakonometrics.free.fr/STT5100/",code_permanent,"-H2023D1.RData",sep="")
 download.file(loc_fichier, "base_devoir_1.RData")
 load("base_devoir_1.RData")
 dim(basedevoir)
 ```
 
-    ## [1]  6 14
+    ## [1]  6 33
 
-La base contient des informations par quartier, dans une grande ville
-américaine, avec 14 variables, parmi les suivantes
+La base contient des informations par élèves dans deux écoles, avec 33 variables,
 
--   `DistanceAutoroutes` = distance à la plus proche autoroute
--   `DistanceEmployeur` = distance moyenne aux principaux employeurs de
-    la ville
--   `Ecoles` = classement des écoles (variable catégorielle - 5
-    catégories)
--   `Historique` = ancienneté des maisons dans le quartier (variable
-    catégorielle)
--   `Industries` = quantité d’industries dans le quartier (variable
-    catégorielle)
--   `NiveauPolution` = indice indiquant la pollution moyenne dans le
-    quartier
--   `NombreChambres` = nombre moyen de chambre par maison dans le
-    quartier
--   `Polution` = classe de polution (variable catégorielle)
--   `ProportionAvant1940` = proportion de logements dans le quartier
-    contruits avant 1940
--   `ProportionEspaceIndustrie` = proportion de la superficie du
-    quartier réservé à des industries
--   `ProportionGrandsTerrain` = proportions de logements occupant un
-    grand terrain
--   `ProportionNoirs` = proportions de personnes se déclarant *noires*
-    de peau dans les formulaires du recensement
--   `ProportionPauvres` = proportions de personnes classées comme
-    *pauvres* dans le quartier
--   `RatioProfEleve` = ratio du nombre d’élèves par professeur
--   `TauxCrime` = taux de crime par habitants, dans le quartier
--   `ValeurMaison` = valeur moyenne des maisons dans le quartier
-    **variable a expliquer**
+- `ecole` : école de l’élève (binaire : “A” ou “B”)
+- `sexe` : sexe de l’étudiant (binaire : “F” - femme ou “M” - homme)
+- `age` : âge de l’étudiant (numérique : de 15 à 22)
+- `geographie` : type d’adresse du domicile de l’étudiant (binaire :
+  “U” - urbain ou “R” - rural)
+- `tailleFamille` : taille de la famille (numérique)
+- `parents` : statut de cohabitation des parents (binaire : “T” - vivant
+  ensemble ou “A” - séparés)
+- `educMere` : niveau d’instruction de la mère (numérique : 0 - aucune,
+  1 - enseignement primaire (4e année), 2 - de la 5e à la 9e année, 3 -
+  enseignement secondaire ou 4 - enseignement supérieur).
+- `educPere` : niveau d’éducation du père (numérique : 0 - aucune, 1 -
+  enseignement primaire (4e année), 2 - de la 5e à la 9e année, 3 -
+  enseignement secondaire ou 4 - enseignement supérieur)
+- `metierMere` : emploi de la mère (nominal : “enseignant”, “santé”,
+  “services” civils (par exemple, administration ou police), “à la
+  maison” ou “autre”).
+- `metierPere` : Emploi du père (nominal : “enseignant”, “santé”,
+  “services” civils (par exemple, administration ou police),
+  “à_la_famille” ou “autre”)
+- `choixEcole` : raison pour laquelle l’élève a choisi cette école
+  (nominal : proximité du “domicile”, “réputation” de l’école,
+  préférence pour un “cours” ou “autre”).
+- `tuteur` : tuteur de l’élève (nominal : “mère”, “père” ou “autre”)
+- `tempsTransport` : temps de trajet domicile-école, en minutes
+- `tempsEtude` : temps d’étude hebdomadaire, en minutes
+- `echec` : nombre d’échecs en classe dans le passé (numérique : n si
+  1\<=n\<3, sinon 4)
+- `extraSupport` : soutien scolaire supplémentaire (binaire : oui ou
+  non)
+- `extra` : soutien scolaire familial (binaire : oui ou non)
+- `activites` : cours supplémentaires rémunérés dans la matière du cours
+  (mathématiques ou français) (binaire : oui ou non)
+- `activites` : activités extra-scolaires (binaire : oui ou non)
+- `garderie` : a fréquenté l’école maternelle (binaire : oui ou non)
+- `etudesSup` : souhaite suivre des études supérieures (binaire : oui ou
+  non)
+- `internet` : accès à l’internet à la maison (binaire : oui ou non)
+- `romance` : avec une relation amoureuse (binaire : oui ou non)
+- `familleQual` : qualité des relations familiales (numérique : de 1 -
+  très mauvaise à 5 - excellente)
+- `tempsLibre` : temps libre après l’école (numérique : de 1 - très
+  faible à 5 - très élevé)
+- `sorties` : sorties avec des amis (numérique : de 1 - très faible à
+  5 - très élevé)
+- `alcoolSemaine` : consommation d’alcool pendant les journées de
+  travail (numérique : de 1 - très faible à 5 - très élevée)
+- `alcoolWE` : consommation d’alcool le week-end (numérique : de 1 -
+  très faible à 5 - très élevée)
+- `sante` : état de santé actuel (numérique : de 1 - très mauvais à 5 -
+  très bon)
+- `absences` : nombre d’absences scolaires (numérique : de 0 à 100)
+- `intra1` : note de la première période (numérique : de 0 à 100)
+- `intra2` : note de la deuxième période (numérique : de 0 à 100)
+- `final` : note finale (numérique : de 0 à 100) **variable à prédire**
 
 ``` r
 str(basedevoir)
 ```
 
-    ## 'data.frame':    6 obs. of  14 variables:
-    ##  $ DistanceAutoroutes       : num  24 24 24 5 24 24
-    ##  $ DistanceEmployeur        : num  1.45 2 1.95 1.46 2.05 ...
-    ##  $ Ecoles                   : Factor w/ 5 levels "P","Q","R","S",..: 4 4 4 1 4 4
-    ##  $ NiveauPolution           : num  0.597 0.584 0.614 0.871 0.584 0.671
-    ##  $ NombreChambres           : num  5.62 5.84 5.65 4.93 6.35 ...
-    ##  $ Polution                 : Factor w/ 5 levels "K","L","M","N",..: 4 4 4 5 4 5
-    ##  $ ProportionAvant1940      : num  97.9 59.7 87.6 95.7 86.1 96.2
-    ##  $ ProportionEspaceIndustrie: num  18.1 18.1 18.1 19.6 18.1 ...
-    ##  $ ProportionGrandsTerrain  : num  0 0 0 0 0 0
-    ##  $ ProportionNoirs          : num  314.6 24.6 291.6 391.7 83.5 ...
-    ##  $ ProportionPauvres        : num  26.4 15.7 14.1 29.5 17.6 ...
-    ##  $ RatioProfEleve           : num  20.2 20.2 20.2 14.7 20.2 20.2
-    ##  $ TauxCrime                : num  7.4 12.25 12.05 2.37 8.49 ...
-    ##  $ ValeurMaison             : num  17.2 10.2 20.8 14.6 14.5 13.1
+    ## 'data.frame':    6 obs. of  33 variables:
+    ##  $ ecole         : Factor w/ 2 levels "A","B": 1 2 1 1 2 1
+    ##  $ sexe          : chr  "M" "F" "M" "M" ...
+    ##  $ age           : int  18 16 16 18 18 16
+    ##  $ geographie    : Factor w/ 2 levels "campagne","ville": 2 1 2 2 2 2
+    ##  $ tailleFamille : int  5 5 5 4 3 5
+    ##  $ parents       : Factor w/ 2 levels "separes","ensembles": 2 2 2 2 1 2
+    ##  $ educMere      : Factor w/ 5 levels "aucune","primaire14",..: 3 3 2 3 2 1
+    ##  $ educPere      : Factor w/ 5 levels "aucune","primaire14",..: 2 4 3 2 3 3
+    ##  $ metierMere    : Factor w/ 5 levels "maison","sante",..: 4 1 4 3 1 3
+    ##  $ metierPere    : Factor w/ 5 levels "maison","sante",..: 4 4 4 3 3 3
+    ##  $ choixEcole    : Factor w/ 4 levels "cours","maison",..: 4 3 3 2 4 3
+    ##  $ tuteur        : Factor w/ 3 levels "pere","mere",..: 2 2 2 2 2 2
+    ##  $ tempsTransport: num  5 18 4 8 29 9
+    ##  $ tempsEtude    : num  590 230 70 190 170 30
+    ##  $ echec         : int  0 0 0 0 0 0
+    ##  $ extraSupport  : Factor w/ 2 levels "non","oui": 1 1 1 1 1 1
+    ##  $ familleSupport: Factor w/ 2 levels "non","oui": 1 2 2 1 1 1
+    ##  $ extra         : Factor w/ 2 levels "non","oui": 2 1 1 1 1 1
+    ##  $ activites     : Factor w/ 2 levels "non","oui": 2 2 2 2 1 1
+    ##  $ garderie      : Factor w/ 2 levels "non","oui": 2 2 2 2 2 1
+    ##  $ etudesSup     : Factor w/ 2 levels "non","oui": 2 2 2 2 2 2
+    ##  $ internet      : Factor w/ 2 levels "non","oui": 2 2 2 2 2 2
+    ##  $ romance       : Factor w/ 2 levels "non","oui": 1 1 2 1 1 1
+    ##  $ familleQual   : Factor w/ 5 levels "tres mauvaise",..: 4 3 3 5 4 4
+    ##  $ tempsLibre    : Factor w/ 5 levels "tres faible",..: 2 3 3 2 4 3
+    ##  $ sorties       : Factor w/ 5 levels "tres faible",..: 4 3 3 4 3 2
+    ##  $ alcoolSemaine : Factor w/ 5 levels "tres faible",..: 1 1 1 1 1 2
+    ##  $ alcoolWE      : Factor w/ 5 levels "tres faible",..: 3 1 2 2 2 4
+    ##  $ sante         : Factor w/ 5 levels "tres mauvaise",..: 2 2 3 4 4 5
+    ##  $ absences      : int  6 0 0 8 0 0
+    ##  $ intra1        : num  78.2 40.5 54.2 78.8 62.5 ...
+    ##  $ intra2        : num  70.5 52.5 45.8 71.5 66.8 ...
+    ##  $ final         : num  72 54.8 59.5 71.5 72.5 ...
 
 ``` diff
-- (12 septembre 2022) la base est en ligne
+- (21 janvier 2023) la base est en ligne
 ```
 
 Le but du devoir est de mettre en oeuvre, sur des vraies données, les
@@ -97,42 +142,42 @@ techniques exposées en cours.
 4.  Une prévision **des deux modèles** sur la base de test donnée ci-dessous,
 
 ``` r
-loc_fichier = "http://freakonometrics.free.fr/STT5100/TestA2021D1.RData"
+loc_fichier = "http://freakonometrics.free.fr/STT5100/TestH2023-D1.RData"
 download.file(loc_fichier, "base_test_devoir_1.RData")
 load("base_test_devoir_1.RData")
 ```
 
-Plus précisément, une fois construit les deux modèles,
+Plus précisément, une fois construit les deux modèles (je fais ici deux modèles simplistes pour illustrer),
 
 ``` r
-model_1 = lm(ValeurMaison ~ 1, data = basedevoir)
-idx = which((basedevoir$ValeurMaison > min(basedevoir$ValeurMaison )) & (basedevoir$ValeurMaison < max(basedevoir$ValeurMaison )))
+model_1 = lm(final ~ 1, data = basedevoir)
+idx = which((basedevoir$final > min(basedevoir$final )) & (basedevoir$final < max(basedevoir$final )))
 sous_basedevoir = basedevoir[idx,]
-model_2 = lm(ValeurMaison ~ 1, data = sous_basedevoir)
+model_2 = lm(final ~ 1, data = sous_basedevoir)
 ```
 
-On va construire une base avec les prix prédits sur les données de cette
+on va construire une base avec les prix prédits sur les données de cette
 nouvelle base
 
 ``` r
-prix_1 = predict(model_1, newdata = basetest)
-prix_2 = predict(model_2, newdata = basetest)
+note_1 = predict(model_1, newdata = basetest)
+note_2 = predict(model_2, newdata = basetest)
 base_prediction = data.frame(indice = as.numeric(rownames(basetest)),
-                             model_1 = prix_1,
-                             model_2 = prix_2)
+                             model_1 = note_1,
+                             model_2 = note_2)
 apply(base_prediction,2,mean)[2:3]
 ```
 
     ##  model_1  model_2 
-    ## 15.06667 14.85000
+    ## 65.04167 65.75000
 
-Cette base doit contenir 100 observations !
+Cette base doit contenir 256 observations ! (ce qu'on vérifie rapidement)
 
 ``` r
 dim(base_prediction)
 ```
 
-    ## [1] 100   3
+    ## [1] 256   3
 
 On va alors l’exporter
 
@@ -149,10 +194,10 @@ load( paste("prevision-devoir1-",code_permanent,".RData",sep=""))
 str(base_prediction)
 ```
 
-    ## 'data.frame':	100 obs. of  3 variables:
-    ##  $ indice              : num  701 702 703 704 705 706 707 708 709 710 ...
-    ##  $ model_1_ABCD12345678: num  15.1 15.1 15.1 15.1 15.1 ...
-    ##  $ model_2_ABCD12345678: num  14.8 14.8 14.8 14.8 14.8 ...
+    ## 'data.frame':    256 obs. of  3 variables:
+    ##  $ indice              : num  1 2 3 4 5 6 7 8 9 10 ...
+    ##  $ model_1_ABCD12345678: num  65 65 65 65 65 ...
+    ##  $ model_2_ABCD12345678: num  65.8 65.8 65.8 65.8 65.8 ...
 
 * tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `[Anderson Darling](https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test)`). Dans le cas contraire, des points seront enlevés.
 * les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
