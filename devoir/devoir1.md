@@ -21,22 +21,22 @@ La base contient des informations par élèves dans deux écoles, avec 33 variab
 - `tailleFamille` : taille de la famille (numérique)
 - `parents` : statut de cohabitation des parents (binaire : “T” - vivant
   ensemble ou “A” - séparés)
-- `educMere` : niveau d’instruction de la mère (numérique : 0 - aucune,
+- `educMere` : niveau d’instruction de la mère (qualitative : 0 - aucune,
   1 - enseignement primaire (4e année), 2 - de la 5e à la 9e année, 3 -
   enseignement secondaire ou 4 - enseignement supérieur).
-- `educPere` : niveau d’éducation du père (numérique : 0 - aucune, 1 -
+- `educPere` : niveau d’éducation du père (qualitative : 0 - aucune, 1 -
   enseignement primaire (4e année), 2 - de la 5e à la 9e année, 3 -
   enseignement secondaire ou 4 - enseignement supérieur)
-- `metierMere` : emploi de la mère (nominal : “enseignant”, “santé”,
+- `metierMere` : emploi de la mère (qualitative : “enseignant”, “santé”,
   “services” civils (par exemple, administration ou police), “à la
   maison” ou “autre”).
-- `metierPere` : Emploi du père (nominal : “enseignant”, “santé”,
+- `metierPere` : Emploi du père (qualitative : “enseignant”, “santé”,
   “services” civils (par exemple, administration ou police),
   “à_la_famille” ou “autre”)
 - `choixEcole` : raison pour laquelle l’élève a choisi cette école
-  (nominal : proximité du “domicile”, “réputation” de l’école,
+  (qualitative : proximité du “domicile”, “réputation” de l’école,
   préférence pour un “cours” ou “autre”).
-- `tuteur` : tuteur de l’élève (nominal : “mère”, “père” ou “autre”)
+- `tuteur` : tuteur de l’élève (qualitative : “mère”, “père” ou “autre”)
 - `tempsTransport` : temps de trajet domicile-école, en minutes
 - `tempsEtude` : temps d’étude hebdomadaire, en minutes
 - `echec` : nombre d’échecs en classe dans le passé (numérique : n si
@@ -54,15 +54,15 @@ La base contient des informations par élèves dans deux écoles, avec 33 variab
 - `romance` : avec une relation amoureuse (binaire : oui ou non)
 - `familleQual` : qualité des relations familiales (numérique : de 1 -
   très mauvaise à 5 - excellente)
-- `tempsLibre` : temps libre après l’école (numérique : de 1 - très
+- `tempsLibre` : temps libre après l’école (qualitative : de 1 - très
   faible à 5 - très élevé)
-- `sorties` : sorties avec des amis (numérique : de 1 - très faible à
+- `sorties` : sorties avec des amis (qualitative : de 1 - très faible à
   5 - très élevé)
 - `alcoolSemaine` : consommation d’alcool pendant les journées de
-  travail (numérique : de 1 - très faible à 5 - très élevée)
-- `alcoolWE` : consommation d’alcool le week-end (numérique : de 1 -
+  travail (qualitative : de 1 - très faible à 5 - très élevée)
+- `alcoolWE` : consommation d’alcool le week-end (qualitative : de 1 -
   très faible à 5 - très élevée)
-- `sante` : état de santé actuel (numérique : de 1 - très mauvais à 5 -
+- `sante` : état de santé actuel (qualitative : de 1 - très mauvais à 5 -
   très bon)
 - `absences` : nombre d’absences scolaires (numérique : de 0 à 100)
 - `intra1` : note de la première période (numérique : de 0 à 100)
