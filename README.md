@@ -9,7 +9,7 @@ Plan de cours : [Plan_Cours_STT5100_H2023.pdf](/docs/STT5100_plan_de_cours_H2023
 Démonstrateur : Anne Paquet
 
 ```diff
-- Le premier cours aura lieu le vendredi 13 janvier
+- Les données pour le premier devoir sont en ligne !
 ```
 
 **Prérequis**
