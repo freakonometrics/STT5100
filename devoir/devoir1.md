@@ -115,7 +115,7 @@ str(basedevoir)
 Le but du devoir est de mettre en oeuvre, sur des vraies données, les
 techniques exposées en cours.
 
-*   Date limite pour envoyer le devoir **14 novembre** a **midi**,
+*   Date limite pour envoyer le devoir **8 mars 2023** a **midi**,
 *   Chaque etudiant(e) doit déposer sur l’espace dédié, sur [Moodle](https://ena01.uqam.ca/mod/assign/view.php?id=3199734),
     trois fichiers : `devoir1-ABCD12345678.hmtl`, sortie d’un fichier
     `devoir1-ABCD12345678.Rmd`, et `prevision-devoir1-ABCD12345678.RData` (il faudra envoyer les deux fichiers), où
@@ -129,8 +129,7 @@ techniques exposées en cours.
 *  Le fichier doit contenir quatre parties
 
 1.  Une partie exploratoire qui presente rapidement les variables qui
-    pourraient etre intéressantes pour prédire ensuite la valeur des
-    maisons (pour rappel, `ValeurMaison` est la variable d’interet)
+    pourraient etre intéressantes pour prédire ensuite la note finale de l'étudiant (pour rappel, `final` est la variable d’interet)
 2.  Une partie presentant la construction d'un modele "simple", par exemple 
     partir au choix (i) d’un modele simple, et de montrer comment
     l’ameliorer, (ii) d’un modele complexe, et de montrer comment le
