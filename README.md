@@ -4,7 +4,7 @@ Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_Cours_STT5100_H2023.pdf](/docs/STT5100_plan_de_cours_H2023_non_approuve.pdf) (version non-approuvée)
+Plan de cours : [Plan_Cours_STT5100_H2023.pdf](/docs/STT5100_plan_de_cours_H2023_non_approuve.pdf) (version approuvée)
 
 Démonstrateur : Anne Paquet
 
