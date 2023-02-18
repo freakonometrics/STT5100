@@ -19,6 +19,7 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 **Démonstrations et codes**
 * démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
 * codes R (1-2-3): [STT5100code123.md](devoir/STT5100code123.md)
+* codes R (4-5-6): [STT5100code456.md](devoir/STT5100-H2023-2.md)
 
 **Examens**
 * Modèles de régression - OLS intra : 
