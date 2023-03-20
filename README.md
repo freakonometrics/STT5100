@@ -9,7 +9,7 @@ Plan de cours : [Plan_Cours_STT5100_H2023.pdf](/docs/STT5100_plan_de_cours_H2023
 Démonstrateur : Anne Paquet
 
 ```diff
-- Les données pour le premier devoir sont en ligne !
+- Les données pour le second devoir sont en ligne !
 ```
 
 **Prérequis**
@@ -22,12 +22,12 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 * codes R (4-5-6): [STT5100code456.md](devoir/STT5100-H2023-2.md)
 
 **Examens**
-* Modèles de régression - OLS intra : 
-* Modèles de régression - GLM final :
+* Modèles de régression - OLS intra 
+* Modèles de régression - GLM final
 
 **Projets / Devoir**
 * Modèles de régression - OLS : [devoir1.md](/devoir/devoir1.md)
-* Modèles de régression - GLM : [devoir2.md](), 
+* Modèles de régression - GLM : [devoir1.md](/devoir/devoir2.md)
 
 **Introduction**
 
