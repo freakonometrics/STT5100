@@ -1,6 +1,5 @@
-STT5100 Devoir 2
+STT5100 (H2023) devoir 2
 ================
-Arthur Charpentier
 
 ``` r
 code_permanent = "ABCD12345678"
