@@ -1,7 +1,8 @@
-MANDASS
+Code tapé en cours
 ================
-Arthur Charpentier
-2022
+
+# Cours régression logistique
+
 
 ``` r
 # LOGISTIQUE
