@@ -179,8 +179,8 @@ str(base_prediction)
     ##  $ model_1_ABCD12345678: num  0.667 0.667 0.667 0.667 0.667 ...
     ##  $ model_2_ABCD12345678: num  0.75 0.5 0.5 0.75 0.75 ...
 
-Un fichier intitulé `ABCD12345678A2020-proba2000.RData` sera créé lors de la compilation, et je
-vous demande de me le déposer sur Moodle avec les deux autres fichiers (`ABCD12345678A2020-devoir2.Rmd` et `ABCD12345678A2020-devoir2.html`). 
+Un fichier intitulé `prevision-devoir2-ABCD12345678.RData` sera créé lors de la compilation, et je
+vous demande de me le déposer sur Moodle avec les deux autres fichiers (`devoir2-ABCD12345678.Rmd` et `devoir2-ABCD12345678.html`). 
 
 **Précisions complémentaires**
 
