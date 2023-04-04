@@ -1,6 +1,11 @@
 STT5100 (H2023) devoir 2
 ================
 
+
+```diff
+- Les instructions ont été rajoutées (voir plus bas)
+```
+
 ``` r
 code_permanent = "ABCD12345678"
 loc_fichier = paste("http://freakonometrics.free.fr/STT5100/",code_permanent,"-H2023D2.RData",sep="")
@@ -102,11 +107,42 @@ str(basedevoir)
     ##  $ oppose_direction : int  1 1 1 1 0 0
     ##  $ y                : Factor w/ 2 levels "pas achat","achat": 2 2 2 2 1 1
 
+**Instructions**
+
+Le but de ce second projet est de construire un modèle prédictif pour quantifier la probabilité de réponse positivement, ou pas, à une sollicitation commerciale. Il convidendra d'adopter le plan suivant :
+
+**1.Présentation des données**
+
+Dans une première partie, il faudra un peu de statistique descriptives, montrant quelles variables sont *a priori* corrélées avec la variable d'intérêt, `y`. Des graphiques sont attendus dans cette partie. Dans cette partie, vous avez le droit de transformer vos variables et de supprimer certains individus, si vous l'expliquez.
+
+**2.Un premier modèle**
+
+En utilisant les techniques du cours, **et uniquement les techniques du cours**, il faudra expliquer comment vous avez contruit un premier modèle qui vous semble valide, simplement en retenant quelques variables, sans transformation de variables.
+
+**3.Le modèle final**
+
+Dans un second temps, vous essayerez d'améliorer ce premier modèle, peut-être en tenant compte de non-linéarités potentielles, ou en regroupant des modalités de variables qualitatives. 
+
+**4.Indicateurs**
+
+Dans une section spécifique, il faudra indiquer
+* le AIC des deux modèles retenus
+* le BIC des modèles retenus
+* le AUC des modèles retenus
+et de tracer la courbe ROC de vos deux modèles.
+
+**5.Prévision**
+
+Une fois construit votre modèle final, il faudra faire des prévisions sur 862 observations (merci de
+copier-coller du code suivant à la fin de votre fichier Rmd)
+
+
 ``` r
 loc_fichier = "http://freakonometrics.free.fr/STT5100/TestH2023D2.RData"
 download.file(loc_fichier, "base_test_devoir_2.RData")
 load("base_test_devoir_2.RData")
 ```
+Afin d'avoir un code qui compile, je créée artificiellement deux modèles, mais vous devez utiliser ici les deux modèles que vous avez construits auparavant.
 
 ``` r
 model_1 = glm(y ~ 1, data = basedevoir, family=binomial)
@@ -142,3 +178,19 @@ str(base_prediction)
     ##  $ indice              : num  1 2 3 4 5 6 7 8 9 10 ...
     ##  $ model_1_ABCD12345678: num  0.667 0.667 0.667 0.667 0.667 ...
     ##  $ model_2_ABCD12345678: num  0.75 0.5 0.5 0.75 0.75 ...
+
+Un fichier intitulé `ABCD12345678A2020-proba2000.RData` sera créé lors de la compilation, et je
+vous demande de me le déposer sur Moodle avec les deux autres fichiers (`ABCD12345678A2020-devoir2.Rmd` et `ABCD12345678A2020-devoir2.html`). 
+
+**Précisions complémentaires**
+
+* dans le préambule de fichier `ABCD12345678A2020-devoir2.Rmd`, l'auteur doit contenir le **code permanent**, `author: "ABCD12345678: John Doe"`
+* les techniques de validation croisée, ou la constitution de bases d’apprentissage et de test (*hold-out*) ne sont pas au programme et ne devront pas etre utilisées pour ce devoir.
+* tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `<https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test>`). Dans le cas contraitre, des points seront enlevés.
+* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `ROCR`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
+* la forme du document et sa lisibilité interviendront dans la notation. Afficher des tableaux de plusieurs centaines de lignes, par exemple, est à proscrire.
+* les rapports sont individuels ! s'il est autorisé de discuter avec d'autres élèves du groupe (en respectant le protocol sanitaire en vigueur), chacun doit rendre son propre rapport. Dans le cas où deux fichiers identiques seraient envoyés par deux élèves différents, les deux élèves seront sanctionnés.
+
+<img src="https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/obviously.png" alt="drawing" width="300" align=right/>
+
+Le fichier html doit être lisible dans un navigateur internet (Firefox) et le code Rmd doit compiler sans erreur. Le préambule du fichier Rmd doit contenir comme auteur le code permanent. Tout fichier qui ne compile pas et/ou qui n'est pas lisible donnera lieu à une forte pénalisation.
