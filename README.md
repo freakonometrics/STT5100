@@ -1,4 +1,4 @@
-# STT5100 Modèles Linéaires Appliqués (Hiver 2023)
+# STT5100 Modèles Linéaires Appliqués (Automne 2023)
 
 Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
