@@ -4,12 +4,12 @@ Arthur Charpentier, [@freakonometrics](https://twitter.com/freakonometrics)
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_Cours_STT5100_H2023.pdf](/docs/STT5100_plan_de_cours_H2023_non_approuve.pdf) (version approuvée)
+Plan de cours : [Plan_Cours_STT5100_A2023.pdf](/docs/STT5100_plan_de_cours_A2023_non_approuve.pdf) (version approuvée)
 
-Démonstrateur : Anne Paquet
+Démonstrateur : xxx
 
 ```diff
-- Les données pour le second devoir sont en ligne !
+- La page sera mis à jour cet été
 ```
 
 **Prérequis**
@@ -18,17 +18,14 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 
 **Démonstrations et codes**
 * démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
-* codes R (OLS 1-2-3): [STT5100code123.md](devoir/STT5100code123.md)
-* codes R (OLS 4-5-6): [STT5100code456.md](devoir/STT5100-H2023-2.md)
-* codes R (GLM 1 - logistique): [STT5100codelogistique.md](devoir/STT5100codelogistique.md)
 
 **Examens**
 * Modèles de régression - OLS intra 
 * Modèles de régression - GLM final
 
 **Projets / Devoir**
-* Modèles de régression - OLS : [devoir1.md](/devoir/devoir1.md)
-* Modèles de régression - GLM : [devoir2.md](/devoir/devoir2.md)
+* Modèles de régression - OLS : [devoir1.md](/devoir/)
+* Modèles de régression - GLM : [devoir2.md](/devoir/)
 
 **Introduction**
 
