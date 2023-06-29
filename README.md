@@ -9,7 +9,7 @@ Plan de cours : [Plan_Cours_STT5100_A2023.pdf](/docs/STT5100_plan_de_cours_A2023
 Démonstrateur : xxx
 
 ```diff
-- La page sera mis à jour cet été
+- La page sera mise à jour cet été
 ```
 
 **Prérequis**
