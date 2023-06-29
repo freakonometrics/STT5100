@@ -4,7 +4,7 @@ Arthur Charpentier,
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_Cours_STT5100_A2023.pdf](/docs/STT5100_plan_de_cours_A2023_non_approuve.pdf) (version approuvée)
+Plan de cours : *à venir* [Plan_Cours_STT5100_A2023.pdf](/docs/STT5100_plan_de_cours_A2023_non_approuve.pdf) (version approuvée)
 
 Démonstrateur : xxx
 
@@ -24,8 +24,8 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 * Modèles de régression - GLM final
 
 **Projets / Devoir**
-* Modèles de régression - OLS : [devoir1.md](/devoir/)
-* Modèles de régression - GLM : [devoir2.md](/devoir/)
+* Modèles de régression - OLS : *à venir* [devoir1.md](/devoir/)
+* Modèles de régression - GLM : *à venir* [devoir2.md](/devoir/)
 
 **Introduction**
 
