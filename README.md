@@ -20,8 +20,8 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 * démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
 
 **Examens**
-* Modèles de régression - OLS intra 
-* Modèles de régression - GLM final
+* Modèles de régression - OLS intra (3 novembre)
+* Modèles de régression - GLM final (15 décembre)
 
 **Projets / Devoir**
 * Modèles de régression - OLS : *à venir* [devoir1.md](/devoir/)
