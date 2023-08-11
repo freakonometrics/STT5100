@@ -1,6 +1,6 @@
 # STT5100 Modèles Linéaires Appliqués (Automne 2023)
 
-Arthur Charpentier,
+Arthur Charpentier, professeur
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
