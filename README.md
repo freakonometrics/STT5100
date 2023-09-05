@@ -116,6 +116,7 @@ Quelques compléments
 * Julian, J. Faraway, 2002, Practical Regression and Anova using R, [CRAN](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)
 * James H. Stock & Mark W. Watson, 2007, Introduction to Econometrics, [Addison Wesley](https://www.pearson.com/us/higher-education/product/Stock-Introduction-to-Econometrics-3rd-Edition/9780138009007.html)
 * Achim Zeileis, 2008, Applied Econometrics with R, [Springer Verlag](https://eeecon.uibk.ac.at/~zeileis/teaching/AER/index.html)
+* Michel Denuit & Arthur Charpentier, [chapitre9.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2018/chapitre9.pdf), extrait de [Charpentier & Denuit (2005)](https://freakonometrics.hypotheses.org/files/2018/11/ASSNVT1.pdf), voir aussi [https://nonlifemaths.github.io/chap9.html](https://nonlifemaths.github.io/chap9.html) (en anglais)
 * Yihui Xie, J. J. Allaire & Garrett Grolemund, R Markdown: The Definitive Guide [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
 * Ewen Gallic, 2020, Notes de cours de R, [https://egallic.fr/Enseignement/R/Book/](https://egallic.fr/Enseignement/R/Book/avant-propos.html)
 * ACT3035 [https://nour.me/act3035/](https://nour.me/act3035/)
