@@ -9,7 +9,7 @@ Plan de cours : [Plan_Cours_STT5100_A2023.pdf](https://github.com/freakonometric
 Démonstrateur : *à confirmer*
 
 ```diff
-- La page sera mise à jour cet été
+- Toujours pas de démo
 ```
 
 **Prérequis**
