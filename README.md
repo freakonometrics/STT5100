@@ -19,6 +19,23 @@ selon [UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont 
 **Démonstrations et codes**
 * démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
 
+``` r
+library(DALEX)
+data("apartments")
+str(apartments)
+
+data("titanic")
+str(titanic)
+
+location=read.table("http://freakonometrics.free.fr/rent98_00.txt",header=TRUE)
+str(location)
+
+davis=read.table(
+  "http://socserv.socsci.mcmaster.ca/jfox/Books/Applied-Regression-2E/datasets/Davis.txt")
+davis[12,c(2,3)]=davis[12,c(3,2)]
+str(davis)
+```
+
 **Examens**
 * Modèles de régression - OLS intra (3 novembre)
 * Modèles de régression - GLM final (15 décembre)
