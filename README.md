@@ -9,7 +9,7 @@ Plan de cours : [Plan_Cours_STT5100_A2023.pdf](https://github.com/freakonometric
 Démonstrateur : *à confirmer*
 
 ```diff
-- Toujours pas de démo
+- La base de données pour le premier devoir est en ligne
 ```
 
 **Prérequis**
@@ -41,7 +41,7 @@ str(davis)
 * Modèles de régression - GLM final (15 décembre)
 
 **Projets / Devoir**
-* Modèles de régression - OLS : *à venir* [devoir1.md](/devoir/)
+* Modèles de régression - OLS : [devoir1.md](/devoir/devoir1.md)
 * Modèles de régression - GLM : *à venir* [devoir2.md](/devoir/)
 
 **Introduction**
