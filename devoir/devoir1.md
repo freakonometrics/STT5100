@@ -1,115 +1,53 @@
-STT5100 (H2023) devoir 1
+STT5100 (A2023) devoir 1
 ================
 
 ``` r
 code_permanent = "ABCD12345678"
-loc_fichier = paste("http://freakonometrics.free.fr/STT5100/",code_permanent,"-H2023D1.RData",sep="")
-download.file(loc_fichier, "base_devoir_1.RData")
-load("base_devoir_1.RData")
-dim(basedevoir)
+loc_fichier = paste("http://freakonometrics.free.fr/STT5100/A2023/Devoir1/STT5100A2023Devoir1",code_permanent,".RData",sep="")
+download.file(loc_fichier, "base_devoir.RData")
+load("base_devoir.RData")
+dim(base_6_stt5100_a2023)
 ```
 
-    ## [1]  6 33
+    ## [1]  6 13
 
-La base contient des informations par élèves dans deux écoles, avec 33 variables,
+La base contient les informations pour des locations de vélos (type bixi)
 
-- `ecole` : école de l’élève (binaire : “A” ou “B”)
-- `sexe` : sexe de l’étudiant (binaire : “F” - femme ou “M” - homme)
-- `age` : âge de l’étudiant (numérique : de 15 à 22)
-- `geographie` : type d’adresse du domicile de l’étudiant (binaire :
-  “U” - urbain ou “R” - rural)
-- `tailleFamille` : taille de la famille (numérique)
-- `parents` : statut de cohabitation des parents (binaire : “T” - vivant
-  ensemble ou “A” - séparés)
-- `educMere` : niveau d’instruction de la mère (qualitative : 0 - aucune,
-  1 - enseignement primaire (4e année), 2 - de la 5e à la 9e année, 3 -
-  enseignement secondaire ou 4 - enseignement supérieur).
-- `educPere` : niveau d’éducation du père (qualitative : 0 - aucune, 1 -
-  enseignement primaire (4e année), 2 - de la 5e à la 9e année, 3 -
-  enseignement secondaire ou 4 - enseignement supérieur)
-- `metierMere` : emploi de la mère (qualitative : “enseignant”, “santé”,
-  “services” civils (par exemple, administration ou police), “à la
-  maison” ou “autre”).
-- `metierPere` : Emploi du père (qualitative : “enseignant”, “santé”,
-  “services” civils (par exemple, administration ou police),
-  “à_la_famille” ou “autre”)
-- `choixEcole` : raison pour laquelle l’élève a choisi cette école
-  (qualitative : proximité du “domicile”, “réputation” de l’école,
-  préférence pour un “cours” ou “autre”).
-- `tuteur` : tuteur de l’élève (qualitative : “mère”, “père” ou “autre”)
-- `tempsTransport` : temps de trajet domicile-école, en minutes
-- `tempsEtude` : temps d’étude hebdomadaire, en minutes
-- `echec` : nombre d’échecs en classe dans le passé (numérique : n si
-  1\<=n\<3, sinon 4)
-- `extraSupport` : soutien scolaire supplémentaire (binaire : oui ou
-  non)
-- `extra` : soutien scolaire familial (binaire : oui ou non)
-- `activites` : cours supplémentaires rémunérés dans la matière du cours
-  (mathématiques ou français) (binaire : oui ou non)
-- `activites` : activités extra-scolaires (binaire : oui ou non)
-- `garderie` : a fréquenté l’école maternelle (binaire : oui ou non)
-- `etudesSup` : souhaite suivre des études supérieures (binaire : oui ou
-  non)
-- `internet` : accès à l’internet à la maison (binaire : oui ou non)
-- `romance` : avec une relation amoureuse (binaire : oui ou non)
-- `familleQual` : qualité des relations familiales (numérique : de 1 -
-  très mauvaise à 5 - excellente)
-- `tempsLibre` : temps libre après l’école (qualitative : de 1 - très
-  faible à 5 - très élevé)
-- `sorties` : sorties avec des amis (qualitative : de 1 - très faible à
-  5 - très élevé)
-- `alcoolSemaine` : consommation d’alcool pendant les journées de
-  travail (qualitative : de 1 - très faible à 5 - très élevée)
-- `alcoolWE` : consommation d’alcool le week-end (qualitative : de 1 -
-  très faible à 5 - très élevée)
-- `sante` : état de santé actuel (qualitative : de 1 - très mauvais à 5 -
-  très bon)
-- `absences` : nombre d’absences scolaires (numérique : de 0 à 100)
-- `intra1` : note de la première période (numérique : de 0 à 100)
-- `intra2` : note de la deuxième période (numérique : de 0 à 100)
-- `final` : note finale (numérique : de 0 à 100) **variable à prédire**
+- `y` : nombre de vélo loués pendant l'heure **variable à prédire**
+- `heure` : heure de la journée (numérique, entre 0 et 23)
+- `temperature` : température (numérique, en degré Celsius)
+- `humidite` : taux d'humidité (numérique, de 0 à 100)
+- `vent` : vitesse du vent (numérique, en m/s)
+- `visibilite` : visibilité (unité inconnue)
+- `luminosite` : indice de luminosité (unité inconnue, 0 correspond à la nuit)
+- `pluie` : pluviométrie (en mm) pendant l'heure
+- `neige` : quantité de neige tombée pendant l'heure (en cm)
+- `saison` : saison de l'année (`Winter`, `Spring`, `Summer`, `Autumn`)
+- `holiday` : jour férié (ou pas, en chaîne de caractères)
+- `mois` : mois de l'année (`Jan`, `Feb`, ..., `Dec`)
+- `jour` : jour de la semaine (`Mon`,`Tue`, ..., `Sun`)
 
 ``` r
-str(basedevoir)
+str(base_6_stt5100_a2023)
 ```
 
-    ## 'data.frame':    6 obs. of  33 variables:
-    ##  $ ecole         : Factor w/ 2 levels "A","B": 1 2 1 1 2 1
-    ##  $ sexe          : chr  "M" "F" "M" "M" ...
-    ##  $ age           : int  18 16 16 18 18 16
-    ##  $ geographie    : Factor w/ 2 levels "campagne","ville": 2 1 2 2 2 2
-    ##  $ tailleFamille : int  5 5 5 4 3 5
-    ##  $ parents       : Factor w/ 2 levels "separes","ensembles": 2 2 2 2 1 2
-    ##  $ educMere      : Factor w/ 5 levels "aucune","primaire14",..: 3 3 2 3 2 1
-    ##  $ educPere      : Factor w/ 5 levels "aucune","primaire14",..: 2 4 3 2 3 3
-    ##  $ metierMere    : Factor w/ 5 levels "maison","sante",..: 4 1 4 3 1 3
-    ##  $ metierPere    : Factor w/ 5 levels "maison","sante",..: 4 4 4 3 3 3
-    ##  $ choixEcole    : Factor w/ 4 levels "cours","maison",..: 4 3 3 2 4 3
-    ##  $ tuteur        : Factor w/ 3 levels "pere","mere",..: 2 2 2 2 2 2
-    ##  $ tempsTransport: num  5 18 4 8 29 9
-    ##  $ tempsEtude    : num  590 230 70 190 170 30
-    ##  $ echec         : int  0 0 0 0 0 0
-    ##  $ extraSupport  : Factor w/ 2 levels "non","oui": 1 1 1 1 1 1
-    ##  $ familleSupport: Factor w/ 2 levels "non","oui": 1 2 2 1 1 1
-    ##  $ extra         : Factor w/ 2 levels "non","oui": 2 1 1 1 1 1
-    ##  $ activites     : Factor w/ 2 levels "non","oui": 2 2 2 2 1 1
-    ##  $ garderie      : Factor w/ 2 levels "non","oui": 2 2 2 2 2 1
-    ##  $ etudesSup     : Factor w/ 2 levels "non","oui": 2 2 2 2 2 2
-    ##  $ internet      : Factor w/ 2 levels "non","oui": 2 2 2 2 2 2
-    ##  $ romance       : Factor w/ 2 levels "non","oui": 1 1 2 1 1 1
-    ##  $ familleQual   : Factor w/ 5 levels "tres mauvaise",..: 4 3 3 5 4 4
-    ##  $ tempsLibre    : Factor w/ 5 levels "tres faible",..: 2 3 3 2 4 3
-    ##  $ sorties       : Factor w/ 5 levels "tres faible",..: 4 3 3 4 3 2
-    ##  $ alcoolSemaine : Factor w/ 5 levels "tres faible",..: 1 1 1 1 1 2
-    ##  $ alcoolWE      : Factor w/ 5 levels "tres faible",..: 3 1 2 2 2 4
-    ##  $ sante         : Factor w/ 5 levels "tres mauvaise",..: 2 2 3 4 4 5
-    ##  $ absences      : int  6 0 0 8 0 0
-    ##  $ intra1        : num  78.2 40.5 54.2 78.8 62.5 ...
-    ##  $ intra2        : num  70.5 52.5 45.8 71.5 66.8 ...
-    ##  $ final         : num  72 54.8 59.5 71.5 72.5 ...
+    ## 'data.frame':    6 obs. of  13 variables:
+    ##  $ y          : num  226 95 849 473 1342 ...
+    ##  $ heure      : num  2 3 17 16 9 12
+    ##  $ temperature: num  5.5 4.7 10.4 8.2 20.5 10.4
+    ##  $ humidite   : num  56 44 37 64 73 44
+    ##  $ vent       : num  1.2 3.8 1 1 1.6 1.7
+    ##  $ visibilite : num  1067 2000 2000 281 364 ...
+    ##  $ luminosite : num  0 0 0.67 0.32 1.23 2.93
+    ##  $ pluie      : num  0 0 0 0 0 0
+    ##  $ neige      : num  0 0 0 0 0 0
+    ##  $ saison     : Factor w/ 4 levels "Spring","Summer",..: 1 1 1 4 2 1
+    ##  $ holiday    : chr  "No Holiday" "No Holiday" "No Holiday" "No Holiday" ...
+    ##  $ mois       : Factor w/ 12 levels "Jan","Feb","Mar",..: 3 3 3 12 6 4
+    ##  $ jour       : Factor w/ 7 levels "Mon","Tue","Wed",..: 7 2 3 6 4 1
 
 ``` diff
-- (21 janvier 2023) la base est en ligne
+- (22 septembre 2023) la base est en ligne
 ```
 
 Le but du devoir est de mettre en oeuvre, sur des vraies données, les
@@ -117,12 +55,12 @@ techniques exposées en cours.
 
 *   Date limite pour envoyer le devoir **8 mars 2023** a **midi**,
 *   Chaque etudiant(e) doit déposer sur l’espace dédié, sur [Moodle](https://ena01.uqam.ca/mod/assign/view.php?id=3199734),
-    trois fichiers : `devoir1-ABCD12345678.hmtl`, sortie d’un fichier
-    `devoir1-ABCD12345678.Rmd`, et `prevision-devoir1-ABCD12345678.RData` (il faudra envoyer les deux fichiers), où
+    trois fichiers : `STT5100A2023Devoir1ABCD12345678.hmtl`, sortie d’un fichier
+    `STT5100A2023Devoir1ABCD12345678.Rmd`, et `STT5100A2023Devoir1ABCD12345678.RData` (il faudra envoyer les deux fichiers), où
     `ABCD12345678` doit être remplacé par le code permanent de
-    l’étudiant(e). Le fichier `devoir1-ABCD12345678.hmtl` doit etre
-    lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
-    erreur. Le troisième fichier, `prevision-devoir1-ABCD12345678.RData`
+    l’étudiant(e). Le fichier `STT5100A2023Devoir1ABCD12345678.hmtl` doit etre
+    lisible et le fichier `STT5100A2023Devoir1ABCD12345678.Rmd` doit compiler sans
+    erreur. Le troisième fichier, `STT5100A2023Devoir1ABCD12345678.RData`
     sera détaillé plus bas,
 *   Dans le preambule du markdown, `author:` doit mentionner le code
     permanent,
@@ -141,62 +79,67 @@ techniques exposées en cours.
 4.  Une prévision **des deux modèles** sur la base de test donnée ci-dessous,
 
 ``` r
-loc_fichier = "http://freakonometrics.free.fr/STT5100/TestH2023-D1.RData"
-download.file(loc_fichier, "base_test_devoir_1.RData")
-load("base_test_devoir_1.RData")
+loc_fichier = "http://freakonometrics.free.fr/STT5100/A2023/Devoir1/STT5100A2023Devoir1TEST.RData"
+download.file(loc_fichier, "base_devoir_1_test.RData", mode= "wb")
+load("base_devoir_1_test.RData")
+dim(base_test_stt5100_a2023)
 ```
+
+    ## [1] 346  12
 
 Plus précisément, une fois construit les deux modèles (je fais ici deux modèles simplistes pour illustrer),
 
 ``` r
-model_1 = lm(final ~ 1, data = basedevoir)
-idx = which((basedevoir$final > min(basedevoir$final )) & (basedevoir$final < max(basedevoir$final )))
-sous_basedevoir = basedevoir[idx,]
-model_2 = lm(final ~ 1, data = sous_basedevoir)
+model1 = lm(y~1, data = base_6_stt5100_a2023)
+model2 = lm(y~1+temperature , data = base_6_stt5100_a2023)
 ```
 
-on va construire une base avec les prix prédits sur les données de cette
+on va construire une base avec les nombres de vélos empruntés prédits sur les données de cette
 nouvelle base
 
 ``` r
-note_1 = predict(model_1, newdata = basetest)
-note_2 = predict(model_2, newdata = basetest)
-base_prediction = data.frame(indice = as.numeric(rownames(basetest)),
-                             model_1 = note_1,
-                             model_2 = note_2)
-apply(base_prediction,2,mean)[2:3]
+prevision = data.frame(yhat_1 = predict(model1, newdata = base_test_stt5100_a2023),
+                       yhat_2 = predict(model2, newdata = base_test_stt5100_a2023))
+names(prevision) = paste("Y_",code_permanent,"_",1:ncol(prevision),sep="")
+tail(prevision)
 ```
 
-    ##  model_1  model_2 
-    ## 65.04167 65.75000
+    ##     Y_ABCD12345678_1 Y_ABCD12345678_2
+    ## 341         630.6667         378.7508
+    ## 342         630.6667        1417.4192
+    ## 343         630.6667        -241.3497
+    ## 344         630.6667         153.9644
+    ## 345         630.6667        2122.7836
+    ## 346         630.6667        1866.9921
 
-Cette base doit contenir 256 observations ! (ce qu'on vérifie rapidement)
+Cette base doit contenir 346 observations ! (ce qu'on vérifie rapidement ici)
 
 ``` r
-dim(base_prediction)
+dim(prevision)
 ```
 
-    ## [1] 256   3
+    ## [1] 346   3
 
 On va alors l’exporter
 
 ``` r
-names(base_prediction) = c("indice",paste("model_",1:2,"_",code_permanent,sep=""))
-save(base_prediction, file = paste("prevision-devoir1-",code_permanent,".RData",sep=""))
+nom_fichier = paste("STT5100A2023Devoir1Prevision_",code_permanent,"_test.RData",sep="")
+save("prevision", file = nom_fichier)
 ```
 
 Vérifions que le fichier a bien été créé
 
 ``` r
-rm(list = "base_prediction")
-load( paste("prevision-devoir1-",code_permanent,".RData",sep=""))
-str(base_prediction)
+rm(list = "prevision")
+nom_fichier = paste("STT5100A2023Devoir1Prevision_",code_permanent,"_test.RData",sep="")
+load(nom_fichier)
+str(prevision)
 ```
 
-    ## 'data.frame':    256 obs. of  3 variables:
-    ##  $ indice              : num  1 2 3 4 5 6 7 8 9 10 ...
-    ##  $ model_1_ABCD12345678: num  65 65 65 65 65 ...
-    ##  $ model_2_ABCD12345678: num  65.8 65.8 65.8 65.8 65.8 ...
+    ## 'data.frame':    346 obs. of  2 variables:
+    ##  $ Y_ABCD12345678_1: num  631 631 631 631 631 ...
+    ##  $ Y_ABCD12345678_2: num  1277.9 797.3 665.5 45.4 1456.2 ...
+
 
 * tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `[Anderson Darling](https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test)`). Dans le cas contraire, des points seront enlevés.
 * les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
