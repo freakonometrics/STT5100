@@ -53,8 +53,8 @@ str(base_6_stt5100_a2023)
 Le but du devoir est de mettre en oeuvre, sur des vraies données, les
 techniques exposées en cours.
 
-*   Date limite pour envoyer le devoir **8 mars 2023** a **midi**,
-*   Chaque etudiant(e) doit déposer sur l’espace dédié, sur [Moodle](https://ena01.uqam.ca/mod/assign/view.php?id=3199734),
+*   Date limite pour envoyer le devoir **8 novembre 2023** a **midi**,
+*   Chaque etudiant(e) doit déposer sur l’espace dédié, sur [Moodle](https://ena01.uqam.ca/mod/assign/view.php),
     trois fichiers : `STT5100A2023Devoir1ABCD12345678.hmtl`, sortie d’un fichier
     `STT5100A2023Devoir1ABCD12345678.Rmd`, et `STT5100A2023Devoir1ABCD12345678.RData` (il faudra envoyer les deux fichiers), où
     `ABCD12345678` doit être remplacé par le code permanent de
