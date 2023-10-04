@@ -60,7 +60,7 @@ techniques exposées en cours.
     `ABCD12345678` doit être remplacé par le code permanent de
     l’étudiant(e). Le fichier `STT5100A2023Devoir1ABCD12345678.hmtl` doit etre
     lisible et le fichier `STT5100A2023Devoir1ABCD12345678.Rmd` doit compiler sans
-    erreur. Le troisième fichier, `STT5100A2023Devoir1ABCD12345678.RData`
+    erreur. Le troisième fichier, `STT5100A2023Devoir1Prevision_ABCD12345678_test.RData`
     sera détaillé plus bas,
 *   Dans le preambule du markdown, `author:` doit mentionner le code
     permanent,
