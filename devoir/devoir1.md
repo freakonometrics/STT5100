@@ -67,12 +67,12 @@ techniques exposées en cours.
 *  Le fichier doit contenir quatre parties
 
 1.  Une partie exploratoire qui presente rapidement les variables qui
-    pourraient etre intéressantes pour prédire ensuite la note finale de l'étudiant (pour rappel, `final` est la variable d’interet)
+    pourraient etre intéressantes pour prédire ensuite le nombre de vélos empruntés (pour rappel, `y` est la variable d’interet)
 2.  Une partie presentant la construction d'un modele "simple", par exemple 
     partir au choix (i) d’un modele simple, et de montrer comment
     l’ameliorer, (ii) d’un modele complexe, et de montrer comment le
     simplifier
-3.  Une partie proposant une amélioration du modèle, par exemple en transformant une variable explicative
+3.  Une partie proposant une amélioration du modèle, par exemple en transformant une ou plusieurs variables explicatives, voire en modélisant le logarithme de la variable d'intérêt
 4.  Une partie qui presente les deux modeles, en donnant (i) le R2
     ajuste (ii) l’indice d’Akaike AIC et (iii) l’indice BIC (iv) la
     liste des variables explicatives retenues,
