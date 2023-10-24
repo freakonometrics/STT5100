@@ -82,20 +82,20 @@ str(base_6_stt5100_a2023)
 
 
 ``` diff
-- (22 septembre 2023) la base est en ligne
+- (24 octobre 2023) la base est en ligne
 ```
 
 Le but du devoir est de mettre en oeuvre, sur des vraies données, les
 techniques exposées en cours.
 
-*   Date limite pour envoyer le devoir **8 novembre 2023** a **midi**,
+*   Date limite pour envoyer le devoir **20 décembre 2023** a **midi**,
 *   Chaque etudiant(e) doit déposer sur l’espace dédié, sur [Moodle](https://ena01.uqam.ca/mod/assign/view.php),
-    trois fichiers : `STT5100A2023Devoir1ABCD12345678.hmtl`, sortie d’un fichier
-    `STT5100A2023Devoir1ABCD12345678.Rmd`, et `STT5100A2023Devoir1ABCD12345678.RData` (il faudra envoyer les deux fichiers), où
+    trois fichiers : `STT5100A2023Devoir2ABCD12345678.hmtl`, sortie d’un fichier
+    `STT5100A2023Devoir2ABCD12345678.Rmd`, et `STT5100A2023Devoir2ABCD12345678.RData` (il faudra envoyer les deux fichiers), où
     `ABCD12345678` doit être remplacé par le code permanent de
-    l’étudiant(e). Le fichier `STT5100A2023Devoir1ABCD12345678.hmtl` doit etre
-    lisible et le fichier `STT5100A2023Devoir1ABCD12345678.Rmd` doit compiler sans
-    erreur. Le troisième fichier, `STT5100A2023Devoir1Prevision_ABCD12345678_test.RData`
+    l’étudiant(e). Le fichier `STT5100A2023Devoir2ABCD12345678.hmtl` doit etre
+    lisible et le fichier `STT5100A2023Devoir2ABCD12345678.Rmd` doit compiler sans
+    erreur. Le troisième fichier, `STT5100A2023Devoir2Prevision_ABCD12345678_test.RData`
     sera détaillé plus bas,
 *   Dans le preambule du markdown, `author:` doit mentionner le code
     permanent,
@@ -108,9 +108,11 @@ techniques exposées en cours.
     l’ameliorer, (ii) d’un modele complexe, et de montrer comment le
     simplifier
 3.  Une partie proposant une amélioration du modèle, par exemple en transformant une ou plusieurs variables explicatives, voire en modélisant le logarithme de la variable d'intérêt
-4.  Une partie qui presente les deux modeles, en donnant (i) le R2
-    ajuste (ii) l’indice d’Akaike AIC et (iii) l’indice BIC (iv) la
-    liste des variables explicatives retenues,
+4.  Une partie spécifique, qui indiquera
+-    le AIC des deux modèles retenus
+-    le BIC des modèles retenus
+-    le AUC des modèles retenus et des graphiques avec la courbe ROC de vos deux modèles.
+
 
    Plus précisément, une fois construit les deux modèles (je fais ici deux modèles simplistes pour illustrer),
 
@@ -168,7 +170,7 @@ str(prevision)
 
 
 * tout test utilisé qui n'a pas été présenté dans le cadre du cours devra être expliqué, motivé, et pointer vers une référence (la commande pour insérer un lien est, e.g. `[Anderson Darling](https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test)`). Dans le cas contraire, des points seront enlevés.
-* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
+* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np`, `pROC`, `ROCR`, `PRROC`, `plotROC`, `ROCit` les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
 * la forme du document et sa lisibilité interviendront dans la notation. Afficher des tableaux de plusieurs centaines de lignes, par exemple, est à proscrire.
 * les rapports sont individuels ! s'il est autorisé de discuter avec d'autres élèves du groupe (en respectant le protocol sanitaire en vigueur), chacun doit rendre son propre rapport. Dans le cas où deux fichiers identiques seraient envoyés par deux élèves différents, les deux élèves seront sanctionnés.
 
