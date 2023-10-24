@@ -130,7 +130,7 @@ load("base_devoir_2_test.RData")
 dim(base_test_stt5100_a2023)
 ```
 
-    ## [1] 1062   29
+    ## [1] 1036   29
 
 ``` r
 prevision = data.frame(yhat_1 = predict(model1, 
@@ -144,14 +144,14 @@ tail(prevision)
 ```
 
     ##      Y_ABCD12345678_1 Y_ABCD12345678_2
-    ## 1057        0.8333333        1.0000000
-    ## 1058        0.8333333        1.0000000
-    ## 1059        0.8333333        0.8531455
-    ## 1060        0.8333333        1.0000000
-    ## 1061        0.8333333        1.0000000
-    ## 1062        0.8333333        1.0000000
+    ## 1031        0.8333333        1.0000000
+    ## 1032        0.8333333        1.0000000
+    ## 1033        0.8333333        0.8531455
+    ## 1034        0.8333333        1.0000000
+    ## 1035        0.8333333        1.0000000
+    ## 1036        0.8333333        1.0000000
 
-Cette base doit contenir 1062 observations ! (ce qu'on vérifie rapidement ici)
+Cette base doit contenir 1036 observations ! (ce qu'on vérifie rapidement ici)
 
 ``` r
 nom_fichier = paste("STT5100A2023Devoir2Prevision_",code_permanent,"_test.RData",sep="")
@@ -164,7 +164,7 @@ load(nom_fichier)
 str(prevision)
 ```
 
-    ## 'data.frame':    1062 obs. of  2 variables:
+    ## 'data.frame':    1036 obs. of  2 variables:
     ##  $ Y_ABCD12345678_1: num  0.833 0.833 0.833 0.833 0.833 ...
     ##  $ Y_ABCD12345678_2: num  0.999996 0.000389 0.981104 1 1 ...
 
