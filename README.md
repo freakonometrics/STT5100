@@ -9,7 +9,7 @@ Plan de cours : [Plan_Cours_STT5100_H2025.pdf](https://github.com/freakonometric
 Démonstrateur : *à confirmer*
 
 ```diff
-- La base de données pour le premier devoir est en ligne
+- à suivre
 ```
 
 **Prérequis**
