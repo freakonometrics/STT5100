@@ -16,7 +16,7 @@ Démonstrateur : *aucun pour l'instant*
 
 selon [le site des cours de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), les préalables sont soit le cours ACT4400 (Modèles de survie) ou bien les trois cours suivants : STT2000 (Statistique II), STT2100 (aboratoire de statistique) et MAT1250 (Algèbre linéaire I).
 
-selon [le lexique de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), "*un crédit équivaut à 45 heures de travail universitaire, soit 15 heures de cours magistraux ou d'ateliers, et 30 heures d'études et de travail personnel*". Ce cours d'une valeur de 3 crédits correspond donc à 135 heures de travail sur le semestre, soit en moyenne 9 heures de travail par semaine. 
+selon [le lexique de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), "*un crédit équivaut à 45 heures de travail universitaire, soit 15 heures de cours magistraux ou d'ateliers, et 30 heures d'études et de travail personnel*". Ce cours d'une valeur de 3 crédits correspond donc à 135 heures de travail sur le semestre, soit en moyenne 9 heures de travail par semaine (3 heures de cours magistral, et 6 heures d'études et de travail personnel).
 
 **Démonstrations et codes**
 * démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
