@@ -33,8 +33,7 @@ location=read.table("http://freakonometrics.free.fr/rent98_00.txt",header=TRUE)
 str(location)
 
 davis=read.table(
-  "http://socserv.socsci.mcmaster.ca/jfox/Books/Applied-Regression-2E/datasets/Davis.txt")
-davis[12,c(2,3)]=davis[12,c(3,2)]
+  "http://freakonometrics.free.fr/Davis.txt")
 str(davis)
 ```
 
