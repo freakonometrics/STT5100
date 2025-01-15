@@ -53,4 +53,4 @@ Les données sont des prix de maisons, à Londres (UK)
 - `voisinage` : note du voisinage (1-10)
 - `code_postal` : code postal de la maison
 - `etage` : nombre d’étages dans la maison
-- \`renovation\`\` : année de la dernière rénovation
+- `renovation` : année de la dernière rénovation
