@@ -1,6 +1,5 @@
 STT5100 Devoir 1 Hiver 2025
 ================
-Arthur Charpentier
 
 ``` r
 code_permanent = "ABCD12345678"
