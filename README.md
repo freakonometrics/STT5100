@@ -9,7 +9,7 @@ Plan de cours : [Plan_Cours_STT5100_H2025.pdf](https://github.com/freakonometric
 Démonstrateur : *aucun pour l'instant*
 
 ```diff
-- le premier cours aura lieu vendredi 10 janvier
+- les données pour le 1er devoir sont en ligne (date limite 11 mars, midi)
 ```
 
 **Prérequis**
