@@ -38,7 +38,6 @@ str(davis)
 ```
 **Codes**
 * [cours3.md](/code/cours3.md)
-* Modèles de régression - GLM final (25 avril)
   
 **Examens**
 * Modèles de régression - OLS intra (28 février)
