@@ -36,10 +36,13 @@ davis=read.table(
   "http://freakonometrics.free.fr/Davis.txt")
 str(davis)
 ```
-
+**Codes**
+* [cours3.md](/code/cours3.md)
+* Modèles de régression - GLM final (25 avril)
+  
 **Examens**
-* Modèles de régression - OLS intra (3 novembre)
-* Modèles de régression - GLM final (15 décembre)
+* Modèles de régression - OLS intra (28 février)
+* Modèles de régression - GLM final (25 avril)
 
 **Projets / Devoir**
 * Modèles de régression - OLS : [devoir1.md](/devoir/devoir1.md)
