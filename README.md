@@ -32,8 +32,12 @@ str(titanic)
 location=read.table("http://freakonometrics.free.fr/rent98_00.txt",header=TRUE)
 str(location)
 
-davis=read.table(
-  "http://freakonometrics.free.fr/Davis.txt")
+download.file("http://freakonometrics.free.fr/fire.RData",
+              destfile="fire.RData")
+load("fire.RData")
+str(fire)
+
+davis=read.table("http://freakonometrics.free.fr/Davis.txt")
 str(davis)
 ```
 **Codes**
