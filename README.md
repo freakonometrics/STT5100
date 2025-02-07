@@ -37,6 +37,19 @@ download.file("http://freakonometrics.free.fr/fire.RData",
 load("fire.RData")
 str(fire)
 
+download.file("http://freakonometrics.free.fr/base4.RData",
+              destfile="base4.RData")
+load("base4.RData")
+str(base4)
+
+library(datasets)
+data("anscombe")
+anscombe
+anscombe1 = data.frame(y=anscombe$y1, x=anscombe$x1)
+anscombe2 = data.frame(y=anscombe$y2, x=anscombe$x2)
+anscombe3 = data.frame(y=anscombe$y3, x=anscombe$x3)
+anscombe4 = data.frame(y=anscombe$y4, x=anscombe$x4)
+
 davis=read.table("http://freakonometrics.free.fr/Davis.txt")
 str(davis)
 ```
