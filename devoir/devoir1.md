@@ -84,7 +84,7 @@ Parmi les consignes,
 * les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np`, les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
 * la forme du document et sa lisibilité interviendront dans la notation. Afficher des sorties R de plusieurs centaines de lignes, par exemple, est à proscrire, ou l'affichage de messages automatiques (*warnings*) est à éviter.
 * les rapports sont individuels ! s'il est autorisé de discuter avec d'autres élèves du groupe (en respectant le protocol sanitaire en vigueur), chacun doit rendre son propre rapport. Dans le cas où deux fichiers identiques seraient envoyés par deux élèves différents, les deux élèves seront sanctionnés.
-* l'utilisation de GPT, Llama, etc est autorisée, voire recommandée, en particulier pour générer des graphiques ou des tableaux plus jolis à lire. Eg,
+* l'utilisation de GPT, Llama, etc est autorisée, voire recommandée, en particulier pour générer des graphiques ou des tableaux plus jolis à lire. Eg, [Llama via duckduckgo](https://duckduckgo.com/?q=quel%20serait%20le%20code%20pour%20faire%20un%20tableau%20de%202%20lignes%20et%203%20colonnes%20en%20Rmd%2C%20avec%20pour%202%20mod%C3%A8les%20lin%C3%A9aires%2C%20le%20R2%20ajust%C3%A9%2C%20le%20AIC%20et%20le%20BIC&t=newext&atb=v418-1&ia=chat)
 
 <img src="chat1.png" alt="drawing" width="400" align=right/>
 
