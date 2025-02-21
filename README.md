@@ -52,6 +52,11 @@ anscombe4 = data.frame(y=anscombe$y4, x=anscombe$x4)
 
 davis=read.table("http://freakonometrics.free.fr/Davis.txt")
 str(davis)
+
+loc_fichier = "http://freakonometrics.free.fr/deathRate.RData"
+download.file(loc_fichier, "deathRate.RData")
+load("deathRate.RData")
+str(database)
 ```
 **Codes**
 * [cours3.md](/code/cours3.md)
