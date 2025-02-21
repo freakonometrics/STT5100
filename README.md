@@ -57,6 +57,12 @@ loc_fichier = "http://freakonometrics.free.fr/deathRate.RData"
 download.file(loc_fichier, "deathRate.RData")
 load("deathRate.RData")
 str(database)
+
+loc_fichier = "http://freakonometrics.free.fr/prix_maison.RData"
+download.file(loc_fichier, "base2.RData")
+load("base2.RData")
+dim(database)
+str(database)
 ```
 **Codes**
 * [cours3.md](/code/cours3.md)
