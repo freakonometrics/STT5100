@@ -63,6 +63,13 @@ download.file(loc_fichier, "base2.RData")
 load("base2.RData")
 dim(database)
 str(database)
+
+loc = "http://freakonometrics.free.fr/titanic.RData"
+download.file(loc, "titanic.RData")
+load("titanic.RData")
+base = base[,1:7]
+n = nrow(base)
+(p = mean(base$Survived))
 ```
 **Codes**
 * [cours3.md](/code/cours3.md)
