@@ -111,7 +111,7 @@ Le but du devoir est de mettre en oeuvre, sur des vraies données, les technique
     permanent,
 *  Le fichier doit contenir quatre parties
 
-1.  Une partie exploratoire qui presente rapidement les variables qui pourraient etre intéressantes pour prédire ensuite la fraude d'une personne (pour rappel, `compte_fraude` est la variable d’interêt à modéliser)
+1.  Une partie exploratoire qui presente rapidement les variables qui pourraient etre intéressantes pour prédire ensuite la fraude d'une personne (pour rappel, `fraude` est la variable d’interêt à modéliser)
 2.  Une partie presentant la construction d'un modèle "simple", par exemple 
     partir au choix (i) d’un modele simple, et de montrer comment
     l’ameliorer, (ii) d’un modele complexe, et de montrer comment le
