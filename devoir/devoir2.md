@@ -99,31 +99,30 @@ Les données corresponde à de la détection de transaction frauduleuses
 
 Le but du devoir est de mettre en oeuvre, sur des vraies données, les techniques présentées en cours.
 
-*   Date limite pour déposer le devoir **mardi 11 mars 2025** à **midi (12:00)** sur Moodle (l'onglet fermera à midi),
-*   Chaque etudiant(e) doit déposer sur l’espace dédié, sur [Moodle](https://ena01.uqam.ca/mod/assign/view.php?id=4557039),
-    deux fichiers : `devoir1-ABCD12345678.hmtl`, sortie d’un fichier
-    `devoir1-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
+*   Date limite pour déposer le devoir **mercredi 30 avril 2025** à **midi (12:00)** sur Moodle (l'onglet fermera à midi),
+*   Chaque etudiant(e) doit déposer sur l’espace dédié, sur [Moodle](https://ena01.uqam.ca/mod/assign/view.php?id=4571971),
+    deux fichiers : `devoir2-ABCD12345678.hmtl`, sortie d’un fichier
+    `devoir3-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
     `ABCD12345678` doit être remplacé par le code permanent de
-    l’étudiant(e). Le fichier `devoir1-ABCD12345678.hmtl` doit etre
-    lisible et le fichier `devoir1-ABCD12345678.Rmd` doit compiler sans
+    l’étudiant(e). Le fichier `devoir3-ABCD12345678.hmtl` doit etre
+    lisible et le fichier `devoir3-ABCD12345678.Rmd` doit compiler sans
     erreur. 
 *   Dans le preambule du markdown, `author:` doit mentionner le code
     permanent,
 *  Le fichier doit contenir quatre parties
 
-1.  Une partie exploratoire qui presente rapidement les variables qui pourraient etre intéressantes pour prédire ensuite le prix de la maison (pour rappel, `prix` est la variable d’interet)
-2.  Une partie presentant la construction d'un modele "simple", par exemple 
+1.  Une partie exploratoire qui presente rapidement les variables qui pourraient etre intéressantes pour prédire ensuite la fraude d'une personne (pour rappel, `compte_fraude` est la variable d’interêt à modéliser)
+2.  Une partie presentant la construction d'un modèle "simple", par exemple 
     partir au choix (i) d’un modele simple, et de montrer comment
     l’ameliorer, (ii) d’un modele complexe, et de montrer comment le
     simplifier
 3.  Une partie proposant une amélioration du modèle, par exemple en transformant une ou plusieurs variables explicatives, en regroupant des variables factorielles, etc
-4.  Une partie qui presente rapidement les deux modeles, et qui conclue par un tableau récapitulatif donnant pour deux modèles (ou plus), (i) le R2
-    ajusté (ii) l’indice d’Akaike AIC et (iii) l’indice BIC
+4.  Une partie qui presente rapidement les deux modèles, avec une première sous-partie plus visuelle, montrant les courbes ROC, et qui conclue par un tableau récapitulatif donnant pour deux modèles (ou plus), (i) le AUC (ii) l’indice d’Akaike AIC et (iii) l’indice BIC
 
 Parmi les consignes,
 
 * tout test ou toute technique utilisée qui n'a pas été présenté dans le cadre du cours devra être expliquée, motivée, et pointer vers une référence (la commande pour insérer un lien est, e.g. `[Anderson Darling](https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test)`). Dans le cas contraire, des points seront enlevés.
-* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np`, les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc), de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
+* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np`, `pROC`, `ROCR` ou `ROCit`, les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc) ou `plotROC`, de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
 * la forme du document et sa lisibilité interviendront dans la notation. Afficher des sorties R de plusieurs centaines de lignes, par exemple, est à proscrire, ou l'affichage de messages automatiques (*warnings*) est à éviter.
 * les rapports sont individuels ! s'il est autorisé de discuter avec d'autres élèves du groupe (en respectant le protocol sanitaire en vigueur), chacun doit rendre son propre rapport. Dans le cas où deux fichiers identiques seraient envoyés par deux élèves différents, les deux élèves seront sanctionnés.
 * l'utilisation de GPT, Llama, etc est autorisée, voire recommandée, en particulier pour générer des graphiques ou des tableaux plus jolis à lire. Eg, [Llama via duckduckgo](https://duckduckgo.com/?q=quel%20serait%20le%20code%20pour%20faire%20un%20tableau%20de%202%20lignes%20et%203%20colonnes%20en%20Rmd%2C%20avec%20pour%202%20mod%C3%A8les%20lin%C3%A9aires%2C%20le%20R2%20ajust%C3%A9%2C%20le%20AIC%20et%20le%20BIC&t=newext&atb=v418-1&ia=chat)
