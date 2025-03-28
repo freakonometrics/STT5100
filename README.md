@@ -23,7 +23,8 @@ selon [le lexique de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), "*un 
 
 ``` r
 locE = "http://www.prdh.umontreal.ca/BDLC/data/que/Exposures_1x1.txt"
-locD = "http://www.prdh.umontreal.ca/BDLC/data/que/Mx_1x1.txt"
+locN = "https://www.prdh.umontreal.ca/BDLC/data/que/Population.txt"
+locD = "https://www.prdh.umontreal.ca/BDLC/data/que/Deaths_1x1.txt"
 E = read.table(locE, skip=2, header=TRUE)
 D = read.table(locD, skip=2, header=TRUE)
 
