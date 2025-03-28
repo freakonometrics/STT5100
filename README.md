@@ -22,6 +22,16 @@ selon [le lexique de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), "*un 
 * démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
 
 ``` r
+locE = "http://www.prdh.umontreal.ca/BDLC/data/que/Exposures_1x1.txt"
+locD = "http://www.prdh.umontreal.ca/BDLC/data/que/Mx_1x1.txt"
+E = read.table(locE,skip=2,header=TRUE)
+D = read.table(locD,skip=2,header=TRUE)
+
+library(boot)
+data(aids)
+loc = "http://freakonometrics.free.fr/baseaffairs.txt"
+affairs = E = read.table(locE,TRUE)
+
 library(DALEX)
 data("apartments")
 str(apartments)
@@ -71,6 +81,8 @@ base = base[,1:7]
 n = nrow(base)
 (p = mean(base$Survived))
 ```
+(pour la mortalité canadienne [http://www.bdlc.umontreal.ca/CHMD/prov/que/que.htm](http://www.bdlc.umontreal.ca/CHMD/prov/que/que.htm) et pour les affaires extraconjugales, [Fair (1978) *A Theory of Extramarital Affairs*](https://www.uibk.ac.at/econometrics/data/fair78.pdf))
+
 **Codes**
 * [cours3.md](/code/cours3.md)
   
