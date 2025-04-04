@@ -81,6 +81,13 @@ load("titanic.RData")
 base = base[,1:7]
 n = nrow(base)
 (p = mean(base$Survived))
+
+Paid = matrix(c(3209, 4372, 4411, 4428, 4435, 4456,
+                3367, 4659, 4696, 4720, 4730,   NA,
+                3871, 5345, 5398, 5420,   NA,   NA,
+                4239, 5917, 6020,   NA,   NA,   NA,
+                4929, 6794,   NA,   NA,   NA,   NA,
+                5217,   NA,   NA,   NA,   NA,   NA), 6,6)
 ```
 (pour la mortalité canadienne [http://www.bdlc.umontreal.ca/CHMD/prov/que/que.htm](http://www.bdlc.umontreal.ca/CHMD/prov/que/que.htm) et pour les affaires extraconjugales, [Fair (1978) *A Theory of Extramarital Affairs*](https://www.uibk.ac.at/econometrics/data/fair78.pdf))
 
