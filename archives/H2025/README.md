@@ -4,7 +4,7 @@ Arthur Charpentier, professeur
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_Cours_STT5100_H2025.pdf](https://github.com/freakonometrics/STT5100/blob/master/docs/Plan_Cours_STT5100_H2025.pdf) (version approuvée)
+Plan de cours : [Plan_Cours_STT5100_A2026.pdf](https://github.com/freakonometrics/STT5100/blob/master/docs/Plan_Cours_STT5100_H2025.pdf) (version non-approuvée)
 
 Démonstrateur : *aucun pour l'instant*
 
