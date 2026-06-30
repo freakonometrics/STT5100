@@ -221,7 +221,8 @@ Quelques compléments
 * GLM énoncé hiver 2019 [H2019-2E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/docs/Examen_STT5100_Hiver_2019-final-B.pdf)
 * GLM _correction_ hiver 2019 [H2019-2C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/H2019/docs/Examen_STT5100_Hiver_2019-correction.pdf)
 * GLM écononcé automne 2019 [A2019-2E.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2019/devoirs/STT5100_AUTOMNE2019_2_ENONCE.pdf) 
-* GLM _correction_ écononcé automne 2019 [A2019-2C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2019/devoirs/STT5100_AUTOMNE2019_2_CORREC.pdf) 
+* GLM _correction_ écononcé automne 2019 [A2019-2C.pdf](https://github.com/freakonometrics/STT5100/blob/master/archives/A2019/devoirs/STT5100_AUTOMNE2019_2_CORREC.pdf)
+* Exercices complémentaires [A2026-E.pdf](./devoirs/STT5100_A2026.pdf)
 
 **Exam S/MASI - CAS** [modern actuarial statistics](https://www.casact.org/admissions/syllabus/index.cfm?fa=MASI)
 * page "study tools" [https://casact.org/examS/](https://www.casact.org/admissions/studytools/examS/)
