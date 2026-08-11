@@ -18,81 +18,8 @@ selon [le site des cours de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100)
 
 selon [le lexique de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), "*un crédit équivaut à 45 heures de travail universitaire, soit 15 heures de cours magistraux ou d'ateliers, et 30 heures d'études et de travail personnel*." Ce cours d'une valeur de 3 crédits correspond donc à 135 heures de travail sur la session, soit en moyenne 9 heures de travail par semaine (3 heures de cours magistral, et 6 heures d'études et de travail personnel).
 
-**Démonstrations et codes**
-* démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
-
-``` r
-locE = "http://www.prdh.umontreal.ca/BDLC/data/que/Exposures_1x1.txt"
-locN = "https://www.prdh.umontreal.ca/BDLC/data/que/Population.txt"
-locD = "https://www.prdh.umontreal.ca/BDLC/data/que/Deaths_1x1.txt"
-E = read.table(locE, skip=2, header=TRUE)
-D = read.table(locD, skip=2, header=TRUE)
-
-library(boot)
-data(aids)
-loc = "http://freakonometrics.free.fr/baseaffairs.txt"
-affairs = read.table(loc, TRUE)
-
-library(DALEX)
-data("apartments")
-str(apartments)
-
-data("titanic")
-str(titanic)
-
-location=read.table("http://freakonometrics.free.fr/rent98_00.txt",header=TRUE)
-str(location)
-
-download.file("http://freakonometrics.free.fr/fire.RData",
-              destfile="fire.RData")
-load("fire.RData")
-str(fire)
-
-download.file("http://freakonometrics.free.fr/base4.RData",
-              destfile="base4.RData")
-load("base4.RData")
-str(base4)
-
-library(datasets)
-data("anscombe")
-anscombe
-anscombe1 = data.frame(y=anscombe$y1, x=anscombe$x1)
-anscombe2 = data.frame(y=anscombe$y2, x=anscombe$x2)
-anscombe3 = data.frame(y=anscombe$y3, x=anscombe$x3)
-anscombe4 = data.frame(y=anscombe$y4, x=anscombe$x4)
-
-davis=read.table("http://freakonometrics.free.fr/Davis.txt")
-str(davis)
-
-loc_fichier = "http://freakonometrics.free.fr/deathRate.RData"
-download.file(loc_fichier, "deathRate.RData")
-load("deathRate.RData")
-str(database)
-
-loc_fichier = "http://freakonometrics.free.fr/prix_maison.RData"
-download.file(loc_fichier, "base2.RData")
-load("base2.RData")
-dim(database)
-str(database)
-
-loc = "http://freakonometrics.free.fr/titanic.RData"
-download.file(loc, "titanic.RData")
-load("titanic.RData")
-base = base[,1:7]
-n = nrow(base)
-(p = mean(base$Survived))
-
-Paid = matrix(c(3209, 4372, 4411, 4428, 4435, 4456,
-                3367, 4659, 4696, 4720, 4730,   NA,
-                3871, 5345, 5398, 5420,   NA,   NA,
-                4239, 5917, 6020,   NA,   NA,   NA,
-                4929, 6794,   NA,   NA,   NA,   NA,
-                5217,   NA,   NA,   NA,   NA,   NA), 6,6)
-```
-(pour la mortalité canadienne [http://www.bdlc.umontreal.ca/CHMD/prov/que/que.htm](http://www.bdlc.umontreal.ca/CHMD/prov/que/que.htm) et pour les affaires extraconjugales, [Fair (1978) *A Theory of Extramarital Affairs*](https://www.uibk.ac.at/econometrics/data/fair78.pdf))
-
-**Codes**
-* [cours3.md](/code/cours3.md)
+**Exercices**
+* [330_choix_multiples](/docs/STT5100_choix_multiples_330.pdf)
   
 **Examens**
 * Modèles de régression - OLS intra (28 février)
@@ -234,6 +161,80 @@ Quelques compléments
 
 **R Toolbox - SOA**
 * page "R console" [https://actuarialtoolkit.soa.org/](https://actuarialtoolkit.soa.org/tool/r-console/learn-more)
+
+**Démonstrations et codes**
+* démo 0: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/lesson-1.html)
+
+``` r
+locE = "http://www.prdh.umontreal.ca/BDLC/data/que/Exposures_1x1.txt"
+locN = "https://www.prdh.umontreal.ca/BDLC/data/que/Population.txt"
+locD = "https://www.prdh.umontreal.ca/BDLC/data/que/Deaths_1x1.txt"
+E = read.table(locE, skip=2, header=TRUE)
+D = read.table(locD, skip=2, header=TRUE)
+
+library(boot)
+data(aids)
+loc = "http://freakonometrics.free.fr/baseaffairs.txt"
+affairs = read.table(loc, TRUE)
+
+library(DALEX)
+data("apartments")
+str(apartments)
+
+data("titanic")
+str(titanic)
+
+location=read.table("http://freakonometrics.free.fr/rent98_00.txt",header=TRUE)
+str(location)
+
+download.file("http://freakonometrics.free.fr/fire.RData",
+              destfile="fire.RData")
+load("fire.RData")
+str(fire)
+
+download.file("http://freakonometrics.free.fr/base4.RData",
+              destfile="base4.RData")
+load("base4.RData")
+str(base4)
+
+library(datasets)
+data("anscombe")
+anscombe
+anscombe1 = data.frame(y=anscombe$y1, x=anscombe$x1)
+anscombe2 = data.frame(y=anscombe$y2, x=anscombe$x2)
+anscombe3 = data.frame(y=anscombe$y3, x=anscombe$x3)
+anscombe4 = data.frame(y=anscombe$y4, x=anscombe$x4)
+
+davis=read.table("http://freakonometrics.free.fr/Davis.txt")
+str(davis)
+
+loc_fichier = "http://freakonometrics.free.fr/deathRate.RData"
+download.file(loc_fichier, "deathRate.RData")
+load("deathRate.RData")
+str(database)
+
+loc_fichier = "http://freakonometrics.free.fr/prix_maison.RData"
+download.file(loc_fichier, "base2.RData")
+load("base2.RData")
+dim(database)
+str(database)
+
+loc = "http://freakonometrics.free.fr/titanic.RData"
+download.file(loc, "titanic.RData")
+load("titanic.RData")
+base = base[,1:7]
+n = nrow(base)
+(p = mean(base$Survived))
+
+Paid = matrix(c(3209, 4372, 4411, 4428, 4435, 4456,
+                3367, 4659, 4696, 4720, 4730,   NA,
+                3871, 5345, 5398, 5420,   NA,   NA,
+                4239, 5917, 6020,   NA,   NA,   NA,
+                4929, 6794,   NA,   NA,   NA,   NA,
+                5217,   NA,   NA,   NA,   NA,   NA), 6,6)
+```
+(pour la mortalité canadienne [http://www.bdlc.umontreal.ca/CHMD/prov/que/que.htm](http://www.bdlc.umontreal.ca/CHMD/prov/que/que.htm) et pour les affaires extraconjugales, [Fair (1978) *A Theory of Extramarital Affairs*](https://www.uibk.ac.at/econometrics/data/fair78.pdf))
+
 
 **"Curve Fitting"**
 
