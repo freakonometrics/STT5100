@@ -1,15 +1,15 @@
-# STT5100 Modèles Linéaires Appliqués (Hiver 2025)
+# STT5100 Modèles Linéaires Appliqués (Automne 2026)
 
 Arthur Charpentier, professeur
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_Cours_STT5100_H2025.pdf](https://github.com/freakonometrics/STT5100/blob/master/docs/Plan_Cours_STT5100_H2025.pdf) (version approuvée)
+Plan de cours : [Plan_Cours_STT5100_A2026.pdf](https://github.com/freakonometrics/STT5100/blob/master/docs/Plan_Cours_STT5100_A2026.pdf) (version approuvée)
 
 Démonstrateur : *aucun pour l'instant*
 
 ```diff
-- les données pour le 1er devoir sont en ligne (date limite 11 mars, midi)
+- les informations relatives au cours seront postés avant la rentrée
 ```
 
 **Prérequis**
