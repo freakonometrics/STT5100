@@ -1,4 +1,4 @@
-# STT5100 Modèles Linéaires Appliqués (Automne 2026)
+# STT5100 Modèles Linéaires Appliqués (Hiver 2025)
 
 Arthur Charpentier, professeur
 
