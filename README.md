@@ -19,7 +19,7 @@ selon [le site des cours de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100)
 selon [le lexique de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), "*un crédit équivaut à 45 heures de travail universitaire, soit 15 heures de cours magistraux ou d'ateliers, et 30 heures d'études et de travail personnel*." Ce cours d'une valeur de 3 crédits correspond donc à 135 heures de travail sur la session, soit en moyenne 9 heures de travail par semaine (3 heures de cours magistral, et 6 heures d'études et de travail personnel).
 
 **Exercices**
-* [330_choix_multiples](/docs/STT5100_choix_multiples_330.pdf)
+* 330 Exercices : [330_choix_multiples](/docs/STT5100_choix_multiples_330.pdf)
   
 **Examens**
 * Modèles de régression - OLS intra (28 février)
