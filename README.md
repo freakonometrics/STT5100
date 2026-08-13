@@ -27,7 +27,7 @@ selon [le lexique de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), "*un 
 
 **Projets / Devoir**
 * Modèles de régression - OLS : [devoir1.md](/devoir/devoir1.md)
-* Modèles de régression - GLM : [devoir2.md](/devoir/devoir2.md)
+* Modèles de régression - GLM : devoir2.md
 
 **Introduction**
 
