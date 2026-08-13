@@ -29,41 +29,42 @@ load("data_devoir1.RData")
 head(data_devoir1)
 ```
 
-    ##   income age education hours sex marital group union worktime worker industry
-    ## 1   6500  30         4    26  S2      M2    G4    U1     <NA>   <NA>       I6
-    ## 2  29700  28         3    40  S1      M1    G1    U1     <NA>   <NA>       I3
-    ## 3  29700  38         2    40  S1      M2    G2    U2     <NA>   <NA>       I6
-    ## 4   8500  34         2    42  S2      M1    G1    U1     <NA>   <NA>       I8
-    ## 5  20900  31         3    40  S2      M1    G1    U1     <NA>   <NA>       I9
-    ## 6  40200  40         4    44  S1      M2    G1    U1     <NA>   <NA>       I9
-    ##   occupation region division metro
-    ## 1         O4     R4       D8    A2
-    ## 2         O1     R1       D1    A2
-    ## 3         O8     R3       D5    A2
-    ## 4         O3     R4       D8    A1
-    ## 5         O1     R3       D5    A1
-    ## 6         O1     R2       D4    A2
+    ##   income age education hours sex marital group union self_employed
+    ## 1   6500  30         4    26  S2      M2    G4    U1           SE1
+    ## 2  29700  28         3    40  S1      M1    G1    U1           SE1
+    ## 3  29700  38         2    40  S1      M2    G2    U2           SE1
+    ## 4   8500  34         2    42  S2      M1    G1    U1           SE1
+    ## 5  20900  31         3    40  S2      M1    G1    U1           SE1
+    ## 6  40200  40         4    44  S1      M2    G1    U1           SE1
+    ##   public_sector paid_hourly industry occupation region division metro
+    ## 1            P1          H2       I6         O4     R4       D8    A2
+    ## 2            P1          H1       I3         O1     R1       D1    A2
+    ## 3            P1          H2       I6         O8     R3       D5    A2
+    ## 4            P1          H2       I8         O3     R4       D8    A1
+    ## 5            P1          H2       I9         O1     R3       D5    A1
+    ## 6            P2          H1       I9         O1     R2       D4    A2
 
 ``` r
 str(data_devoir1)
 ```
 
-    ## 'data.frame':    6 obs. of  15 variables:
-    ##  $ income    : num  6500 29700 29700 8500 20900 40200
-    ##  $ age       : num  30 28 38 34 31 40
-    ##  $ education : num  4 3 2 2 3 4
-    ##  $ hours     : num  26 40 40 42 40 44
-    ##  $ sex       : Factor w/ 2 levels "S1","S2": 2 1 1 2 2 1
-    ##  $ marital   : Factor w/ 2 levels "M1","M2": 2 1 2 1 1 2
-    ##  $ group     : Factor w/ 4 levels "G1","G2","G3",..: 4 1 2 1 1 1
-    ##  $ union     : Factor w/ 2 levels "U1","U2": 1 1 2 1 1 1
-    ##  $ worktime  : Factor w/ 12 levels "T1","T2","T3",..: NA NA NA NA NA NA
-    ##  $ worker    : Factor w/ 8 levels "C1","C2","C3",..: NA NA NA NA NA NA
-    ##  $ industry  : Factor w/ 16 levels "I1","I2","I3",..: 6 3 6 8 9 9
-    ##  $ occupation: Factor w/ 10 levels "O1","O2","O3",..: 4 1 8 3 1 1
-    ##  $ region    : Factor w/ 4 levels "R1","R2","R3",..: 4 1 3 4 3 2
-    ##  $ division  : Factor w/ 9 levels "D1","D2","D3",..: 8 1 5 8 5 4
-    ##  $ metro     : Factor w/ 2 levels "A1","A2": 2 2 2 1 1 2
+    ## 'data.frame':    6 obs. of  16 variables:
+    ##  $ income       : num  6500 29700 29700 8500 20900 40200
+    ##  $ age          : num  30 28 38 34 31 40
+    ##  $ education    : num  4 3 2 2 3 4
+    ##  $ hours        : num  26 40 40 42 40 44
+    ##  $ sex          : Factor w/ 2 levels "S1","S2": 2 1 1 2 2 1
+    ##  $ marital      : Factor w/ 2 levels "M1","M2": 2 1 2 1 1 2
+    ##  $ group        : Factor w/ 4 levels "G1","G2","G3",..: 4 1 2 1 1 1
+    ##  $ union        : Factor w/ 2 levels "U1","U2": 1 1 2 1 1 1
+    ##  $ self_employed: Factor w/ 2 levels "SE1","SE2": 1 1 1 1 1 1
+    ##  $ public_sector: Factor w/ 2 levels "P1","P2": 1 1 1 1 1 2
+    ##  $ paid_hourly  : Factor w/ 2 levels "H1","H2": 2 1 2 2 2 1
+    ##  $ industry     : Factor w/ 16 levels "I1","I2","I3",..: 6 3 6 8 9 9
+    ##  $ occupation   : Factor w/ 10 levels "O1","O2","O3",..: 4 1 8 3 1 1
+    ##  $ region       : Factor w/ 4 levels "R1","R2","R3",..: 4 1 3 4 3 2
+    ##  $ division     : Factor w/ 9 levels "D1","D2","D3",..: 8 1 5 8 5 4
+    ##  $ metro        : Factor w/ 2 levels "A1","A2": 2 2 2 1 1 2
 
 À titre d’illustration, les premières lignes d’une base peuvent avoir la
 structure suivante :
@@ -72,22 +73,23 @@ structure suivante :
 str(data_devoir1)
 ```
 
-    ## 'data.frame':    6 obs. of  15 variables:
-    ##  $ income    : num  6500 29700 29700 8500 20900 40200
-    ##  $ age       : num  30 28 38 34 31 40
-    ##  $ education : num  4 3 2 2 3 4
-    ##  $ hours     : num  26 40 40 42 40 44
-    ##  $ sex       : Factor w/ 2 levels "S1","S2": 2 1 1 2 2 1
-    ##  $ marital   : Factor w/ 2 levels "M1","M2": 2 1 2 1 1 2
-    ##  $ group     : Factor w/ 4 levels "G1","G2","G3",..: 4 1 2 1 1 1
-    ##  $ union     : Factor w/ 2 levels "U1","U2": 1 1 2 1 1 1
-    ##  $ worktime  : Factor w/ 12 levels "T1","T2","T3",..: NA NA NA NA NA NA
-    ##  $ worker    : Factor w/ 8 levels "C1","C2","C3",..: NA NA NA NA NA NA
-    ##  $ industry  : Factor w/ 16 levels "I1","I2","I3",..: 6 3 6 8 9 9
-    ##  $ occupation: Factor w/ 10 levels "O1","O2","O3",..: 4 1 8 3 1 1
-    ##  $ region    : Factor w/ 4 levels "R1","R2","R3",..: 4 1 3 4 3 2
-    ##  $ division  : Factor w/ 9 levels "D1","D2","D3",..: 8 1 5 8 5 4
-    ##  $ metro     : Factor w/ 2 levels "A1","A2": 2 2 2 1 1 2
+    ## 'data.frame':    6 obs. of  16 variables:
+    ##  $ income       : num  6500 29700 29700 8500 20900 40200
+    ##  $ age          : num  30 28 38 34 31 40
+    ##  $ education    : num  4 3 2 2 3 4
+    ##  $ hours        : num  26 40 40 42 40 44
+    ##  $ sex          : Factor w/ 2 levels "S1","S2": 2 1 1 2 2 1
+    ##  $ marital      : Factor w/ 2 levels "M1","M2": 2 1 2 1 1 2
+    ##  $ group        : Factor w/ 4 levels "G1","G2","G3",..: 4 1 2 1 1 1
+    ##  $ union        : Factor w/ 2 levels "U1","U2": 1 1 2 1 1 1
+    ##  $ self_employed: Factor w/ 2 levels "SE1","SE2": 1 1 1 1 1 1
+    ##  $ public_sector: Factor w/ 2 levels "P1","P2": 1 1 1 1 1 2
+    ##  $ paid_hourly  : Factor w/ 2 levels "H1","H2": 2 1 2 2 2 1
+    ##  $ industry     : Factor w/ 16 levels "I1","I2","I3",..: 6 3 6 8 9 9
+    ##  $ occupation   : Factor w/ 10 levels "O1","O2","O3",..: 4 1 8 3 1 1
+    ##  $ region       : Factor w/ 4 levels "R1","R2","R3",..: 4 1 3 4 3 2
+    ##  $ division     : Factor w/ 9 levels "D1","D2","D3",..: 8 1 5 8 5 4
+    ##  $ metro        : Factor w/ 2 levels "A1","A2": 2 2 2 1 1 2
 
 Les données décrivent des situations individuelles sur le marché du
 travail. Elles ont été recodées et certaines variables ont été
@@ -174,7 +176,7 @@ load("data_test_devoir1.RData")
 dim(data_test_devoir1)
 ```
 
-    ## [1] 1000   14
+    ## [1] 1000   15
 
 Une fois les deux modèles retenus construits, il faudra calculer leurs
 prévisions sur cette base. Par exemple, si les deux modèles s’appellent
