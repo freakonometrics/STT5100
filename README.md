@@ -22,7 +22,7 @@ selon [le lexique de l'UQAM](https://etudier.uqam.ca/cours?sigle=STT5100), "*un 
 * 330 Exercices : [330_choix_multiples](/docs/STT5100_choix_multiples_330.pdf)
   
 **Examens**
-* Modèles de régression - OLS intra (30 octobre / 6 novembre)
+* Modèles de régression - OLS intra (30 octobre)
 * Modèles de régression - GLM final (18 décembre)
 
 **Projets / Devoir**
