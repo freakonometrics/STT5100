@@ -6,7 +6,7 @@ Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freak
 
 Plan de cours : [Plan_Cours_STT5100_A2026.pdf](https://github.com/freakonometrics/STT5100/blob/master/docs/Plan_Cours_STT5100_A2026.pdf) (version non-approuvée)
 
-Démonstrateur : *aucun pour l'instant*
+Démonstrateur : Maurin Ahanhanzo
 
 ```diff
 - les informations relatives au cours seront postés avant la rentrée
