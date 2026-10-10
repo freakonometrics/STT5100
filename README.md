@@ -4,12 +4,12 @@ Arthur Charpentier, professeur
 
 Pour plus d'information : [https://freakonometrics.hypotheses.org](https://freakonometrics.hypotheses.org/category/courses/stt5100)
 
-Plan de cours : [Plan_Cours_STT5100_A2026.pdf](https://github.com/freakonometrics/STT5100/blob/master/docs/Plan_Cours_STT5100_A2026.pdf) (version non-approuvée)
+Plan de cours : [Plan_Cours_STT5100_A2026.pdf](https://github.com/freakonometrics/STT5100/blob/master/docs/Plan_Cours_STT5100_A2026.pdf) (version approuvée)
 
 Démonstrateur : Maurin Ahanhanzo
 
 ```diff
-- les informations relatives au cours seront postés avant la rentrée
+- les dates sur Moodle ont été mise à jour pour les devoirs
 ```
 
 **Prérequis**
