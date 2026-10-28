@@ -1,136 +1,249 @@
-STT5100 Devoir 2 Hiver 2025
-================
+# STT5100 — Devoir 2 — Automne 2026
 
-``` r
-code_permanent = "ABCD12345678"
-loc_fichier = paste("http://freakonometrics.free.fr/STT5100/base_STT5100_H2025_Devoir2_",code_permanent,".RData",sep="")
-download.file(loc_fichier, "base_devoir_2.RData")
-load("base_devoir_2.RData")
-tail(base_STT5100_H2025_2)
+## Données
+
+Chaque étudiant(e) dispose d’une base de données différente. Pour télécharger votre base, remplacez `"ABCD12345678"` par votre code permanent, en conservant les lettres en majuscules.
+
+```r
+code_permanent <- "ABCD12345678"
+
+loc_fichier <- paste0(
+  "https://raw.githubusercontent.com/freakonometrics/",
+  "STT5100/master/devoir/",
+  "data_devoir2_STT5100_A2026_",
+  code_permanent,
+  ".RData"
+)
+
+download.file(
+  loc_fichier,
+  "data_devoir2.RData",
+  mode = "wb"
+)
+
+load("data_devoir2.RData")
+
+head(data_devoir2)
 ```
 
-    ##   fraude    revenu email_similarite nb_mois age temps_demande payment_type
-    ## 1      1 0.8685308        0.6550653     199  70   0.002775998           AC
-    ## 2      0 0.1982509        0.7044166      10  30   0.826400181           AC
-    ## 3      0 0.8978133        0.7521825      73  20   0.020636228           AB
-    ## 4      0 0.3300099        0.5396401     137  40   0.022440745           AA
-    ## 5      1 0.7263235        0.7644467      56  50   0.023049073           AB
-    ## 6      0 0.5887841        0.8661035      44  30   0.003589341           AC
-    ##   zip_compte_4sem activite_6h activite_24h activite_4sem distinct_emails emploi
-    ## 1            1403    5724.159     4775.064      4867.410               1     CC
-    ## 2            2428   12842.400     6791.232      5496.401               7     CA
-    ## 3            2802    9844.447     5028.261      5337.626              24     CA
-    ## 4            3935   11531.850     8048.617      5602.788              14     CC
-    ## 5            1144    7226.854     4667.367      5008.360               1     CA
-    ## 6             665    4037.265     3440.621      5638.649              10     CA
-    ##   credit_score logement tel_maison tel_cell banque_mois cartes_autres
-    ## 1          276       BA          1        0          -1             0
-    ## 2           67       BA          0        1          -1             0
-    ## 3          160       BE          0        1          28             0
-    ## 4           78       BB          1        1          15             0
-    ## 5          234       BB          1        1          31             0
-    ## 6          113       BB          0        1          -1             0
-    ##   limit_credit etranger   source duree_min OS_ordinateur compte_fraude
-    ## 1         2000        0 INTERNET  4.604693       windows             0
-    ## 2         1500        0 INTERNET 10.106207         linux             0
-    ## 3         1000        0 INTERNET  1.728756         linux             0
-    ## 4          200        0 INTERNET  7.377212         linux             0
-    ## 5         1500        0 INTERNET  6.791382       windows             0
-    ## 6          500        0 INTERNET  6.016655       windows             0
+À titre d’illustration, la structure d’une base est la suivante :
 
-``` r
-str(base_STT5100_H2025_2)
+```r
+str(data_devoir2)
 ```
 
-    ## 'data.frame':    6 obs. of  25 variables:
-    ##  $ fraude          : int  1 0 0 0 1 0
-    ##  $ revenu          : num  0.869 0.198 0.898 0.33 0.726 ...
-    ##  $ email_similarite: num  0.655 0.704 0.752 0.54 0.764 ...
-    ##  $ nb_mois         : int  199 10 73 137 56 44
-    ##  $ age             : int  70 30 20 40 50 30
-    ##  $ temps_demande   : num  0.00278 0.8264 0.02064 0.02244 0.02305 ...
-    ##  $ payment_type    : chr  "AC" "AC" "AB" "AA" ...
-    ##  $ zip_compte_4sem : int  1403 2428 2802 3935 1144 665
-    ##  $ activite_6h     : num  5724 12842 9844 11532 7227 ...
-    ##  $ activite_24h    : num  4775 6791 5028 8049 4667 ...
-    ##  $ activite_4sem   : num  4867 5496 5338 5603 5008 ...
-    ##  $ distinct_emails : int  1 7 24 14 1 10
-    ##  $ emploi          : chr  "CC" "CA" "CA" "CC" ...
-    ##  $ credit_score    : int  276 67 160 78 234 113
-    ##  $ logement        : chr  "BA" "BA" "BE" "BB" ...
-    ##  $ tel_maison      : int  1 0 0 1 1 0
-    ##  $ tel_cell        : int  0 1 1 1 1 1
-    ##  $ banque_mois     : int  -1 -1 28 15 31 -1
-    ##  $ cartes_autres   : int  0 0 0 0 0 0
-    ##  $ limit_credit    : num  2000 1500 1000 200 1500 500
-    ##  $ etranger        : int  0 0 0 0 0 0
-    ##  $ source          : chr  "INTERNET" "INTERNET" "INTERNET" "INTERNET" ...
-    ##  $ duree_min       : num  4.6 10.11 1.73 7.38 6.79 ...
-    ##  $ OS_ordinateur   : chr  "windows" "linux" "linux" "linux" ...
-    ##  $ compte_fraude   : int  0 0 0 0 0 0
+La variable d’intérêt est `adhesion`, une variable binaire prenant les valeurs 0 et 1.
 
-Les données corresponde à de la détection de transaction frauduleuses
+Les autres variables sont :
 
-- `fraude` : **Variable a expliquer** : détection d’une fraude (0/1)
-- `revenu` : score indiquant un niveau de revenu
-- `email_similarite` : similarité email frauduleux
-- `nb_mois` : nombre de mois
-- `age` : âge
-- `temps_demande` : temps d’une demande
-- `payment_type` : type de payments
-- `zip_compte_4sem` : nombres de ZIP codes sur 4 semaines
-- `activite_6h` : activités sur 6 heures
-- `activite_24h` : activités sur 24 heures
-- `activite_4sem` : activités sur 4 semaines
-- `distinct_emails` : courriels
-- `emploi` : emploi
-- `credit_score` : score de crédit
-- `logement` : logement
-- `tel_maison` : numéro de téléphone fixe
-- `tel_cell` : numéro de cellulaire
-- `banque_mois` : banques
-- `cartes_autres` : autres cartes de crédit
-- `limit_credit` : montant limite du crédit
-- `etranger` : étranger
-- `source` : source de la fraude
-- `duree_min` : durée
-- `OS_ordinateur` : type d’OS
-- `compte_fraude` : comptage de fraudes passées
+- `adhesion` : variable binaire à expliquer ;
+- `age` : âge ;
+- `indice_financier` : indicateur financier individuel ;
+- `categorie_professionnelle` : catégorie professionnelle recodée ;
+- `statut_familial` : situation familiale recodée ;
+- `niveau_formation` : niveau de formation ;
+- `incident_paiement` : indicateur relatif à un incident de paiement ;
+- `engagement_principal` : indicateur relatif à un engagement financier principal ;
+- `engagement_secondaire` : indicateur relatif à un engagement financier secondaire ;
+- `canal` : catégorie correspondant au canal utilisé pour l’interaction ;
+- `jour_observation` : jour associé à l’observation ;
+- `periode` : période de l’année, recodée ;
+- `nombre_solicitations` : nombre de sollicitations au cours de la période courante ;
+- `delai` : délai depuis une interaction antérieure ; la valeur 0 correspond notamment à l’absence d’interaction antérieure ;
+- `nombre_interactions` : nombre d’interactions antérieures ;
+- `etat_precedent` : résultat recodé d’une interaction antérieure.
 
-Le but du devoir est de mettre en oeuvre, sur des vraies données, les techniques présentées en cours.
+Chaque étudiant(e) dispose d’un échantillon de **2 000 observations**. Les échantillons sont différents d’un(e) étudiant(e) à l’autre.
 
-*   Date limite pour déposer le devoir **mercredi 30 avril 2025** à **midi (12:00)** sur Moodle (l'onglet fermera à midi),
-*   Chaque etudiant(e) doit déposer sur l’espace dédié, sur [Moodle](https://ena01.uqam.ca/mod/assign/view.php?id=4571971),
-    deux fichiers : `devoir2-ABCD12345678.hmtl`, sortie d’un fichier
-    `devoir3-ABCD12345678.Rmd` (il faudra envoyer les deux fichiers), où
-    `ABCD12345678` doit être remplacé par le code permanent de
-    l’étudiant(e). Le fichier `devoir3-ABCD12345678.hmtl` doit etre
-    lisible et le fichier `devoir3-ABCD12345678.Rmd` doit compiler sans
-    erreur. 
-*   Dans le preambule du markdown, `author:` doit mentionner le code
-    permanent,
-*  Le fichier doit contenir quatre parties
+Le but du devoir est de mettre en œuvre, sur de vraies données, les techniques de régression logistique présentées en cours.
 
-1.  Une partie exploratoire qui presente rapidement les variables qui pourraient etre intéressantes pour prédire ensuite la fraude d'une personne (pour rappel, `fraude` est la variable d’interêt à modéliser)
-2.  Une partie presentant la construction d'un modèle "simple", par exemple 
-    partir au choix (i) d’un modele simple, et de montrer comment
-    l’ameliorer, (ii) d’un modele complexe, et de montrer comment le
-    simplifier
-3.  Une partie proposant une amélioration du modèle, par exemple en transformant une ou plusieurs variables explicatives, en regroupant des variables factorielles, etc
-4.  Une partie qui presente rapidement les deux modèles, avec une première sous-partie plus visuelle, montrant les courbes ROC, et qui conclue par un tableau récapitulatif donnant pour deux modèles (ou plus), (i) le AUC (ii) l’indice d’Akaike AIC et (iii) l’indice BIC
+## Travail demandé
 
-Parmi les consignes,
+Le rapport doit contenir **cinq parties**.
 
-* tout test ou toute technique utilisée qui n'a pas été présenté dans le cadre du cours devra être expliquée, motivée, et pointer vers une référence (la commande pour insérer un lien est, e.g. `[Anderson Darling](https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test)`). Dans le cas contraire, des points seront enlevés.
-* les seuls packages autorises (sauf autorisation explicite) sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `splines`, `Hmisc`, `np`, `pROC`, `ROCR` ou `ROCit`, les packages graphiques `ggplot2` (et éventuellement de couleurs, ou de mise en forme `knitr`, `stargazer`, `DT`, `papeR`, `formattable` etc) ou `plotROC`, de manipulation de données `dplyr`, ainsi que les fonctions de base de `stats`. L'utilisation de tout autre package devra être demandée au préalable. Sinon, des points seront enlevés.
-* la forme du document et sa lisibilité interviendront dans la notation. Afficher des sorties R de plusieurs centaines de lignes, par exemple, est à proscrire, ou l'affichage de messages automatiques (*warnings*) est à éviter.
-* les rapports sont individuels ! s'il est autorisé de discuter avec d'autres élèves du groupe (en respectant le protocol sanitaire en vigueur), chacun doit rendre son propre rapport. Dans le cas où deux fichiers identiques seraient envoyés par deux élèves différents, les deux élèves seront sanctionnés.
-* l'utilisation de GPT, Llama, etc est autorisée, voire recommandée, en particulier pour générer des graphiques ou des tableaux plus jolis à lire. Eg, [Llama via duckduckgo](https://duckduckgo.com/?q=quel%20serait%20le%20code%20pour%20faire%20un%20tableau%20de%202%20lignes%20et%203%20colonnes%20en%20Rmd%2C%20avec%20pour%202%20mod%C3%A8les%20lin%C3%A9aires%2C%20le%20R2%20ajust%C3%A9%2C%20le%20AIC%20et%20le%20BIC&t=newext&atb=v418-1&ia=chat)
+1. **Analyse exploratoire.** Présenter rapidement les variables qui semblent pertinentes pour expliquer `adhesion`. On attend des représentations graphiques appropriées, une description de la fréquence de la variable d’intérêt et une première discussion des relations entre `adhesion` et les variables explicatives.
 
-<img src="chat1.png" alt="drawing" width="400" align=right/>
+2. **Construction d’un premier modèle.** Proposer un premier modèle de régression logistique et expliquer la démarche suivie. Il est possible, par exemple, de partir d’un modèle simple et de l’enrichir, ou de partir d’un modèle plus complexe et de le simplifier. Les coefficients importants devront être interprétés, notamment en termes de signe et, lorsque cela est pertinent, d’odds ratios. Les principaux tests et diagnostics vus en cours devront être discutés.
 
-<img src="chat2.png" alt="drawing" width="400" align=right/>
+3. **Amélioration du modèle.** Proposer au moins une amélioration substantielle : effet non linéaire, interaction, regroupement de modalités, sélection de variables, transformation d’une variable explicative, etc. Les choix doivent être justifiés. On doit aboutir à un **second modèle**, différent du premier.
 
-* le fichier html doit être lisible dans un navigateur internet (Firefox) et le code Rmd doit compiler sans erreur. Le préambule du fichier Rmd doit contenir comme auteur le code permanent. Tout fichier qui ne compile pas et/ou qui n'est pas lisible donnera lieu à une forte pénalisation.
+4. **Comparaison des modèles.** Comparer les deux modèles sur la base individuelle utilisée pour les estimer. 
 
-Au niveau pratique, pour avoir accès à _vos_ données, vous devez remplacer `"ABCD12345678"` ci-dessus par votre **vrai** code permanent (avec les lettres en majuscules).
+   On présentera notamment, pour chacun des deux modèles :
+
+   - le critère d’information d’Akaike (AIC) ;
+   - le critère d’information bayésien (BIC) ;
+   - les principales variables explicatives retenues ;
+   - une courbe ROC, calculée à partir des probabilités prédites sur les 2 000 observations de la base ;
+   - l’aire sous la courbe ROC (AUC).
+
+   Les deux courbes ROC peuvent être présentées séparément ou sur une même figure, à condition que la comparaison soit claire.
+
+   Par exemple, si les deux modèles s’appellent `model_1` et `model_2`, les probabilités ajustées utilisées pour les courbes ROC sont obtenues par
+
+```r
+proba_1 <- predict(
+  model_1,
+  newdata = data_devoir2,
+  type = "response"
+)
+
+proba_2 <- predict(
+  model_2,
+  newdata = data_devoir2,
+  type = "response"
+)
+```
+
+   Le modèle finalement retenu devra être clairement identifié et le choix devra être justifié en tenant compte de l’ensemble des éléments précédents, et pas uniquement de l’AUC.
+
+5. **Prévision sur une base test commune.** Une base de test de **1 000 observations** est disponible dans le dépôt GitHub du cours. Elle contient les mêmes variables explicatives que les bases individuelles, mais **ne contient pas la variable `adhesion`**.
+
+```r
+loc_test <- paste0(
+  "https://raw.githubusercontent.com/freakonometrics/",
+  "STT5100/master/devoir/",
+  "data_test_devoir2_STT5100_A2026.RData"
+)
+
+download.file(
+  loc_test,
+  "data_test_devoir2.RData",
+  mode = "wb"
+)
+
+load("data_test_devoir2.RData")
+
+dim(data_test_devoir2)
+```
+
+On doit obtenir :
+
+```text
+1000   15
+```
+
+Une fois les deux modèles construits, il faudra calculer pour chacun la **probabilité prédite de `adhesion = 1`** sur cette base.
+
+Par exemple :
+
+```r
+prediction_1 <- predict(
+  model_1,
+  newdata = data_test_devoir2,
+  type = "response"
+)
+
+prediction_2 <- predict(
+  model_2,
+  newdata = data_test_devoir2,
+  type = "response"
+)
+
+base_prediction <- data.frame(
+  indice = seq_len(nrow(data_test_devoir2)),
+  prediction_1 = prediction_1,
+  prediction_2 = prediction_2
+)
+
+names(base_prediction) <- c(
+  "indice",
+  paste0("model_1_", code_permanent),
+  paste0("model_2_", code_permanent)
+)
+
+dim(base_prediction)
+head(base_prediction)
+```
+
+La base `base_prediction` doit contenir exactement **1 000 lignes et 3 colonnes**, sans valeur manquante.
+
+Les deux colonnes de prévisions doivent contenir des **probabilités comprises entre 0 et 1**, et non des classifications finales en 0 ou 1.
+
+```r
+stopifnot(
+  nrow(base_prediction) == 1000,
+  ncol(base_prediction) == 3,
+  !anyNA(base_prediction),
+  all(base_prediction[[2]] >= 0),
+  all(base_prediction[[2]] <= 1),
+  all(base_prediction[[3]] >= 0),
+  all(base_prediction[[3]] <= 1)
+)
+```
+
+L’ordre des lignes de `data_test_devoir2` ne doit pas être modifié : la colonne `indice` doit correspondre à l’ordre initial des observations dans la base test.
+
+On exportera ensuite les prévisions :
+
+```r
+save(
+  base_prediction,
+  file = paste0(
+    "prevision-devoir2-",
+    code_permanent,
+    ".RData"
+  )
+)
+```
+
+Il est fortement recommandé de vérifier que le fichier sauvegardé peut être relu correctement :
+
+```r
+rm(base_prediction)
+
+load(
+  paste0(
+    "prevision-devoir2-",
+    code_permanent,
+    ".RData"
+  )
+)
+
+str(base_prediction)
+```
+## Consignes
+
+- **Date limite : Mercredi 16 Décembre, midi.**
+
+- Le devoir est individuel. Les discussions entre étudiant(e)s sont autorisées, mais chacun(e) doit produire son propre rapport, son propre code et ses propres prévisions. Des travaux identiques ou substantiellement identiques pourront donner lieu à une vérification individuelle.
+
+- Chaque étudiant(e) doit déposer sur Moodle **trois fichiers** :
+
+  - `devoir2-ABCD12345678.html`,
+  - `devoir2-ABCD12345678.Rmd`,
+  - `prevision-devoir2-ABCD12345678.RData`,
+
+  où `ABCD12345678` doit être remplacé par le code permanent de l’étudiant(e).
+
+- Dans le préambule du fichier R Markdown, le champ `author:` doit contenir le code permanent.
+
+- Le fichier `.html` doit être lisible dans un navigateur et le fichier `.Rmd` doit compiler sans erreur. Tout fichier HTML vide ou tout fichier Rmd qui ne compile pas sera pénalisé. Il appartient à l’étudiant(e) de vérifier les fichiers déposés sur Moodle après le téléversement.
+
+- La qualité de la présentation, des graphiques, des tableaux et, plus généralement, la lisibilité du document interviennent dans la notation. Il faut éviter les sorties R inutilement longues, les tableaux de plusieurs centaines de lignes ainsi que l’affichage de messages ou d’avertissements automatiques sans intérêt pour le rapport.
+
+- Tout test ou toute technique qui n’a pas été vue et présentée dans le cours doit être expliqué et motivé, avec une référence appropriée. Il s’agit d’évaluer les connaissances acquises en cours, et non l’habileté à construire des modèles complexes et très prédictifs.
+
+- Sauf autorisation explicite, les packages autorisés sont `MASS`, `lmtest`, `nortest`, `car`, `splines`, `AER`, `Hmisc`, `np`, `ggplot2`, `dplyr`, `pROC`, ainsi que les fonctions de base de `stats`. Des packages de mise en forme tels que `knitr`, `stargazer`, `DT`, `papeR` ou `formattable` peuvent également être utilisés. L’utilisation d’un autre package doit être demandée au préalable.
+
+- L’utilisation d’outils d’IA générative (ChatGPT, Claude, Gemini, Llama, etc.) est autorisée pour améliorer l’aspect visuel du rendu (tableaux, figures, options du Markdown, etc.). L’étudiant(e) reste toutefois responsable de l’ensemble du contenu remis et doit être capable d’expliquer les méthodes, le code et les résultats présentés. En cas de doute, les étudiant(e)s pourront être convoqué(e)s pour présenter leur travail en 5 minutes.
+
+- Les outils d’IA générative ne dispensent pas de citer une méthode ou une technique extérieure au cours. Une référence produite par un outil d’IA **doit** être vérifiée avant d’être incluse dans le rapport.
+
+- Le fichier de prévisions sera évalué automatiquement. Une mauvaise structure, un nombre incorrect de lignes, des valeurs manquantes, un changement de l’ordre des observations ou des prévisions qui ne sont pas des probabilités comprises entre 0 et 1 pourront empêcher son évaluation correcte.
+
+## Remarque pratique
+
+Pour accéder à votre base, vous devez remplacer `"ABCD12345678"` dans le code de téléchargement par votre véritable code permanent, avec les lettres en majuscules.
+
+La base remise à chaque étudiant(e) porte le nom
+
+```text
+data_devoir2_STT5100_A2026_ABCD12345678.RData
+```
+
+mais l’objet chargé dans R porte toujours le même nom :
+
+```r
+data_devoir2
+```
