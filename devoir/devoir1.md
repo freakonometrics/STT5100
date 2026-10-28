@@ -66,31 +66,6 @@ str(data_devoir1)
     ##  $ division     : Factor w/ 9 levels "D1","D2","D3",..: 8 1 5 8 5 4
     ##  $ metro        : Factor w/ 2 levels "A1","A2": 2 2 2 1 1 2
 
-À titre d’illustration, les premières lignes d’une base peuvent avoir la
-structure suivante :
-
-``` r
-str(data_devoir1)
-```
-
-    ## 'data.frame':    6 obs. of  16 variables:
-    ##  $ income       : num  6500 29700 29700 8500 20900 40200
-    ##  $ age          : num  30 28 38 34 31 40
-    ##  $ education    : num  4 3 2 2 3 4
-    ##  $ hours        : num  26 40 40 42 40 44
-    ##  $ sex          : Factor w/ 2 levels "S1","S2": 2 1 1 2 2 1
-    ##  $ marital      : Factor w/ 2 levels "M1","M2": 2 1 2 1 1 2
-    ##  $ group        : Factor w/ 4 levels "G1","G2","G3",..: 4 1 2 1 1 1
-    ##  $ union        : Factor w/ 2 levels "U1","U2": 1 1 2 1 1 1
-    ##  $ self_employed: Factor w/ 2 levels "SE1","SE2": 1 1 1 1 1 1
-    ##  $ public_sector: Factor w/ 2 levels "P1","P2": 1 1 1 1 1 2
-    ##  $ paid_hourly  : Factor w/ 2 levels "H1","H2": 2 1 2 2 2 1
-    ##  $ industry     : Factor w/ 16 levels "I1","I2","I3",..: 6 3 6 8 9 9
-    ##  $ occupation   : Factor w/ 10 levels "O1","O2","O3",..: 4 1 8 3 1 1
-    ##  $ region       : Factor w/ 4 levels "R1","R2","R3",..: 4 1 3 4 3 2
-    ##  $ division     : Factor w/ 9 levels "D1","D2","D3",..: 8 1 5 8 5 4
-    ##  $ metro        : Factor w/ 2 levels "A1","A2": 2 2 2 1 1 2
-
 Les données décrivent des situations individuelles sur le marché du
 travail. Elles ont été recodées et certaines variables ont été
 légèrement transformées. La variable d’intérêt est `income`.
@@ -103,14 +78,14 @@ légèrement transformées. La variable d’intérêt est `income`.
 - `marital` : situation matrimoniale ;
 - `group` : groupe démographique recodé ;
 - `union` : statut relatif à la représentation syndicale ;
-- `worktime` : statut temps plein / temps partiel recodé ;
-- `worker` : catégorie de travailleur ;
+- `self_employed` : indicateur relatif au statut de travailleur autonome ;
+- `public_sector` : indicateur relatif au secteur public ;
+- `paid_hourly` : indicateur relatif à une rémunération horaire ;
 - `industry` : secteur d’activité ;
 - `occupation` : catégorie professionnelle ;
 - `region` : grande région géographique ;
 - `division` : division géographique, plus fine que `region` ;
-- `metro` : catégorie relative au caractère métropolitain du lieu de
-  résidence.
+- `metro` : catégorie relative au caractère métropolitain du lieu de résidence.
 
 Chaque étudiant(e) dispose d’un échantillon d’environ 2 000
 observations. Les échantillons sont différents d’un(e) étudiant(e) à
