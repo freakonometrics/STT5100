@@ -9,7 +9,7 @@ Plan de cours : [Plan_Cours_STT5100_A2026.pdf](https://github.com/freakonometric
 Démonstrateur : Maurin Ahanhanzo
 
 ```diff
-- l'examen a lieu ce vendredi; sinon la base test du premier devoir a été modifiée
+- l'examen intra a lieu ce vendredi
 ```
 
 **Prérequis**
